@@ -1,0 +1,54 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/main.cpp
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "test/tests.h"
+        -:    3:#include "controller/CarController.h"
+        -:    4:#include "ui/UI.h"
+        -:    5:
+function main called 1 returned 100% blocks executed 65%
+        1:    6:int main() {
+        -:    7:    // Create repository
+        1:    8:    CarRepository carRepository = CarRepository();
+        1:    8-block  0
+call    0 returned 1
+        -:    9:
+        -:   10:    // Create Controller
+        1:   11:    CarController carController = CarController(carRepository);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   12:
+        -:   13:    // Create UI
+        1:   14:    UI ui = UI(carController);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   15:
+        -:   16:    // run tests
+        1:   17:    runAllTests();
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   18:
+        -:   19:    // run app
+        1:   20:    ui.runApp();
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21:    return 0;
+        1:   22:}
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   22-block  1
+call    3 never executed
+    $$$$$:   22-block  2
+call    4 never executed
+    $$$$$:   22-block  3
+call    5 never executed

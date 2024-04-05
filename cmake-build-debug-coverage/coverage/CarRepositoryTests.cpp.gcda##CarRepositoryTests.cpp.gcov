@@ -1,0 +1,1231 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/test/CarRepositoryTests.cpp
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarRepositoryTests.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarRepositoryTests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <cassert>
+        -:    2:#include "CarRepositoryTests.h"
+        -:    3:#include "../domain/Car.h"
+        -:    4:#include "../repository/CarRepository.h"
+        -:    5:
+function _ZN18CarRepositoryTests13testAddNewCarEv called 1 returned 100% blocks executed 44%
+        1:    6:void CarRepositoryTests::testAddNewCar() {
+        -:    7:    // Arrange
+        2:    8:    Car car1 = Car("RO123AA", "AAA", "AAA", "AAA");
+        1:    8-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    8-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:    8-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:    8-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:    8-block  4
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:    8-block  5
+    $$$$$:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+    $$$$$:    8-block 12
+        2:    9:    Car car2 = Car("RO123BB", "VVV", "VVV", "VVV");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    9-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:    9-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:    9-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:    9-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:    9-block  4
+    $$$$$:    9-block  5
+    $$$$$:    9-block  6
+    $$$$$:    9-block  7
+    $$$$$:    9-block  8
+    $$$$$:    9-block  9
+    $$$$$:    9-block 10
+    $$$$$:    9-block 11
+        2:   10:    Car car3 = Car("RO123AA", "BBB", "BBB", "BBB");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   10-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   10-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   10-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   10-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   10-block  4
+    $$$$$:   10-block  5
+    $$$$$:   10-block  6
+    $$$$$:   10-block  7
+    $$$$$:   10-block  8
+    $$$$$:   10-block  9
+    $$$$$:   10-block 10
+    $$$$$:   10-block 11
+        1:   11:    CarRepository cars = CarRepository();
+call    0 returned 1
+        1:   12:    cars.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   12-block  1
+call    6 returned 1
+    $$$$$:   12-block  2
+call    7 never executed
+    $$$$$:   12-block  3
+        -:   13:
+        -:   14:    // Act
+        -:   15:    try {
+       2*:   16:        cars.addNewCar(car3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   16-block  1
+call    6 never executed
+        1:   16-block  2
+call    7 returned 1
+        1:   16-block  3
+    #####:   17:        assert(true == false);
+call    0 never executed
+        1:   18:    } catch (...) {
+        1:   18-block  0
+        1:   18-block  1
+call    0 returned 1
+        -:   19:        assert(true == true);
+        1:   20:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   21:
+        -:   22:    try {
+        1:   23:        cars.addNewCar(car2);
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+call    6 returned 1
+    $$$$$:   23-block  3
+call    7 never executed
+    $$$$$:   23-block  4
+    =====:   24:    } catch (...) {
+    $$$$$:   24-block  0
+    $$$$$:   24-block  1
+call    0 never executed
+    =====:   25:        assert(false == true);
+call    0 never executed
+        -:   26:    }
+        -:   27:
+        -:   28:    // Assert
+        1:   29:    assert(car1.compareCars(cars.getCarByRegistrationNumber("RO123AA")));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   29-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   29-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   29-block  2
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:   29-block  3
+call   12 never executed
+        1:   29-block  4
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:   29-block  5
+call   16 never executed
+    $$$$$:   29-block  6
+    $$$$$:   29-block  7
+call   17 never executed
+    $$$$$:   29-block  8
+    $$$$$:   29-block  9
+call   18 never executed
+    $$$$$:   29-block 10
+        1:   30:    assert(car2.compareCars(cars.getCarByRegistrationNumber("RO123BB")));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   30-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   30-block  2
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:   30-block  3
+call   12 never executed
+        1:   30-block  4
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:   30-block  5
+call   16 never executed
+    $$$$$:   30-block  6
+    $$$$$:   30-block  7
+call   17 never executed
+    $$$$$:   30-block  8
+    $$$$$:   30-block  9
+call   18 never executed
+    $$$$$:   30-block 10
+        1:   31:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   31-block  0
+call    4 never executed
+    $$$$$:   31-block  1
+call    5 never executed
+    $$$$$:   31-block  2
+call    6 never executed
+    $$$$$:   31-block  3
+call    7 never executed
+        -:   32:
+function _ZN18CarRepositoryTests30testGetCarByRegistrationNumberEv called 1 returned 100% blocks executed 48%
+        1:   33:void CarRepositoryTests::testGetCarByRegistrationNumber() {
+        -:   34:    // Arrange
+        2:   35:    Car car1 = Car("RO123AA", "AAA", "AAA", "AAA");
+        1:   35-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   35-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   35-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   35-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   35-block  4
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   35-block  5
+    $$$$$:   35-block  6
+    $$$$$:   35-block  7
+    $$$$$:   35-block  8
+    $$$$$:   35-block  9
+    $$$$$:   35-block 10
+    $$$$$:   35-block 11
+    $$$$$:   35-block 12
+        2:   36:    Car car2 = Car("RO123BB", "VVV", "VVV", "VVV");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   36-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   36-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   36-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   36-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+    $$$$$:   36-block  6
+    $$$$$:   36-block  7
+    $$$$$:   36-block  8
+    $$$$$:   36-block  9
+    $$$$$:   36-block 10
+    $$$$$:   36-block 11
+        1:   37:    CarRepository cars = CarRepository();
+call    0 returned 1
+        1:   38:    cars.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   38-block  1
+call    6 returned 1
+    $$$$$:   38-block  2
+call    7 never executed
+    $$$$$:   38-block  3
+        1:   39:    cars.addNewCar(car2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   39-block  1
+call    6 returned 1
+    $$$$$:   39-block  2
+call    7 never executed
+    $$$$$:   39-block  3
+        -:   40:
+        -:   41:    // Act
+        2:   42:    const Car actual1 = cars.getCarByRegistrationNumber("RO123AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   42-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:   42-block  1
+    $$$$$:   42-block  2
+        2:   43:    const Car actual2 = cars.getCarByRegistrationNumber("RO123BB");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   43-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:   43-block  1
+    $$$$$:   43-block  2
+        -:   44:    try {
+       3*:   45:        const Car actual3 = cars.getCarByRegistrationNumber("RO134AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   45-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1 (throw)
+call    7 never executed
+        1:   45-block  1
+        1:   45-block  2
+    #####:   46:        assert(true == false);
+call    0 never executed
+        1:   47:    } catch (...) {
+        1:   47-block  0
+        1:   47-block  1
+call    0 returned 1
+        -:   48:        assert(true == true);
+        1:   49:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   50:
+        -:   51:    // Assert
+        1:   52:    assert(car1.compareCars(actual1));
+        1:   52-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   52-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:   52-block  3
+call    8 never executed
+        1:   52-block  4
+call    9 returned 1
+    $$$$$:   52-block  5
+call   10 never executed
+    $$$$$:   52-block  6
+        1:   53:    assert(car2.compareCars(actual2));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   53-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   53-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:   53-block  2
+call    8 never executed
+        1:   53-block  3
+call    9 returned 1
+    $$$$$:   53-block  4
+call   10 never executed
+    $$$$$:   53-block  5
+        1:   54:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:   54-block  0
+call    5 never executed
+    $$$$$:   54-block  1
+call    6 never executed
+    $$$$$:   54-block  2
+call    7 never executed
+    $$$$$:   54-block  3
+call    8 never executed
+    $$$$$:   54-block  4
+call    9 never executed
+        -:   55:
+function _ZN18CarRepositoryTests14testGetAllCarsEv called 1 returned 100% blocks executed 45%
+        1:   56:void CarRepositoryTests::testGetAllCars() {
+        -:   57:    // Arrange
+        2:   58:    Car car1 = Car("RO123AA", "AAA", "AAA", "AAA");
+        1:   58-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   58-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   58-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   58-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   58-block  4
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   58-block  5
+    $$$$$:   58-block  6
+    $$$$$:   58-block  7
+    $$$$$:   58-block  8
+    $$$$$:   58-block  9
+    $$$$$:   58-block 10
+    $$$$$:   58-block 11
+    $$$$$:   58-block 12
+        2:   59:    Car car2 = Car("RO123BB", "VVV", "VVV", "VVV");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   59-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   59-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   59-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   59-block  4
+    $$$$$:   59-block  5
+    $$$$$:   59-block  6
+    $$$$$:   59-block  7
+    $$$$$:   59-block  8
+    $$$$$:   59-block  9
+    $$$$$:   59-block 10
+    $$$$$:   59-block 11
+        1:   60:    CarRepository cars = CarRepository();
+call    0 returned 1
+        1:   61:    cars.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   61-block  1
+call    6 returned 1
+    $$$$$:   61-block  2
+call    7 never executed
+    $$$$$:   61-block  3
+        1:   62:    cars.addNewCar(car2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   62-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   62-block  1
+call    6 returned 1
+    $$$$$:   62-block  2
+call    7 never executed
+    $$$$$:   62-block  3
+        -:   63:
+        -:   64:    // Act
+        1:   65:    std::vector<Car> returnedCars = cars.getAllCars();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   66:
+        -:   67:    // Assert
+       1*:   68:    assert(car1.compareCars(returnedCars[0]));
+        1:   68-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   68-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   68-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   68-block  3
+call    9 never executed
+        1:   68-block  4
+call   10 returned 1
+    $$$$$:   68-block  5
+call   11 never executed
+    $$$$$:   68-block  6
+       1*:   69:    assert(car2.compareCars(returnedCars[1]));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   69-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   69-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   69-block  2
+call    9 never executed
+        1:   69-block  3
+call   10 returned 1
+    $$$$$:   69-block  4
+call   11 never executed
+    $$$$$:   69-block  5
+        1:   70:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   70-block  0
+call    4 never executed
+    $$$$$:   70-block  1
+call    5 never executed
+    $$$$$:   70-block  2
+call    6 never executed
+    $$$$$:   70-block  3
+call    7 never executed
+        -:   71:
+function _ZN18CarRepositoryTests33testDeleteCarByRegistrationNumberEv called 1 returned 100% blocks executed 50%
+        1:   72:void CarRepositoryTests::testDeleteCarByRegistrationNumber() {
+        -:   73:    // Arrange
+        2:   74:    Car car1 = Car("RO123AA", "AAA", "AAA", "AAA");
+        1:   74-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   74-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   74-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   74-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   74-block  4
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   74-block  5
+    $$$$$:   74-block  6
+    $$$$$:   74-block  7
+    $$$$$:   74-block  8
+    $$$$$:   74-block  9
+    $$$$$:   74-block 10
+    $$$$$:   74-block 11
+    $$$$$:   74-block 12
+        2:   75:    Car car2 = Car("RO123BB", "VVV", "VVV", "VVV");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   75-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   75-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   75-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   75-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   75-block  4
+    $$$$$:   75-block  5
+    $$$$$:   75-block  6
+    $$$$$:   75-block  7
+    $$$$$:   75-block  8
+    $$$$$:   75-block  9
+    $$$$$:   75-block 10
+    $$$$$:   75-block 11
+        1:   76:    CarRepository cars = CarRepository();
+call    0 returned 1
+        1:   77:    cars.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   77-block  1
+call    6 returned 1
+    $$$$$:   77-block  2
+call    7 never executed
+    $$$$$:   77-block  3
+        1:   78:    cars.addNewCar(car2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   78-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   78-block  1
+call    6 returned 1
+    $$$$$:   78-block  2
+call    7 never executed
+    $$$$$:   78-block  3
+        -:   79:
+        -:   80:    // Act
+        -:   81:    try {
+       3*:   82:        cars.deleteCarByRegistrationNumber("RO123BN");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   82-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1 (throw)
+    %%%%%:   82-block  1
+call    7 never executed
+call    8 never executed
+        1:   82-block  2
+call    9 returned 1
+        1:   82-block  3
+        1:   82-block  4
+call   10 returned 1
+        1:   82-block  5
+    #####:   83:        assert(true == false);
+call    0 never executed
+        1:   84:    } catch (...) {
+        1:   84-block  0
+        1:   84-block  1
+call    0 returned 1
+        -:   85:        assert(true == true);
+        1:   86:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   87:
+        1:   88:    cars.deleteCarByRegistrationNumber("RO123AA");
+        1:   88-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   88-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   88-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   88-block  3
+call    9 never executed
+    $$$$$:   88-block  4
+    $$$$$:   88-block  5
+call   10 never executed
+    $$$$$:   88-block  6
+        -:   89:
+        -:   90:    // Assert
+        -:   91:    try {
+        3:   92:        cars.getCarByRegistrationNumber("RO123AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   92-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1 (throw)
+    $$$$$:   92-block  1
+call    7 never executed
+call    8 never executed
+call    9 never executed
+        1:   92-block  2
+call   10 returned 1
+        1:   92-block  3
+        1:   92-block  4
+call   11 returned 1
+        1:   92-block  5
+    =====:   93:        assert(false == true);
+call    0 never executed
+        1:   94:    } catch (...) {
+        1:   94-block  0
+        1:   94-block  1
+call    0 returned 1
+        -:   95:        assert(true == true);
+        1:   96:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97:    assert(car2.compareCars(cars.getCarByRegistrationNumber("RO123BB")));
+        1:   97-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   97-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   97-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   97-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:   97-block  4
+call   12 never executed
+        1:   97-block  5
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:   97-block  6
+call   16 never executed
+    $$$$$:   97-block  7
+    $$$$$:   97-block  8
+call   17 never executed
+    $$$$$:   97-block  9
+    $$$$$:   97-block 10
+call   18 never executed
+    $$$$$:   97-block 11
+        1:   98:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   98-block  0
+call    3 never executed
+    $$$$$:   98-block  1
+call    4 never executed
+    $$$$$:   98-block  2
+call    5 never executed
+        -:   99:
+function _ZN18CarRepositoryTests33testUpdateCarByRegistrationNumberEv called 1 returned 100% blocks executed 51%
+        1:  100:void CarRepositoryTests::testUpdateCarByRegistrationNumber() {
+        -:  101:    // Arrange
+        2:  102:    Car car1 = Car("RO123AA", "AAA", "AAA", "AAA");
+        1:  102-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  102-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  102-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  102-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  102-block  4
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  102-block  5
+    $$$$$:  102-block  6
+    $$$$$:  102-block  7
+    $$$$$:  102-block  8
+    $$$$$:  102-block  9
+    $$$$$:  102-block 10
+    $$$$$:  102-block 11
+    $$$$$:  102-block 12
+        2:  103:    Car car2 = Car("RO123BB", "VVV", "VVV", "VVV");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  103-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  103-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  103-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  103-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  103-block  4
+    $$$$$:  103-block  5
+    $$$$$:  103-block  6
+    $$$$$:  103-block  7
+    $$$$$:  103-block  8
+    $$$$$:  103-block  9
+    $$$$$:  103-block 10
+    $$$$$:  103-block 11
+        2:  104:    Car newCar1= Car("EN123AA", "BBB", "BBB", "BBB");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  104-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  104-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  104-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  104-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  104-block  4
+    $$$$$:  104-block  5
+    $$$$$:  104-block  6
+    $$$$$:  104-block  7
+    $$$$$:  104-block  8
+    $$$$$:  104-block  9
+    $$$$$:  104-block 10
+    $$$$$:  104-block 11
+        1:  105:    CarRepository cars = CarRepository();
+call    0 returned 1
+        1:  106:    cars.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  106-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  106-block  1
+call    6 returned 1
+    $$$$$:  106-block  2
+call    7 never executed
+    $$$$$:  106-block  3
+        1:  107:    cars.addNewCar(car2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  107-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  107-block  1
+call    6 returned 1
+    $$$$$:  107-block  2
+call    7 never executed
+    $$$$$:  107-block  3
+        -:  108:
+        -:  109:    // Act
+        -:  110:    try {
+       4*:  111:        cars.updateCarByRegistrationNumber("RO123MM", newCar1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  111-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  111-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1 (throw)
+    %%%%%:  111-block  2
+call   10 never executed
+call   11 never executed
+call   12 never executed
+        1:  111-block  3
+call   13 returned 1
+        1:  111-block  4
+        1:  111-block  5
+call   14 returned 1
+        1:  111-block  6
+        1:  111-block  7
+call   15 returned 1
+        1:  111-block  8
+    #####:  112:        assert(true == false);
+call    0 never executed
+        1:  113:    } catch (...) {
+        1:  113-block  0
+        1:  113-block  1
+call    0 returned 1
+        -:  114:        assert(true == true)
+        -:  115:;
+        1:  116:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  117:
+        -:  118:    try {
+        3:  119:        cars.updateCarByRegistrationNumber(car1.getRegistrationNumber(), car2);
+        1:  119-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  119-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  119-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1 (throw)
+    $$$$$:  119-block  3
+call    9 never executed
+call   10 never executed
+        1:  119-block  4
+call   11 returned 1
+        1:  119-block  5
+        1:  119-block  6
+call   12 returned 1
+        1:  119-block  7
+    =====:  120:        assert(true == false);
+call    0 never executed
+        1:  121:    } catch (...) {
+        1:  121-block  0
+        1:  121-block  1
+call    0 returned 1
+        -:  122:        assert(true == true);
+        1:  123:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  124:
+        1:  125:    cars.updateCarByRegistrationNumber("RO123AA", newCar1);
+        1:  125-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  125-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  125-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  125-block  3
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    $$$$$:  125-block  4
+call   13 never executed
+    $$$$$:  125-block  5
+    $$$$$:  125-block  6
+call   14 never executed
+    $$$$$:  125-block  7
+    $$$$$:  125-block  8
+call   15 never executed
+    $$$$$:  125-block  9
+        -:  126:
+        -:  127:    // Assert
+        -:  128:    try {
+        3:  129:        cars.getCarByRegistrationNumber("RO123AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  129-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1 (throw)
+    $$$$$:  129-block  1
+call    7 never executed
+call    8 never executed
+call    9 never executed
+        1:  129-block  2
+call   10 returned 1
+        1:  129-block  3
+        1:  129-block  4
+call   11 returned 1
+        1:  129-block  5
+    =====:  130:        assert(false == true);
+call    0 never executed
+        1:  131:    } catch (...) {
+        1:  131-block  0
+        1:  131-block  1
+call    0 returned 1
+        -:  132:        assert(true == true);
+        1:  133:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  134:
+        1:  135:    assert(newCar1.compareCars(cars.getCarByRegistrationNumber("EN123AA")));
+        1:  135-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  135-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  135-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  135-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:  135-block  4
+call   12 never executed
+        1:  135-block  5
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:  135-block  6
+call   16 never executed
+    $$$$$:  135-block  7
+    $$$$$:  135-block  8
+call   17 never executed
+    $$$$$:  135-block  9
+    $$$$$:  135-block 10
+call   18 never executed
+    $$$$$:  135-block 11
+        -:  136:
+        1:  137:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  137-block  0
+call    4 never executed
+    $$$$$:  137-block  1
+call    5 never executed
+    $$$$$:  137-block  2
+call    6 never executed
+    $$$$$:  137-block  3
+call    7 never executed

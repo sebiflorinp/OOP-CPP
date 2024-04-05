@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.27)
 project(cpplab)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17 CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Werror")
 
 add_executable(cpplab main.cpp
         domain/Car.cpp
@@ -13,4 +13,14 @@ add_executable(cpplab main.cpp
         controller/CarController.cpp
         controller/CarController.h
         ui/UI.cpp
-        ui/UI.h)
+        ui/UI.h
+        test/CarValidatorsTests.cpp
+        test/CarValidatorsTests.h
+        test/tests.cpp
+        test/tests.h
+        test/CarTests.cpp
+        test/CarTests.h
+        test/CarRepositoryTests.cpp
+        test/CarRepositoryTests.h
+        test/CarControllerTests.cpp
+        test/CarControllerTests.h)

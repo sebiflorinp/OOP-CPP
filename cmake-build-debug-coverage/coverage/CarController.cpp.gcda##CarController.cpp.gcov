@@ -1,0 +1,104 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/controller/CarController.cpp
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/controller/CarController.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/controller/CarController.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "CarController.h"
+        -:    2:
+function _ZN13CarControllerC2ERK13CarRepository called 6 returned 100% blocks executed 80%
+        6:    3:CarController::CarController(const CarRepository& carRepository) {
+        6:    3-block  0
+call    0 returned 6
+        6:    4:    this->carRepository = carRepository;
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:    5:}
+        6:    5-block  0
+    $$$$$:    5-block  1
+call    0 never executed
+        -:    6:
+function _ZN13CarController9addNewCarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 10 returned 90% blocks executed 100%
+       10:    7:void CarController::addNewCar(
+        -:    8:        const std::string& registrationNumber,
+        -:    9:        const std::string& type,
+        -:   10:        const std::string& model,
+        -:   11:        const std::string& producer
+        -:   12:        ) {
+        -:   13:    // create new car object and try to add it in the repository
+       10:   14:    Car newCar = Car(registrationNumber, producer, model, type);
+       10:   14-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   15:    carRepository.addNewCar(newCar);
+       10:   15-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   15-block  1
+call    3 returned 10
+branch  4 taken 9 (fallthrough)
+branch  5 taken 1 (throw)
+        9:   15-block  2
+call    6 returned 9
+        1:   15-block  3
+call    7 returned 1
+        1:   15-block  4
+       10:   16:}
+call    0 returned 9
+        1:   16-block  0
+call    1 returned 1
+        -:   17:
+function _ZN13CarController27findCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 9 returned 67% blocks executed 100%
+        9:   18:Car CarController::findCarByRegistrationNumber(const std::string& registrationNumber) {
+        -:   19:    // return the car with the given registrationNumber or throw an error
+        9:   20:    return this->carRepository.getCarByRegistrationNumber(registrationNumber);
+        9:   20-block  0
+call    0 returned 6
+        -:   21:}
+        -:   22:
+function _ZN13CarController10getAllCarsEv called 1 returned 100% blocks executed 100%
+        1:   23:std::vector<Car> CarController::getAllCars() {
+        1:   24:    return this->carRepository.getAllCars();
+        1:   24-block  0
+call    0 returned 1
+        -:   25:}
+        -:   26:
+function _ZN13CarController29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 100%
+        2:   27:void CarController::deleteCarByRegistrationNumber(const std::string& registrationNumber) {
+        -:   28:    // deletes the car with the given registrationNumber or throw an error if there is no car with the given registrationNumber
+        2:   29:    this->carRepository.deleteCarByRegistrationNumber(registrationNumber);
+        2:   29-block  0
+call    0 returned 1
+        1:   30:}
+        -:   31:
+function _ZN13CarController29updateCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_S7_ called 3 returned 33% blocks executed 100%
+        3:   32:void CarController::updateCarByRegistrationNumber(const std::string& registrationNumber, const std::string& newRegistrationNumber, const std::string& type, const std::string& model, const std::string& producer) {
+        -:   33:    // Create the updated car
+        3:   34:    Car updatedCar = Car(newRegistrationNumber, producer, model, type);
+        3:   34-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   35:    // Updates the car
+        5:   36:    this->carRepository.updateCarByRegistrationNumber(registrationNumber, updatedCar);
+        3:   36-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   36-block  1
+call    3 returned 3
+branch  4 taken 1 (fallthrough)
+branch  5 taken 2 (throw)
+        1:   36-block  2
+call    6 returned 1
+        2:   36-block  3
+call    7 returned 2
+        2:   36-block  4
+        3:   37:}
+call    0 returned 1
+        2:   37-block  0
+call    1 returned 2
+        -:   38:
+        -:   39:
+        -:   40:

@@ -1,0 +1,274 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/test/CarValidatorsTests.cpp
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarValidatorsTests.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarValidatorsTests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <string>
+        -:    2:#include <cassert>
+        -:    3:#include "CarValidatorsTests.h"
+        -:    4:#include "../domain/CarValidators.h"
+        -:    5:
+function _ZN18CarValidatorsTests30testValidateRegistrationNumberEv called 1 returned 100% blocks executed 53%
+        1:    6:void CarValidatorsTests::testValidateRegistrationNumber() {
+        -:    7:    // Arrange
+        -:    8:    CarValidators validators = CarValidators();
+        1:    9:    const std::string validRegistrationNumber = "RO57AAA";
+        1:    9-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:    9-block  1
+        1:   10:    const std::string invalidRegistrationNumber1 = "";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   10-block  0
+        1:   11:    const std::string invalidRegistrationNumber2 = "ROCJ12345";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   11-block  0
+        -:   12:
+        -:   13:    // Act
+        -:   14:    try {
+        1:   15:        validators.validateRegistrationNumber(validRegistrationNumber);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   16:    }
+    =====:   17:    catch (...) {
+    $$$$$:   17-block  0
+    $$$$$:   17-block  1
+call    0 never executed
+    =====:   18:        assert(true == false);
+call    0 never executed
+        -:   19:    }
+        -:   20:
+        -:   21:    try {
+        1:   22:        validators.validateRegistrationNumber(invalidRegistrationNumber1);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:   23:        assert(true == false);
+    %%%%%:   23-block  0
+call    0 never executed
+        1:   24:    } catch(...) {
+        1:   24-block  0
+        1:   24-block  1
+call    0 returned 1
+        -:   25:        assert(true == true);
+        1:   26:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   27:
+        -:   28:    try {
+        1:   29:        validators.validateRegistrationNumber(invalidRegistrationNumber2);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    =====:   30:        assert(true == false);
+    $$$$$:   30-block  0
+call    0 never executed
+        1:   31:    } catch (...) {
+        1:   31-block  0
+        1:   31-block  1
+call    0 returned 1
+        -:   32:        assert(true == true);
+        1:   33:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34:}
+        1:   34-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   34-block  1
+call    3 never executed
+    $$$$$:   34-block  2
+call    4 never executed
+    $$$$$:   34-block  3
+call    5 never executed
+        -:   35:
+function _ZN18CarValidatorsTests20testValidateProducerEv called 1 returned 100% blocks executed 52%
+        1:   36:void CarValidatorsTests::testValidateProducer() {
+        -:   37:    // Arrange
+        -:   38:    CarValidators validators = CarValidators();
+        1:   39:    const std::string validProducer = "Dacia";
+        1:   39-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   39-block  1
+        1:   40:    const std::string invalidProducer = "";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   40-block  0
+        -:   41:
+        -:   42:    // Act
+        -:   43:    try {
+        1:   44:        validators.validateProducer(validProducer);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    =====:   45:    } catch (...) {
+    $$$$$:   45-block  0
+    $$$$$:   45-block  1
+call    0 never executed
+    =====:   46:        assert(true == false);
+call    0 never executed
+        -:   47:    }
+        -:   48:
+        -:   49:    try {
+        1:   50:        validators.validateProducer(invalidProducer);
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:   51:        assert(true == false);
+    %%%%%:   51-block  0
+call    0 never executed
+        1:   52:    } catch (...) {
+        1:   52-block  0
+        1:   52-block  1
+call    0 returned 1
+        -:   53:        assert(true == true);
+        1:   54:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55:}
+        1:   55-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   55-block  1
+call    2 never executed
+    $$$$$:   55-block  2
+call    3 never executed
+        -:   56:
+function _ZN18CarValidatorsTests16testValidateTypeEv called 1 returned 100% blocks executed 52%
+        1:   57:void CarValidatorsTests::testValidateType() {
+        -:   58:    // Arrange
+        -:   59:    CarValidators validators = CarValidators();
+        1:   60:    const std::string validType = "Sports";
+        1:   60-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   60-block  1
+        1:   61:    const std::string invalidType = "";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   61-block  0
+        -:   62:
+        -:   63:    // Act
+        -:   64:    try {
+        1:   65:        validators.validateType(validType);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    =====:   66:    } catch (...) {
+    $$$$$:   66-block  0
+    $$$$$:   66-block  1
+call    0 never executed
+    =====:   67:        assert(true == false);
+call    0 never executed
+        -:   68:    }
+        -:   69:
+        -:   70:    try {
+        1:   71:        validators.validateType(invalidType);
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:   72:        assert(true == false);
+    %%%%%:   72-block  0
+call    0 never executed
+        1:   73:    } catch (...) {
+        1:   73-block  0
+        1:   73-block  1
+call    0 returned 1
+        -:   74:        assert(true == true);
+        1:   75:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76:}
+        1:   76-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   76-block  1
+call    2 never executed
+    $$$$$:   76-block  2
+call    3 never executed
+        -:   77:
+function _ZN18CarValidatorsTests17testValidateModelEv called 1 returned 100% blocks executed 52%
+        1:   78:void CarValidatorsTests::testValidateModel() {
+        -:   79:    // Arrange
+        -:   80:    CarValidators validators = CarValidators();
+        1:   81:    const std::string validModel = "ABC";
+        1:   81-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   81-block  1
+        1:   82:    const std::string invalidModel = "";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   82-block  0
+        -:   83:
+        -:   84:    // Act
+        -:   85:    try {
+        1:   86:        validators.validateModel(validModel);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    =====:   87:    } catch (...) {
+    $$$$$:   87-block  0
+    $$$$$:   87-block  1
+call    0 never executed
+    =====:   88:        assert(true == false);
+call    0 never executed
+        -:   89:    }
+        -:   90:
+        -:   91:    try {
+        1:   92:        validators.validateModel(invalidModel);
+        1:   92-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:   93:        assert(false == true);
+    %%%%%:   93-block  0
+call    0 never executed
+        1:   94:    } catch (...) {
+        1:   94-block  0
+        1:   94-block  1
+call    0 returned 1
+        -:   95:        assert(true == true);
+        1:   96:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97:}
+        1:   97-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   97-block  1
+call    2 never executed
+    $$$$$:   97-block  2
+call    3 never executed
+        -:   98:

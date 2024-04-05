@@ -1,0 +1,82 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/domain/CarValidators.cpp
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/CarValidators.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/CarValidators.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "CarValidators.h"
+        -:    2:
+function _ZN13CarValidators26validateRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 48 returned 90% blocks executed 100%
+       48:    3:void CarValidators::validateRegistrationNumber(const std::string &registrationNumber) {
+        -:    4:    // check if the string is empty
+       48:    5:    if (registrationNumber.empty()) {
+       48:    5-block  0
+call    0 returned 48
+branch  1 taken 3 (fallthrough)
+branch  2 taken 45
+        3:    6:        throw std::exception();
+        3:    6-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 0
+        -:    7:    }
+        -:    8:
+        -:    9:    // check if it is made of 7 characters
+       45:   10:    if (registrationNumber.size() != 7) {
+       45:   10-block  0
+call    0 returned 45
+branch  1 taken 2 (fallthrough)
+branch  2 taken 43
+        2:   11:        throw std::exception();
+        2:   11-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 0
+        -:   12:    }
+       43:   13:}
+        -:   14:
+function _ZN13CarValidators13validateModelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 45 returned 96% blocks executed 100%
+       45:   15:void CarValidators::validateModel(const std::string &model) {
+        -:   16:    // check if the string is empty
+       45:   17:    if (model.empty()) {
+       45:   17-block  0
+call    0 returned 45
+branch  1 taken 2 (fallthrough)
+branch  2 taken 43
+        2:   18:        throw std::exception();
+        2:   18-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 0
+        -:   19:    }
+       43:   20:}
+        -:   21:
+function _ZN13CarValidators12validateTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 45 returned 96% blocks executed 100%
+       45:   22:void CarValidators::validateType(const std::string &type) {
+        -:   23:    // check if the string is empty
+       45:   24:    if (type.empty()) {
+       45:   24-block  0
+call    0 returned 45
+branch  1 taken 2 (fallthrough)
+branch  2 taken 43
+        2:   25:        throw std::exception();
+        2:   25-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 0
+        -:   26:    }
+       43:   27:}
+        -:   28:
+function _ZN13CarValidators16validateProducerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 45 returned 96% blocks executed 100%
+       45:   29:void CarValidators::validateProducer(const std::string &producer) {
+        -:   30:    // check if the string is empty
+       45:   31:    if (producer.empty()) {
+       45:   31-block  0
+call    0 returned 45
+branch  1 taken 2 (fallthrough)
+branch  2 taken 43
+        2:   32:        throw std::exception();
+        2:   32-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 0
+        -:   33:    }
+       43:   34:}

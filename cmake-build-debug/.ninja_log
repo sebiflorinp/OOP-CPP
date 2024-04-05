@@ -1,0 +1,11 @@
+# ninja log v5
+2	262	1711990613175212033	CMakeFiles/cpplab.dir/domain/CarValidators.cpp.o	2bdd9a06a69139ee
+1	209	1712034851298131291	CMakeFiles/cpplab.dir/domain/Car.cpp.o	d73c20575b3dde24
+208	262	1712036434896926986	cpplab	a1be7ce457c684b0
+1	19	1711988279310856231	CMakeFiles/cpplab.dir/repository/CarRepository.cpp.o	901c58ccf9cb2746
+1	22	1712036387868997995	CMakeFiles/cpplab.dir/test/tests.cpp.o	422d842753d46e07
+1	20	1711988279310856231	CMakeFiles/cpplab.dir/controller/CarController.cpp.o	f64f0461c4903bc8
+3	292	1711990613207215458	CMakeFiles/cpplab.dir/test/CarValidatorsTests.cpp.o	fdc99d9ae2d5efdf
+1	274	1711988279566859900	CMakeFiles/cpplab.dir/main.cpp.o	6cc07e70f760be39
+2	21	1711988279314856288	CMakeFiles/cpplab.dir/ui/UI.cpp.o	a0932623264312db
+0	208	1712036434840927070	CMakeFiles/cpplab.dir/test/CarTests.cpp.o	40f95e3095ad0050

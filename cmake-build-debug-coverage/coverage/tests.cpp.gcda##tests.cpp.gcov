@@ -1,0 +1,116 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/test/tests.cpp
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/tests.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "tests.h"
+        -:    2:#include "CarValidatorsTests.h"
+        -:    3:#include "CarTests.h"
+        -:    4:#include "CarRepositoryTests.h"
+        -:    5:#include "CarControllerTests.h"
+        -:    6:
+function _Z11runAllTestsv called 1 returned 100% blocks executed 100%
+        1:    7:void runAllTests() {
+        -:    8:    // car validators tests
+        -:    9:    CarValidatorsTests carValidatorsTests = CarValidatorsTests();
+        1:   10:    carValidatorsTests.testValidateRegistrationNumber();
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:    carValidatorsTests.testValidateType();
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12:    carValidatorsTests.testValidateModel();
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13:    carValidatorsTests.testValidateProducer();
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   14:
+        -:   15:    // car constructor, setters and getters tests
+        -:   16:    CarTests carTests = CarTests();
+        1:   17:    carTests.testConstructor();
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18:    carTests.testGetters();
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19:    carTests.testSetters();
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20:    carTests.testEquality();
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   21:
+        -:   22:    // car repository tests
+        -:   23:    CarRepositoryTests carRepositoryTests = CarRepositoryTests();
+        1:   24:    carRepositoryTests.testAddNewCar();
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25:    carRepositoryTests.testDeleteCarByRegistrationNumber();
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26:    carRepositoryTests.testGetCarByRegistrationNumber();
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27:    carRepositoryTests.testUpdateCarByRegistrationNumber();
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28:    carRepositoryTests.testGetAllCars();
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   29:
+        -:   30:    // car controller tests
+        -:   31:    CarControllerTests carControllerTests = CarControllerTests();
+        1:   32:    carControllerTests.testAddCar();
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33:    carControllerTests.testFindCarByRegistrationNumber();
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34:    carControllerTests.testGetAllCars();
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35:    carControllerTests.testUpdateCarByRegistrationNumber();
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36:    carControllerTests.testDeleteCarByRegistrationNumber();
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37:}
+        1:   37-block  0
+        -:   38:
