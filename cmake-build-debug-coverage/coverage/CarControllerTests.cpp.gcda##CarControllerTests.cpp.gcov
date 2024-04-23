@@ -12,7 +12,10 @@ function _ZN18CarControllerTests14testGetAllCarsEv called 1 returned 100% blocks
         1:    7:    CarRepository carRepository = CarRepository();
         1:    7-block  0
 call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         1:    8:    CarController carController = CarController(carRepository);
+        1:    8-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
@@ -211,13 +214,17 @@ call   34 never executed
     $$$$$:   12-block 20
         -:   13:
         -:   14:    // Act
-        1:   15:    std::vector<Car> actual = carController.getAllCars();
+        1:   15:    DynamicArray<Car> actual = carController.getAllCars();
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
+        1:   15-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
         -:   16:
         -:   17:    // Assert
-       1*:   18:    assert(car1.compareCars(actual[0]));
+       1*:   18:    assert(car1.compareCars(actual.get(0)));
         1:   18-block  0
 call    0 returned 1
 call    1 returned 1
@@ -237,7 +244,7 @@ call   10 returned 1
     $$$$$:   18-block  5
 call   11 never executed
     $$$$$:   18-block  6
-       1*:   19:    assert(car2.compareCars(actual[1]));
+       1*:   19:    assert(car2.compareCars(actual.get(1)));
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
@@ -279,7 +286,10 @@ function _ZN18CarControllerTests31testFindCarByRegistrationNumberEv called 1 ret
         1:   24:    CarRepository carRepository = CarRepository();
         1:   24-block  0
 call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         1:   25:    CarController carController = CarController(carRepository);
+        1:   25-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
@@ -598,7 +608,10 @@ function _ZN18CarControllerTests10testAddCarEv called 1 returned 100% blocks exe
         1:   48:    CarRepository carRepository = CarRepository();
         1:   48-block  0
 call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         1:   49:    CarController carController = CarController(carRepository);
+        1:   49-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
@@ -822,7 +835,10 @@ function _ZN18CarControllerTests33testUpdateCarByRegistrationNumberEv called 1 r
         1:   68:    CarRepository carRepository = CarRepository();
         1:   68-block  0
 call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         1:   69:    CarController carController = CarController(carRepository);
+        1:   69-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
@@ -1416,7 +1432,10 @@ function _ZN18CarControllerTests33testDeleteCarByRegistrationNumberEv called 1 r
         1:  105:    CarRepository carRepository = CarRepository();
         1:  105-block  0
 call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         1:  106:    CarController carController = CarController(carRepository);
+        1:  106-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)

@@ -1,5 +1,7 @@
 #include <iostream>
 #include "UI.h"
+#include "../misc/Filters.h"
+#include "../misc/SortingFunctions.h"
 
 using std::string;
 using std::cout;
@@ -23,7 +25,12 @@ void UI::runApp() {
                 "  3. Update a car. \n"
                 "  4. Display all the cars.\n"
                 "  5. Find a car by registration number.\n"
-                "  6. Exit the application.\n";
+                "  6. Filter cars by producer.\n"
+                "  7. Filter cars by type.\n"
+                "  8. Sort cars by registration number.\n"
+                "  9. Sort cars by type.\n"
+                "  10. Sort cars by producer and model.\n"
+                "  11. Exit the application.\n";
         try {
             cin >> option;
         } catch (...) {
@@ -36,6 +43,7 @@ void UI::runApp() {
         string type;
         string model;
         string producer;
+        string producerToFilterBy;
 
 
         switch (option) {
@@ -62,7 +70,7 @@ void UI::runApp() {
                 }
                 break;
             case 2:
-                if (this->carController.getAllCars().empty()) {
+                if (this->carController.getAllCars().size() == 0) {
                     cout << "There are no cars to delete" << endl;
                     break;
                 }
@@ -77,7 +85,7 @@ void UI::runApp() {
                 }
                 break;
             case 3:
-                if (this->carController.getAllCars().empty()) {
+                if (this->carController.getAllCars().size() == 0) {
                     cout << "There are no cars to update." <<endl;
                     break;
                 }
@@ -108,14 +116,14 @@ void UI::runApp() {
 
                 break;
             case 4:
-                if (carController.getAllCars().empty()) {
+                if (carController.getAllCars().size() == 0) {
                     cout << "There are no cars to display" << endl;
                 } else {
                     UI::displayCars(carController.getAllCars());
                 }
                 break;
             case 5:
-                if (this->carController.getAllCars().empty()) {
+                if (this->carController.getAllCars().size() == 0) {
                     cout << "There are no cars." << endl;
                     break;
                 }
@@ -123,15 +131,98 @@ void UI::runApp() {
                 cin >> registrationNumber;
                 try {
                     Car foundCar = this->carController.findCarByRegistrationNumber(registrationNumber);
-                    std::vector<Car> displayCar;
-                    displayCar.push_back(foundCar);
+                    DynamicArray<Car> displayCar;
+                    displayCar.add(foundCar);
                     UI::displayCars(displayCar);
                 } catch (...) {
                     cout << "There is no car with the input registration number" << endl;
                 }
-
                 break;
             case 6:
+                if (this->carController.getAllCars().size() == 0) {
+                    cout << "There are no cars to filter." << endl;
+                    break;
+                }
+
+                cout << "Input the producer of the car." << endl;
+                cin >> producer;
+
+                {
+                    DynamicArray<Car> filteredCars = carController.filter(producer, filterByProducer);
+                    if (filteredCars.size() == 0) {
+                        cout << "There are no cars with the input producer." << endl;
+                    } else {
+                        displayCars(filteredCars);
+                    }
+                }
+                break;
+            case 7:
+                if (this->carController.getAllCars().size() == 0) {
+                    cout << "There are no cars to filter." << endl;
+                    break;
+                }
+
+                cout << "Input the type of the car." << endl;
+                cin >> type;
+
+                {
+                    DynamicArray<Car> filteredCars = carController.filter(type, filterByType);
+                    if (filteredCars.size() == 0) {
+                        cout << "There are no cars with the input type." << endl;
+                    } else {
+                        displayCars(filteredCars);
+                    }
+                }
+                break;
+            case 8:
+                if (this->carController.getAllCars().size() == 0) {
+                    cout << "There are no cars to sort." << endl;
+                    break;
+                }
+                cout << "Input sorting order: ASC / DESC." <<endl;
+                {
+                    string ordering;
+                    cin >> ordering;
+                    if (ordering != "ASC" && ordering != "DESC") {
+                        cout << "Invalid sorting order." << endl;
+                        break;
+                    }
+                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByRegistrationNumber));
+                }
+                break;
+            case 9:
+                if (this->carController.getAllCars().size() == 0) {
+                    cout << "There are no cars to sort." << endl;
+                    break;
+                }
+                cout << "Input sorting order: ASC / DESC." <<endl;
+                {
+                    string ordering;
+                    cin >> ordering;
+                    if (ordering != "ASC" && ordering != "DESC") {
+                        cout << "Invalid sorting order." << endl;
+                        break;
+                    }
+                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByType));
+                }
+                break;
+            case 10:
+                if (this->carController.getAllCars().size() == 0) {
+                    cout << "There are no cars to sort." << endl;
+                    break;
+                }
+                cout << "Input sorting order: ASC / DESC." <<endl;
+                {
+                    string ordering;
+                    cin >> ordering;
+                    if (ordering != "ASC" && ordering != "DESC") {
+                        cout << "Invalid sorting order." << endl;
+                        break;
+                    }
+                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByProducerAndModel));
+                }
+                break;
+            case 11:
                 running = false;
                 cout << "Thank you for using this application." << endl;
                 break;
@@ -143,18 +234,18 @@ void UI::runApp() {
     }
 }
 
-void UI::displayCars(const std::vector<Car>& cars) {
-    printf("+------------------------+--------------+--------------+--------------+\n");
-    printf("|  %-20s  |  %-10s  |  %-10s  |  %-10s  |\n", "Registration Number", "Type", "Model", "Producer");
-    printf("+------------------------+--------------+--------------+--------------+\n");
+void UI::displayCars(const DynamicArray<Car>& cars) {
+    printf("+------------------------+-------------------+-------------------+-------------------+\n");
+    printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", "Registration Number", "Type", "Model", "Producer");
+    printf("+------------------------+-------------------+-------------------+-------------------+\n");
 
-    for (Car car: cars) {
-        printf("|  %-20s  |  %-10s  |  %-10s  |  %-10s  |\n", car.getRegistrationNumber().c_str(), car.getType().c_str(), car.getModel().c_str(), car.getProducer().c_str());
-        printf("+------------------------+--------------+--------------+--------------+\n");
+    for (auto& car: cars) {
+        printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", car.getRegistrationNumber().c_str(), car.getType().c_str(), car.getModel().c_str(), car.getProducer().c_str());
+        printf("+------------------------+-------------------+-------------------+-------------------+\n");
     }
-    if (cars.empty()) {
-        printf("|  %-20s  |  %-10s  |  %-10s  |  %-10s  |\n", " ", " ", " ", " ");
-        printf("+------------------------+--------------+--------------+--------------+\n");
+    if (cars.size() == 0) {
+        printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", " ", " ", " ", " ");
+        printf("+------------------------+-------------------+-------------------+-------------------+\n");
 
     }
 }

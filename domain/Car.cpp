@@ -83,3 +83,6 @@ Car::Car(const Car &car) {
 
     printf("Constructor\n");
 }
+
+Car::Car() {
+}

@@ -3,6 +3,11 @@
 #include "CarTests.h"
 #include "CarRepositoryTests.h"
 #include "CarControllerTests.h"
+#include "../misc/DynamicArray.h"
+#include "FiltersTests.h"
+#include "SortingFunctionsTests.h"
+
+void testAll();
 
 void runAllTests() {
     // car validators tests
@@ -34,5 +39,21 @@ void runAllTests() {
     carControllerTests.testGetAllCars();
     carControllerTests.testUpdateCarByRegistrationNumber();
     carControllerTests.testDeleteCarByRegistrationNumber();
+
+    // Filters tests
+    FiltersTests filtersTests = FiltersTests();
+    filtersTests.testFilterByProducer();
+    filtersTests.testFilterByType();
+
+    // SortingFunctions tests
+    SortingFunctionsTests sortingFunctionsTests = SortingFunctionsTests();
+    sortingFunctionsTests.testCompareTypes();
+    sortingFunctionsTests.testCompareRegistrationNumbers();
+    sortingFunctionsTests.testCompareProducersAndModels();
+    sortingFunctionsTests.testSortCarsByType();
+    sortingFunctionsTests.testSortCarsByRegistrationNumber();
+    sortingFunctionsTests.testSortCarsByProducerAndModel();
 }
+
+
 

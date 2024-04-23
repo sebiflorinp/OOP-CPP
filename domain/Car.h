@@ -14,6 +14,12 @@ class Car {
 
     public:
         /*
+         * Default constructor.
+         * Preconditions: -
+         * Post-conditions: -
+         */
+        Car();
+        /*
          * The constructor of the Car class.
          * Preconditions: registrationNumber: a non-empty string
          *                producer: a non-empty string

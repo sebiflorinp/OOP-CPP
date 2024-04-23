@@ -29,7 +29,7 @@ class CarController {
          * Preconditions: -
          * Post-conditions: a vector with instances of the Car class
          */
-        const std::vector<Car>& getAllCars();
+        const DynamicArray<Car>& getAllCars();
 
         /*
          * Adds a new Car in the repository.
@@ -64,9 +64,11 @@ class CarController {
          * Filters the instances of the Car class depending on the received string and function
          * Preconditions: toEqual: a string
          *                a function that takes a Car and a  string and return a bool
-         *  Post-conditions: a vector with instance of the car object
+         * Post-conditions: a vector with instance of the car object
          */
-        //std::vector<Car> filter(const std::string& toEqual, [](Car carsToFilter, const std::string& producerToCheck) -> bool)
+        DynamicArray<Car> filter(std::string toEqual, DynamicArray<Car> (*filterByCriteria)(const DynamicArray<Car>&, const std::string&));
+
+        DynamicArray<Car> sort(const DynamicArray<Car>& cars, const std::string& sortingOrder, DynamicArray<Car> (*sortByCriteria)(DynamicArray<Car>,const std::string&));
 };
 
 #endif //CPPLAB_CARCONTROLLER_H

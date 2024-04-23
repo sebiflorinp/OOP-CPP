@@ -11,7 +11,7 @@ Car CarRepository::getCarByRegistrationNumber(const std::string& registrationNum
     throw std::exception();
 }
 
-const std::vector<Car>& CarRepository::getAllCars() {
+const DynamicArray<Car>& CarRepository::getAllCars() const {
     return cars;
 }
 
@@ -25,15 +25,15 @@ void CarRepository::addNewCar(Car newCar) {
     }
 
     // add the new car
-    cars.push_back(newCar);
+    cars.add(newCar);
 }
 
 void CarRepository::deleteCarByRegistrationNumber(const std::string& registrationNumber) {
     // find the car that needs to be deleted
     for (int i = 0; i < cars.size(); i++) {
-        if (cars[i].getRegistrationNumber() == registrationNumber) {
+        if (cars.get(i).getRegistrationNumber() == registrationNumber) {
             // delete the car
-            cars.erase(cars.begin() + i);
+            cars.erase(i);
             return;
         }
     }

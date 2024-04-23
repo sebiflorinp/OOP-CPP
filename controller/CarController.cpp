@@ -1,5 +1,7 @@
 #include "CarController.h"
 
+#include <utility>
+
 CarController::CarController(const CarRepository& carRepository) {
     this->carRepository = carRepository;
 }
@@ -20,7 +22,7 @@ Car CarController::findCarByRegistrationNumber(const std::string& registrationNu
     return this->carRepository.getCarByRegistrationNumber(registrationNumber);
 }
 
-const std::vector<Car>& CarController::getAllCars() {
+const DynamicArray<Car>& CarController::getAllCars() {
     return this->carRepository.getAllCars();
 }
 
@@ -36,5 +38,13 @@ void CarController::updateCarByRegistrationNumber(const std::string& registratio
     this->carRepository.updateCarByRegistrationNumber(registrationNumber, updatedCar);
 }
 
+DynamicArray<Car> CarController::filter(std::string toEqual,DynamicArray<Car> (*filterByCriteria)(const DynamicArray<Car>&,const std::string&)) {
+    return filterByCriteria(carRepository.getAllCars(), toEqual);
+}
+
+DynamicArray<Car>
+CarController::sort(const DynamicArray<Car> & cars, const std::string& sortingOrder, DynamicArray<Car> (*sortByCriteria)(DynamicArray<Car>, const std::string&)) {
+    return sortByCriteria(cars, sortingOrder);
+}
 
 

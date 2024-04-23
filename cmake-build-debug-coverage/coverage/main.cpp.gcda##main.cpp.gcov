@@ -6,49 +6,285 @@
         -:    2:#include "test/tests.h"
         -:    3:#include "controller/CarController.h"
         -:    4:#include "ui/UI.h"
-        -:    5:
-function main called 1 returned 100% blocks executed 65%
-        1:    6:int main() {
-        -:    7:    // Create repository
-        1:    8:    CarRepository carRepository = CarRepository();
-        1:    8-block  0
-call    0 returned 1
-        -:    9:
-        -:   10:    // Create Controller
-        1:   11:    CarController carController = CarController(carRepository);
+        -:    5:#include "misc/DynamicArray.h"
+        -:    6:
+function main called 1 returned 100% blocks executed 44%
+        1:    7:int main() {
+        -:    8:
+        -:    9:    // Create repository
+        1:   10:    CarRepository carRepository = CarRepository();
+        1:   10-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   12:
-        -:   13:    // Create UI
-        1:   14:    UI ui = UI(carController);
-        1:   14-block  0
+        -:   11:
+        -:   12:    // Create Controller
+        1:   13:    CarController carController = CarController(carRepository);
+        1:   13-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   15:
-        -:   16:    // run tests
-        1:   17:    runAllTests();
+        -:   14:
+        -:   15:    // Add some cars for testing purposes
+        1:   16:    carController.addNewCar("RO123AA", "Regular", "12AA", "Dacia");
+        1:   16-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   16-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   16-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   16-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   16-block  4
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   16-block  5
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+    $$$$$:   16-block  6
+call   27 never executed
+    $$$$$:   16-block  7
+    $$$$$:   16-block  8
+call   28 never executed
+    $$$$$:   16-block  9
+    $$$$$:   16-block 10
+call   29 never executed
+    $$$$$:   16-block 11
+    $$$$$:   16-block 12
+call   30 never executed
+    $$$$$:   16-block 13
+    $$$$$:   16-block 14
+call   31 never executed
+    $$$$$:   16-block 15
+    $$$$$:   16-block 16
+call   32 never executed
+    $$$$$:   16-block 17
+    $$$$$:   16-block 18
+call   33 never executed
+    $$$$$:   16-block 19
+    $$$$$:   16-block 20
+call   34 never executed
+    $$$$$:   16-block 21
+        1:   17:    carController.addNewCar("EN123RR", "Regular", "23AA", "Dacia");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
         1:   17-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   17-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   17-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   17-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   17-block  4
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+    $$$$$:   17-block  5
+call   27 never executed
+    $$$$$:   17-block  6
+    $$$$$:   17-block  7
+call   28 never executed
+    $$$$$:   17-block  8
+    $$$$$:   17-block  9
+call   29 never executed
+    $$$$$:   17-block 10
+    $$$$$:   17-block 11
+call   30 never executed
+    $$$$$:   17-block 12
+    $$$$$:   17-block 13
+call   31 never executed
+    $$$$$:   17-block 14
+    $$$$$:   17-block 15
+call   32 never executed
+    $$$$$:   17-block 16
+    $$$$$:   17-block 17
+call   33 never executed
+    $$$$$:   17-block 18
+    $$$$$:   17-block 19
+call   34 never executed
+    $$$$$:   17-block 20
+        1:   18:    carController.addNewCar("DE123VV", "Sports", "66FF", "Mercedes");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   18-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   18-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   18-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   18-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   18-block  4
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+    $$$$$:   18-block  5
+call   27 never executed
+    $$$$$:   18-block  6
+    $$$$$:   18-block  7
+call   28 never executed
+    $$$$$:   18-block  8
+    $$$$$:   18-block  9
+call   29 never executed
+    $$$$$:   18-block 10
+    $$$$$:   18-block 11
+call   30 never executed
+    $$$$$:   18-block 12
+    $$$$$:   18-block 13
+call   31 never executed
+    $$$$$:   18-block 14
+    $$$$$:   18-block 15
+call   32 never executed
+    $$$$$:   18-block 16
+    $$$$$:   18-block 17
+call   33 never executed
+    $$$$$:   18-block 18
+    $$$$$:   18-block 19
+call   34 never executed
+    $$$$$:   18-block 20
+        1:   19:    carController.addNewCar("RO444WW", "Sports", "11DD", "Dacia");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   19-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   19-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   19-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   19-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   19-block  4
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+    $$$$$:   19-block  5
+call   27 never executed
+    $$$$$:   19-block  6
+    $$$$$:   19-block  7
+call   28 never executed
+    $$$$$:   19-block  8
+    $$$$$:   19-block  9
+call   29 never executed
+    $$$$$:   19-block 10
+    $$$$$:   19-block 11
+call   30 never executed
+    $$$$$:   19-block 12
+    $$$$$:   19-block 13
+call   31 never executed
+    $$$$$:   19-block 14
+    $$$$$:   19-block 15
+call   32 never executed
+    $$$$$:   19-block 16
+    $$$$$:   19-block 17
+call   33 never executed
+    $$$$$:   19-block 18
+    $$$$$:   19-block 19
+call   34 never executed
+    $$$$$:   19-block 20
+        -:   20:
+        -:   21:    // Create UI
+        1:   22:    UI ui = UI(carController);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   18:
-        -:   19:    // run app
-        1:   20:    ui.runApp();
-        1:   20-block  0
+        -:   23:
+        -:   24:    // run tests
+        1:   25:    runAllTests();
+        1:   25-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   21:    return 0;
-        1:   22:}
-        1:   22-block  0
+        -:   26:
+        -:   27:    // run app
+        1:   28:    ui.runApp();
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   29:
+        1:   30:    return 0;
+        1:   31:}
+        1:   31-block  0
 call    0 returned 1
 call    1 returned 1
 call    2 returned 1
-    $$$$$:   22-block  1
+    $$$$$:   31-block  1
 call    3 never executed
-    $$$$$:   22-block  2
+    $$$$$:   31-block  2
 call    4 never executed
-    $$$$$:   22-block  3
+    $$$$$:   31-block  3
 call    5 never executed

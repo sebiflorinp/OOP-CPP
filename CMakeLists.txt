@@ -23,4 +23,13 @@ add_executable(cpplab main.cpp
         test/CarRepositoryTests.cpp
         test/CarRepositoryTests.h
         test/CarControllerTests.cpp
-        test/CarControllerTests.h)
+        test/CarControllerTests.h
+        misc/DynamicArray.h
+        misc/Filters.cpp
+        misc/Filters.h
+        misc/SortingFunctions.cpp
+        misc/SortingFunctions.h
+        test/FiltersTests.cpp
+        test/FiltersTests.h
+        test/SortingFunctionsTests.cpp
+        test/SortingFunctionsTests.h)

@@ -12,11 +12,11 @@ void CarControllerTests::testGetAllCars() {
     carController.addNewCar("RO456CD", "BBB", "BBB", "BBB");
 
     // Act
-    std::vector<Car> actual = carController.getAllCars();
+    DynamicArray<Car> actual = carController.getAllCars();
 
     // Assert
-    assert(car1.compareCars(actual[0]));
-    assert(car2.compareCars(actual[1]));
+    assert(car1.compareCars(actual.get(0)));
+    assert(car2.compareCars(actual.get(1)));
 }
 
 void CarControllerTests::testFindCarByRegistrationNumber() {

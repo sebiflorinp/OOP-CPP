@@ -3,10 +3,11 @@
 
 #include <vector>
 #include "../domain/Car.h"
+#include "../misc/DynamicArray.h"
 
 class CarRepository {
     private:
-        std::vector<Car> cars;
+        DynamicArray<Car> cars;
 
     public:
         /*
@@ -22,7 +23,7 @@ class CarRepository {
          * Preconditions: -
          * Post-conditions: a vector with instances of the Car class
          */
-        const std::vector<Car>& getAllCars();
+        const DynamicArray<Car>& getAllCars() const;
 
         /*
          * Adds the received Car instance in the repository.

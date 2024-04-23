@@ -62,11 +62,11 @@ void CarRepositoryTests::testGetAllCars() {
     cars.addNewCar(car2);
 
     // Act
-    std::vector<Car> returnedCars = cars.getAllCars();
+    DynamicArray<Car> returnedCars = cars.getAllCars();
 
     // Assert
-    assert(car1.compareCars(returnedCars[0]));
-    assert(car2.compareCars(returnedCars[1]));
+    assert(car1.compareCars(returnedCars.get(0)));
+    assert(car2.compareCars(returnedCars.get(1)));
 }
 
 void CarRepositoryTests::testDeleteCarByRegistrationNumber() {
