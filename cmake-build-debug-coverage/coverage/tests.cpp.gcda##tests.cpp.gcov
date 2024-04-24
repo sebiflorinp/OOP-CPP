@@ -116,54 +116,64 @@ branch  2 taken 0 (throw)
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   42:
-        -:   43:    // Filters tests
-        -:   44:    FiltersTests filtersTests = FiltersTests();
-        1:   45:    filtersTests.testFilterByProducer();
-        1:   45-block  0
+        1:   42:    carControllerTests.testFilter();
+        1:   42-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   46:    filtersTests.testFilterByType();
-        1:   46-block  0
+        1:   43:    carControllerTests.testSort();
+        1:   43-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   47:
-        -:   48:    // SortingFunctions tests
-        -:   49:    SortingFunctionsTests sortingFunctionsTests = SortingFunctionsTests();
-        1:   50:    sortingFunctionsTests.testCompareTypes();
-        1:   50-block  0
+        -:   44:
+        -:   45:    // Filters tests
+        -:   46:    FiltersTests filtersTests = FiltersTests();
+        1:   47:    filtersTests.testFilterByProducer();
+        1:   47-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   51:    sortingFunctionsTests.testCompareRegistrationNumbers();
-        1:   51-block  0
+        1:   48:    filtersTests.testFilterByType();
+        1:   48-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   52:    sortingFunctionsTests.testCompareProducersAndModels();
+        -:   49:
+        -:   50:    // SortingFunctions tests
+        -:   51:    SortingFunctionsTests sortingFunctionsTests = SortingFunctionsTests();
+        1:   52:    sortingFunctionsTests.testCompareTypes();
         1:   52-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   53:    sortingFunctionsTests.testSortCarsByType();
+        1:   53:    sortingFunctionsTests.testCompareRegistrationNumbers();
         1:   53-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   54:    sortingFunctionsTests.testSortCarsByRegistrationNumber();
+        1:   54:    sortingFunctionsTests.testCompareProducersAndModels();
         1:   54-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   55:    sortingFunctionsTests.testSortCarsByProducerAndModel();
+        1:   55:    sortingFunctionsTests.testSortCarsByType();
         1:   55-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   56:}
+        1:   56:    sortingFunctionsTests.testSortCarsByRegistrationNumber();
         1:   56-block  0
-        -:   57:
-        -:   58:
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57:    sortingFunctionsTests.testSortCarsByProducerAndModel();
+        1:   57-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58:}
+        1:   58-block  0
         -:   59:
+        -:   60:
+        -:   61:

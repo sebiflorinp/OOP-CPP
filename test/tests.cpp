@@ -39,6 +39,8 @@ void runAllTests() {
     carControllerTests.testGetAllCars();
     carControllerTests.testUpdateCarByRegistrationNumber();
     carControllerTests.testDeleteCarByRegistrationNumber();
+    carControllerTests.testFilter();
+    carControllerTests.testSort();
 
     // Filters tests
     FiltersTests filtersTests = FiltersTests();

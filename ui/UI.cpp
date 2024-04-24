@@ -111,7 +111,7 @@ void UI::runApp() {
                             model, producer);
                     cout << "The car was updated successfully." << endl;
                 } catch (...) {
-                    cout << "The update could not pe performed." << endl;
+                    cout << "The update could not be performed." << endl;
                 }
 
                 break;

@@ -194,20 +194,20 @@ call    0 returned 2
         -:  183:}
         -:  184:
         -:  185:template<typename Element>
-function _ZN12DynamicArrayI3CarE3addERKS0_ called 41 returned 100% blocks executed 100%
-       41:  186:void DynamicArray<Element>::add(const Element& newElement) {
-       41:  187:	ensureCapacity();
-       41:  187-block  0
-call    0 returned 41
-       41:  188:	elements[length++] = newElement;
-call    0 returned 41
-       41:  189:}
+function _ZN12DynamicArrayI3CarE3addERKS0_ called 47 returned 100% blocks executed 100%
+       47:  186:void DynamicArray<Element>::add(const Element& newElement) {
+       47:  187:	ensureCapacity();
+       47:  187-block  0
+call    0 returned 47
+       47:  188:	elements[length++] = newElement;
+call    0 returned 47
+       47:  189:}
         -:  190:
         -:  191:template<typename Element>
-function _ZNK12DynamicArrayI3CarE3getEi called 40 returned 100% blocks executed 100%
-       40:  192:Element& DynamicArray<Element>::get(int position) const {
-       40:  193:	return elements[position];
-       40:  193-block  0
+function _ZNK12DynamicArrayI3CarE3getEi called 56 returned 100% blocks executed 100%
+       56:  192:Element& DynamicArray<Element>::get(int position) const {
+       56:  193:	return elements[position];
+       56:  193-block  0
         -:  194:}
         -:  195:
         -:  196:template<typename Element>
@@ -216,42 +216,42 @@ function _ZNK12DynamicArrayI3CarE3getEi called 40 returned 100% blocks executed 
         -:  199:}
         -:  200:
         -:  201:template<typename Element>
-function _ZNK12DynamicArrayI3CarE4sizeEv called 26 returned 100% blocks executed 100%
-       26:  202:int DynamicArray<Element>::size() const noexcept {
-       26:  203:	return length;
-       26:  203-block  0
+function _ZNK12DynamicArrayI3CarE4sizeEv called 35 returned 100% blocks executed 100%
+       35:  202:int DynamicArray<Element>::size() const noexcept {
+       35:  203:	return length;
+       35:  203-block  0
         -:  204:}
         -:  205:
         -:  206:template<typename Element>
-function _ZN12DynamicArrayI3CarE14ensureCapacityEv called 41 returned 100% blocks executed 68%
-       41:  207:void DynamicArray<Element>::ensureCapacity() {
+function _ZN12DynamicArrayI3CarE14ensureCapacityEv called 47 returned 100% blocks executed 68%
+       47:  207:void DynamicArray<Element>::ensureCapacity() {
         -:  208:	// Check if there is enough space for a new element
-       41:  209:	if (length < capacity) {
-       41:  209-block  0
-branch  0 taken 37 (fallthrough)
-branch  1 taken 4
-       37:  210:		return;
-       37:  210-block  0
+       47:  209:	if (length < capacity) {
+       47:  209-block  0
+branch  0 taken 42 (fallthrough)
+branch  1 taken 5
+       42:  210:		return;
+       42:  210-block  0
         -:  211:	}
         -:  212:
         -:  213:	// increase the space if it isn't the case
-        4:  214:	capacity *= 2;
-      20*:  215:	Element* aux = new Element[capacity];
-        4:  215-block  0
-branch  0 taken 4 (fallthrough)
+        5:  214:	capacity *= 2;
+      25*:  215:	Element* aux = new Element[capacity];
+        5:  215-block  0
+branch  0 taken 5 (fallthrough)
 branch  1 taken 0
-        4:  215-block  1
+        5:  215-block  1
     %%%%%:  215-block  2
-        4:  215-block  3
-call    2 returned 4
-       16:  215-block  4
-call    3 returned 16
-branch  4 taken 16 (fallthrough)
+        5:  215-block  3
+call    2 returned 5
+       20:  215-block  4
+call    3 returned 20
+branch  4 taken 20 (fallthrough)
 branch  5 taken 0 (throw)
-       16:  215-block  5
-       20:  215-block  6
-branch  6 taken 16
-branch  7 taken 4 (fallthrough)
+       20:  215-block  5
+       25:  215-block  6
+branch  6 taken 20
+branch  7 taken 5 (fallthrough)
     $$$$$:  215-block  7
     $$$$$:  215-block  8
 call    8 never executed
@@ -262,47 +262,47 @@ branch 10 never executed
     $$$$$:  215-block 11
     $$$$$:  215-block 12
 call   11 never executed
-       12:  216:	for (int i = 0; i < length; i++) {
-        4:  216-block  0
-       12:  216-block  1
-branch  0 taken 8
-branch  1 taken 4 (fallthrough)
-        8:  217:		aux[i] = elements[i];
-        8:  217-block  0
-call    0 returned 8
+       15:  216:	for (int i = 0; i < length; i++) {
+        5:  216-block  0
+       15:  216-block  1
+branch  0 taken 10
+branch  1 taken 5 (fallthrough)
+       10:  217:		aux[i] = elements[i];
+       10:  217-block  0
+call    0 returned 10
         -:  218:	}
-       12:  219:	delete[] elements;
-        4:  219-block  0
-branch  0 taken 4 (fallthrough)
+       15:  219:	delete[] elements;
+        5:  219-block  0
+branch  0 taken 5 (fallthrough)
 branch  1 taken 0
-        4:  219-block  1
-       12:  219-block  2
-branch  2 taken 8 (fallthrough)
-branch  3 taken 4
-        8:  219-block  3
-call    4 returned 8
-        4:  219-block  4
-call    5 returned 4
-        4:  220:	elements = aux;
-        4:  220-block  0
+        5:  219-block  1
+       15:  219-block  2
+branch  2 taken 10 (fallthrough)
+branch  3 taken 5
+       10:  219-block  3
+call    4 returned 10
+        5:  219-block  4
+call    5 returned 5
+        5:  220:	elements = aux;
+        5:  220-block  0
         -:  221:}
         -:  222:
         -:  223:template<typename Element>
-function _ZNK12DynamicArrayI3CarE5beginEv called 55 returned 100% blocks executed 100%
-       55:  224:DynamicArrayIterator<Element> DynamicArray<Element>::begin() const
+function _ZNK12DynamicArrayI3CarE5beginEv called 61 returned 100% blocks executed 100%
+       61:  224:DynamicArrayIterator<Element> DynamicArray<Element>::begin() const
         -:  225:{
-       55:  226:	return DynamicArrayIterator<Element>(*this);
-       55:  226-block  0
-call    0 returned 55
+       61:  226:	return DynamicArrayIterator<Element>(*this);
+       61:  226-block  0
+call    0 returned 61
         -:  227:}
         -:  228:
         -:  229:template<typename Element>
-function _ZNK12DynamicArrayI3CarE3endEv called 55 returned 100% blocks executed 100%
-       55:  230:DynamicArrayIterator<Element> DynamicArray<Element>::end() const
+function _ZNK12DynamicArrayI3CarE3endEv called 61 returned 100% blocks executed 100%
+       61:  230:DynamicArrayIterator<Element> DynamicArray<Element>::end() const
         -:  231:{
-       55:  232:	return DynamicArrayIterator<Element>(*this, length);
-       55:  232-block  0
-call    0 returned 55
+       61:  232:	return DynamicArrayIterator<Element>(*this, length);
+       61:  232-block  0
+call    0 returned 61
         -:  233:}
         -:  234:
         -:  235:template<typename Element>
@@ -377,13 +377,13 @@ call    0 returned 55
         -:  304:};
         -:  305:
         -:  306:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_E called 55 returned 100% blocks executed 100%
-       55:  307:DynamicArrayIterator<Element>::DynamicArrayIterator(const DynamicArray<Element>& v) noexcept:array{ v } {}
+function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_E called 61 returned 100% blocks executed 100%
+       61:  307:DynamicArrayIterator<Element>::DynamicArrayIterator(const DynamicArray<Element>& v) noexcept:array{ v } {}
         -:  308:
         -:  309:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_Ei called 55 returned 100% blocks executed 100%
-       55:  310:DynamicArrayIterator<Element>::DynamicArrayIterator(const DynamicArray<Element>& array, int position)noexcept :
-       55:  311:array{ array }, position{ position } {}
+function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_Ei called 61 returned 100% blocks executed 100%
+       61:  310:DynamicArrayIterator<Element>::DynamicArrayIterator(const DynamicArray<Element>& array, int position)noexcept :
+       61:  311:array{ array }, position{ position } {}
         -:  312:
         -:  313:template<typename Element>
         -:  314:bool DynamicArrayIterator<Element>::valid()const {
@@ -391,48 +391,48 @@ function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_Ei called 55 retu
         -:  316:}
         -:  317:
         -:  318:template<typename Element>
-function _ZNK20DynamicArrayIteratorI3CarE7elementEv called 69 returned 100% blocks executed 100%
-       69:  319:Element& DynamicArrayIterator<Element>::element() const {
-       69:  320:	return array.elements[position];
-       69:  320-block  0
+function _ZNK20DynamicArrayIteratorI3CarE7elementEv called 75 returned 100% blocks executed 100%
+       75:  319:Element& DynamicArrayIterator<Element>::element() const {
+       75:  320:	return array.elements[position];
+       75:  320-block  0
         -:  321:}
         -:  322:
         -:  323:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarE4nextEv called 51 returned 100% blocks executed 100%
-       51:  324:void DynamicArrayIterator<Element>::next() {
-       51:  325:	position++;
-       51:  326:}
+function _ZN20DynamicArrayIteratorI3CarE4nextEv called 57 returned 100% blocks executed 100%
+       57:  324:void DynamicArrayIterator<Element>::next() {
+       57:  325:	position++;
+       57:  326:}
         -:  327:
         -:  328:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEdeEv called 69 returned 100% blocks executed 100%
-       69:  329:Element& DynamicArrayIterator<Element>::operator*() {
-       69:  330:	return element();
-       69:  330-block  0
-call    0 returned 69
+function _ZN20DynamicArrayIteratorI3CarEdeEv called 75 returned 100% blocks executed 100%
+       75:  329:Element& DynamicArrayIterator<Element>::operator*() {
+       75:  330:	return element();
+       75:  330-block  0
+call    0 returned 75
         -:  331:}
         -:  332:
         -:  333:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEppEv called 51 returned 100% blocks executed 100%
-       51:  334:DynamicArrayIterator<Element>& DynamicArrayIterator<Element>::operator++() {
-       51:  335:	next();
-       51:  335-block  0
-call    0 returned 51
-       51:  336:	return *this;
+function _ZN20DynamicArrayIteratorI3CarEppEv called 57 returned 100% blocks executed 100%
+       57:  334:DynamicArrayIterator<Element>& DynamicArrayIterator<Element>::operator++() {
+       57:  335:	next();
+       57:  335-block  0
+call    0 returned 57
+       57:  336:	return *this;
         -:  337:}
         -:  338:
         -:  339:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEeqERKS1_ called 106 returned 100% blocks executed 100%
-      106:  340:bool DynamicArrayIterator<Element>::operator==(const DynamicArrayIterator<Element>& anotherDynamicArrayIterator) noexcept {
-      106:  341:	return position == anotherDynamicArrayIterator.position;
-      106:  341-block  0
+function _ZN20DynamicArrayIteratorI3CarEeqERKS1_ called 118 returned 100% blocks executed 100%
+      118:  340:bool DynamicArrayIterator<Element>::operator==(const DynamicArrayIterator<Element>& anotherDynamicArrayIterator) noexcept {
+      118:  341:	return position == anotherDynamicArrayIterator.position;
+      118:  341-block  0
         -:  342:}
         -:  343:
         -:  344:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEneERKS1_ called 106 returned 100% blocks executed 100%
-      106:  345:bool DynamicArrayIterator<Element>::operator!=(const DynamicArrayIterator<Element>& anotherDynamicArrayIterator)noexcept {
-      106:  346:	return !(*this == anotherDynamicArrayIterator);
-      106:  346-block  0
-call    0 returned 106
+function _ZN20DynamicArrayIteratorI3CarEneERKS1_ called 118 returned 100% blocks executed 100%
+      118:  345:bool DynamicArrayIterator<Element>::operator!=(const DynamicArrayIterator<Element>& anotherDynamicArrayIterator)noexcept {
+      118:  346:	return !(*this == anotherDynamicArrayIterator);
+      118:  346-block  0
+call    0 returned 118
         -:  347:}
         -:  348:
         -:  349:#endif //CPPLAB_DYNAMICARRAY_H

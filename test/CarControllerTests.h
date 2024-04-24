@@ -12,6 +12,10 @@ class CarControllerTests {
         void testUpdateCarByRegistrationNumber();
 
         void testDeleteCarByRegistrationNumber();
+
+        void testFilter();
+
+        void testSort();
 };
 
 #endif //CPPLAB_CARCONTROLLERTESTS_H

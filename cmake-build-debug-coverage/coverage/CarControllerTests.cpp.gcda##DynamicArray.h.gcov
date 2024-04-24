@@ -267,8 +267,10 @@ function _ZNK12DynamicArrayI3CarE3getEi called 0 returned 0% blocks executed 0%
         -:  199:}
         -:  200:
         -:  201:template<typename Element>
-        -:  202:int DynamicArray<Element>::size() const noexcept {
-        -:  203:	return length;
+function _ZNK12DynamicArrayI3CarE4sizeEv called 0 returned 0% blocks executed 0%
+    #####:  202:int DynamicArray<Element>::size() const noexcept {
+    #####:  203:	return length;
+    %%%%%:  203-block  0
         -:  204:}
         -:  205:
         -:  206:template<typename Element>

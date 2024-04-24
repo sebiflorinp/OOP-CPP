@@ -1,6 +1,8 @@
 #include <cassert>
 #include "CarControllerTests.h"
 #include "../controller/CarController.h"
+#include "../misc/Filters.h"
+#include "../misc/SortingFunctions.h"
 
 void CarControllerTests::testGetAllCars() {
     // Arrange
@@ -127,4 +129,43 @@ void CarControllerTests::testDeleteCarByRegistrationNumber() {
     } catch (...) {
         assert(true == true);
     }
+}
+
+void CarControllerTests::testFilter() {
+    // Arrange
+    CarRepository carRepository = CarRepository();
+    CarController carController = CarController(carRepository);
+    Car car1 = Car("RO123AB", "AAA", "AAA", "AAA");
+    Car car2 = Car("RO111BB", "BBB", "BBB", "BBB");
+    Car car3 = Car("EN123BB", "CCC", "CCC", "CCC");
+    carController.addNewCar("RO123AB", "AAA", "AAA", "AAA");
+    carController.addNewCar("RO111BB", "BBB", "BBB", "BBB");
+
+    // Act
+    DynamicArray<Car> actual = carController.filter("AAA", filterByProducer);
+
+    // Assert
+    assert(actual.size() == 1);
+    assert(actual.get(0).getRegistrationNumber() == car1.getRegistrationNumber());
+}
+
+void CarControllerTests::testSort() {
+    // Arrange
+    CarRepository carRepository = CarRepository();
+    CarController carController = CarController(carRepository);
+    Car car1 = Car("RO123AB", "AAA", "AAA", "AAA");
+    Car car2 = Car("RO111BB", "BBB", "BBB", "BBB");
+    Car car3 = Car("EN123BB", "CCC", "CCC", "CCC");
+    carController.addNewCar("RO123AB", "AAA", "AAA", "AAA");
+    carController.addNewCar("RO111BB", "BBB", "BBB", "BBB");
+    carController.addNewCar("EN123BB", "CCC", "CCC", "CCC");
+
+    // Act
+    DynamicArray<Car> actual = carController.sort(carController.getAllCars(), "ASC", sortCarsByRegistrationNumber);
+
+    // Assert
+    assert(actual.get(0).getRegistrationNumber() == car3.getRegistrationNumber());
+    assert(actual.get(1).getRegistrationNumber() == car2.getRegistrationNumber());
+    assert(actual.get(2).getRegistrationNumber() == car1.getRegistrationNumber());
+
 }

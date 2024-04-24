@@ -117,19 +117,19 @@
         -:  113:}
         -:  114:
         -:  115:template<typename Element>
-function _ZN12DynamicArrayI3CarEC2Ev called 24 returned 100% blocks executed 54%
-       72:  116:DynamicArray<Element>::DynamicArray() :elements{ new Element[2] }, capacity{ 2 }, length{ 0 } {}
-       24:  116-block  0
-call    0 returned 24
-       48:  116-block  1
-call    1 returned 48
-branch  2 taken 48 (fallthrough)
+function _ZN12DynamicArrayI3CarEC2Ev called 29 returned 100% blocks executed 54%
+       87:  116:DynamicArray<Element>::DynamicArray() :elements{ new Element[2] }, capacity{ 2 }, length{ 0 } {}
+       29:  116-block  0
+call    0 returned 29
+       58:  116-block  1
+call    1 returned 58
+branch  2 taken 58 (fallthrough)
 branch  3 taken 0 (throw)
-       48:  116-block  2
-       72:  116-block  3
-branch  4 taken 48
-branch  5 taken 24 (fallthrough)
-       24:  116-block  4
+       58:  116-block  2
+       87:  116-block  3
+branch  4 taken 58
+branch  5 taken 29 (fallthrough)
+       29:  116-block  4
     $$$$$:  116-block  5
     $$$$$:  116-block  6
 call    6 never executed
@@ -167,21 +167,21 @@ call    7 never executed
         -:  146:}
         -:  147:
         -:  148:template<typename Element>
-function _ZN12DynamicArrayI3CarED2Ev called 33 returned 100% blocks executed 100%
-       33:  149:DynamicArray<Element>::~DynamicArray() {
-      105:  150:	delete[] elements;
-       33:  150-block  0
-branch  0 taken 30 (fallthrough)
-branch  1 taken 3
-       30:  150-block  1
-      102:  150-block  2
-branch  2 taken 72 (fallthrough)
-branch  3 taken 30
-       72:  150-block  3
-call    4 returned 72
-       30:  150-block  4
-call    5 returned 30
-       33:  151:}
+function _ZN12DynamicArrayI3CarED2Ev called 40 returned 100% blocks executed 100%
+       40:  149:DynamicArray<Element>::~DynamicArray() {
+      128:  150:	delete[] elements;
+       40:  150-block  0
+branch  0 taken 36 (fallthrough)
+branch  1 taken 4
+       36:  150-block  1
+      124:  150-block  2
+branch  2 taken 88 (fallthrough)
+branch  3 taken 36
+       88:  150-block  3
+call    4 returned 88
+       36:  150-block  4
+call    5 returned 36
+       40:  151:}
         -:  152:
         -:  153:template<typename Element>
         -:  154:DynamicArray<Element>::DynamicArray(DynamicArray&& arrayToBeMoved) {

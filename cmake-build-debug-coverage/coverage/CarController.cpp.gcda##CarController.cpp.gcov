@@ -6,48 +6,48 @@
         -:    2:
         -:    3:#include <utility>
         -:    4:
-function _ZN13CarControllerC2ERK13CarRepository called 6 returned 100% blocks executed 80%
-        6:    5:CarController::CarController(const CarRepository& carRepository) {
-        6:    5-block  0
-call    0 returned 6
-        6:    6:    this->carRepository = carRepository;
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
+function _ZN13CarControllerC2ERK13CarRepository called 8 returned 100% blocks executed 80%
+        8:    5:CarController::CarController(const CarRepository& carRepository) {
+        8:    5-block  0
+call    0 returned 8
+        8:    6:    this->carRepository = carRepository;
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
 branch  2 taken 0 (throw)
-        6:    7:}
-        6:    7-block  0
+        8:    7:}
+        8:    7-block  0
     $$$$$:    7-block  1
 call    0 never executed
         -:    8:
-function _ZN13CarController9addNewCarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 14 returned 93% blocks executed 100%
-       14:    9:void CarController::addNewCar(
+function _ZN13CarController9addNewCarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 19 returned 95% blocks executed 100%
+       19:    9:void CarController::addNewCar(
         -:   10:        const std::string& registrationNumber,
         -:   11:        const std::string& type,
         -:   12:        const std::string& model,
         -:   13:        const std::string& producer
         -:   14:        ) {
         -:   15:    // create new car object and try to add it in the repository
-       14:   16:    Car newCar = Car(registrationNumber, producer, model, type);
-       14:   16-block  0
-call    0 returned 14
-branch  1 taken 14 (fallthrough)
+       19:   16:    Car newCar = Car(registrationNumber, producer, model, type);
+       19:   16-block  0
+call    0 returned 19
+branch  1 taken 19 (fallthrough)
 branch  2 taken 0 (throw)
-       15:   17:    carRepository.addNewCar(newCar);
-       14:   17-block  0
-call    0 returned 14
-branch  1 taken 14 (fallthrough)
+       20:   17:    carRepository.addNewCar(newCar);
+       19:   17-block  0
+call    0 returned 19
+branch  1 taken 19 (fallthrough)
 branch  2 taken 0 (throw)
-       14:   17-block  1
-call    3 returned 14
-branch  4 taken 13 (fallthrough)
+       19:   17-block  1
+call    3 returned 19
+branch  4 taken 18 (fallthrough)
 branch  5 taken 1 (throw)
-       13:   17-block  2
-call    6 returned 13
+       18:   17-block  2
+call    6 returned 18
         1:   17-block  3
 call    7 returned 1
         1:   17-block  4
-       14:   18:}
-call    0 returned 13
+       19:   18:}
+call    0 returned 18
         1:   18-block  0
 call    1 returned 1
         -:   19:
@@ -59,11 +59,11 @@ function _ZN13CarController27findCarByRegistrationNumberERKNSt7__cxx1112basic_st
 call    0 returned 6
         -:   23:}
         -:   24:
-function _ZN13CarController10getAllCarsEv called 1 returned 100% blocks executed 100%
-        1:   25:const DynamicArray<Car>& CarController::getAllCars() {
-        1:   26:    return this->carRepository.getAllCars();
-        1:   26-block  0
-call    0 returned 1
+function _ZN13CarController10getAllCarsEv called 2 returned 100% blocks executed 100%
+        2:   25:const DynamicArray<Car>& CarController::getAllCars() {
+        2:   26:    return this->carRepository.getAllCars();
+        2:   26-block  0
+call    0 returned 2
         -:   27:}
         -:   28:
 function _ZN13CarController29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 100%
@@ -102,26 +102,26 @@ call    0 returned 1
         2:   39-block  0
 call    1 returned 2
         -:   40:
-function _ZN13CarController6filterENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPF12DynamicArrayI3CarERKS8_RKS5_E called 0 returned 0% blocks executed 0%
-    #####:   41:DynamicArray<Car> CarController::filter(std::string toEqual,DynamicArray<Car> (*filterByCriteria)(const DynamicArray<Car>&,const std::string&)) {
-    #####:   42:    return filterByCriteria(carRepository.getAllCars(), toEqual);
-    %%%%%:   42-block  0
-call    0 never executed
-call    1 never executed
+function _ZN13CarController6filterENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPF12DynamicArrayI3CarERKS8_RKS5_E called 1 returned 100% blocks executed 100%
+        1:   41:DynamicArray<Car> CarController::filter(std::string toEqual,DynamicArray<Car> (*filterByCriteria)(const DynamicArray<Car>&,const std::string&)) {
+        1:   42:    return filterByCriteria(carRepository.getAllCars(), toEqual);
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
         -:   43:}
         -:   44:
         -:   45:DynamicArray<Car>
-function _ZN13CarController4sortERK12DynamicArrayI3CarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFS2_S2_SC_E called 0 returned 0% blocks executed 0%
-    #####:   46:CarController::sort(const DynamicArray<Car> & cars, const std::string& sortingOrder, DynamicArray<Car> (*sortByCriteria)(DynamicArray<Car>, const std::string&)) {
-    #####:   47:    return sortByCriteria(cars, sortingOrder);
-    %%%%%:   47-block  0
-call    0 never executed
-call    1 never executed
-branch  2 never executed
-branch  3 never executed
-    %%%%%:   47-block  1
-call    4 never executed
-    %%%%%:   47-block  2
+function _ZN13CarController4sortERK12DynamicArrayI3CarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFS2_S2_SC_E called 1 returned 100% blocks executed 75%
+        1:   46:CarController::sort(const DynamicArray<Car> & cars, const std::string& sortingOrder, DynamicArray<Car> (*sortByCriteria)(DynamicArray<Car>, const std::string&)) {
+        1:   47:    return sortByCriteria(cars, sortingOrder);
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   47-block  1
+call    4 returned 1
+        1:   47-block  2
     $$$$$:   47-block  3
 call    5 never executed
         -:   48:}

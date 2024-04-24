@@ -6258,12 +6258,12 @@ call    0 never executed
         -: 6245:   */
         -: 6246:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 6247:    inline bool
-function _ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_ called 27 returned 100% blocks executed 100%
-       27: 6248:    operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+function _ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_ called 30 returned 100% blocks executed 100%
+       30: 6248:    operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 6249:	       const _CharT* __rhs)
-       27: 6250:    { return __lhs.compare(__rhs) == 0; }
-       27: 6250-block  0
-call    0 returned 27
+       30: 6250:    { return __lhs.compare(__rhs) == 0; }
+       30: 6250-block  0
+call    0 returned 30
         -: 6251:
         -: 6252:#if __cpp_lib_three_way_comparison
         -: 6253:  /**

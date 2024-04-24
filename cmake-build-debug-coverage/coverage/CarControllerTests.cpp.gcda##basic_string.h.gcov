@@ -6255,11 +6255,27 @@ call    0 never executed
         -: 6231:  template<typename _CharT>
         -: 6232:    inline
         -: 6233:    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value, bool>::__type
-        -: 6234:    operator==(const basic_string<_CharT>& __lhs,
+function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 0 returned 0% blocks executed 0%
+    #####: 6234:    operator==(const basic_string<_CharT>& __lhs,
         -: 6235:	       const basic_string<_CharT>& __rhs) _GLIBCXX_NOEXCEPT
-        -: 6236:    { return (__lhs.size() == __rhs.size()
-        -: 6237:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
-        -: 6238:						    __lhs.size())); }
+    #####: 6236:    { return (__lhs.size() == __rhs.size()
+    %%%%%: 6236-block  0
+call    0 never executed
+call    1 never executed
+    #####: 6237:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
+branch  0 never executed
+branch  1 never executed
+    %%%%%: 6237-block  0
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%: 6237-block  1
+    %%%%%: 6237-block  2
+    #####: 6238:						    __lhs.size())); }
+    %%%%%: 6238-block  0
         -: 6239:
         -: 6240:  /**
         -: 6241:   *  @brief  Test equivalence of string and C string.

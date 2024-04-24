@@ -155,18 +155,18 @@
         -:  151:}
         -:  152:
         -:  153:template<typename Element>
-function _ZN12DynamicArrayI3CarEC2EOS1_ called 3 returned 100% blocks executed 100%
-        3:  154:DynamicArray<Element>::DynamicArray(DynamicArray&& arrayToBeMoved) {
+function _ZN12DynamicArrayI3CarEC2EOS1_ called 4 returned 100% blocks executed 100%
+        4:  154:DynamicArray<Element>::DynamicArray(DynamicArray&& arrayToBeMoved) {
         -:  155:	// Copy the data from the given array.
-        3:  156:	elements = arrayToBeMoved.elements;
-        3:  157:	length = arrayToBeMoved.length;
-        3:  158:	capacity = arrayToBeMoved.capacity;
+        4:  156:	elements = arrayToBeMoved.elements;
+        4:  157:	length = arrayToBeMoved.length;
+        4:  158:	capacity = arrayToBeMoved.capacity;
         -:  159:
         -:  160:	// Free the given array so the data doesn't get deleted twice.
-        3:  161:	arrayToBeMoved.elements = nullptr;
-        3:  162:	arrayToBeMoved.length = 0;
-        3:  163:	arrayToBeMoved.capacity = 0;
-        3:  164:}
+        4:  161:	arrayToBeMoved.elements = nullptr;
+        4:  162:	arrayToBeMoved.length = 0;
+        4:  163:	arrayToBeMoved.capacity = 0;
+        4:  164:}
         -:  165:
         -:  166:template<typename Element>
         -:  167:DynamicArray<Element>& DynamicArray<Element>::operator=(DynamicArray<Element>&& arrayToBeMoved) {
@@ -201,12 +201,12 @@ function _ZNK12DynamicArrayI3CarE3getEi called 0 returned 0% blocks executed 0%
         -:  194:}
         -:  195:
         -:  196:template<typename Element>
-function _ZN12DynamicArrayI3CarE3setEiRKS0_ called 10 returned 100% blocks executed 100%
-       10:  197:void DynamicArray<Element>::set(int position, const Element& newValue) {
-       10:  198:	elements[position] = newValue;
-       10:  198-block  0
-call    0 returned 10
-       10:  199:}
+function _ZN12DynamicArrayI3CarE3setEiRKS0_ called 16 returned 100% blocks executed 100%
+       16:  197:void DynamicArray<Element>::set(int position, const Element& newValue) {
+       16:  198:	elements[position] = newValue;
+       16:  198-block  0
+call    0 returned 16
+       16:  199:}
         -:  200:
         -:  201:template<typename Element>
 function _ZNK12DynamicArrayI3CarE4sizeEv called 0 returned 0% blocks executed 0%

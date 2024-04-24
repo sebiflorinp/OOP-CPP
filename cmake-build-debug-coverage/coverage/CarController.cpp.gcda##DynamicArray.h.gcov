@@ -137,24 +137,24 @@ call    6 never executed
 call    7 never executed
         -:  117:
         -:  118:template<typename Element>
-function _ZN12DynamicArrayI3CarEC2ERKS1_ called 6 returned 100% blocks executed 57%
-        6:  119:DynamicArray<Element>::DynamicArray(const DynamicArray<Element>& arrayToBeCopied) {
-      22*:  120:	elements = new Element[arrayToBeCopied.capacity];
-        6:  120-block  0
-branch  0 taken 6 (fallthrough)
+function _ZN12DynamicArrayI3CarEC2ERKS1_ called 7 returned 100% blocks executed 57%
+        7:  119:DynamicArray<Element>::DynamicArray(const DynamicArray<Element>& arrayToBeCopied) {
+      27*:  120:	elements = new Element[arrayToBeCopied.capacity];
+        7:  120-block  0
+branch  0 taken 7 (fallthrough)
 branch  1 taken 0
-        6:  120-block  1
+        7:  120-block  1
     %%%%%:  120-block  2
-        6:  120-block  3
-call    2 returned 6
-       16:  120-block  4
-call    3 returned 16
-branch  4 taken 16 (fallthrough)
+        7:  120-block  3
+call    2 returned 7
+       20:  120-block  4
+call    3 returned 20
+branch  4 taken 20 (fallthrough)
 branch  5 taken 0 (throw)
-       16:  120-block  5
-       22:  120-block  6
-branch  6 taken 16
-branch  7 taken 6 (fallthrough)
+       20:  120-block  5
+       27:  120-block  6
+branch  6 taken 20
+branch  7 taken 7 (fallthrough)
     $$$$$:  120-block  7
     $$$$$:  120-block  8
 call    8 never executed
@@ -167,61 +167,61 @@ branch 10 never executed
 call   11 never executed
         -:  121:
         -:  122:    // Copy the elements in the copy.
-       21:  123:	for (int i = 0; i < arrayToBeCopied.length; i++) {
-        6:  123-block  0
-       21:  123-block  1
-branch  0 taken 15
-branch  1 taken 6 (fallthrough)
-       15:  124:		elements[i] = arrayToBeCopied.elements[i];
-       15:  124-block  0
-call    0 returned 15
+       25:  123:	for (int i = 0; i < arrayToBeCopied.length; i++) {
+        7:  123-block  0
+       25:  123-block  1
+branch  0 taken 18
+branch  1 taken 7 (fallthrough)
+       18:  124:		elements[i] = arrayToBeCopied.elements[i];
+       18:  124-block  0
+call    0 returned 18
         -:  125:	}
-        6:  126:	length = arrayToBeCopied.length;
-        6:  127:	capacity = arrayToBeCopied.capacity;
-        6:  128:}
-        6:  128-block  0
+        7:  126:	length = arrayToBeCopied.length;
+        7:  127:	capacity = arrayToBeCopied.capacity;
+        7:  128:}
+        7:  128-block  0
         -:  129:
         -:  130:template<typename Element>
-function _ZN12DynamicArrayI3CarEaSERKS1_ called 7 returned 100% blocks executed 65%
-        7:  131:DynamicArray<Element>& DynamicArray<Element>::operator=(const DynamicArray<Element>& arrayToBeAssigned) {
+function _ZN12DynamicArrayI3CarEaSERKS1_ called 9 returned 100% blocks executed 65%
+        9:  131:DynamicArray<Element>& DynamicArray<Element>::operator=(const DynamicArray<Element>& arrayToBeAssigned) {
         -:  132:    // Check if the given array is the same as the current one
-        7:  133:	if (this == &arrayToBeAssigned) {
-        7:  133-block  0
+        9:  133:	if (this == &arrayToBeAssigned) {
+        9:  133-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 7
+branch  1 taken 9
     #####:  134:		return *this;
     %%%%%:  134-block  0
         -:  135:	}
         -:  136:
         -:  137:    // Create a new array and put the elements of the given on in it.
-       23:  138:	delete[] elements;
-        7:  138-block  0
-branch  0 taken 7 (fallthrough)
+       29:  138:	delete[] elements;
+        9:  138-block  0
+branch  0 taken 9 (fallthrough)
 branch  1 taken 0
-        7:  138-block  1
-       23:  138-block  2
-branch  2 taken 16 (fallthrough)
-branch  3 taken 7
-       16:  138-block  3
-call    4 returned 16
-        7:  138-block  4
-call    5 returned 7
-      23*:  139:	elements = new Element[arrayToBeAssigned.capacity];
-        7:  139-block  0
-branch  0 taken 7 (fallthrough)
+        9:  138-block  1
+       29:  138-block  2
+branch  2 taken 20 (fallthrough)
+branch  3 taken 9
+       20:  138-block  3
+call    4 returned 20
+        9:  138-block  4
+call    5 returned 9
+      29*:  139:	elements = new Element[arrayToBeAssigned.capacity];
+        9:  139-block  0
+branch  0 taken 9 (fallthrough)
 branch  1 taken 0
-        7:  139-block  1
+        9:  139-block  1
     %%%%%:  139-block  2
-        7:  139-block  3
-call    2 returned 7
-       16:  139-block  4
-call    3 returned 16
-branch  4 taken 16 (fallthrough)
+        9:  139-block  3
+call    2 returned 9
+       20:  139-block  4
+call    3 returned 20
+branch  4 taken 20 (fallthrough)
 branch  5 taken 0 (throw)
-       16:  139-block  5
-       23:  139-block  6
-branch  6 taken 16
-branch  7 taken 7 (fallthrough)
+       20:  139-block  5
+       29:  139-block  6
+branch  6 taken 20
+branch  7 taken 9 (fallthrough)
     $$$$$:  139-block  7
     $$$$$:  139-block  8
 call    8 never executed
@@ -232,19 +232,19 @@ branch 10 never executed
     $$$$$:  139-block 11
     $$$$$:  139-block 12
 call   11 never executed
-       11:  140:	for (int i = 0; i < arrayToBeAssigned.length; i++) {
-        7:  140-block  0
-       11:  140-block  1
+       13:  140:	for (int i = 0; i < arrayToBeAssigned.length; i++) {
+        9:  140-block  0
+       13:  140-block  1
 branch  0 taken 4
-branch  1 taken 7 (fallthrough)
+branch  1 taken 9 (fallthrough)
         4:  141:		elements[i] = arrayToBeAssigned.elements[i];
         4:  141-block  0
 call    0 returned 4
         -:  142:	}
-        7:  143:	length = arrayToBeAssigned.length;
-        7:  144:	capacity = arrayToBeAssigned.capacity;
-        7:  145:	return *this;
-        7:  145-block  0
+        9:  143:	length = arrayToBeAssigned.length;
+        9:  144:	capacity = arrayToBeAssigned.capacity;
+        9:  145:	return *this;
+        9:  145-block  0
         -:  146:}
         -:  147:
         -:  148:template<typename Element>

@@ -6364,13 +6364,13 @@ call    0 never executed
         -: 6337:   */
         -: 6338:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 6339:    inline bool
-function _ZStltIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 24 returned 100% blocks executed 100%
-       24: 6340:    operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+function _ZStltIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 27 returned 100% blocks executed 100%
+       27: 6340:    operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 6341:	      const basic_string<_CharT, _Traits, _Alloc>& __rhs)
         -: 6342:    _GLIBCXX_NOEXCEPT
-       24: 6343:    { return __lhs.compare(__rhs) < 0; }
-       24: 6343-block  0
-call    0 returned 24
+       27: 6343:    { return __lhs.compare(__rhs) < 0; }
+       27: 6343-block  0
+call    0 returned 27
         -: 6344:
         -: 6345:  /**
         -: 6346:   *  @brief  Test if string precedes C string.
@@ -6405,13 +6405,13 @@ call    0 returned 24
         -: 6375:   */
         -: 6376:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 6377:    inline bool
-function _ZStgtIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 14 returned 100% blocks executed 100%
-       14: 6378:    operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+function _ZStgtIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 17 returned 100% blocks executed 100%
+       17: 6378:    operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 6379:	      const basic_string<_CharT, _Traits, _Alloc>& __rhs)
         -: 6380:    _GLIBCXX_NOEXCEPT
-       14: 6381:    { return __lhs.compare(__rhs) > 0; }
-       14: 6381-block  0
-call    0 returned 14
+       17: 6381:    { return __lhs.compare(__rhs) > 0; }
+       17: 6381-block  0
+call    0 returned 17
         -: 6382:
         -: 6383:  /**
         -: 6384:   *  @brief  Test if string follows C string.

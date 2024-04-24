@@ -6244,27 +6244,27 @@ call    0 never executed
         -: 6231:  template<typename _CharT>
         -: 6232:    inline
         -: 6233:    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value, bool>::__type
-function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 168 returned 100% blocks executed 100%
-      168: 6234:    operator==(const basic_string<_CharT>& __lhs,
+function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 178 returned 100% blocks executed 100%
+      178: 6234:    operator==(const basic_string<_CharT>& __lhs,
         -: 6235:	       const basic_string<_CharT>& __rhs) _GLIBCXX_NOEXCEPT
-      168: 6236:    { return (__lhs.size() == __rhs.size()
-      168: 6236-block  0
-call    0 returned 168
-call    1 returned 168
-      168: 6237:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
-branch  0 taken 163 (fallthrough)
+      178: 6236:    { return (__lhs.size() == __rhs.size()
+      178: 6236-block  0
+call    0 returned 178
+call    1 returned 178
+      178: 6237:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
+branch  0 taken 173 (fallthrough)
 branch  1 taken 5
-      163: 6237-block  0
-call    2 returned 163
-call    3 returned 163
-call    4 returned 163
-call    5 returned 163
-branch  6 taken 109 (fallthrough)
-branch  7 taken 54
-      109: 6237-block  1
-       59: 6237-block  2
-      168: 6238:						    __lhs.size())); }
-      168: 6238-block  0
+      173: 6237-block  0
+call    2 returned 173
+call    3 returned 173
+call    4 returned 173
+call    5 returned 173
+branch  6 taken 114 (fallthrough)
+branch  7 taken 59
+      114: 6237-block  1
+       64: 6237-block  2
+      178: 6238:						    __lhs.size())); }
+      178: 6238-block  0
         -: 6239:
         -: 6240:  /**
         -: 6241:   *  @brief  Test equivalence of string and C string.

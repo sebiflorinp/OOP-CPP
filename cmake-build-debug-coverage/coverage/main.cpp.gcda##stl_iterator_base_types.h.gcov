@@ -239,10 +239,10 @@
         -:  235:  template<typename _Iter>
         -:  236:    inline _GLIBCXX_CONSTEXPR
         -:  237:    typename iterator_traits<_Iter>::iterator_category
-function _ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_ called 347 returned 100% blocks executed 100%
-      347:  238:    __iterator_category(const _Iter&)
-      347:  239:    { return typename iterator_traits<_Iter>::iterator_category(); }
-      347:  239-block  0
+function _ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_ called 393 returned 100% blocks executed 100%
+      393:  238:    __iterator_category(const _Iter&)
+      393:  239:    { return typename iterator_traits<_Iter>::iterator_category(); }
+      393:  239-block  0
         -:  240:
         -:  241:  ///@}
         -:  242:
