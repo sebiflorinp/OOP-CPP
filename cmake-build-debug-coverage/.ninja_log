@@ -38,3 +38,16 @@
 3	488	1713947797484747248	CMakeFiles/cpplab.dir/test/CarRepositoryTests.cpp.o	4e4e65f7b257abd4
 2	564	1713947797564749389	CMakeFiles/cpplab.dir/ui/UI.cpp.o	1770d236dcb48f9e
 564	631	1713947797628751102	cpplab	bd2f8297e00a984e
+5	67	1713952315016523956	CMakeFiles/cpplab.dir/test/tests.cpp.o	a773c216e9e81af8
+9	440	1713952315388537741	CMakeFiles/cpplab.dir/misc/Filters.cpp.o	15c0ca48663200fe
+4	483	1713952315432539371	CMakeFiles/cpplab.dir/controller/CarController.cpp.o	6493a95e6dd3af21
+9	489	1713952315440539667	CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.o	688d430765d9d2d3
+12	506	1713952315456540260	CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.o	23d8ec626b9fbcea
+3	514	1713952315464540557	CMakeFiles/cpplab.dir/repository/CarRepository.cpp.o	6da803e5e3556877
+11	577	1713952315528542928	CMakeFiles/cpplab.dir/test/SortingFunctionsTests.cpp.o	696c3ed835babdfb
+10	589	1713952315540543373	CMakeFiles/cpplab.dir/test/FiltersTests.cpp.o	6cce0f3a7fcef27b
+6	592	1713952315544543521	CMakeFiles/cpplab.dir/test/CarRepositoryTests.cpp.o	4e4e65f7b257abd4
+3	601	1713952315552543817	CMakeFiles/cpplab.dir/main.cpp.o	a44ed399ed42a5e0
+5	672	1713952315624546487	CMakeFiles/cpplab.dir/ui/UI.cpp.o	1770d236dcb48f9e
+6	718	1713952315668548116	CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.o	decf230cd5e3dccc
+718	842	1713952315792552711	cpplab	bd2f8297e00a984e

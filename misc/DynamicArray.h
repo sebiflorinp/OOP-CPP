@@ -7,6 +7,13 @@ class DynamicArrayIterator;
 template <typename Element>
 class DynamicArray
 {
+private:
+	int length;
+	int capacity;
+	Element* elements;
+
+	void ensureCapacity();
+
 public:
 	// Default constructor
 	DynamicArray();
@@ -94,14 +101,6 @@ public:
      * Post-conditions: DynamicArrayIterator
      */
 	DynamicArrayIterator<Element> end() const;
-
-
-private:
-	int length;
-	int capacity;
-	Element* elements;
-
-	void ensureCapacity();
 };
 
 template<typename ElementT>

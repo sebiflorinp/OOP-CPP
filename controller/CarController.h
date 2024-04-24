@@ -68,6 +68,12 @@ class CarController {
          */
         DynamicArray<Car> filter(std::string toEqual, DynamicArray<Car> (*filterByCriteria)(const DynamicArray<Car>&, const std::string&));
 
+        /*
+         * Sorts the instance of the Car class depending on the received string and function.
+         * Preconditions: cars: an instance of the DynamicArray<Car> class.
+         *                sortingOrder: a string that must be either "ASC" or "DESC"
+         *                sortByCriteria: a function that takes as arguments an instance of the DynamicArray<Car> class and a string.
+         */
         DynamicArray<Car> sort(const DynamicArray<Car>& cars, const std::string& sortingOrder, DynamicArray<Car> (*sortByCriteria)(DynamicArray<Car>,const std::string&));
 };
 
