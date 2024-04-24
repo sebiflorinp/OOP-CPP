@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/basic_string.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcda
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcda
         -:    0:Runs:1
         -:    1:// Components for manipulating sequences of characters -*- C++ -*-
         -:    2:
@@ -252,18 +252,12 @@
         -:  248:      // requires special behaviour if _InIterator is an integral type
         -:  249:      template<typename _InIterator>
         -:  250:        void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_construct_auxIPcEEvT_S7_St12__false_type called 0 returned 0% blocks executed 0%
-    #####:  251:        _M_construct_aux(_InIterator __beg, _InIterator __end,
+        -:  251:        _M_construct_aux(_InIterator __beg, _InIterator __end,
         -:  252:			 std::__false_type)
         -:  253:	{
         -:  254:          typedef typename iterator_traits<_InIterator>::iterator_category _Tag;
-    #####:  255:          _M_construct(__beg, __end, _Tag());
-    %%%%%:  255-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  256:	}
-    %%%%%:  256-block  0
+        -:  255:          _M_construct(__beg, __end, _Tag());
+        -:  256:	}
         -:  257:
         -:  258:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  259:      // 438. Ambiguity in the "do the right thing" clause
@@ -278,14 +272,11 @@ branch  2 never executed
         -:  268:
         -:  269:      template<typename _InIterator>
         -:  270:        void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_ called 0 returned 0% blocks executed 0%
-    #####:  271:        _M_construct(_InIterator __beg, _InIterator __end)
+        -:  271:        _M_construct(_InIterator __beg, _InIterator __end)
         -:  272:	{
         -:  273:	  typedef typename std::__is_integer<_InIterator>::__type _Integral;
-    #####:  274:	  _M_construct_aux(__beg, __end, _Integral());
-    %%%%%:  274-block  0
-call    0 never executed
-    #####:  275:        }
+        -:  274:	  _M_construct_aux(__beg, __end, _Integral());
+        -:  275:        }
         -:  276:
         -:  277:      // For Input Iterators, used in istreambuf_iterators, etc.
         -:  278:      template<typename _InIterator>
@@ -543,14 +534,34 @@ call    0 never executed
         -:  530:      // 3076. basic_string CTAD ambiguity
         -:  531:      template<typename = _RequireAllocator<_Alloc>>
         -:  532:#endif
-        -:  533:      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
-        -:  534:      : _M_dataplus(_M_local_data(), __a)
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_ called 0 returned 0% blocks executed 0%
+    #####:  533:      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
+    #####:  534:      : _M_dataplus(_M_local_data(), __a)
+    %%%%%:  534-block  0
+call    0 never executed
+call    1 never executed
         -:  535:      {
-        -:  536:	const _CharT* __end = __s ? __s + traits_type::length(__s)
+    #####:  536:	const _CharT* __end = __s ? __s + traits_type::length(__s)
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  536-block  0
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  536-block  1
+    %%%%%:  536-block  2
         -:  537:	  // We just need a non-null pointer here to get an exception:
         -:  538:	  : reinterpret_cast<const _CharT*>(__alignof__(_CharT));
-        -:  539:	_M_construct(__s, __end, random_access_iterator_tag());
-        -:  540:      }
+    #####:  539:	_M_construct(__s, __end, random_access_iterator_tag());
+    %%%%%:  539-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  539-block  1
+    #####:  540:      }
+    %%%%%:  540-block  0
+    $$$$$:  540-block  1
+call    0 never executed
         -:  541:
         -:  542:      /**
         -:  543:       *  @brief  Construct string as multiple characters.
@@ -6244,27 +6255,27 @@ call    0 never executed
         -: 6231:  template<typename _CharT>
         -: 6232:    inline
         -: 6233:    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value, bool>::__type
-function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 189 returned 100% blocks executed 100%
-      189: 6234:    operator==(const basic_string<_CharT>& __lhs,
+function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 0 returned 0% blocks executed 0%
+    #####: 6234:    operator==(const basic_string<_CharT>& __lhs,
         -: 6235:	       const basic_string<_CharT>& __rhs) _GLIBCXX_NOEXCEPT
-      189: 6236:    { return (__lhs.size() == __rhs.size()
-      189: 6236-block  0
-call    0 returned 189
-call    1 returned 189
-      189: 6237:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
-branch  0 taken 184 (fallthrough)
-branch  1 taken 5
-      184: 6237-block  0
-call    2 returned 184
-call    3 returned 184
-call    4 returned 184
-call    5 returned 184
-branch  6 taken 125 (fallthrough)
-branch  7 taken 59
-      125: 6237-block  1
-       64: 6237-block  2
-      189: 6238:						    __lhs.size())); }
-      189: 6238-block  0
+    #####: 6236:    { return (__lhs.size() == __rhs.size()
+    %%%%%: 6236-block  0
+call    0 never executed
+call    1 never executed
+    #####: 6237:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
+branch  0 never executed
+branch  1 never executed
+    %%%%%: 6237-block  0
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%: 6237-block  1
+    %%%%%: 6237-block  2
+    #####: 6238:						    __lhs.size())); }
+    %%%%%: 6238-block  0
         -: 6239:
         -: 6240:  /**
         -: 6241:   *  @brief  Test equivalence of string and C string.
@@ -6328,13 +6339,10 @@ branch  7 taken 59
         -: 6299:   */
         -: 6300:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 6301:    inline bool
-function _ZStneIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 75 returned 100% blocks executed 100%
-       75: 6302:    operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+        -: 6302:    operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 6303:	       const basic_string<_CharT, _Traits, _Alloc>& __rhs)
         -: 6304:    _GLIBCXX_NOEXCEPT
-       75: 6305:    { return !(__lhs == __rhs); }
-       75: 6305-block  0
-call    0 returned 75
+        -: 6305:    { return !(__lhs == __rhs); }
         -: 6306:
         -: 6307:  /**
         -: 6308:   *  @brief  Test difference of C string and string.

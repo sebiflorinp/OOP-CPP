@@ -139,6 +139,12 @@ build CMakeFiles/cpplab.dir/test/SortingFunctionsTests.cpp.o: CXX_COMPILER__cppl
   OBJECT_DIR = CMakeFiles/cpplab.dir
   OBJECT_FILE_DIR = CMakeFiles/cpplab.dir/test
 
+build CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.o: CXX_COMPILER__cpplab_unscanned_Debug /home/sebifp/ubb/cpplab/test/DynamicArrayTests.cpp || cmake_object_order_depends_target_cpplab
+  DEP_FILE = CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/cpplab.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpplab.dir/test
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target cpplab
@@ -147,7 +153,7 @@ build CMakeFiles/cpplab.dir/test/SortingFunctionsTests.cpp.o: CXX_COMPILER__cppl
 #############################################
 # Link the executable cpplab
 
-build cpplab: CXX_EXECUTABLE_LINKER__cpplab_Debug CMakeFiles/cpplab.dir/main.cpp.o CMakeFiles/cpplab.dir/domain/Car.cpp.o CMakeFiles/cpplab.dir/domain/CarValidators.cpp.o CMakeFiles/cpplab.dir/repository/CarRepository.cpp.o CMakeFiles/cpplab.dir/controller/CarController.cpp.o CMakeFiles/cpplab.dir/ui/UI.cpp.o CMakeFiles/cpplab.dir/test/CarValidatorsTests.cpp.o CMakeFiles/cpplab.dir/test/tests.cpp.o CMakeFiles/cpplab.dir/test/CarTests.cpp.o CMakeFiles/cpplab.dir/test/CarRepositoryTests.cpp.o CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.o CMakeFiles/cpplab.dir/misc/Filters.cpp.o CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.o CMakeFiles/cpplab.dir/test/FiltersTests.cpp.o CMakeFiles/cpplab.dir/test/SortingFunctionsTests.cpp.o
+build cpplab: CXX_EXECUTABLE_LINKER__cpplab_Debug CMakeFiles/cpplab.dir/main.cpp.o CMakeFiles/cpplab.dir/domain/Car.cpp.o CMakeFiles/cpplab.dir/domain/CarValidators.cpp.o CMakeFiles/cpplab.dir/repository/CarRepository.cpp.o CMakeFiles/cpplab.dir/controller/CarController.cpp.o CMakeFiles/cpplab.dir/ui/UI.cpp.o CMakeFiles/cpplab.dir/test/CarValidatorsTests.cpp.o CMakeFiles/cpplab.dir/test/tests.cpp.o CMakeFiles/cpplab.dir/test/CarTests.cpp.o CMakeFiles/cpplab.dir/test/CarRepositoryTests.cpp.o CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.o CMakeFiles/cpplab.dir/misc/Filters.cpp.o CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.o CMakeFiles/cpplab.dir/test/FiltersTests.cpp.o CMakeFiles/cpplab.dir/test/SortingFunctionsTests.cpp.o CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/cpplab.dir
   POST_BUILD = :

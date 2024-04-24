@@ -1,6 +1,6 @@
         -:    0:Source:/home/sebifp/ubb/cpplab/misc/DynamicArray.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/Filters.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/Filters.cpp.gcda
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcda
         -:    0:Runs:1
         -:    1:#ifndef CPPLAB_DYNAMICARRAY_H
         -:    2:#define CPPLAB_DYNAMICARRAY_H
@@ -109,12 +109,19 @@
         -:  105:};
         -:  106:
         -:  107:template<typename ElementT>
-        -:  108:void DynamicArray<ElementT>::erase(int position) {
-        -:  109:    for (int i = position; i < length - 1; ++i) {
-        -:  110:        elements[i] = elements[i + 1];
+function _ZN12DynamicArrayI3CarE5eraseEi called 0 returned 0% blocks executed 0%
+    #####:  108:void DynamicArray<ElementT>::erase(int position) {
+    #####:  109:    for (int i = position; i < length - 1; ++i) {
+    %%%%%:  109-block  0
+    %%%%%:  109-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  110:        elements[i] = elements[i + 1];
+    %%%%%:  110-block  0
+call    0 never executed
         -:  111:    }
-        -:  112:    length--;
-        -:  113:}
+    #####:  112:    length--;
+    #####:  113:}
         -:  114:
         -:  115:template<typename Element>
 function _ZN12DynamicArrayI3CarEC2Ev called 0 returned 0% blocks executed 0%
@@ -149,16 +156,61 @@ call    7 never executed
         -:  128:}
         -:  129:
         -:  130:template<typename Element>
-        -:  131:DynamicArray<Element>& DynamicArray<Element>::operator=(const DynamicArray<Element>& arrayToBeAssigned) {
+function _ZN12DynamicArrayI3CarEaSERKS1_ called 0 returned 0% blocks executed 0%
+    #####:  131:DynamicArray<Element>& DynamicArray<Element>::operator=(const DynamicArray<Element>& arrayToBeAssigned) {
         -:  132:    // Create a new array and put the elements of the given on in it.
-        -:  133:	delete[] elements;
-        -:  134:	elements = new Element[arrayToBeAssigned.capacity];
-        -:  135:	for (int i = 0; i < arrayToBeAssigned.length; i++) {
-        -:  136:		elements[i] = arrayToBeAssigned.elements[i];
+    #####:  133:	delete[] elements;
+    %%%%%:  133-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  133-block  1
+    %%%%%:  133-block  2
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  133-block  3
+call    4 never executed
+    %%%%%:  133-block  4
+call    5 never executed
+    #####:  134:	elements = new Element[arrayToBeAssigned.capacity];
+    %%%%%:  134-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  134-block  1
+    %%%%%:  134-block  2
+    %%%%%:  134-block  3
+call    2 never executed
+    %%%%%:  134-block  4
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  134-block  5
+    %%%%%:  134-block  6
+branch  6 never executed
+branch  7 never executed
+    $$$$$:  134-block  7
+    $$$$$:  134-block  8
+call    8 never executed
+    $$$$$:  134-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:  134-block 10
+    $$$$$:  134-block 11
+    $$$$$:  134-block 12
+call   11 never executed
+    #####:  135:	for (int i = 0; i < arrayToBeAssigned.length; i++) {
+    %%%%%:  135-block  0
+    %%%%%:  135-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  136:		elements[i] = arrayToBeAssigned.elements[i];
+    %%%%%:  136-block  0
+call    0 never executed
         -:  137:	}
-        -:  138:	length = arrayToBeAssigned.length;
-        -:  139:	capacity = arrayToBeAssigned.capacity;
-        -:  140:	return *this;
+    #####:  138:	length = arrayToBeAssigned.length;
+    #####:  139:	capacity = arrayToBeAssigned.capacity;
+    #####:  140:	return *this;
+    %%%%%:  140-block  0
+    %%%%%:  140-block  1
         -:  141:}
         -:  142:
         -:  143:template<typename Element>
@@ -221,18 +273,25 @@ call    0 never executed
     #####:  184:}
         -:  185:
         -:  186:template<typename Element>
-        -:  187:Element& DynamicArray<Element>::get(int position) const {
-        -:  188:	return elements[position];
+function _ZNK12DynamicArrayI3CarE3getEi called 0 returned 0% blocks executed 0%
+    #####:  187:Element& DynamicArray<Element>::get(int position) const {
+    #####:  188:	return elements[position];
+    %%%%%:  188-block  0
         -:  189:}
         -:  190:
         -:  191:template<typename Element>
-        -:  192:void DynamicArray<Element>::set(int position, const Element& newValue) {
-        -:  193:	elements[position] = newValue;
-        -:  194:}
+function _ZN12DynamicArrayI3CarE3setEiRKS0_ called 0 returned 0% blocks executed 0%
+    #####:  192:void DynamicArray<Element>::set(int position, const Element& newValue) {
+    #####:  193:	elements[position] = newValue;
+    %%%%%:  193-block  0
+call    0 never executed
+    #####:  194:}
         -:  195:
         -:  196:template<typename Element>
-        -:  197:int DynamicArray<Element>::size() const noexcept {
-        -:  198:	return length;
+function _ZNK12DynamicArrayI3CarE4sizeEv called 0 returned 0% blocks executed 0%
+    #####:  197:int DynamicArray<Element>::size() const noexcept {
+    #####:  198:	return length;
+    %%%%%:  198-block  0
         -:  199:}
         -:  200:
         -:  201:template<typename Element>

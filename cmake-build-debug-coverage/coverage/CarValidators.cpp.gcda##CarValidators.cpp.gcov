@@ -4,14 +4,14 @@
         -:    0:Runs:1
         -:    1:#include "CarValidators.h"
         -:    2:
-function _ZN13CarValidators26validateRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 85 returned 94% blocks executed 100%
-       85:    3:void CarValidators::validateRegistrationNumber(const std::string &registrationNumber) {
+function _ZN13CarValidators26validateRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 88 returned 94% blocks executed 100%
+       88:    3:void CarValidators::validateRegistrationNumber(const std::string &registrationNumber) {
         -:    4:    // check if the string is empty
-       85:    5:    if (registrationNumber.empty()) {
-       85:    5-block  0
-call    0 returned 85
+       88:    5:    if (registrationNumber.empty()) {
+       88:    5-block  0
+call    0 returned 88
 branch  1 taken 3 (fallthrough)
-branch  2 taken 82
+branch  2 taken 85
         3:    6:        throw std::exception();
         3:    6-block  0
 call    0 returned 3
@@ -20,63 +20,63 @@ call    2 returned 0
         -:    7:    }
         -:    8:
         -:    9:    // check if it is made of 7 characters
-       82:   10:    if (registrationNumber.size() != 7) {
-       82:   10-block  0
-call    0 returned 82
+       85:   10:    if (registrationNumber.size() != 7) {
+       85:   10-block  0
+call    0 returned 85
 branch  1 taken 2 (fallthrough)
-branch  2 taken 80
+branch  2 taken 83
         2:   11:        throw std::exception();
         2:   11-block  0
 call    0 returned 2
 call    1 returned 2
 call    2 returned 0
         -:   12:    }
-       80:   13:}
+       83:   13:}
         -:   14:
-function _ZN13CarValidators13validateModelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 82 returned 98% blocks executed 100%
-       82:   15:void CarValidators::validateModel(const std::string &model) {
+function _ZN13CarValidators13validateModelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 85 returned 98% blocks executed 100%
+       85:   15:void CarValidators::validateModel(const std::string &model) {
         -:   16:    // check if the string is empty
-       82:   17:    if (model.empty()) {
-       82:   17-block  0
-call    0 returned 82
+       85:   17:    if (model.empty()) {
+       85:   17-block  0
+call    0 returned 85
 branch  1 taken 2 (fallthrough)
-branch  2 taken 80
+branch  2 taken 83
         2:   18:        throw std::exception();
         2:   18-block  0
 call    0 returned 2
 call    1 returned 2
 call    2 returned 0
         -:   19:    }
-       80:   20:}
+       83:   20:}
         -:   21:
-function _ZN13CarValidators12validateTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 82 returned 98% blocks executed 100%
-       82:   22:void CarValidators::validateType(const std::string &type) {
+function _ZN13CarValidators12validateTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 85 returned 98% blocks executed 100%
+       85:   22:void CarValidators::validateType(const std::string &type) {
         -:   23:    // check if the string is empty
-       82:   24:    if (type.empty()) {
-       82:   24-block  0
-call    0 returned 82
+       85:   24:    if (type.empty()) {
+       85:   24-block  0
+call    0 returned 85
 branch  1 taken 2 (fallthrough)
-branch  2 taken 80
+branch  2 taken 83
         2:   25:        throw std::exception();
         2:   25-block  0
 call    0 returned 2
 call    1 returned 2
 call    2 returned 0
         -:   26:    }
-       80:   27:}
+       83:   27:}
         -:   28:
-function _ZN13CarValidators16validateProducerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 82 returned 98% blocks executed 100%
-       82:   29:void CarValidators::validateProducer(const std::string &producer) {
+function _ZN13CarValidators16validateProducerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 85 returned 98% blocks executed 100%
+       85:   29:void CarValidators::validateProducer(const std::string &producer) {
         -:   30:    // check if the string is empty
-       82:   31:    if (producer.empty()) {
-       82:   31-block  0
-call    0 returned 82
+       85:   31:    if (producer.empty()) {
+       85:   31-block  0
+call    0 returned 85
 branch  1 taken 2 (fallthrough)
-branch  2 taken 80
+branch  2 taken 83
         2:   32:        throw std::exception();
         2:   32-block  0
 call    0 returned 2
 call    1 returned 2
 call    2 returned 0
         -:   33:    }
-       80:   34:}
+       83:   34:}

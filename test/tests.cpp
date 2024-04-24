@@ -6,6 +6,7 @@
 #include "../misc/DynamicArray.h"
 #include "FiltersTests.h"
 #include "SortingFunctionsTests.h"
+#include "DynamicArrayTests.h"
 
 void testAll();
 
@@ -55,6 +56,10 @@ void runAllTests() {
     sortingFunctionsTests.testSortCarsByType();
     sortingFunctionsTests.testSortCarsByRegistrationNumber();
     sortingFunctionsTests.testSortCarsByProducerAndModel();
+
+    // DynamicArray tests
+    DynamicArrayTests dynamicArrayTests = DynamicArrayTests();
+    dynamicArrayTests.testDynamicArray();
 }
 
 

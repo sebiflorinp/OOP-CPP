@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/stl_iterator_base_types.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcda
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcda
         -:    0:Runs:1
         -:    1:// Types used in iterator implementation -*- C++ -*-
         -:    2:
@@ -239,10 +239,10 @@
         -:  235:  template<typename _Iter>
         -:  236:    inline _GLIBCXX_CONSTEXPR
         -:  237:    typename iterator_traits<_Iter>::iterator_category
-function _ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_ called 405 returned 100% blocks executed 100%
-      405:  238:    __iterator_category(const _Iter&)
-      405:  239:    { return typename iterator_traits<_Iter>::iterator_category(); }
-      405:  239-block  0
+function _ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_ called 0 returned 0% blocks executed 0%
+    #####:  238:    __iterator_category(const _Iter&)
+    #####:  239:    { return typename iterator_traits<_Iter>::iterator_category(); }
+    %%%%%:  239-block  0
         -:  240:
         -:  241:  ///@}
         -:  242:

@@ -32,4 +32,6 @@ add_executable(cpplab main.cpp
         test/FiltersTests.cpp
         test/FiltersTests.h
         test/SortingFunctionsTests.cpp
-        test/SortingFunctionsTests.h)
+        test/SortingFunctionsTests.h
+        test/DynamicArrayTests.cpp
+        test/DynamicArrayTests.h)

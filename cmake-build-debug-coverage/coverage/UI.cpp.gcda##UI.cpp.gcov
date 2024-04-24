@@ -419,7 +419,7 @@ branch  5 never executed
     $$$$$:  113-block  0
     $$$$$:  113-block  1
 call    0 never executed
-    =====:  114:                    cout << "The update could not pe performed." << endl;
+    =====:  114:                    cout << "The update could not be performed." << endl;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed

@@ -10,170 +10,179 @@
         -:    6:#include "../misc/DynamicArray.h"
         -:    7:#include "FiltersTests.h"
         -:    8:#include "SortingFunctionsTests.h"
-        -:    9:
-        -:   10:void testAll();
-        -:   11:
+        -:    9:#include "DynamicArrayTests.h"
+        -:   10:
+        -:   11:void testAll();
+        -:   12:
 function _Z11runAllTestsv called 1 returned 100% blocks executed 100%
-        1:   12:void runAllTests() {
-        -:   13:    // car validators tests
-        -:   14:    CarValidatorsTests carValidatorsTests = CarValidatorsTests();
-        1:   15:    carValidatorsTests.testValidateRegistrationNumber();
-        1:   15-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   16:    carValidatorsTests.testValidateType();
+        1:   13:void runAllTests() {
+        -:   14:    // car validators tests
+        -:   15:    CarValidatorsTests carValidatorsTests = CarValidatorsTests();
+        1:   16:    carValidatorsTests.testValidateRegistrationNumber();
         1:   16-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   17:    carValidatorsTests.testValidateModel();
+        1:   17:    carValidatorsTests.testValidateType();
         1:   17-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   18:    carValidatorsTests.testValidateProducer();
+        1:   18:    carValidatorsTests.testValidateModel();
         1:   18-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   19:
-        -:   20:    // car constructor, setters and getters tests
-        -:   21:    CarTests carTests = CarTests();
-        1:   22:    carTests.testConstructor();
-        1:   22-block  0
+        1:   19:    carValidatorsTests.testValidateProducer();
+        1:   19-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   23:    carTests.testGetters();
+        -:   20:
+        -:   21:    // car constructor, setters and getters tests
+        -:   22:    CarTests carTests = CarTests();
+        1:   23:    carTests.testConstructor();
         1:   23-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   24:    carTests.testSetters();
+        1:   24:    carTests.testGetters();
         1:   24-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   25:    carTests.testEquality();
+        1:   25:    carTests.testSetters();
         1:   25-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   26:
-        -:   27:    // car repository tests
-        -:   28:    CarRepositoryTests carRepositoryTests = CarRepositoryTests();
-        1:   29:    carRepositoryTests.testAddNewCar();
-        1:   29-block  0
+        1:   26:    carTests.testEquality();
+        1:   26-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   30:    carRepositoryTests.testDeleteCarByRegistrationNumber();
+        -:   27:
+        -:   28:    // car repository tests
+        -:   29:    CarRepositoryTests carRepositoryTests = CarRepositoryTests();
+        1:   30:    carRepositoryTests.testAddNewCar();
         1:   30-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   31:    carRepositoryTests.testGetCarByRegistrationNumber();
+        1:   31:    carRepositoryTests.testDeleteCarByRegistrationNumber();
         1:   31-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   32:    carRepositoryTests.testUpdateCarByRegistrationNumber();
+        1:   32:    carRepositoryTests.testGetCarByRegistrationNumber();
         1:   32-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   33:    carRepositoryTests.testGetAllCars();
+        1:   33:    carRepositoryTests.testUpdateCarByRegistrationNumber();
         1:   33-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   34:
-        -:   35:    // car controller tests
-        -:   36:    CarControllerTests carControllerTests = CarControllerTests();
-        1:   37:    carControllerTests.testAddCar();
-        1:   37-block  0
+        1:   34:    carRepositoryTests.testGetAllCars();
+        1:   34-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   38:    carControllerTests.testFindCarByRegistrationNumber();
+        -:   35:
+        -:   36:    // car controller tests
+        -:   37:    CarControllerTests carControllerTests = CarControllerTests();
+        1:   38:    carControllerTests.testAddCar();
         1:   38-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   39:    carControllerTests.testGetAllCars();
+        1:   39:    carControllerTests.testFindCarByRegistrationNumber();
         1:   39-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   40:    carControllerTests.testUpdateCarByRegistrationNumber();
+        1:   40:    carControllerTests.testGetAllCars();
         1:   40-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   41:    carControllerTests.testDeleteCarByRegistrationNumber();
+        1:   41:    carControllerTests.testUpdateCarByRegistrationNumber();
         1:   41-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   42:    carControllerTests.testFilter();
+        1:   42:    carControllerTests.testDeleteCarByRegistrationNumber();
         1:   42-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   43:    carControllerTests.testSort();
+        1:   43:    carControllerTests.testFilter();
         1:   43-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   44:
-        -:   45:    // Filters tests
-        -:   46:    FiltersTests filtersTests = FiltersTests();
-        1:   47:    filtersTests.testFilterByProducer();
-        1:   47-block  0
+        1:   44:    carControllerTests.testSort();
+        1:   44-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   48:    filtersTests.testFilterByType();
+        -:   45:
+        -:   46:    // Filters tests
+        -:   47:    FiltersTests filtersTests = FiltersTests();
+        1:   48:    filtersTests.testFilterByProducer();
         1:   48-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   49:
-        -:   50:    // SortingFunctions tests
-        -:   51:    SortingFunctionsTests sortingFunctionsTests = SortingFunctionsTests();
-        1:   52:    sortingFunctionsTests.testCompareTypes();
-        1:   52-block  0
+        1:   49:    filtersTests.testFilterByType();
+        1:   49-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   53:    sortingFunctionsTests.testCompareRegistrationNumbers();
+        -:   50:
+        -:   51:    // SortingFunctions tests
+        -:   52:    SortingFunctionsTests sortingFunctionsTests = SortingFunctionsTests();
+        1:   53:    sortingFunctionsTests.testCompareTypes();
         1:   53-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   54:    sortingFunctionsTests.testCompareProducersAndModels();
+        1:   54:    sortingFunctionsTests.testCompareRegistrationNumbers();
         1:   54-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   55:    sortingFunctionsTests.testSortCarsByType();
+        1:   55:    sortingFunctionsTests.testCompareProducersAndModels();
         1:   55-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   56:    sortingFunctionsTests.testSortCarsByRegistrationNumber();
+        1:   56:    sortingFunctionsTests.testSortCarsByType();
         1:   56-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   57:    sortingFunctionsTests.testSortCarsByProducerAndModel();
+        1:   57:    sortingFunctionsTests.testSortCarsByRegistrationNumber();
         1:   57-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   58:}
+        1:   58:    sortingFunctionsTests.testSortCarsByProducerAndModel();
         1:   58-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         -:   59:
-        -:   60:
-        -:   61:
+        -:   60:    // DynamicArray tests
+        -:   61:    DynamicArrayTests dynamicArrayTests = DynamicArrayTests();
+        1:   62:    dynamicArrayTests.testDynamicArray();
+        1:   62-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   63:}
+        1:   63-block  0
+        -:   64:
+        -:   65:
+        -:   66:

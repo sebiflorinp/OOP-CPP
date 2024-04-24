@@ -129,11 +129,6 @@ DynamicArray<Element>::DynamicArray(const DynamicArray<Element>& arrayToBeCopied
 
 template<typename Element>
 DynamicArray<Element>& DynamicArray<Element>::operator=(const DynamicArray<Element>& arrayToBeAssigned) {
-    // Check if the given array is the same as the current one
-	if (this == &arrayToBeAssigned) {
-		return *this;
-	}
-
     // Create a new array and put the elements of the given on in it.
 	delete[] elements;
 	elements = new Element[arrayToBeAssigned.capacity];
