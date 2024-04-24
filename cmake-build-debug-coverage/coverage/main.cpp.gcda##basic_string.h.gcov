@@ -534,32 +534,32 @@
         -:  530:      // 3076. basic_string CTAD ambiguity
         -:  531:      template<typename = _RequireAllocator<_Alloc>>
         -:  532:#endif
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_ called 405 returned 100% blocks executed 73%
-      405:  533:      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
-      405:  534:      : _M_dataplus(_M_local_data(), __a)
-      405:  534-block  0
-call    0 returned 405
-call    1 returned 405
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_ called 402 returned 100% blocks executed 73%
+      402:  533:      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
+      402:  534:      : _M_dataplus(_M_local_data(), __a)
+      402:  534-block  0
+call    0 returned 402
+call    1 returned 402
         -:  535:      {
-     405*:  536:	const _CharT* __end = __s ? __s + traits_type::length(__s)
-branch  0 taken 405 (fallthrough)
+     402*:  536:	const _CharT* __end = __s ? __s + traits_type::length(__s)
+branch  0 taken 402 (fallthrough)
 branch  1 taken 0
-      405:  536-block  0
-call    2 returned 405
-branch  3 taken 405 (fallthrough)
+      402:  536-block  0
+call    2 returned 402
+branch  3 taken 402 (fallthrough)
 branch  4 taken 0 (throw)
-      405:  536-block  1
+      402:  536-block  1
     %%%%%:  536-block  2
         -:  537:	  // We just need a non-null pointer here to get an exception:
         -:  538:	  : reinterpret_cast<const _CharT*>(__alignof__(_CharT));
-      405:  539:	_M_construct(__s, __end, random_access_iterator_tag());
-      405:  539-block  0
-call    0 returned 405
-branch  1 taken 405 (fallthrough)
+      402:  539:	_M_construct(__s, __end, random_access_iterator_tag());
+      402:  539-block  0
+call    0 returned 402
+branch  1 taken 402 (fallthrough)
 branch  2 taken 0 (throw)
     $$$$$:  539-block  1
-      405:  540:      }
-      405:  540-block  0
+      402:  540:      }
+      402:  540-block  0
     $$$$$:  540-block  1
 call    0 never executed
         -:  541:

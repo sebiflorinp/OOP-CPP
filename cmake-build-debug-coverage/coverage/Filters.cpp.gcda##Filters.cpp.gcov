@@ -3,107 +3,59 @@
         -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/Filters.cpp.gcda
         -:    0:Runs:1
         -:    1:#include "Filters.h"
-        -:    2:
-function _Z16filterByProducerRK12DynamicArrayI3CarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 81%
-        2:    3:DynamicArray<Car> filterByProducer(const DynamicArray<Car>& cars, const std::string& producer) {
-        2:    4:    DynamicArray<Car> result;
-        2:    4-block  0
+        -:    2:#include "algorithm"
+        -:    3:
+        -:    4:
+function _Z16filterByProducerRKSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 89%
+        2:    5:std::vector<Car> filterByProducer(const std::vector<Car>& cars, const std::string& producer) {
+        2:    6:    std::vector<Car> result;
+        2:    6-block  0
 call    0 returned 2
-        8:    5:    for (auto car: cars) {
+function _ZZ16filterByProducerRKSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRKS0_E_clESE_ called 6 returned 100% blocks executed 100%
+        8:    7:    copy_if(cars.begin(), cars.end(), std::back_inserter(result), [&](const Car& car){return car.getProducer() == producer;});
 call    0 returned 2
-call    1 returned 2
-        6:    5-block  0
-call    2 returned 6
-branch  3 taken 6 (fallthrough)
-branch  4 taken 0 (throw)
-        6:    5-block  1
-call    5 returned 6
-branch  6 taken 6 (fallthrough)
-branch  7 taken 0 (throw)
-call    8 returned 6
-branch  9 taken 6 (fallthrough)
-branch 10 taken 0 (throw)
-        8:    5-block  2
-call   11 returned 8
-branch 12 taken 6
-branch 13 taken 2 (fallthrough)
-        6:    6:        if (car.getProducer() == producer) {
-        6:    6-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
+branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        6:    6-block  1
-call    3 returned 6
-call    4 returned 6
-branch  5 taken 2 (fallthrough)
-branch  6 taken 4
-        2:    7:            result.add(car);
         2:    7-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        -:    8:        }
-        6:    9:    }
-        6:    9-block  0
-call    0 returned 6
-    $$$$$:    9-block  1
-call    1 never executed
-        -:   10:
-        2:   11:    return result;
-        2:   11-block  0
-        2:   11-block  1
-    =====:   12:}
-    $$$$$:   12-block  0
-call    0 never executed
-        -:   13:
-function _Z12filterByTypeRK12DynamicArrayI3CarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 81%
-        1:   14:DynamicArray<Car> filterByType(const DynamicArray<Car>& cars, const std::string& type) {
-        1:   15:    DynamicArray<Car> result;
-        1:   15-block  0
-call    0 returned 1
-        5:   16:    for (auto car: cars) {
-call    0 returned 1
-call    1 returned 1
-        4:   16-block  0
-call    2 returned 4
-branch  3 taken 4 (fallthrough)
-branch  4 taken 0 (throw)
-        4:   16-block  1
-call    5 returned 4
-branch  6 taken 4 (fallthrough)
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
 branch  7 taken 0 (throw)
+        6:    7-block  1
+call    8 returned 6
+call    9 returned 6
+call   10 returned 6
+        2:    8:    return result;
+        2:    8-block  0
+        2:    8-block  1
+    =====:    9:}
+    $$$$$:    9-block  0
+call    0 never executed
+        -:   10:
+function _Z12filterByTypeRKSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 89%
+        1:   11:std::vector<Car> filterByType(const std::vector<Car>& cars, const std::string& type) {
+        1:   12:    std::vector<Car> result;
+        1:   12-block  0
+call    0 returned 1
+function _ZZ12filterByTypeRKSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRKS0_E_clESE_ called 4 returned 100% blocks executed 100%
+        5:   13:    copy_if(cars.begin(), cars.end(), std::back_inserter(result), [&](const Car& car){return car.getType() == type;});
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  0
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   13-block  1
 call    8 returned 4
-branch  9 taken 4 (fallthrough)
-branch 10 taken 0 (throw)
-        5:   16-block  2
-call   11 returned 5
-branch 12 taken 4
-branch 13 taken 1 (fallthrough)
-        4:   17:        if (car.getType() == type) {
-        4:   17-block  0
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
-branch  2 taken 0 (throw)
-        4:   17-block  1
-call    3 returned 4
-call    4 returned 4
-branch  5 taken 2 (fallthrough)
-branch  6 taken 2
-        2:   18:            result.add(car);
-        2:   18-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        -:   19:        }
-        4:   20:    }
-        4:   20-block  0
-call    0 returned 4
-    $$$$$:   20-block  1
-call    1 never executed
-        -:   21:
-        1:   22:    return result;
-        1:   22-block  0
-        1:   22-block  1
-    =====:   23:}
-    $$$$$:   23-block  0
+call    9 returned 4
+call   10 returned 4
+        1:   14:    return result;
+        1:   14-block  0
+        1:   14-block  1
+    =====:   15:}
+    $$$$$:   15-block  0
 call    0 never executed

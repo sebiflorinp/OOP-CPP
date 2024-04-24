@@ -2,408 +2,430 @@
         -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.gcno
         -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.gcda
         -:    0:Runs:1
-        -:    1:#include "SortingFunctions.h"
-        -:    2:#include "../domain/Car.h"
-        -:    3:#include "DynamicArray.h"
-        -:    4:
-function _Z28sortCarsByRegistrationNumber12DynamicArrayI3CarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 92%
-        2:    5:DynamicArray<Car> sortCarsByRegistrationNumber(DynamicArray<Car> cars, const std::string& sortingOrder) {
-        5:    6:    for (int i = 0; i < cars.size() - 1; ++i) {
-        2:    6-block  0
-        3:    6-block  1
-        5:    6-block  2
-call    0 returned 5
-branch  1 taken 3
-branch  2 taken 2 (fallthrough)
-        7:    7:        for (int j = i + 1; j < cars.size(); ++j) {
-        3:    7-block  0
-        4:    7-block  1
-        7:    7-block  2
-call    0 returned 7
-branch  1 taken 4
-branch  2 taken 3 (fallthrough)
-        4:    8:            if (compareRegistrationNumbers(cars.get(i), cars.get(j), sortingOrder) == -1) {
-        4:    8-block  0
-call    0 returned 4
-call    1 returned 4
-call    2 returned 4
-branch  3 taken 4 (fallthrough)
-branch  4 taken 0
-        4:    9:                Car aux = cars.get(i);
-        4:    9-block  0
-call    0 returned 4
-call    1 returned 4
-branch  2 taken 4 (fallthrough)
-branch  3 taken 0 (throw)
-        4:   10:                cars.set(i, cars.get(j));
-        4:   10-block  0
-call    0 returned 4
-call    1 returned 4
-branch  2 taken 4 (fallthrough)
-branch  3 taken 0 (throw)
-        4:   11:                cars.set(j, aux);
-        4:   11-block  0
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
-branch  2 taken 0 (throw)
-        4:   12:            }
-        4:   12-block  0
-call    0 returned 4
-    $$$$$:   12-block  1
-call    1 never executed
-        -:   13:        }
-        -:   14:    }
-        2:   15:    return cars;
-        2:   15-block  0
+        -:    1:#include <vector>
+        -:    2:#include <algorithm>
+        -:    3:#include "SortingFunctions.h"
+        -:    4:#include "../domain/Car.h"
+        -:    5:#include "DynamicArray.h"
+        -:    6:
+function _Z28sortCarsByRegistrationNumberSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 100%
+        2:    7:std::vector<Car> sortCarsByRegistrationNumber(std::vector<Car> cars, const std::string& sortingOrder) {
+function _ZZ28sortCarsByRegistrationNumberSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRKS0_SC_E_clESC_SC_ called 3 returned 100% blocks executed 58%
+        5:    8:    std::sort(cars.begin(), cars.end(), [&](const Car& car1, const Car& car2){return sortingOrder == "ASC" ? car1.getRegistrationNumber() < car2.getRegistrationNumber() : car1.getRegistrationNumber() > car2.getRegistrationNumber();});
+        2:    8-block  0
 call    0 returned 2
-        -:   16:}
-        -:   17:
-function _Z14sortCarsByType12DynamicArrayI3CarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 92%
-        1:   18:DynamicArray<Car> sortCarsByType(DynamicArray<Car> cars, const std::string& sortingOrder) {
-        2:   19:    for (int i = 0; i < cars.size() - 1; ++i) {
-        1:   19-block  0
-        1:   19-block  1
-        2:   19-block  2
+call    1 returned 2
+call    2 returned 2
+        3:    8-block  1
+call    3 returned 3
+branch  4 taken 2 (fallthrough)
+branch  5 taken 1
+        2:    8-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:    8-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:    8-block  4
+call   12 returned 2
+        1:    8-block  5
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:    8-block  6
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:    8-block  7
+call   19 returned 1
+        3:    8-block  8
+branch 20 taken 1 (fallthrough)
+branch 21 taken 2
+        1:    8-block  9
+call   22 returned 1
+        3:    8-block 10
+branch 23 taken 1 (fallthrough)
+branch 24 taken 2
+        1:    8-block 11
+call   25 returned 1
+        3:    8-block 12
+branch 26 taken 2 (fallthrough)
+branch 27 taken 1
+        2:    8-block 13
+call   28 returned 2
+        3:    8-block 14
+branch 29 taken 2 (fallthrough)
+branch 30 taken 1
+        2:    8-block 15
+call   31 returned 2
+        3:    8-block 16
+        3:    8-block 17
+    $$$$$:    8-block 18
+branch 32 never executed
+branch 33 never executed
+    $$$$$:    8-block 19
+call   34 never executed
+    $$$$$:    8-block 20
+    $$$$$:    8-block 21
+branch 35 never executed
+branch 36 never executed
+    $$$$$:    8-block 22
+call   37 never executed
+    $$$$$:    8-block 23
+    $$$$$:    8-block 24
+branch 38 never executed
+branch 39 never executed
+    $$$$$:    8-block 25
+call   40 never executed
+    $$$$$:    8-block 26
+    $$$$$:    8-block 27
+branch 41 never executed
+branch 42 never executed
+    $$$$$:    8-block 28
+call   43 never executed
+        2:    9:    return cars;
 call    0 returned 2
-branch  1 taken 1
-branch  2 taken 1 (fallthrough)
-        2:   20:        for (int j = i + 1; j < cars.size(); ++j) {
-        1:   20-block  0
-        1:   20-block  1
-        2:   20-block  2
-call    0 returned 2
-branch  1 taken 1
-branch  2 taken 1 (fallthrough)
-        1:   21:            if (compareTypes(cars.get(i), cars.get(j), sortingOrder) == -1) {
-        1:   21-block  0
+        -:   10:}
+        -:   11:
+function _Z14sortCarsByTypeSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   12:std::vector<Car> sortCarsByType(std::vector<Car> cars, const std::string& sortingOrder) {
+function _ZZ14sortCarsByTypeSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRKS0_SC_E_clESC_SC_ called 1 returned 100% blocks executed 42%
+       2*:   13:    std::sort(cars.begin(), cars.end(), [&](const Car& car1,const Car& car2){return sortingOrder == "ASC" ? car1.getType() < car2.getType() : car1.getType() > car2.getType();});
+        1:   13-block  0
 call    0 returned 1
 call    1 returned 1
 call    2 returned 1
-branch  3 taken 1 (fallthrough)
-branch  4 taken 0
-        1:   22:                Car aux = cars.get(i);
-        1:   22-block  0
+        1:   13-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   13-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   13-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   13-block  4
+call   12 never executed
+        1:   13-block  5
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   13-block  6
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   13-block  7
+call   19 returned 1
+        1:   13-block  8
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0
+        1:   13-block  9
+call   22 returned 1
+        1:   13-block 10
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   13-block 11
+call   25 returned 1
+        1:   13-block 12
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+    %%%%%:   13-block 13
+call   28 never executed
+        1:   13-block 14
+branch 29 taken 0 (fallthrough)
+branch 30 taken 1
+    %%%%%:   13-block 15
+call   31 never executed
+        1:   13-block 16
+        1:   13-block 17
+    $$$$$:   13-block 18
+branch 32 never executed
+branch 33 never executed
+    $$$$$:   13-block 19
+call   34 never executed
+    $$$$$:   13-block 20
+    $$$$$:   13-block 21
+branch 35 never executed
+branch 36 never executed
+    $$$$$:   13-block 22
+call   37 never executed
+    $$$$$:   13-block 23
+    $$$$$:   13-block 24
+branch 38 never executed
+branch 39 never executed
+    $$$$$:   13-block 25
+call   40 never executed
+    $$$$$:   13-block 26
+    $$$$$:   13-block 27
+branch 41 never executed
+branch 42 never executed
+    $$$$$:   13-block 28
+call   43 never executed
+        1:   14:    return cars;
+call    0 returned 1
+        -:   15:}
+        -:   16:
+function _Z26sortCarsByProducerAndModelSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   17:std::vector<Car> sortCarsByProducerAndModel(std::vector<Car> cars, const std::string& sortingOrder) {
+function _ZZ26sortCarsByProducerAndModelSt6vectorI3CarSaIS0_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRKS0_SC_E_clESC_SC_ called 2 returned 100% blocks executed 100%
+        3:   18:    std::sort(cars.begin(), cars.end(), [&](const Car &car1, const Car &car2) { return compareProducersAndModels(car1, car2, sortingOrder) == 1;});
+        1:   18-block  0
 call    0 returned 1
 call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   23:                cars.set(i, cars.get(j));
-        1:   23-block  0
+call    2 returned 1
+        2:   18-block  1
+call    3 returned 2
+        1:   19:    return cars;
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   24:                cars.set(j, aux);
-        1:   24-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   25:            }
-        1:   25-block  0
-call    0 returned 1
-    $$$$$:   25-block  1
-call    1 never executed
-        -:   26:        }
-        -:   27:    }
-        1:   28:    return cars;
-        1:   28-block  0
-call    0 returned 1
-        -:   29:}
-        -:   30:
-function _Z26sortCarsByProducerAndModel12DynamicArrayI3CarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 92%
-        1:   31:DynamicArray<Car> sortCarsByProducerAndModel(DynamicArray<Car> cars, const std::string& sortingOrder) {
-        3:   32:    for (int i = 0; i < cars.size() - 1; ++i) {
-        1:   32-block  0
-        2:   32-block  1
-        3:   32-block  2
-call    0 returned 3
-branch  1 taken 2
-branch  2 taken 1 (fallthrough)
-        5:   33:        for (int j = i + 1; j < cars.size(); ++j) {
-        2:   33-block  0
-        3:   33-block  1
-        5:   33-block  2
+        -:   20:}
+        -:   21:
+function _Z26compareRegistrationNumbersRK3CarS1_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 100% blocks executed 69%
+        5:   22:int compareRegistrationNumbers(const Car& firstCar,const Car& secondCar,const std::string& sortingOrder) {
+        5:   23:    if (sortingOrder == "ASC") {
+        5:   23-block  0
 call    0 returned 5
-branch  1 taken 3
-branch  2 taken 2 (fallthrough)
-        3:   34:            if (compareProducersAndModels(cars.get(i), cars.get(j), sortingOrder) == -1) {
-        3:   34-block  0
-call    0 returned 3
-call    1 returned 3
-call    2 returned 3
-branch  3 taken 3 (fallthrough)
-branch  4 taken 0
-        3:   35:                Car aux = cars.get(i);
-        3:   35-block  0
-call    0 returned 3
-call    1 returned 3
-branch  2 taken 3 (fallthrough)
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:   24:        if (firstCar.getRegistrationNumber() < secondCar.getRegistrationNumber()) {
+        4:   24-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
 branch  3 taken 0 (throw)
-        3:   36:                cars.set(i, cars.get(j));
-        3:   36-block  0
-call    0 returned 3
-call    1 returned 3
-branch  2 taken 3 (fallthrough)
-branch  3 taken 0 (throw)
-        3:   37:                cars.set(j, aux);
-        3:   37-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
-branch  2 taken 0 (throw)
-        3:   38:            }
-        3:   38-block  0
-call    0 returned 3
-    $$$$$:   38-block  1
-call    1 never executed
-        -:   39:        }
-        -:   40:    }
-        1:   41:    return cars;
-        1:   41-block  0
-call    0 returned 1
-        -:   42:}
-        -:   43:
-function _Z26compareRegistrationNumbersR3CarS0_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 10 returned 100% blocks executed 69%
-       10:   44:int compareRegistrationNumbers(Car& firstCar,Car& secondCar,const std::string& sortingOrder) {
-       10:   45:    if (sortingOrder == "ASC") {
-       10:   45-block  0
-call    0 returned 10
-branch  1 taken 8 (fallthrough)
-branch  2 taken 2
-        8:   46:        if (firstCar.getRegistrationNumber() < secondCar.getRegistrationNumber()) {
-        8:   46-block  0
-call    0 returned 8
-call    1 returned 8
-branch  2 taken 8 (fallthrough)
-branch  3 taken 0 (throw)
-        8:   46-block  1
-call    4 returned 8
-call    5 returned 8
-call    6 returned 8
-branch  7 taken 2 (fallthrough)
-branch  8 taken 6
-    $$$$$:   46-block  2
-call    9 never executed
-    $$$$$:   46-block  3
-call   10 never executed
-        2:   47:            return 1;
-        2:   47-block  0
-        6:   48:        } else if (firstCar.getRegistrationNumber() > secondCar.getRegistrationNumber()) {
-        6:   48-block  0
-call    0 returned 6
-call    1 returned 6
-branch  2 taken 6 (fallthrough)
-branch  3 taken 0 (throw)
-        6:   48-block  1
-call    4 returned 6
-call    5 returned 6
-call    6 returned 6
-branch  7 taken 5 (fallthrough)
-branch  8 taken 1
-    $$$$$:   48-block  2
-call    9 never executed
-    $$$$$:   48-block  3
-call   10 never executed
-        5:   49:            return -1;
-        5:   49-block  0
-        -:   50:        } else {
-        1:   51:            return 0;
-        1:   51-block  0
-        -:   52:        }
-        -:   53:    } else {
-        2:   54:        return compareRegistrationNumbers(firstCar, secondCar, "ASC") * -1;
-        2:   54-block  0
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
-branch  3 taken 0 (throw)
-        2:   54-block  1
-call    4 returned 2
-branch  5 taken 2 (fallthrough)
-branch  6 taken 0 (throw)
-        2:   54-block  2
-call    7 returned 2
-call    8 returned 2
-    $$$$$:   54-block  3
-call    9 never executed
-    $$$$$:   54-block  4
-    $$$$$:   54-block  5
-call   10 never executed
-        -:   55:    }
-        -:   56:}
-        -:   57:
-function _Z12compareTypesR3CarS0_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 69%
-        7:   58:int compareTypes(Car& firstCar, Car& secondCar, const std::string& sortingOrder) {
-        7:   59:    if (sortingOrder == "ASC") {
-        7:   59-block  0
-call    0 returned 7
-branch  1 taken 5 (fallthrough)
-branch  2 taken 2
-        5:   60:        if (firstCar.getType() < secondCar.getType()) {
-        5:   60-block  0
-call    0 returned 5
-call    1 returned 5
-branch  2 taken 5 (fallthrough)
-branch  3 taken 0 (throw)
-        5:   60-block  1
-call    4 returned 5
-call    5 returned 5
-call    6 returned 5
-branch  7 taken 2 (fallthrough)
+        4:   24-block  1
+call    4 returned 4
+call    5 returned 4
+call    6 returned 4
+branch  7 taken 1 (fallthrough)
 branch  8 taken 3
-    $$$$$:   60-block  2
+    $$$$$:   24-block  2
 call    9 never executed
-    $$$$$:   60-block  3
+    $$$$$:   24-block  3
 call   10 never executed
-        2:   61:            return 1;
-        2:   61-block  0
-        3:   62:        } else if (firstCar.getType() > secondCar.getType()) {
-        3:   62-block  0
+        1:   25:            return 1;
+        1:   25-block  0
+        3:   26:        } else if (firstCar.getRegistrationNumber() > secondCar.getRegistrationNumber()) {
+        3:   26-block  0
 call    0 returned 3
 call    1 returned 3
 branch  2 taken 3 (fallthrough)
 branch  3 taken 0 (throw)
-        3:   62-block  1
+        3:   26-block  1
 call    4 returned 3
 call    5 returned 3
 call    6 returned 3
 branch  7 taken 2 (fallthrough)
 branch  8 taken 1
-    $$$$$:   62-block  2
+    $$$$$:   26-block  2
 call    9 never executed
-    $$$$$:   62-block  3
+    $$$$$:   26-block  3
 call   10 never executed
-        2:   63:            return -1;
-        2:   63-block  0
-        -:   64:        } else {
-        1:   65:            return 0;
-        1:   65-block  0
-        -:   66:        }
-        -:   67:    } else {
-        2:   68:        return compareTypes(firstCar, secondCar, "ASC") * -1;
-        2:   68-block  0
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
+        2:   27:            return -1;
+        2:   27-block  0
+        -:   28:        } else {
+        1:   29:            return 0;
+        1:   29-block  0
+        -:   30:        }
+        -:   31:    } else {
+        1:   32:        return compareRegistrationNumbers(firstCar, secondCar, "ASC") * -1;
+        1:   32-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        2:   68-block  1
-call    4 returned 2
-branch  5 taken 2 (fallthrough)
+        1:   32-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
 branch  6 taken 0 (throw)
-        2:   68-block  2
-call    7 returned 2
-call    8 returned 2
-    $$$$$:   68-block  3
+        1:   32-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   32-block  3
 call    9 never executed
-    $$$$$:   68-block  4
-    $$$$$:   68-block  5
+    $$$$$:   32-block  4
+    $$$$$:   32-block  5
 call   10 never executed
-        -:   69:    }
-        -:   70:}
-        -:   71:
-function _Z25compareProducersAndModelsR3CarS0_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 13 returned 100% blocks executed 70%
-       13:   72:int compareProducersAndModels(Car& firstCar,Car& secondCar,const std::string& sortingOrder) {
-       13:   73:    if (sortingOrder == "ASC") {
-       13:   73-block  0
-call    0 returned 13
-branch  1 taken 9 (fallthrough)
-branch  2 taken 4
-        9:   74:        if (firstCar.getProducer() < secondCar.getProducer()) {
-        9:   74-block  0
-call    0 returned 9
-call    1 returned 9
-branch  2 taken 9 (fallthrough)
-branch  3 taken 0 (throw)
-        9:   74-block  1
-call    4 returned 9
-call    5 returned 9
-call    6 returned 9
-branch  7 taken 3 (fallthrough)
-branch  8 taken 6
-    $$$$$:   74-block  2
-call    9 never executed
-    $$$$$:   74-block  3
-call   10 never executed
-        3:   75:            return 1;
-        3:   75-block  0
-        6:   76:        } else if (firstCar.getProducer() > secondCar.getProducer()) {
-        6:   76-block  0
-call    0 returned 6
-call    1 returned 6
-branch  2 taken 6 (fallthrough)
-branch  3 taken 0 (throw)
-        6:   76-block  1
-call    4 returned 6
-call    5 returned 6
-call    6 returned 6
-branch  7 taken 1 (fallthrough)
-branch  8 taken 5
-    $$$$$:   76-block  2
-call    9 never executed
-    $$$$$:   76-block  3
-call   10 never executed
-        1:   77:            return -1;
-        1:   77-block  0
-        -:   78:        } else {
-        5:   79:            if (firstCar.getModel() < secondCar.getModel()) {
-        5:   79-block  0
+        -:   33:    }
+        -:   34:}
+        -:   35:
+function _Z12compareTypesR3CarS0_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 100% blocks executed 69%
+        5:   36:int compareTypes(Car& firstCar, Car& secondCar, const std::string& sortingOrder) {
+        5:   37:    if (sortingOrder == "ASC") {
+        5:   37-block  0
 call    0 returned 5
-call    1 returned 5
-branch  2 taken 5 (fallthrough)
-branch  3 taken 0 (throw)
-        5:   79-block  1
-call    4 returned 5
-call    5 returned 5
-call    6 returned 5
-branch  7 taken 3 (fallthrough)
-branch  8 taken 2
-    $$$$$:   79-block  2
-call    9 never executed
-    $$$$$:   79-block  3
-call   10 never executed
-        3:   80:                return 1;
-        3:   80-block  0
-        2:   81:            } else if (firstCar.getModel() > secondCar.getModel()) {
-        2:   81-block  0
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
-branch  3 taken 0 (throw)
-        2:   81-block  1
-call    4 returned 2
-call    5 returned 2
-call    6 returned 2
-branch  7 taken 1 (fallthrough)
-branch  8 taken 1
-    $$$$$:   81-block  2
-call    9 never executed
-    $$$$$:   81-block  3
-call   10 never executed
-        1:   82:                return -1;
-        1:   82-block  0
-        -:   83:            } else {
-        1:   84:                return 0;
-        1:   84-block  0
-        -:   85:            }
-        -:   86:        }
-        -:   87:    } else {
-        4:   88:        return compareProducersAndModels(firstCar, secondCar, "ASC") * -1;
-        4:   88-block  0
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:   38:        if (firstCar.getType() < secondCar.getType()) {
+        4:   38-block  0
 call    0 returned 4
 call    1 returned 4
 branch  2 taken 4 (fallthrough)
 branch  3 taken 0 (throw)
-        4:   88-block  1
+        4:   38-block  1
 call    4 returned 4
-branch  5 taken 4 (fallthrough)
-branch  6 taken 0 (throw)
-        4:   88-block  2
-call    7 returned 4
-call    8 returned 4
-    $$$$$:   88-block  3
+call    5 returned 4
+call    6 returned 4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 3
+    $$$$$:   38-block  2
 call    9 never executed
-    $$$$$:   88-block  4
-    $$$$$:   88-block  5
+    $$$$$:   38-block  3
 call   10 never executed
-        -:   89:    }
-        -:   90:}
-        -:   91:
+        1:   39:            return 1;
+        1:   39-block  0
+        3:   40:        } else if (firstCar.getType() > secondCar.getType()) {
+        3:   40-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   40-block  1
+call    4 returned 3
+call    5 returned 3
+call    6 returned 3
+branch  7 taken 2 (fallthrough)
+branch  8 taken 1
+    $$$$$:   40-block  2
+call    9 never executed
+    $$$$$:   40-block  3
+call   10 never executed
+        2:   41:            return -1;
+        2:   41-block  0
+        -:   42:        } else {
+        1:   43:            return 0;
+        1:   43-block  0
+        -:   44:        }
+        -:   45:    } else {
+        1:   46:        return compareTypes(firstCar, secondCar, "ASC") * -1;
+        1:   46-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   46-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   46-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   46-block  3
+call    9 never executed
+    $$$$$:   46-block  4
+    $$$$$:   46-block  5
+call   10 never executed
+        -:   47:    }
+        -:   48:}
+        -:   49:
+function _Z25compareProducersAndModelsRK3CarS1_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 11 returned 100% blocks executed 70%
+       11:   50:int compareProducersAndModels(const Car& firstCar,const Car& secondCar,const std::string& sortingOrder) {
+       11:   51:    if (sortingOrder == "ASC") {
+       11:   51-block  0
+call    0 returned 11
+branch  1 taken 8 (fallthrough)
+branch  2 taken 3
+        8:   52:        if (firstCar.getProducer() < secondCar.getProducer()) {
+        8:   52-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:   52-block  1
+call    4 returned 8
+call    5 returned 8
+call    6 returned 8
+branch  7 taken 2 (fallthrough)
+branch  8 taken 6
+    $$$$$:   52-block  2
+call    9 never executed
+    $$$$$:   52-block  3
+call   10 never executed
+        2:   53:            return 1;
+        2:   53-block  0
+        6:   54:        } else if (firstCar.getProducer() > secondCar.getProducer()) {
+        6:   54-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   54-block  1
+call    4 returned 6
+call    5 returned 6
+call    6 returned 6
+branch  7 taken 2 (fallthrough)
+branch  8 taken 4
+    $$$$$:   54-block  2
+call    9 never executed
+    $$$$$:   54-block  3
+call   10 never executed
+        2:   55:            return -1;
+        2:   55-block  0
+        -:   56:        } else {
+        4:   57:            if (firstCar.getModel() < secondCar.getModel()) {
+        4:   57-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   57-block  1
+call    4 returned 4
+call    5 returned 4
+call    6 returned 4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 3
+    $$$$$:   57-block  2
+call    9 never executed
+    $$$$$:   57-block  3
+call   10 never executed
+        1:   58:                return 1;
+        1:   58-block  0
+        3:   59:            } else if (firstCar.getModel() > secondCar.getModel()) {
+        3:   59-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   59-block  1
+call    4 returned 3
+call    5 returned 3
+call    6 returned 3
+branch  7 taken 2 (fallthrough)
+branch  8 taken 1
+    $$$$$:   59-block  2
+call    9 never executed
+    $$$$$:   59-block  3
+call   10 never executed
+        2:   60:                return -1;
+        2:   60-block  0
+        -:   61:            } else {
+        1:   62:                return 0;
+        1:   62-block  0
+        -:   63:            }
+        -:   64:        }
+        -:   65:    } else {
+        3:   66:        return compareProducersAndModels(firstCar, secondCar, "ASC") * -1;
+        3:   66-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   66-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   66-block  2
+call    7 returned 3
+call    8 returned 3
+    $$$$$:   66-block  3
+call    9 never executed
+    $$$$$:   66-block  4
+    $$$$$:   66-block  5
+call   10 never executed
+        -:   67:    }
+        -:   68:}
+        -:   69:

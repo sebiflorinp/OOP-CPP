@@ -749,23 +749,20 @@ call   25 returned 1
     $$$$$:   68-block  9
     $$$$$:   68-block 10
     $$$$$:   68-block 11
-        1:   69:    DynamicArray<Car> cars;
+        1:   69:    std::vector<Car> cars;
+call    0 returned 1
+        1:   70:    cars.push_back(car1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   70:    cars.add(car1);
-        1:   70-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   71:    cars.add(car2);
+        1:   71:    cars.push_back(car2);
         1:   71-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         -:   72:
         -:   73:    // Act
-        2:   74:    DynamicArray<Car> actual = sortCarsByType(cars, "DESC");
+        2:   74:    std::vector<Car> actual = sortCarsByType(cars, "DESC");
         1:   74-block  0
 call    0 returned 1
 call    1 returned 1
@@ -786,48 +783,54 @@ call   11 returned 1
     $$$$$:   74-block  5
         -:   75:
         -:   76:    // Assert
-       1*:   77:    assert(actual.get(0).getRegistrationNumber() == car2.getRegistrationNumber());
+       1*:   77:    assert(actual.at(0).getRegistrationNumber() == car2.getRegistrationNumber());
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:   77-block  0
 call    3 returned 1
-call    4 returned 1
-branch  5 taken 1 (fallthrough)
-branch  6 taken 0 (throw)
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
         1:   77-block  1
-call    7 returned 1
-branch  8 taken 0 (fallthrough)
-branch  9 taken 1
-    %%%%%:   77-block  2
-call   10 never executed
-        1:   77-block  3
-call   11 returned 1
-call   12 returned 1
-    $$$$$:   77-block  4
-call   13 never executed
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   77-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   77-block  3
+call   12 never executed
+        1:   77-block  4
+call   13 returned 1
+call   14 returned 1
     $$$$$:   77-block  5
-       1*:   78:    assert(actual.get(1).getRegistrationNumber() == car1.getRegistrationNumber());
+call   15 never executed
+    $$$$$:   77-block  6
+       1*:   78:    assert(actual.at(1).getRegistrationNumber() == car1.getRegistrationNumber());
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:   78-block  0
 call    3 returned 1
-call    4 returned 1
-branch  5 taken 1 (fallthrough)
-branch  6 taken 0 (throw)
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
         1:   78-block  1
-call    7 returned 1
-branch  8 taken 0 (fallthrough)
-branch  9 taken 1
-    %%%%%:   78-block  2
-call   10 never executed
-        1:   78-block  3
-call   11 returned 1
-call   12 returned 1
-    $$$$$:   78-block  4
-call   13 never executed
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   78-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   78-block  3
+call   12 never executed
+        1:   78-block  4
+call   13 returned 1
+call   14 returned 1
     $$$$$:   78-block  5
+call   15 never executed
+    $$$$$:   78-block  6
         1:   79:}
 call    0 returned 1
 call    1 returned 1
@@ -924,23 +927,20 @@ call   25 returned 1
     $$$$$:   84-block  9
     $$$$$:   84-block 10
     $$$$$:   84-block 11
-        1:   85:    DynamicArray<Car> cars;
+        1:   85:    std::vector<Car> cars;
+call    0 returned 1
+        1:   86:    cars.push_back(car1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   86:    cars.add(car1);
-        1:   86-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   87:    cars.add(car2);
+        1:   87:    cars.push_back(car2);
         1:   87-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         -:   88:
         -:   89:    // Act
-        2:   90:    DynamicArray<Car> actual = sortCarsByRegistrationNumber(cars, "DESC");
+        2:   90:    std::vector<Car> actual = sortCarsByRegistrationNumber(cars, "DESC");
         1:   90-block  0
 call    0 returned 1
 call    1 returned 1
@@ -961,48 +961,54 @@ call   11 returned 1
     $$$$$:   90-block  5
         -:   91:
         -:   92:    // Assert
-       1*:   93:    assert(actual.get(0).getRegistrationNumber() == car2.getRegistrationNumber());
+       1*:   93:    assert(actual.at(0).getRegistrationNumber() == car2.getRegistrationNumber());
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:   93-block  0
 call    3 returned 1
-call    4 returned 1
-branch  5 taken 1 (fallthrough)
-branch  6 taken 0 (throw)
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
         1:   93-block  1
-call    7 returned 1
-branch  8 taken 0 (fallthrough)
-branch  9 taken 1
-    %%%%%:   93-block  2
-call   10 never executed
-        1:   93-block  3
-call   11 returned 1
-call   12 returned 1
-    $$$$$:   93-block  4
-call   13 never executed
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   93-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   93-block  3
+call   12 never executed
+        1:   93-block  4
+call   13 returned 1
+call   14 returned 1
     $$$$$:   93-block  5
-       1*:   94:    assert(actual.get(1).getRegistrationNumber() == car1.getRegistrationNumber());
+call   15 never executed
+    $$$$$:   93-block  6
+       1*:   94:    assert(actual.at(1).getRegistrationNumber() == car1.getRegistrationNumber());
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:   94-block  0
 call    3 returned 1
-call    4 returned 1
-branch  5 taken 1 (fallthrough)
-branch  6 taken 0 (throw)
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
         1:   94-block  1
-call    7 returned 1
-branch  8 taken 0 (fallthrough)
-branch  9 taken 1
-    %%%%%:   94-block  2
-call   10 never executed
-        1:   94-block  3
-call   11 returned 1
-call   12 returned 1
-    $$$$$:   94-block  4
-call   13 never executed
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   94-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   94-block  3
+call   12 never executed
+        1:   94-block  4
+call   13 returned 1
+call   14 returned 1
     $$$$$:   94-block  5
+call   15 never executed
+    $$$$$:   94-block  6
         1:   95:}
 call    0 returned 1
 call    1 returned 1
@@ -1138,27 +1144,24 @@ call   25 returned 1
     $$$$$:  101-block  9
     $$$$$:  101-block 10
     $$$$$:  101-block 11
-        1:  102:    DynamicArray<Car> cars;
+        1:  102:    std::vector<Car> cars;
+call    0 returned 1
+        1:  103:    cars.push_back(car1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:  103:    cars.add(car1);
-        1:  103-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:  104:    cars.add(car2);
+        1:  104:    cars.push_back(car2);
         1:  104-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:  105:    cars.add(car3);
+        1:  105:    cars.push_back(car3);
         1:  105-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         -:  106:    // Act
-        2:  107:    DynamicArray<Car> actual = sortCarsByProducerAndModel(cars, "DESC");
+        2:  107:    std::vector<Car> actual = sortCarsByProducerAndModel(cars, "DESC");
         1:  107-block  0
 call    0 returned 1
 call    1 returned 1
@@ -1179,69 +1182,78 @@ call   11 returned 1
     $$$$$:  107-block  5
         -:  108:
         -:  109:    // Assert
-       1*:  110:    assert(actual.get(0).getRegistrationNumber() == car3.getRegistrationNumber());
+       1*:  110:    assert(actual.at(0).getRegistrationNumber() == car3.getRegistrationNumber());
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:  110-block  0
 call    3 returned 1
-call    4 returned 1
-branch  5 taken 1 (fallthrough)
-branch  6 taken 0 (throw)
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
         1:  110-block  1
-call    7 returned 1
-branch  8 taken 0 (fallthrough)
-branch  9 taken 1
-    %%%%%:  110-block  2
-call   10 never executed
-        1:  110-block  3
-call   11 returned 1
-call   12 returned 1
-    $$$$$:  110-block  4
-call   13 never executed
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  110-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  110-block  3
+call   12 never executed
+        1:  110-block  4
+call   13 returned 1
+call   14 returned 1
     $$$$$:  110-block  5
-       1*:  111:    assert(actual.get(1).getRegistrationNumber() == car2.getRegistrationNumber());
+call   15 never executed
+    $$$$$:  110-block  6
+       1*:  111:    assert(actual.at(1).getRegistrationNumber() == car2.getRegistrationNumber());
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:  111-block  0
 call    3 returned 1
-call    4 returned 1
-branch  5 taken 1 (fallthrough)
-branch  6 taken 0 (throw)
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
         1:  111-block  1
-call    7 returned 1
-branch  8 taken 0 (fallthrough)
-branch  9 taken 1
-    %%%%%:  111-block  2
-call   10 never executed
-        1:  111-block  3
-call   11 returned 1
-call   12 returned 1
-    $$$$$:  111-block  4
-call   13 never executed
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  111-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  111-block  3
+call   12 never executed
+        1:  111-block  4
+call   13 returned 1
+call   14 returned 1
     $$$$$:  111-block  5
-       1*:  112:    assert(actual.get(2).getRegistrationNumber() == car1.getRegistrationNumber());
+call   15 never executed
+    $$$$$:  111-block  6
+       1*:  112:    assert(actual.at(2).getRegistrationNumber() == car1.getRegistrationNumber());
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:  112-block  0
 call    3 returned 1
-call    4 returned 1
-branch  5 taken 1 (fallthrough)
-branch  6 taken 0 (throw)
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
         1:  112-block  1
-call    7 returned 1
-branch  8 taken 0 (fallthrough)
-branch  9 taken 1
-    %%%%%:  112-block  2
-call   10 never executed
-        1:  112-block  3
-call   11 returned 1
-call   12 returned 1
-    $$$$$:  112-block  4
-call   13 never executed
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  112-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  112-block  3
+call   12 never executed
+        1:  112-block  4
+call   13 returned 1
+call   14 returned 1
     $$$$$:  112-block  5
+call   15 never executed
+    $$$$$:  112-block  6
         1:  113:}
 call    0 returned 1
 call    1 returned 1

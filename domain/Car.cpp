@@ -22,19 +22,19 @@ Car::Car(const std::string& registrationNumber, const std::string& producer, con
 
 
 
-std::string Car::getRegistrationNumber() {
+std::string Car::getRegistrationNumber() const {
     return this->registrationNumber;
 }
 
-std::string Car::getModel() {
+std::string Car::getModel() const {
     return this->model;
 }
 
-std::string Car::getProducer() {
+std::string Car::getProducer() const {
     return this->producer;
 }
 
-std::string Car::getType() {
+std::string Car::getType() const {
     return this->type;
 }
 

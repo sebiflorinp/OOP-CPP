@@ -1,47 +1,25 @@
+#include <vector>
+#include <algorithm>
 #include "SortingFunctions.h"
 #include "../domain/Car.h"
 #include "DynamicArray.h"
 
-DynamicArray<Car> sortCarsByRegistrationNumber(DynamicArray<Car> cars, const std::string& sortingOrder) {
-    for (int i = 0; i < cars.size() - 1; ++i) {
-        for (int j = i + 1; j < cars.size(); ++j) {
-            if (compareRegistrationNumbers(cars.get(i), cars.get(j), sortingOrder) == -1) {
-                Car aux = cars.get(i);
-                cars.set(i, cars.get(j));
-                cars.set(j, aux);
-            }
-        }
-    }
+std::vector<Car> sortCarsByRegistrationNumber(std::vector<Car> cars, const std::string& sortingOrder) {
+    std::sort(cars.begin(), cars.end(), [&](const Car& car1, const Car& car2){return sortingOrder == "ASC" ? car1.getRegistrationNumber() < car2.getRegistrationNumber() : car1.getRegistrationNumber() > car2.getRegistrationNumber();});
     return cars;
 }
 
-DynamicArray<Car> sortCarsByType(DynamicArray<Car> cars, const std::string& sortingOrder) {
-    for (int i = 0; i < cars.size() - 1; ++i) {
-        for (int j = i + 1; j < cars.size(); ++j) {
-            if (compareTypes(cars.get(i), cars.get(j), sortingOrder) == -1) {
-                Car aux = cars.get(i);
-                cars.set(i, cars.get(j));
-                cars.set(j, aux);
-            }
-        }
-    }
+std::vector<Car> sortCarsByType(std::vector<Car> cars, const std::string& sortingOrder) {
+    std::sort(cars.begin(), cars.end(), [&](const Car& car1,const Car& car2){return sortingOrder == "ASC" ? car1.getType() < car2.getType() : car1.getType() > car2.getType();});
     return cars;
 }
 
-DynamicArray<Car> sortCarsByProducerAndModel(DynamicArray<Car> cars, const std::string& sortingOrder) {
-    for (int i = 0; i < cars.size() - 1; ++i) {
-        for (int j = i + 1; j < cars.size(); ++j) {
-            if (compareProducersAndModels(cars.get(i), cars.get(j), sortingOrder) == -1) {
-                Car aux = cars.get(i);
-                cars.set(i, cars.get(j));
-                cars.set(j, aux);
-            }
-        }
-    }
+std::vector<Car> sortCarsByProducerAndModel(std::vector<Car> cars, const std::string& sortingOrder) {
+    std::sort(cars.begin(), cars.end(), [&](const Car &car1, const Car &car2) { return compareProducersAndModels(car1, car2, sortingOrder) == 1;});
     return cars;
 }
 
-int compareRegistrationNumbers(Car& firstCar,Car& secondCar,const std::string& sortingOrder) {
+int compareRegistrationNumbers(const Car& firstCar,const Car& secondCar,const std::string& sortingOrder) {
     if (sortingOrder == "ASC") {
         if (firstCar.getRegistrationNumber() < secondCar.getRegistrationNumber()) {
             return 1;
@@ -69,7 +47,7 @@ int compareTypes(Car& firstCar, Car& secondCar, const std::string& sortingOrder)
     }
 }
 
-int compareProducersAndModels(Car& firstCar,Car& secondCar,const std::string& sortingOrder) {
+int compareProducersAndModels(const Car& firstCar,const Car& secondCar,const std::string& sortingOrder) {
     if (sortingOrder == "ASC") {
         if (firstCar.getProducer() < secondCar.getProducer()) {
             return 1;

@@ -84,7 +84,8 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
     #####:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
         -:   80:
         -:   81:      _GLIBCXX20_CONSTEXPR
-        -:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorI3CarEC2ERKS2_ called 0 returned 0% blocks executed 0%
+    #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
         -:   83:
         -:   84:      template<typename _Tp1>
         -:   85:	_GLIBCXX20_CONSTEXPR

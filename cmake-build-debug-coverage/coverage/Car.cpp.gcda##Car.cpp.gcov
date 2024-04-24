@@ -72,29 +72,29 @@ call    3 returned 2
         -:   22:
         -:   23:
         -:   24:
-function _ZN3Car21getRegistrationNumberB5cxx11Ev called 209 returned 100% blocks executed 100%
-      209:   25:std::string Car::getRegistrationNumber() {
-      209:   26:    return this->registrationNumber;
-      209:   26-block  0
-call    0 returned 209
+function _ZNK3Car21getRegistrationNumberB5cxx11Ev called 201 returned 100% blocks executed 100%
+      201:   25:std::string Car::getRegistrationNumber() const {
+      201:   26:    return this->registrationNumber;
+      201:   26-block  0
+call    0 returned 201
         -:   27:}
         -:   28:
-function _ZN3Car8getModelB5cxx11Ev called 33 returned 100% blocks executed 100%
-       33:   29:std::string Car::getModel() {
+function _ZNK3Car8getModelB5cxx11Ev called 33 returned 100% blocks executed 100%
+       33:   29:std::string Car::getModel() const {
        33:   30:    return this->model;
        33:   30-block  0
 call    0 returned 33
         -:   31:}
         -:   32:
-function _ZN3Car11getProducerB5cxx11Ev called 55 returned 100% blocks executed 100%
-       55:   33:std::string Car::getProducer() {
-       55:   34:    return this->producer;
-       55:   34-block  0
-call    0 returned 55
+function _ZNK3Car11getProducerB5cxx11Ev called 53 returned 100% blocks executed 100%
+       53:   33:std::string Car::getProducer() const {
+       53:   34:    return this->producer;
+       53:   34-block  0
+call    0 returned 53
         -:   35:}
         -:   36:
-function _ZN3Car7getTypeB5cxx11Ev called 39 returned 100% blocks executed 100%
-       39:   37:std::string Car::getType() {
+function _ZNK3Car7getTypeB5cxx11Ev called 39 returned 100% blocks executed 100%
+       39:   37:std::string Car::getType() const {
        39:   38:    return this->type;
        39:   38-block  0
 call    0 returned 39
@@ -236,40 +236,40 @@ call   11 never executed
        17:   75-block  0
         -:   76:}
         -:   77:
-function _ZN3CarC2ERKS_ called 83 returned 100% blocks executed 61%
-       83:   78:Car::Car(const Car &car) {
-       83:   78-block  0
-call    0 returned 83
-call    1 returned 83
-call    2 returned 83
-call    3 returned 83
-       83:   79:    registrationNumber = car.registrationNumber;
-call    0 returned 83
-branch  1 taken 83 (fallthrough)
+function _ZN3CarC2ERKS_ called 134 returned 100% blocks executed 61%
+      134:   78:Car::Car(const Car &car) {
+      134:   78-block  0
+call    0 returned 134
+call    1 returned 134
+call    2 returned 134
+call    3 returned 134
+      134:   79:    registrationNumber = car.registrationNumber;
+call    0 returned 134
+branch  1 taken 134 (fallthrough)
 branch  2 taken 0 (throw)
-       83:   80:    model = car.model;
-       83:   80-block  0
-call    0 returned 83
-branch  1 taken 83 (fallthrough)
+      134:   80:    model = car.model;
+      134:   80-block  0
+call    0 returned 134
+branch  1 taken 134 (fallthrough)
 branch  2 taken 0 (throw)
-       83:   81:    producer = car.producer;
-       83:   81-block  0
-call    0 returned 83
-branch  1 taken 83 (fallthrough)
+      134:   81:    producer = car.producer;
+      134:   81-block  0
+call    0 returned 134
+branch  1 taken 134 (fallthrough)
 branch  2 taken 0 (throw)
-       83:   82:    type = car.type;
-       83:   82-block  0
-call    0 returned 83
-branch  1 taken 83 (fallthrough)
+      134:   82:    type = car.type;
+      134:   82-block  0
+call    0 returned 134
+branch  1 taken 134 (fallthrough)
 branch  2 taken 0 (throw)
         -:   83:
-       83:   84:    printf("Constructor\n");
-       83:   84-block  0
-call    0 returned 83
-branch  1 taken 83 (fallthrough)
+      134:   84:    printf("Constructor\n");
+      134:   84-block  0
+call    0 returned 134
+branch  1 taken 134 (fallthrough)
 branch  2 taken 0 (throw)
-       83:   85:}
-       83:   85-block  0
+      134:   85:}
+      134:   85-block  0
     $$$$$:   85-block  1
 call    0 never executed
     $$$$$:   85-block  2
@@ -279,11 +279,11 @@ call    2 never executed
     $$$$$:   85-block  4
 call    3 never executed
         -:   86:
-function _ZN3CarC2Ev called 134 returned 100% blocks executed 100%
-      134:   87:Car::Car() {
-      134:   87-block  0
-call    0 returned 134
-call    1 returned 134
-call    2 returned 134
-call    3 returned 134
-      134:   88:}
+function _ZN3CarC2Ev called 16 returned 100% blocks executed 100%
+       16:   87:Car::Car() {
+       16:   87-block  0
+call    0 returned 16
+call    1 returned 16
+call    2 returned 16
+call    3 returned 16
+       16:   88:}

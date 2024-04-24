@@ -11,500 +11,499 @@
         -:    7:template <typename Element>
         -:    8:class DynamicArray
         -:    9:{
-        -:   10:public:
-        -:   11:	// Default constructor
-        -:   12:	DynamicArray();
-        -:   13:
-        -:   14:	/*
-        -:   15:	 * Copy constructor.
-        -:   16:	 * Preconditions: arrayToBeCopied: an instance of the DynamicArray class.
-        -:   17:	 * Post-conditions: -
-        -:   18:	 */
-        -:   19:	DynamicArray(const DynamicArray& arrayToBeCopied);
+        -:   10:private:
+        -:   11:	int length;
+        -:   12:	int capacity;
+        -:   13:	Element* elements;
+        -:   14:
+        -:   15:	void ensureCapacity();
+        -:   16:
+        -:   17:public:
+        -:   18:	// Default constructor
+        -:   19:	DynamicArray();
         -:   20:
-        -:   21:	// Destructor
-        -:   22:	~DynamicArray();
-        -:   23:
-        -:   24:	/*
-        -:   25:	 * Assignment operator.
-        -:   26:	 * Preconditions: arrayToBeAssigned: an instance of the DynamicArray class.
-        -:   27:	 * Post-conditions: an instance of the DynamicArray class.
-        -:   28:	 */
-        -:   29:	DynamicArray& operator=(const DynamicArray& arrayToBeAssigned);
+        -:   21:	/*
+        -:   22:	 * Copy constructor.
+        -:   23:	 * Preconditions: arrayToBeCopied: an instance of the DynamicArray class.
+        -:   24:	 * Post-conditions: -
+        -:   25:	 */
+        -:   26:	DynamicArray(const DynamicArray& arrayToBeCopied);
+        -:   27:
+        -:   28:	// Destructor
+        -:   29:	~DynamicArray();
         -:   30:
-        -:   31:    /*
-        -:   32:     * Move constructor.
-        -:   33:     * Preconditions: arrayToBeMoved: an instance of the DynamicArray class.
-        -:   34:     * Post-conditions: -
-        -:   35:     */
-        -:   36:	DynamicArray(DynamicArray&& arrayToBeMoved);
+        -:   31:	/*
+        -:   32:	 * Assignment operator.
+        -:   33:	 * Preconditions: arrayToBeAssigned: an instance of the DynamicArray class.
+        -:   34:	 * Post-conditions: an instance of the DynamicArray class.
+        -:   35:	 */
+        -:   36:	DynamicArray& operator=(const DynamicArray& arrayToBeAssigned);
         -:   37:
-        -:   38:	/*
-        -:   39:	 * Move assignment.
-        -:   40:	 * Preconditions: arrayToBeMoved: an instance of the DynamicArray class.
-        -:   41:	 * Post-conditions: an instance of the DynamicArray class.
-        -:   42:	 */
-        -:   43:	DynamicArray& operator=(DynamicArray&& arrayToBeMoved);
+        -:   38:    /*
+        -:   39:     * Move constructor.
+        -:   40:     * Preconditions: arrayToBeMoved: an instance of the DynamicArray class.
+        -:   41:     * Post-conditions: -
+        -:   42:     */
+        -:   43:	DynamicArray(DynamicArray&& arrayToBeMoved);
         -:   44:
-        -:   45:    /*
-        -:   46:     * Adds a new element in the array.
-        -:   47:     * Preconditions: newElement: an Element
-        -:   48:     * Post-conditions: -
-        -:   49:     */
-        -:   50:	void add(const Element& newElement);
+        -:   45:	/*
+        -:   46:	 * Move assignment.
+        -:   47:	 * Preconditions: arrayToBeMoved: an instance of the DynamicArray class.
+        -:   48:	 * Post-conditions: an instance of the DynamicArray class.
+        -:   49:	 */
+        -:   50:	DynamicArray& operator=(DynamicArray&& arrayToBeMoved);
         -:   51:
         -:   52:    /*
-        -:   53:     * Returns the element at a given position.
-        -:   54:     * Preconditions: position: a positive integer
-        -:   55:     * Post-conditions: an Element
+        -:   53:     * Adds a new element in the array.
+        -:   54:     * Preconditions: newElement: an Element
+        -:   55:     * Post-conditions: -
         -:   56:     */
-        -:   57:	Element& get(int position) const;
+        -:   57:	void add(const Element& newElement);
         -:   58:
-        -:   59:
-        -:   60:    /*
-        -:   61:     * Changes the value of the element at the given position to match the given value
-        -:   62:     * Preconditions: position: a positive integer
-        -:   63:     *                newValue: an Element
-        -:   64:     * Post-conditions: -
-        -:   65:     */
-        -:   66:	void set(int position, const Element& newValue);
-        -:   67:
-        -:   68:    /*
-        -:   69:     * Returns the size of the Array.
-        -:   70:     * Preconditions: -
-        -:   71:     * Post-conditions: an integer
+        -:   59:    /*
+        -:   60:     * Returns the element at a given position.
+        -:   61:     * Preconditions: position: a positive integer
+        -:   62:     * Post-conditions: an Element
+        -:   63:     */
+        -:   64:	Element& get(int position) const;
+        -:   65:
+        -:   66:
+        -:   67:    /*
+        -:   68:     * Changes the value of the element at the given position to match the given value
+        -:   69:     * Preconditions: position: a positive integer
+        -:   70:     *                newValue: an Element
+        -:   71:     * Post-conditions: -
         -:   72:     */
-        -:   73:	int size() const noexcept;
+        -:   73:	void set(int position, const Element& newValue);
         -:   74:
         -:   75:    /*
-        -:   76:     * Deletes an element at the given position
-        -:   77:     * Preconditions: position: a positive integer
-        -:   78:     * Post-conditions: -
+        -:   76:     * Returns the size of the Array.
+        -:   77:     * Preconditions: -
+        -:   78:     * Post-conditions: an integer
         -:   79:     */
-        -:   80:    void erase(int position);
+        -:   80:	int size() const noexcept;
         -:   81:
-        -:   82:	friend class DynamicArrayIterator<Element>;
-        -:   83:
-        -:   84:    /*
-        -:   85:     * Returns a DynamicArrayIterator at the first position of the Array.
-        -:   86:     * Preconditions: -
-        -:   87:     * Post-conditions: DynamicArrayIterator
-        -:   88:     */
-        -:   89:	DynamicArrayIterator<Element> begin() const;
+        -:   82:    /*
+        -:   83:     * Deletes an element at the given position
+        -:   84:     * Preconditions: position: a positive integer
+        -:   85:     * Post-conditions: -
+        -:   86:     */
+        -:   87:    void erase(int position);
+        -:   88:
+        -:   89:	friend class DynamicArrayIterator<Element>;
         -:   90:
         -:   91:    /*
-        -:   92:     * Returns a DynamicArrayIterator at the last position of the Array.
+        -:   92:     * Returns a DynamicArrayIterator at the first position of the Array.
         -:   93:     * Preconditions: -
         -:   94:     * Post-conditions: DynamicArrayIterator
         -:   95:     */
-        -:   96:	DynamicArrayIterator<Element> end() const;
+        -:   96:	DynamicArrayIterator<Element> begin() const;
         -:   97:
-        -:   98:
-        -:   99:private:
-        -:  100:	int length;
-        -:  101:	int capacity;
-        -:  102:	Element* elements;
-        -:  103:
-        -:  104:	void ensureCapacity();
-        -:  105:};
-        -:  106:
-        -:  107:template<typename ElementT>
-function _ZN12DynamicArrayI3CarE5eraseEi called 0 returned 0% blocks executed 0%
-    #####:  108:void DynamicArray<ElementT>::erase(int position) {
-    #####:  109:    for (int i = position; i < length - 1; ++i) {
+        -:   98:    /*
+        -:   99:     * Returns a DynamicArrayIterator at the last position of the Array.
+        -:  100:     * Preconditions: -
+        -:  101:     * Post-conditions: DynamicArrayIterator
+        -:  102:     */
+        -:  103:	DynamicArrayIterator<Element> end() const;
+        -:  104:};
+        -:  105:
+        -:  106:template<typename ElementT>
+function _ZN12DynamicArrayI3CarE5eraseEi called 1 returned 100% blocks executed 60%
+        1:  107:void DynamicArray<ElementT>::erase(int position) {
+       1*:  108:    for (int i = position; i < length - 1; ++i) {
+        1:  108-block  0
+        1:  108-block  1
+branch  0 taken 0
+branch  1 taken 1 (fallthrough)
+    #####:  109:        elements[i] = elements[i + 1];
     %%%%%:  109-block  0
-    %%%%%:  109-block  1
-branch  0 never executed
-branch  1 never executed
-    #####:  110:        elements[i] = elements[i + 1];
-    %%%%%:  110-block  0
 call    0 never executed
-        -:  111:    }
-    #####:  112:    length--;
-    #####:  113:}
-        -:  114:
-        -:  115:template<typename Element>
-function _ZN12DynamicArrayI3CarEC2Ev called 0 returned 0% blocks executed 0%
-    #####:  116:DynamicArray<Element>::DynamicArray() :elements{ new Element[2] }, capacity{ 2 }, length{ 0 } {}
-    %%%%%:  116-block  0
-call    0 never executed
-    %%%%%:  116-block  1
-call    1 never executed
-branch  2 never executed
-branch  3 never executed
-    %%%%%:  116-block  2
-    %%%%%:  116-block  3
-branch  4 never executed
-branch  5 never executed
-    %%%%%:  116-block  4
-    $$$$$:  116-block  5
-    $$$$$:  116-block  6
+        -:  110:    }
+        1:  111:    length--;
+        1:  112:}
+        -:  113:
+        -:  114:template<typename Element>
+function _ZN12DynamicArrayI3CarEC2Ev called 2 returned 100% blocks executed 54%
+        6:  115:DynamicArray<Element>::DynamicArray() :elements{ new Element[2] }, capacity{ 2 }, length{ 0 } {}
+        2:  115-block  0
+call    0 returned 2
+        4:  115-block  1
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  115-block  2
+        6:  115-block  3
+branch  4 taken 4
+branch  5 taken 2 (fallthrough)
+        2:  115-block  4
+    $$$$$:  115-block  5
+    $$$$$:  115-block  6
 call    6 never executed
-    $$$$$:  116-block  7
+    $$$$$:  115-block  7
 call    7 never executed
-        -:  117:
-        -:  118:template<typename Element>
-        -:  119:DynamicArray<Element>::DynamicArray(const DynamicArray<Element>& arrayToBeCopied) {
-        -:  120:	elements = new Element[arrayToBeCopied.capacity];
-        -:  121:
-        -:  122:    // Copy the elements in the copy.
-        -:  123:	for (int i = 0; i < arrayToBeCopied.length; i++) {
-        -:  124:		elements[i] = arrayToBeCopied.elements[i];
-        -:  125:	}
-        -:  126:	length = arrayToBeCopied.length;
-        -:  127:	capacity = arrayToBeCopied.capacity;
-        -:  128:}
-        -:  129:
-        -:  130:template<typename Element>
-function _ZN12DynamicArrayI3CarEaSERKS1_ called 0 returned 0% blocks executed 0%
-    #####:  131:DynamicArray<Element>& DynamicArray<Element>::operator=(const DynamicArray<Element>& arrayToBeAssigned) {
-        -:  132:    // Create a new array and put the elements of the given on in it.
-    #####:  133:	delete[] elements;
-    %%%%%:  133-block  0
-branch  0 never executed
-branch  1 never executed
-    %%%%%:  133-block  1
+        -:  116:
+        -:  117:template<typename Element>
+        -:  118:DynamicArray<Element>::DynamicArray(const DynamicArray<Element>& arrayToBeCopied) {
+        -:  119:	elements = new Element[arrayToBeCopied.capacity];
+        -:  120:
+        -:  121:    // Copy the elements in the copy.
+        -:  122:	for (int i = 0; i < arrayToBeCopied.length; i++) {
+        -:  123:		elements[i] = arrayToBeCopied.elements[i];
+        -:  124:	}
+        -:  125:	length = arrayToBeCopied.length;
+        -:  126:	capacity = arrayToBeCopied.capacity;
+        -:  127:}
+        -:  128:
+        -:  129:template<typename Element>
+function _ZN12DynamicArrayI3CarEaSERKS1_ called 1 returned 100% blocks executed 66%
+        1:  130:DynamicArray<Element>& DynamicArray<Element>::operator=(const DynamicArray<Element>& arrayToBeAssigned) {
+        -:  131:    // Create a new array and put the elements of the given on in it.
+        5:  132:	delete[] elements;
+        1:  132-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  132-block  1
+        5:  132-block  2
+branch  2 taken 4 (fallthrough)
+branch  3 taken 1
+        4:  132-block  3
+call    4 returned 4
+        1:  132-block  4
+call    5 returned 1
+       5*:  133:	elements = new Element[arrayToBeAssigned.capacity];
+        1:  133-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  133-block  1
     %%%%%:  133-block  2
-branch  2 never executed
-branch  3 never executed
-    %%%%%:  133-block  3
-call    4 never executed
-    %%%%%:  133-block  4
-call    5 never executed
-    #####:  134:	elements = new Element[arrayToBeAssigned.capacity];
-    %%%%%:  134-block  0
-branch  0 never executed
-branch  1 never executed
-    %%%%%:  134-block  1
-    %%%%%:  134-block  2
-    %%%%%:  134-block  3
-call    2 never executed
-    %%%%%:  134-block  4
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    %%%%%:  134-block  5
-    %%%%%:  134-block  6
-branch  6 never executed
-branch  7 never executed
-    $$$$$:  134-block  7
-    $$$$$:  134-block  8
+        1:  133-block  3
+call    2 returned 1
+        4:  133-block  4
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  133-block  5
+        5:  133-block  6
+branch  6 taken 4
+branch  7 taken 1 (fallthrough)
+    $$$$$:  133-block  7
+    $$$$$:  133-block  8
 call    8 never executed
-    $$$$$:  134-block  9
+    $$$$$:  133-block  9
 branch  9 never executed
 branch 10 never executed
-    $$$$$:  134-block 10
-    $$$$$:  134-block 11
-    $$$$$:  134-block 12
+    $$$$$:  133-block 10
+    $$$$$:  133-block 11
+    $$$$$:  133-block 12
 call   11 never executed
-    #####:  135:	for (int i = 0; i < arrayToBeAssigned.length; i++) {
-    %%%%%:  135-block  0
-    %%%%%:  135-block  1
-branch  0 never executed
-branch  1 never executed
-    #####:  136:		elements[i] = arrayToBeAssigned.elements[i];
-    %%%%%:  136-block  0
-call    0 never executed
-        -:  137:	}
-    #####:  138:	length = arrayToBeAssigned.length;
-    #####:  139:	capacity = arrayToBeAssigned.capacity;
-    #####:  140:	return *this;
-    %%%%%:  140-block  0
-    %%%%%:  140-block  1
-        -:  141:}
-        -:  142:
-        -:  143:template<typename Element>
-function _ZN12DynamicArrayI3CarED2Ev called 0 returned 0% blocks executed 0%
-    #####:  144:DynamicArray<Element>::~DynamicArray() {
-    #####:  145:	delete[] elements;
-    %%%%%:  145-block  0
-branch  0 never executed
-branch  1 never executed
-    %%%%%:  145-block  1
-    %%%%%:  145-block  2
-branch  2 never executed
-branch  3 never executed
-    %%%%%:  145-block  3
-call    4 never executed
-    %%%%%:  145-block  4
-call    5 never executed
-    #####:  146:}
-        -:  147:
-        -:  148:template<typename Element>
-        -:  149:DynamicArray<Element>::DynamicArray(DynamicArray&& arrayToBeMoved) {
-        -:  150:	// Copy the data from the given array.
-        -:  151:	elements = arrayToBeMoved.elements;
-        -:  152:	length = arrayToBeMoved.length;
-        -:  153:	capacity = arrayToBeMoved.capacity;
-        -:  154:
-        -:  155:	// Free the given array so the data doesn't get deleted twice.
-        -:  156:	arrayToBeMoved.elements = nullptr;
-        -:  157:	arrayToBeMoved.length = 0;
-        -:  158:	arrayToBeMoved.capacity = 0;
-        -:  159:}
-        -:  160:
-        -:  161:template<typename Element>
-        -:  162:DynamicArray<Element>& DynamicArray<Element>::operator=(DynamicArray<Element>&& arrayToBeMoved) {
-        -:  163:	// Check if to given array is the same as the current one.
-        -:  164:	if (this == &arrayToBeMoved) {
-        -:  165:		return *this;
-        -:  166:	}
-        -:  167:	delete[] elements;
-        -:  168:	// Copy the data from the given array to the current one
-        -:  169:	elements = arrayToBeMoved.elements;
-        -:  170:	length = arrayToBeMoved.length;
-        -:  171:	capacity = arrayToBeMoved.capacity;
-        -:  172:
-        -:  173:	// Free the data from the given array so the data isn't deleted twice
-        -:  174:	arrayToBeMoved.elements = nullptr;
-        -:  175:	arrayToBeMoved.length = 0;
-        -:  176:	arrayToBeMoved.capacity = 0;
-        -:  177:	return *this;
-        -:  178:}
-        -:  179:
-        -:  180:template<typename Element>
-function _ZN12DynamicArrayI3CarE3addERKS0_ called 0 returned 0% blocks executed 0%
-    #####:  181:void DynamicArray<Element>::add(const Element& newElement) {
-    #####:  182:	ensureCapacity();
-    %%%%%:  182-block  0
-call    0 never executed
-    #####:  183:	elements[length++] = newElement;
-call    0 never executed
-    #####:  184:}
-        -:  185:
-        -:  186:template<typename Element>
-function _ZNK12DynamicArrayI3CarE3getEi called 0 returned 0% blocks executed 0%
-    #####:  187:Element& DynamicArray<Element>::get(int position) const {
-    #####:  188:	return elements[position];
-    %%%%%:  188-block  0
-        -:  189:}
-        -:  190:
-        -:  191:template<typename Element>
-function _ZN12DynamicArrayI3CarE3setEiRKS0_ called 0 returned 0% blocks executed 0%
-    #####:  192:void DynamicArray<Element>::set(int position, const Element& newValue) {
-    #####:  193:	elements[position] = newValue;
-    %%%%%:  193-block  0
-call    0 never executed
-    #####:  194:}
-        -:  195:
-        -:  196:template<typename Element>
-function _ZNK12DynamicArrayI3CarE4sizeEv called 0 returned 0% blocks executed 0%
-    #####:  197:int DynamicArray<Element>::size() const noexcept {
-    #####:  198:	return length;
-    %%%%%:  198-block  0
-        -:  199:}
-        -:  200:
-        -:  201:template<typename Element>
-function _ZN12DynamicArrayI3CarE14ensureCapacityEv called 0 returned 0% blocks executed 0%
-    #####:  202:void DynamicArray<Element>::ensureCapacity() {
-        -:  203:	// Check if there is enough space for a new element
-    #####:  204:	if (length < capacity) {
-    %%%%%:  204-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  205:		return;
-    %%%%%:  205-block  0
-        -:  206:	}
-        -:  207:
-        -:  208:	// increase the space if it isn't the case
-    #####:  209:	capacity *= 2;
-    #####:  210:	Element* aux = new Element[capacity];
-    %%%%%:  210-block  0
-branch  0 never executed
-branch  1 never executed
-    %%%%%:  210-block  1
-    %%%%%:  210-block  2
-    %%%%%:  210-block  3
-call    2 never executed
-    %%%%%:  210-block  4
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    %%%%%:  210-block  5
-    %%%%%:  210-block  6
-branch  6 never executed
-branch  7 never executed
-    $$$$$:  210-block  7
-    $$$$$:  210-block  8
+        4:  134:	for (int i = 0; i < arrayToBeAssigned.length; i++) {
+        1:  134-block  0
+        4:  134-block  1
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        3:  135:		elements[i] = arrayToBeAssigned.elements[i];
+        3:  135-block  0
+call    0 returned 3
+        -:  136:	}
+        1:  137:	length = arrayToBeAssigned.length;
+        1:  138:	capacity = arrayToBeAssigned.capacity;
+        1:  139:	return *this;
+        1:  139-block  0
+        1:  139-block  1
+        -:  140:}
+        -:  141:
+        -:  142:template<typename Element>
+function _ZN12DynamicArrayI3CarED2Ev called 2 returned 100% blocks executed 100%
+        2:  143:DynamicArray<Element>::~DynamicArray() {
+       10:  144:	delete[] elements;
+        2:  144-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  144-block  1
+       10:  144-block  2
+branch  2 taken 8 (fallthrough)
+branch  3 taken 2
+        8:  144-block  3
+call    4 returned 8
+        2:  144-block  4
+call    5 returned 2
+        2:  145:}
+        -:  146:
+        -:  147:template<typename Element>
+        -:  148:DynamicArray<Element>::DynamicArray(DynamicArray&& arrayToBeMoved) {
+        -:  149:	// Copy the data from the given array.
+        -:  150:	elements = arrayToBeMoved.elements;
+        -:  151:	length = arrayToBeMoved.length;
+        -:  152:	capacity = arrayToBeMoved.capacity;
+        -:  153:
+        -:  154:	// Free the given array so the data doesn't get deleted twice.
+        -:  155:	arrayToBeMoved.elements = nullptr;
+        -:  156:	arrayToBeMoved.length = 0;
+        -:  157:	arrayToBeMoved.capacity = 0;
+        -:  158:}
+        -:  159:
+        -:  160:template<typename Element>
+        -:  161:DynamicArray<Element>& DynamicArray<Element>::operator=(DynamicArray<Element>&& arrayToBeMoved) {
+        -:  162:	// Check if to given array is the same as the current one.
+        -:  163:	if (this == &arrayToBeMoved) {
+        -:  164:		return *this;
+        -:  165:	}
+        -:  166:	delete[] elements;
+        -:  167:	// Copy the data from the given array to the current one
+        -:  168:	elements = arrayToBeMoved.elements;
+        -:  169:	length = arrayToBeMoved.length;
+        -:  170:	capacity = arrayToBeMoved.capacity;
+        -:  171:
+        -:  172:	// Free the data from the given array so the data isn't deleted twice
+        -:  173:	arrayToBeMoved.elements = nullptr;
+        -:  174:	arrayToBeMoved.length = 0;
+        -:  175:	arrayToBeMoved.capacity = 0;
+        -:  176:	return *this;
+        -:  177:}
+        -:  178:
+        -:  179:template<typename Element>
+function _ZN12DynamicArrayI3CarE3addERKS0_ called 7 returned 100% blocks executed 100%
+        7:  180:void DynamicArray<Element>::add(const Element& newElement) {
+        7:  181:	ensureCapacity();
+        7:  181-block  0
+call    0 returned 7
+        7:  182:	elements[length++] = newElement;
+call    0 returned 7
+        7:  183:}
+        -:  184:
+        -:  185:template<typename Element>
+function _ZNK12DynamicArrayI3CarE3getEi called 14 returned 100% blocks executed 100%
+       14:  186:Element& DynamicArray<Element>::get(int position) const {
+       14:  187:	return elements[position];
+       14:  187-block  0
+        -:  188:}
+        -:  189:
+        -:  190:template<typename Element>
+function _ZN12DynamicArrayI3CarE3setEiRKS0_ called 3 returned 100% blocks executed 100%
+        3:  191:void DynamicArray<Element>::set(int position, const Element& newValue) {
+        3:  192:	elements[position] = newValue;
+        3:  192-block  0
+call    0 returned 3
+        3:  193:}
+        -:  194:
+        -:  195:template<typename Element>
+function _ZNK12DynamicArrayI3CarE4sizeEv called 7 returned 100% blocks executed 100%
+        7:  196:int DynamicArray<Element>::size() const noexcept {
+        7:  197:	return length;
+        7:  197-block  0
+        -:  198:}
+        -:  199:
+        -:  200:template<typename Element>
+function _ZN12DynamicArrayI3CarE14ensureCapacityEv called 7 returned 100% blocks executed 68%
+        7:  201:void DynamicArray<Element>::ensureCapacity() {
+        -:  202:	// Check if there is enough space for a new element
+        7:  203:	if (length < capacity) {
+        7:  203-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 2
+        5:  204:		return;
+        5:  204-block  0
+        -:  205:	}
+        -:  206:
+        -:  207:	// increase the space if it isn't the case
+        2:  208:	capacity *= 2;
+      10*:  209:	Element* aux = new Element[capacity];
+        2:  209-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  209-block  1
+    %%%%%:  209-block  2
+        2:  209-block  3
+call    2 returned 2
+        8:  209-block  4
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:  209-block  5
+       10:  209-block  6
+branch  6 taken 8
+branch  7 taken 2 (fallthrough)
+    $$$$$:  209-block  7
+    $$$$$:  209-block  8
 call    8 never executed
-    $$$$$:  210-block  9
+    $$$$$:  209-block  9
 branch  9 never executed
 branch 10 never executed
-    $$$$$:  210-block 10
-    $$$$$:  210-block 11
-    $$$$$:  210-block 12
+    $$$$$:  209-block 10
+    $$$$$:  209-block 11
+    $$$$$:  209-block 12
 call   11 never executed
-    #####:  211:	for (int i = 0; i < length; i++) {
-    %%%%%:  211-block  0
-    %%%%%:  211-block  1
-branch  0 never executed
-branch  1 never executed
-    #####:  212:		aux[i] = elements[i];
-    %%%%%:  212-block  0
-call    0 never executed
-        -:  213:	}
-    #####:  214:	delete[] elements;
-    %%%%%:  214-block  0
-branch  0 never executed
-branch  1 never executed
-    %%%%%:  214-block  1
-    %%%%%:  214-block  2
-branch  2 never executed
-branch  3 never executed
-    %%%%%:  214-block  3
-call    4 never executed
-    %%%%%:  214-block  4
-call    5 never executed
-    #####:  215:	elements = aux;
-    %%%%%:  215-block  0
-        -:  216:}
-        -:  217:
-        -:  218:template<typename Element>
-function _ZNK12DynamicArrayI3CarE5beginEv called 0 returned 0% blocks executed 0%
-    #####:  219:DynamicArrayIterator<Element> DynamicArray<Element>::begin() const
-        -:  220:{
-    #####:  221:	return DynamicArrayIterator<Element>(*this);
-    %%%%%:  221-block  0
-call    0 never executed
-        -:  222:}
-        -:  223:
-        -:  224:template<typename Element>
-function _ZNK12DynamicArrayI3CarE3endEv called 0 returned 0% blocks executed 0%
-    #####:  225:DynamicArrayIterator<Element> DynamicArray<Element>::end() const
-        -:  226:{
-    #####:  227:	return DynamicArrayIterator<Element>(*this, length);
-    %%%%%:  227-block  0
-call    0 never executed
-        -:  228:}
-        -:  229:
-        -:  230:template<typename Element>
-        -:  231:class DynamicArrayIterator {
-        -:  232:private:
-        -:  233:	const DynamicArray<Element>& array;
-        -:  234:	int position = 0;
-        -:  235:public:
-        -:  236:	/*
-        -:  237:	 * Constructor of the DynamicArrayIterator.
-        -:  238:	 * Preconditions: array: a reference to an instance of the DynamicArray class.
-        -:  239:	 * Post-conditions: -
-        -:  240:	 */
-        -:  241:	DynamicArrayIterator(const DynamicArray<Element>& array) noexcept;
-        -:  242:
-        -:  243:	/*
-        -:  244:	 * Constructor of the DynamicArrayIterator.
-        -:  245:	 * Preconditions: array: a reference to an instance of the DynamicArray class. 
-        -:  246:	 * 				  position: a positive integer
-        -:  247:	 * Post-conditions: -
-        -:  248:	 */
-        -:  249:	DynamicArrayIterator(const DynamicArray<Element>& array, int position)noexcept;
-        -:  250:
-        -:  251:	/*
-        -:  252:	 * Checks if the iterator is on a valid position.
-        -:  253:	 * Preconditions: -
-        -:  254:	 * Post-conditions: a boolean
-        -:  255:	 */
-        -:  256:	bool valid()const;
-        -:  257:
-        -:  258:	/*
-        -:  259:	 * Returns the element at the position the iterator is at.
-        -:  260:	 * Preconditions: -
-        -:  261:	 * Post-conditions: an Element
-        -:  262:	 */
-        -:  263:	Element& element() const;
-        -:  264:
-        -:  265:    /*
-        -:  266:     * Moves the iterator one position forward.
-        -:  267:     * Preconditions: -
-        -:  268:     * Post-conditions: -
-        -:  269:     */
-        -:  270:	void next();
-        -:  271:
-        -:  272:    /*
-        -:  273:     * Returns the element the iterator is currently pointing at.
-        -:  274:     * Preconditions: -
-        -:  275:     * Post-conditions: an Element
-        -:  276:     */
-        -:  277:	Element& operator*();
-        -:  278:
-        -:  279:    /*
-        -:  280:     * Moves the iterator one position forward.
-        -:  281:     * Preconditions: -
-        -:  282:     * Post-conditions: -
-        -:  283:     */
-        -:  284:	DynamicArrayIterator& operator++();
-        -:  285:
-        -:  286:    /*
-        -:  287:     * Checks if two iterators are at the same position.
-        -:  288:     * Preconditions: anotherDynamicArrayIterator: an instance of the DynamicArrayIterator class.
-        -:  289:     * Post-conditions: a boolean
-        -:  290:     */
-        -:  291:	bool operator==(const DynamicArrayIterator& anotherDynamicArrayIterator)noexcept;
-        -:  292:
-        -:  293:    /*
-        -:  294:     * Checks if two iterators are on different positions.
-        -:  295:     * Preconditions: anotherDynamicArrayIterator: an instance of the DynamicArrayIterator class.
-        -:  296:     * Post-conditions: a boolean.
-        -:  297:     */
-        -:  298:	bool operator!=(const DynamicArrayIterator& anotherDynamicArrayIterator)noexcept;
-        -:  299:};
-        -:  300:
-        -:  301:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_E called 0 returned 0% blocks executed 0%
-    #####:  302:DynamicArrayIterator<Element>::DynamicArrayIterator(const DynamicArray<Element>& v) noexcept:array{ v } {}
-        -:  303:
-        -:  304:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_Ei called 0 returned 0% blocks executed 0%
-    #####:  305:DynamicArrayIterator<Element>::DynamicArrayIterator(const DynamicArray<Element>& array, int position)noexcept :
-    #####:  306:array{ array }, position{ position } {}
-        -:  307:
-        -:  308:template<typename Element>
-        -:  309:bool DynamicArrayIterator<Element>::valid()const {
-        -:  310:	return position < array.length;
-        -:  311:}
-        -:  312:
-        -:  313:template<typename Element>
-function _ZNK20DynamicArrayIteratorI3CarE7elementEv called 0 returned 0% blocks executed 0%
-    #####:  314:Element& DynamicArrayIterator<Element>::element() const {
-    #####:  315:	return array.elements[position];
-    %%%%%:  315-block  0
-        -:  316:}
-        -:  317:
-        -:  318:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarE4nextEv called 0 returned 0% blocks executed 0%
-    #####:  319:void DynamicArrayIterator<Element>::next() {
-    #####:  320:	position++;
-    #####:  321:}
-        -:  322:
-        -:  323:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEdeEv called 0 returned 0% blocks executed 0%
-    #####:  324:Element& DynamicArrayIterator<Element>::operator*() {
-    #####:  325:	return element();
-    %%%%%:  325-block  0
-call    0 never executed
-        -:  326:}
-        -:  327:
-        -:  328:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEppEv called 0 returned 0% blocks executed 0%
-    #####:  329:DynamicArrayIterator<Element>& DynamicArrayIterator<Element>::operator++() {
-    #####:  330:	next();
-    %%%%%:  330-block  0
-call    0 never executed
-    #####:  331:	return *this;
-        -:  332:}
-        -:  333:
-        -:  334:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEeqERKS1_ called 0 returned 0% blocks executed 0%
-    #####:  335:bool DynamicArrayIterator<Element>::operator==(const DynamicArrayIterator<Element>& anotherDynamicArrayIterator) noexcept {
-    #####:  336:	return position == anotherDynamicArrayIterator.position;
-    %%%%%:  336-block  0
-        -:  337:}
-        -:  338:
-        -:  339:template<typename Element>
-function _ZN20DynamicArrayIteratorI3CarEneERKS1_ called 0 returned 0% blocks executed 0%
-    #####:  340:bool DynamicArrayIterator<Element>::operator!=(const DynamicArrayIterator<Element>& anotherDynamicArrayIterator)noexcept {
-    #####:  341:	return !(*this == anotherDynamicArrayIterator);
-    %%%%%:  341-block  0
-call    0 never executed
-        -:  342:}
-        -:  343:
-        -:  344:#endif //CPPLAB_DYNAMICARRAY_H
+        6:  210:	for (int i = 0; i < length; i++) {
+        2:  210-block  0
+        6:  210-block  1
+branch  0 taken 4
+branch  1 taken 2 (fallthrough)
+        4:  211:		aux[i] = elements[i];
+        4:  211-block  0
+call    0 returned 4
+        -:  212:	}
+        6:  213:	delete[] elements;
+        2:  213-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  213-block  1
+        6:  213-block  2
+branch  2 taken 4 (fallthrough)
+branch  3 taken 2
+        4:  213-block  3
+call    4 returned 4
+        2:  213-block  4
+call    5 returned 2
+        2:  214:	elements = aux;
+        2:  214-block  0
+        -:  215:}
+        -:  216:
+        -:  217:template<typename Element>
+function _ZNK12DynamicArrayI3CarE5beginEv called 1 returned 100% blocks executed 100%
+        1:  218:DynamicArrayIterator<Element> DynamicArray<Element>::begin() const
+        -:  219:{
+        1:  220:	return DynamicArrayIterator<Element>(*this);
+        1:  220-block  0
+call    0 returned 1
+        -:  221:}
+        -:  222:
+        -:  223:template<typename Element>
+function _ZNK12DynamicArrayI3CarE3endEv called 1 returned 100% blocks executed 100%
+        1:  224:DynamicArrayIterator<Element> DynamicArray<Element>::end() const
+        -:  225:{
+        1:  226:	return DynamicArrayIterator<Element>(*this, length);
+        1:  226-block  0
+call    0 returned 1
+        -:  227:}
+        -:  228:
+        -:  229:template<typename Element>
+        -:  230:class DynamicArrayIterator {
+        -:  231:private:
+        -:  232:	const DynamicArray<Element>& array;
+        -:  233:	int position = 0;
+        -:  234:public:
+        -:  235:	/*
+        -:  236:	 * Constructor of the DynamicArrayIterator.
+        -:  237:	 * Preconditions: array: a reference to an instance of the DynamicArray class.
+        -:  238:	 * Post-conditions: -
+        -:  239:	 */
+        -:  240:	DynamicArrayIterator(const DynamicArray<Element>& array) noexcept;
+        -:  241:
+        -:  242:	/*
+        -:  243:	 * Constructor of the DynamicArrayIterator.
+        -:  244:	 * Preconditions: array: a reference to an instance of the DynamicArray class. 
+        -:  245:	 * 				  position: a positive integer
+        -:  246:	 * Post-conditions: -
+        -:  247:	 */
+        -:  248:	DynamicArrayIterator(const DynamicArray<Element>& array, int position)noexcept;
+        -:  249:
+        -:  250:	/*
+        -:  251:	 * Checks if the iterator is on a valid position.
+        -:  252:	 * Preconditions: -
+        -:  253:	 * Post-conditions: a boolean
+        -:  254:	 */
+        -:  255:	bool valid()const;
+        -:  256:
+        -:  257:	/*
+        -:  258:	 * Returns the element at the position the iterator is at.
+        -:  259:	 * Preconditions: -
+        -:  260:	 * Post-conditions: an Element
+        -:  261:	 */
+        -:  262:	Element& element() const;
+        -:  263:
+        -:  264:    /*
+        -:  265:     * Moves the iterator one position forward.
+        -:  266:     * Preconditions: -
+        -:  267:     * Post-conditions: -
+        -:  268:     */
+        -:  269:	void next();
+        -:  270:
+        -:  271:    /*
+        -:  272:     * Returns the element the iterator is currently pointing at.
+        -:  273:     * Preconditions: -
+        -:  274:     * Post-conditions: an Element
+        -:  275:     */
+        -:  276:	Element& operator*();
+        -:  277:
+        -:  278:    /*
+        -:  279:     * Moves the iterator one position forward.
+        -:  280:     * Preconditions: -
+        -:  281:     * Post-conditions: -
+        -:  282:     */
+        -:  283:	DynamicArrayIterator& operator++();
+        -:  284:
+        -:  285:    /*
+        -:  286:     * Checks if two iterators are at the same position.
+        -:  287:     * Preconditions: anotherDynamicArrayIterator: an instance of the DynamicArrayIterator class.
+        -:  288:     * Post-conditions: a boolean
+        -:  289:     */
+        -:  290:	bool operator==(const DynamicArrayIterator& anotherDynamicArrayIterator)noexcept;
+        -:  291:
+        -:  292:    /*
+        -:  293:     * Checks if two iterators are on different positions.
+        -:  294:     * Preconditions: anotherDynamicArrayIterator: an instance of the DynamicArrayIterator class.
+        -:  295:     * Post-conditions: a boolean.
+        -:  296:     */
+        -:  297:	bool operator!=(const DynamicArrayIterator& anotherDynamicArrayIterator)noexcept;
+        -:  298:};
+        -:  299:
+        -:  300:template<typename Element>
+function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_E called 1 returned 100% blocks executed 100%
+        1:  301:DynamicArrayIterator<Element>::DynamicArrayIterator(const DynamicArray<Element>& v) noexcept:array{ v } {}
+        -:  302:
+        -:  303:template<typename Element>
+function _ZN20DynamicArrayIteratorI3CarEC2ERK12DynamicArrayIS0_Ei called 1 returned 100% blocks executed 100%
+        1:  304:DynamicArrayIterator<Element>::DynamicArrayIterator(const DynamicArray<Element>& array, int position)noexcept :
+        1:  305:array{ array }, position{ position } {}
+        -:  306:
+        -:  307:template<typename Element>
+        -:  308:bool DynamicArrayIterator<Element>::valid()const {
+        -:  309:	return position < array.length;
+        -:  310:}
+        -:  311:
+        -:  312:template<typename Element>
+function _ZNK20DynamicArrayIteratorI3CarE7elementEv called 3 returned 100% blocks executed 100%
+        3:  313:Element& DynamicArrayIterator<Element>::element() const {
+        3:  314:	return array.elements[position];
+        3:  314-block  0
+        -:  315:}
+        -:  316:
+        -:  317:template<typename Element>
+function _ZN20DynamicArrayIteratorI3CarE4nextEv called 3 returned 100% blocks executed 100%
+        3:  318:void DynamicArrayIterator<Element>::next() {
+        3:  319:	position++;
+        3:  320:}
+        -:  321:
+        -:  322:template<typename Element>
+function _ZN20DynamicArrayIteratorI3CarEdeEv called 3 returned 100% blocks executed 100%
+        3:  323:Element& DynamicArrayIterator<Element>::operator*() {
+        3:  324:	return element();
+        3:  324-block  0
+call    0 returned 3
+        -:  325:}
+        -:  326:
+        -:  327:template<typename Element>
+function _ZN20DynamicArrayIteratorI3CarEppEv called 3 returned 100% blocks executed 100%
+        3:  328:DynamicArrayIterator<Element>& DynamicArrayIterator<Element>::operator++() {
+        3:  329:	next();
+        3:  329-block  0
+call    0 returned 3
+        3:  330:	return *this;
+        -:  331:}
+        -:  332:
+        -:  333:template<typename Element>
+function _ZN20DynamicArrayIteratorI3CarEeqERKS1_ called 4 returned 100% blocks executed 100%
+        4:  334:bool DynamicArrayIterator<Element>::operator==(const DynamicArrayIterator<Element>& anotherDynamicArrayIterator) noexcept {
+        4:  335:	return position == anotherDynamicArrayIterator.position;
+        4:  335-block  0
+        -:  336:}
+        -:  337:
+        -:  338:template<typename Element>
+function _ZN20DynamicArrayIteratorI3CarEneERKS1_ called 4 returned 100% blocks executed 100%
+        4:  339:bool DynamicArrayIterator<Element>::operator!=(const DynamicArrayIterator<Element>& anotherDynamicArrayIterator)noexcept {
+        4:  340:	return !(*this == anotherDynamicArrayIterator);
+        4:  340-block  0
+call    0 returned 4
+        -:  341:}
+        -:  342:
+        -:  343:#endif //CPPLAB_DYNAMICARRAY_H

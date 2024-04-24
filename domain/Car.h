@@ -40,28 +40,28 @@ class Car {
          * Preconditions: -
          * Post-conditions: a string
          */
-        std::string getRegistrationNumber();
+        std::string getRegistrationNumber() const;
 
         /*
          * Producer getter.
          * Preconditions: -
          * Post-conditions: a string
          */
-        std::string getProducer();
+        std::string getProducer() const;
 
         /*
          * Producer getter.
          * Preconditions: -
          * Post-conditions: a string
          */
-        std::string getModel();
+        std::string getModel() const;
 
         /*
          * Model getter.
          * Preconditions: -
          * Post-conditions: a string
          */
-        std::string getType();
+        std::string getType() const;
 
         /*
          * RegistrationNumber setter.

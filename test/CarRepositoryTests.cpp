@@ -1,4 +1,5 @@
 #include <cassert>
+#include <iostream>
 #include "CarRepositoryTests.h"
 #include "../domain/Car.h"
 #include "../repository/CarRepository.h"
@@ -62,11 +63,11 @@ void CarRepositoryTests::testGetAllCars() {
     cars.addNewCar(car2);
 
     // Act
-    DynamicArray<Car> returnedCars = cars.getAllCars();
+    std::vector<Car> returnedCars = cars.getAllCars();
 
     // Assert
-    assert(car1.compareCars(returnedCars.get(0)));
-    assert(car2.compareCars(returnedCars.get(1)));
+    assert(car1.compareCars(returnedCars.at(0)));
+    assert(car2.compareCars(returnedCars.at(1)));
 }
 
 void CarRepositoryTests::testDeleteCarByRegistrationNumber() {
@@ -84,7 +85,6 @@ void CarRepositoryTests::testDeleteCarByRegistrationNumber() {
     } catch (...) {
         assert(true == true);
     }
-
     cars.deleteCarByRegistrationNumber("RO123AA");
 
     // Assert

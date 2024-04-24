@@ -14,11 +14,11 @@ void CarControllerTests::testGetAllCars() {
     carController.addNewCar("RO456CD", "BBB", "BBB", "BBB");
 
     // Act
-    DynamicArray<Car> actual = carController.getAllCars();
+    std::vector<Car> actual = carController.getAllCars();
 
     // Assert
-    assert(car1.compareCars(actual.get(0)));
-    assert(car2.compareCars(actual.get(1)));
+    assert(car1.compareCars(actual.at(0)));
+    assert(car2.compareCars(actual.at(1)));
 }
 
 void CarControllerTests::testFindCarByRegistrationNumber() {
@@ -142,11 +142,11 @@ void CarControllerTests::testFilter() {
     carController.addNewCar("RO111BB", "BBB", "BBB", "BBB");
 
     // Act
-    DynamicArray<Car> actual = carController.filter("AAA", filterByProducer);
+    std::vector<Car> actual = carController.filter("AAA", filterByProducer);
 
     // Assert
     assert(actual.size() == 1);
-    assert(actual.get(0).getRegistrationNumber() == car1.getRegistrationNumber());
+    assert(actual.at(0).getRegistrationNumber() == car1.getRegistrationNumber());
 }
 
 void CarControllerTests::testSort() {
@@ -161,11 +161,11 @@ void CarControllerTests::testSort() {
     carController.addNewCar("EN123BB", "CCC", "CCC", "CCC");
 
     // Act
-    DynamicArray<Car> actual = carController.sort(carController.getAllCars(), "ASC", sortCarsByRegistrationNumber);
+    std::vector<Car> actual = carController.sort(carController.getAllCars(), "ASC", sortCarsByRegistrationNumber);
 
     // Assert
-    assert(actual.get(0).getRegistrationNumber() == car3.getRegistrationNumber());
-    assert(actual.get(1).getRegistrationNumber() == car2.getRegistrationNumber());
-    assert(actual.get(2).getRegistrationNumber() == car1.getRegistrationNumber());
+    assert(actual.at(0).getRegistrationNumber() == car3.getRegistrationNumber());
+    assert(actual.at(1).getRegistrationNumber() == car2.getRegistrationNumber());
+    assert(actual.at(2).getRegistrationNumber() == car1.getRegistrationNumber());
 
 }

@@ -1,6 +1,7 @@
 #ifndef CPPLAB_FILTERS_H
 #define CPPLAB_FILTERS_H
 
+#include <vector>
 #include "DynamicArray.h"
 #include "../domain/Car.h"
 
@@ -10,7 +11,7 @@
  *                producer: a string
  * Post-conditions: an instance of the DynamicArray class.
  */
-DynamicArray<Car> filterByProducer(const DynamicArray<Car>& cars, const std::string& producer);
+std::vector<Car> filterByProducer(const std::vector<Car>& cars, const std::string& producer);
 
 /*
  * Filters the cars by the type.
@@ -18,6 +19,6 @@ DynamicArray<Car> filterByProducer(const DynamicArray<Car>& cars, const std::str
  *                producer: a string
  * Post-conditions: an instance of the DynamicArray class.
  */
-DynamicArray<Car> filterByType(const DynamicArray<Car>& cars, const std::string& type);
+std::vector<Car> filterByType(const std::vector<Car>& cars, const std::string& type);
 
 #endif //CPPLAB_FILTERS_H

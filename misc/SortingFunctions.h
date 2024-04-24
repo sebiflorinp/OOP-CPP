@@ -3,6 +3,7 @@
 
 #include "../domain/Car.h"
 #include "DynamicArray.h"
+#include <vector>
 
 /*
  * Sorts the given cars by their registration numbers.
@@ -10,7 +11,7 @@
  *                sortingOrdering: a string that has to be either ASC or DESC
  * Post-conditions: an instance of the DynamicArray class.
  */
-DynamicArray<Car> sortCarsByRegistrationNumber(DynamicArray<Car> cars,const std::string& sortingOrder);
+std::vector<Car> sortCarsByRegistrationNumber(std::vector<Car> cars,const std::string& sortingOrder);
 
 /*
  * Sorts the given cars by their types.
@@ -18,7 +19,7 @@ DynamicArray<Car> sortCarsByRegistrationNumber(DynamicArray<Car> cars,const std:
  *                sortingOrdering: a string that has to be either ASC or DESC
  * Post-conditions: an instance of the DynamicArray class.
  */
-DynamicArray<Car> sortCarsByType(DynamicArray<Car> cars,const std::string& sortingOrder);
+std::vector<Car> sortCarsByType(std::vector<Car> cars,const std::string& sortingOrder);
 
 /*
  * Sorts the given cars by their producers and models.
@@ -26,7 +27,7 @@ DynamicArray<Car> sortCarsByType(DynamicArray<Car> cars,const std::string& sorti
  *                sortingOrdering: a string that has to be either ASC or DESC
  * Post-conditions: an instance of the DynamicArray class.
  */
-DynamicArray<Car> sortCarsByProducerAndModel(DynamicArray<Car> cars,const std::string& sortingOrder);
+std::vector<Car> sortCarsByProducerAndModel(std::vector<Car> cars,const std::string& sortingOrder);
 
 /*
  * Compares the registration numbers of two cars.
@@ -35,7 +36,7 @@ DynamicArray<Car> sortCarsByProducerAndModel(DynamicArray<Car> cars,const std::s
  *                sortingOrder: a string that has to be either ASC or DESC
  * Post-conditions: an integer that is -1, 0 or 1
  */
-int compareRegistrationNumbers(Car& firstCar,Car& secondCar,const std::string& sortingOrder);
+int compareRegistrationNumbers(const Car& firstCar, const Car& secondCar,const std::string& sortingOrder);
 
 /*
  * Compares the types of two cars.
@@ -53,6 +54,6 @@ int compareTypes(Car& firstCar, Car& secondCar, const std::string& sortingOrder)
  *                sortingOrder: a string that has to be either ASC or DESC
  * Post-conditions: an integer that is -1, 0 or 1
  */
-int compareProducersAndModels(Car& firstCar,Car& secondCar,const std::string& sortingOrder);
+int compareProducersAndModels(const Car& firstCar, const Car& secondCar,const std::string& sortingOrder);
 
 #endif //CPPLAB_SORTINGFUNCTIONS_H

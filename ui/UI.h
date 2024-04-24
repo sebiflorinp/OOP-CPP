@@ -13,7 +13,7 @@ class UI {
          * Displays all the cars present in the received list.
          * Preconditions:
          */
-        static void displayCars(const DynamicArray<Car>& cars);
+        static void displayCars(const std::vector<Car>& cars);
         /*
          * The constructor of the UI class
          * Preconditions: carController: an instance of the CarController class.

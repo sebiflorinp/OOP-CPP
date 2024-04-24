@@ -174,7 +174,7 @@ call    0 never executed
 branch  1 never executed
 branch  2 never executed
         -:   63:
-        -:   64:                // try to add the car
+        -:   64:                // try to push_back the car
         -:   65:                try {
     #####:   66:                    this->carController.addNewCar(registrationNumber, type, model, producer);
     %%%%%:   66-block  0
@@ -511,13 +511,10 @@ branch  2 never executed
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  134:                    DynamicArray<Car> displayCar;
+    #####:  134:                    std::vector<Car> displayCar;
     %%%%%:  134-block  0
 call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  135:                    displayCar.add(foundCar);
-    %%%%%:  135-block  0
+    #####:  135:                    displayCar.push_back(foundCar);
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
@@ -593,7 +590,7 @@ branch  1 never executed
 branch  2 never executed
         -:  149:
         -:  150:                {
-    #####:  151:                    DynamicArray<Car> filteredCars = carController.filter(producer, filterByProducer);
+    #####:  151:                    std::vector<Car> filteredCars = carController.filter(producer, filterByProducer);
     %%%%%:  151-block  0
 call    0 never executed
 branch  1 never executed
@@ -668,7 +665,7 @@ branch  1 never executed
 branch  2 never executed
         -:  167:
         -:  168:                {
-    #####:  169:                    DynamicArray<Car> filteredCars = carController.filter(type, filterByType);
+    #####:  169:                    std::vector<Car> filteredCars = carController.filter(type, filterByType);
     %%%%%:  169-block  0
 call    0 never executed
 branch  1 never executed
@@ -1048,8 +1045,8 @@ call   11 never executed
         1:  235:}
         1:  235-block  0
         -:  236:
-function _ZN2UI11displayCarsERK12DynamicArrayI3CarE called 0 returned 0% blocks executed 0%
-    #####:  237:void UI::displayCars(const DynamicArray<Car>& cars) {
+function _ZN2UI11displayCarsERKSt6vectorI3CarSaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:  237:void UI::displayCars(const std::vector<Car>& cars) {
     #####:  238:    printf("+------------------------+-------------------+-------------------+-------------------+\n");
     %%%%%:  238-block  0
 call    0 never executed
@@ -1063,58 +1060,53 @@ call    0 never executed
 call    1 never executed
     %%%%%:  242-block  0
 call    2 never executed
-branch  3 never executed
-branch  4 never executed
     %%%%%:  242-block  1
-call    5 never executed
-branch  6 never executed
-branch  7 never executed
+call    3 never executed
     %%%%%:  242-block  2
-call    8 never executed
-branch  9 never executed
-branch 10 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
     #####:  243:        printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", car.getRegistrationNumber().c_str(), car.getType().c_str(), car.getModel().c_str(), car.getProducer().c_str());
-    %%%%%:  243-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  243-block  1
+    %%%%%:  243-block  0
 call    3 never executed
 call    4 never executed
 branch  5 never executed
 branch  6 never executed
-    %%%%%:  243-block  2
+    %%%%%:  243-block  1
 call    7 never executed
 call    8 never executed
 branch  9 never executed
 branch 10 never executed
-    %%%%%:  243-block  3
+    %%%%%:  243-block  2
 call   11 never executed
 call   12 never executed
 branch 13 never executed
 branch 14 never executed
-    %%%%%:  243-block  4
+    %%%%%:  243-block  3
 call   15 never executed
 call   16 never executed
 branch 17 never executed
 branch 18 never executed
-    %%%%%:  243-block  5
+    %%%%%:  243-block  4
 call   19 never executed
 call   20 never executed
 call   21 never executed
 call   22 never executed
-    $$$$$:  243-block  6
+    $$$$$:  243-block  5
 call   23 never executed
+    $$$$$:  243-block  6
     $$$$$:  243-block  7
-    $$$$$:  243-block  8
 call   24 never executed
+    $$$$$:  243-block  8
     $$$$$:  243-block  9
-    $$$$$:  243-block 10
 call   25 never executed
+    $$$$$:  243-block 10
     $$$$$:  243-block 11
-    $$$$$:  243-block 12
 call   26 never executed
-    $$$$$:  243-block 13
+    $$$$$:  243-block 12
     #####:  244:        printf("+------------------------+-------------------+-------------------+-------------------+\n");
 call    0 never executed
 branch  1 never executed

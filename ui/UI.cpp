@@ -61,7 +61,7 @@ void UI::runApp() {
                 cout << "Input the producer of the car" << std::endl;
                 cin >> producer;
 
-                // try to add the car
+                // try to push_back the car
                 try {
                     this->carController.addNewCar(registrationNumber, type, model, producer);
                     cout << "The car was added successfully" << endl;
@@ -131,8 +131,8 @@ void UI::runApp() {
                 cin >> registrationNumber;
                 try {
                     Car foundCar = this->carController.findCarByRegistrationNumber(registrationNumber);
-                    DynamicArray<Car> displayCar;
-                    displayCar.add(foundCar);
+                    std::vector<Car> displayCar;
+                    displayCar.push_back(foundCar);
                     UI::displayCars(displayCar);
                 } catch (...) {
                     cout << "There is no car with the input registration number" << endl;
@@ -148,7 +148,7 @@ void UI::runApp() {
                 cin >> producer;
 
                 {
-                    DynamicArray<Car> filteredCars = carController.filter(producer, filterByProducer);
+                    std::vector<Car> filteredCars = carController.filter(producer, filterByProducer);
                     if (filteredCars.size() == 0) {
                         cout << "There are no cars with the input producer." << endl;
                     } else {
@@ -166,7 +166,7 @@ void UI::runApp() {
                 cin >> type;
 
                 {
-                    DynamicArray<Car> filteredCars = carController.filter(type, filterByType);
+                    std::vector<Car> filteredCars = carController.filter(type, filterByType);
                     if (filteredCars.size() == 0) {
                         cout << "There are no cars with the input type." << endl;
                     } else {
@@ -234,7 +234,7 @@ void UI::runApp() {
     }
 }
 
-void UI::displayCars(const DynamicArray<Car>& cars) {
+void UI::displayCars(const std::vector<Car>& cars) {
     printf("+------------------------+-------------------+-------------------+-------------------+\n");
     printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", "Registration Number", "Type", "Model", "Producer");
     printf("+------------------------+-------------------+-------------------+-------------------+\n");

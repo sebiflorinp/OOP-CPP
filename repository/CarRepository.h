@@ -7,7 +7,7 @@
 
 class CarRepository {
     private:
-        DynamicArray<Car> cars;
+        std::vector<Car> cars;
 
     public:
         /*
@@ -23,7 +23,7 @@ class CarRepository {
          * Preconditions: -
          * Post-conditions: a vector with instances of the Car class
          */
-        const DynamicArray<Car>& getAllCars() const;
+        const std::vector<Car>& getAllCars() const;
 
         /*
          * Adds the received Car instance in the repository.
@@ -31,7 +31,7 @@ class CarRepository {
          * Post-conditions: -
          * Raises: There is already another car with the same registrationNumber
          */
-        void addNewCar(Car newCar);
+        void addNewCar(const Car& newCar);
 
         /*
          * Deletes the instance of the Car class with the received registrationNumber

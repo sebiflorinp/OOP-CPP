@@ -1,45 +1,40 @@
+#include <algorithm>
 #include "CarRepository.h"
 
 Car CarRepository::getCarByRegistrationNumber(const std::string& registrationNumber) {
     // find the car with the received registration
-    for (auto & car : cars) {
-        if (car.getRegistrationNumber() == registrationNumber) {
-            return car;
-        }
+    auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return car.getRegistrationNumber() == registrationNumber;});
+    if (result == cars.end()) {
+        throw std::exception();
+    } else {
+        return *result;
     }
-    // throw an error if the car was not found
-    throw std::exception();
 }
 
-const DynamicArray<Car>& CarRepository::getAllCars() const {
+const std::vector<Car>& CarRepository::getAllCars() const {
     return cars;
 }
 
-void CarRepository::addNewCar(Car newCar) {
+void CarRepository::addNewCar(const Car& newCar) {
     // check if there is already a Car with the registrationNumber of the received one.
-    for (auto & car : cars) {
-        if (car.getRegistrationNumber() == newCar.getRegistrationNumber()) {
-            // throw an error because there is already another car with the registrationNumber of the received car
-            throw std::exception();
-        }
+    auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return newCar.getRegistrationNumber() == car.getRegistrationNumber();});
+    if (result == cars.end()) {
+        cars.push_back(newCar);
+        return;
+    } else {
+        throw std::exception();
     }
-
-    // add the new car
-    cars.add(newCar);
 }
 
 void CarRepository::deleteCarByRegistrationNumber(const std::string& registrationNumber) {
     // find the car that needs to be deleted
-    for (int i = 0; i < cars.size(); i++) {
-        if (cars.get(i).getRegistrationNumber() == registrationNumber) {
-            // delete the car
-            cars.erase(i);
-            return;
-        }
+    auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return car.getRegistrationNumber() == registrationNumber;});
+    if (result != cars.end()) {
+        cars.erase(result);
+        return ;
+    } else {
+        throw std::exception();
     }
-
-    // throw an error if no car was deleted
-    throw std::exception();
 }
 
 void CarRepository::updateCarByRegistrationNumber(const std::string& registrationNumber, Car updatedCar) {

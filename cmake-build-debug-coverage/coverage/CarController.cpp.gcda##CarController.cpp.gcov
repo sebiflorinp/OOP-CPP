@@ -32,23 +32,15 @@ function _ZN13CarController9addNewCarERKNSt7__cxx1112basic_stringIcSt11char_trai
 call    0 returned 19
 branch  1 taken 19 (fallthrough)
 branch  2 taken 0 (throw)
-       20:   17:    carRepository.addNewCar(newCar);
+       19:   17:    carRepository.addNewCar(newCar);
        19:   17-block  0
 call    0 returned 19
-branch  1 taken 19 (fallthrough)
-branch  2 taken 0 (throw)
-       19:   17-block  1
-call    3 returned 19
-branch  4 taken 18 (fallthrough)
-branch  5 taken 1 (throw)
-       18:   17-block  2
-call    6 returned 18
-        1:   17-block  3
-call    7 returned 1
-        1:   17-block  4
+branch  1 taken 18 (fallthrough)
+branch  2 taken 1 (throw)
        19:   18:}
+       18:   18-block  0
 call    0 returned 18
-        1:   18-block  0
+        1:   18-block  1
 call    1 returned 1
         -:   19:
 function _ZN13CarController27findCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 9 returned 67% blocks executed 100%
@@ -60,7 +52,7 @@ call    0 returned 6
         -:   23:}
         -:   24:
 function _ZN13CarController10getAllCarsEv called 2 returned 100% blocks executed 100%
-        2:   25:const DynamicArray<Car>& CarController::getAllCars() {
+        2:   25:const std::vector<Car>& CarController::getAllCars() {
         2:   26:    return this->carRepository.getAllCars();
         2:   26-block  0
 call    0 returned 2
@@ -102,17 +94,17 @@ call    0 returned 1
         2:   39-block  0
 call    1 returned 2
         -:   40:
-function _ZN13CarController6filterENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPF12DynamicArrayI3CarERKS8_RKS5_E called 1 returned 100% blocks executed 100%
-        1:   41:DynamicArray<Car> CarController::filter(std::string toEqual,DynamicArray<Car> (*filterByCriteria)(const DynamicArray<Car>&,const std::string&)) {
+function _ZN13CarController6filterENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFSt6vectorI3CarSaIS7_EERKS9_RKS5_E called 1 returned 100% blocks executed 100%
+        1:   41:std::vector<Car> CarController::filter(std::string toEqual,std::vector<Car> (*filterByCriteria)(const std::vector<Car>&,const std::string&)) {
         1:   42:    return filterByCriteria(carRepository.getAllCars(), toEqual);
         1:   42-block  0
 call    0 returned 1
 call    1 returned 1
         -:   43:}
         -:   44:
-        -:   45:DynamicArray<Car>
-function _ZN13CarController4sortERK12DynamicArrayI3CarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFS2_S2_SC_E called 1 returned 100% blocks executed 75%
-        1:   46:CarController::sort(const DynamicArray<Car> & cars, const std::string& sortingOrder, DynamicArray<Car> (*sortByCriteria)(DynamicArray<Car>, const std::string&)) {
+        -:   45:std::vector<Car>
+function _ZN13CarController4sortERKSt6vectorI3CarSaIS1_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFS3_S3_SD_E called 1 returned 100% blocks executed 75%
+        1:   46:CarController::sort(const std::vector<Car> & cars, const std::string& sortingOrder, std::vector<Car> (*sortByCriteria)(std::vector<Car>, const std::string&)) {
         1:   47:    return sortByCriteria(cars, sortingOrder);
         1:   47-block  0
 call    0 returned 1

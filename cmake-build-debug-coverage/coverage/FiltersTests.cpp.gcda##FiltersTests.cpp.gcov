@@ -11,33 +11,30 @@
 function _ZN12FiltersTests20testFilterByProducerEv called 1 returned 100% blocks executed 44%
         1:    7:void FiltersTests::testFilterByProducer() {
         -:    8:    // Arrange
-        1:    9:    DynamicArray<Car> cars;
+        1:    9:    std::vector<Car> cars;
         1:    9-block  0
 call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
         2:   10:    Car car1 = Car("RO123AA", "Dacia", "12AA", "Regular");
-        1:   10-block  0
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   10-block  1
+        1:   10-block  0
 call    4 returned 1
 call    5 returned 1
 branch  6 taken 1 (fallthrough)
 branch  7 taken 0 (throw)
-        1:   10-block  2
+        1:   10-block  1
 call    8 returned 1
 call    9 returned 1
 branch 10 taken 1 (fallthrough)
 branch 11 taken 0 (throw)
-        1:   10-block  3
+        1:   10-block  2
 call   12 returned 1
 call   13 returned 1
 branch 14 taken 1 (fallthrough)
 branch 15 taken 0 (throw)
-        1:   10-block  4
+        1:   10-block  3
 call   16 returned 1
 branch 17 taken 1 (fallthrough)
 branch 18 taken 0 (throw)
@@ -48,6 +45,7 @@ call   22 returned 1
 call   23 returned 1
 call   24 returned 1
 call   25 returned 1
+    $$$$$:   10-block  4
     $$$$$:   10-block  5
     $$$$$:   10-block  6
     $$$$$:   10-block  7
@@ -55,7 +53,6 @@ call   25 returned 1
     $$$$$:   10-block  9
     $$$$$:   10-block 10
     $$$$$:   10-block 11
-    $$$$$:   10-block 12
         2:   11:    Car car2 = Car("EN123RR", "Dacia", "23AA", "Regular");
 call    0 returned 1
 call    1 returned 1
@@ -173,28 +170,28 @@ call   25 returned 1
     $$$$$:   13-block  9
     $$$$$:   13-block 10
     $$$$$:   13-block 11
-        1:   14:    cars.add(car1);
+        1:   14:    cars.push_back(car1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   15:    cars.add(car2);
+        1:   15:    cars.push_back(car2);
         1:   15-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   16:    cars.add(car3);
+        1:   16:    cars.push_back(car3);
         1:   16-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   17:    cars.add(car4);
+        1:   17:    cars.push_back(car4);
         1:   17-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         -:   18:
         -:   19:    // Act
-        2:   20:    DynamicArray<Car> actual = filterByProducer(cars, "Mercedes");
+        2:   20:    std::vector<Car> actual = filterByProducer(cars, "Mercedes");
         1:   20-block  0
 call    0 returned 1
 call    1 returned 1
@@ -215,12 +212,15 @@ branch  1 taken 0 (fallthrough)
 branch  2 taken 1
     %%%%%:   23-block  0
 call    3 never executed
-        1:   24:    Car actualCar = actual.get(0);
+        1:   24:    Car actualCar = actual.at(0);
         1:   24-block  0
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
        1*:   25:    assert(actualCar.getRegistrationNumber() == car3.getRegistrationNumber());
         1:   25-block  0
 call    0 returned 1
@@ -268,33 +268,30 @@ call   13 never executed
 function _ZN12FiltersTests16testFilterByTypeEv called 1 returned 100% blocks executed 45%
         1:   28:void FiltersTests::testFilterByType() {
         -:   29:    // Arrange
-        1:   30:    DynamicArray<Car> cars;
+        1:   30:    std::vector<Car> cars;
         1:   30-block  0
 call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
         2:   31:    Car car1 = Car("RO123AA", "Dacia", "12AA", "Regular");
-        1:   31-block  0
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   31-block  1
+        1:   31-block  0
 call    4 returned 1
 call    5 returned 1
 branch  6 taken 1 (fallthrough)
 branch  7 taken 0 (throw)
-        1:   31-block  2
+        1:   31-block  1
 call    8 returned 1
 call    9 returned 1
 branch 10 taken 1 (fallthrough)
 branch 11 taken 0 (throw)
-        1:   31-block  3
+        1:   31-block  2
 call   12 returned 1
 call   13 returned 1
 branch 14 taken 1 (fallthrough)
 branch 15 taken 0 (throw)
-        1:   31-block  4
+        1:   31-block  3
 call   16 returned 1
 branch 17 taken 1 (fallthrough)
 branch 18 taken 0 (throw)
@@ -305,6 +302,7 @@ call   22 returned 1
 call   23 returned 1
 call   24 returned 1
 call   25 returned 1
+    $$$$$:   31-block  4
     $$$$$:   31-block  5
     $$$$$:   31-block  6
     $$$$$:   31-block  7
@@ -312,7 +310,6 @@ call   25 returned 1
     $$$$$:   31-block  9
     $$$$$:   31-block 10
     $$$$$:   31-block 11
-    $$$$$:   31-block 12
         2:   32:    Car car2 = Car("EN123RR", "Dacia", "23AA", "Regular");
 call    0 returned 1
 call    1 returned 1
@@ -430,28 +427,28 @@ call   25 returned 1
     $$$$$:   34-block  9
     $$$$$:   34-block 10
     $$$$$:   34-block 11
-        1:   35:    cars.add(car1);
+        1:   35:    cars.push_back(car1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   36:    cars.add(car2);
+        1:   36:    cars.push_back(car2);
         1:   36-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   37:    cars.add(car3);
+        1:   37:    cars.push_back(car3);
         1:   37-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   38:    cars.add(car4);
+        1:   38:    cars.push_back(car4);
         1:   38-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         -:   39:
         -:   40:    // Act
-        2:   41:    DynamicArray<Car> actual = filterByType(cars, "Sports");
+        2:   41:    std::vector<Car> actual = filterByType(cars, "Sports");
         1:   41-block  0
 call    0 returned 1
 call    1 returned 1
@@ -472,18 +469,24 @@ branch  1 taken 0 (fallthrough)
 branch  2 taken 1
     %%%%%:   44-block  0
 call    3 never executed
-        1:   45:    Car actualCar1 = actual.get(0);
+        1:   45:    Car actualCar1 = actual.at(0);
         1:   45-block  0
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   46:    Car actualCar2 = actual.get(1);
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   46:    Car actualCar2 = actual.at(1);
         1:   46-block  0
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
        1*:   47:    assert(actualCar1.getRegistrationNumber() == car3.getRegistrationNumber());
         1:   47-block  0
 call    0 returned 1

@@ -22,7 +22,7 @@ Car CarController::findCarByRegistrationNumber(const std::string& registrationNu
     return this->carRepository.getCarByRegistrationNumber(registrationNumber);
 }
 
-const DynamicArray<Car>& CarController::getAllCars() {
+const std::vector<Car>& CarController::getAllCars() {
     return this->carRepository.getAllCars();
 }
 
@@ -38,12 +38,12 @@ void CarController::updateCarByRegistrationNumber(const std::string& registratio
     this->carRepository.updateCarByRegistrationNumber(registrationNumber, updatedCar);
 }
 
-DynamicArray<Car> CarController::filter(std::string toEqual,DynamicArray<Car> (*filterByCriteria)(const DynamicArray<Car>&,const std::string&)) {
+std::vector<Car> CarController::filter(std::string toEqual,std::vector<Car> (*filterByCriteria)(const std::vector<Car>&,const std::string&)) {
     return filterByCriteria(carRepository.getAllCars(), toEqual);
 }
 
-DynamicArray<Car>
-CarController::sort(const DynamicArray<Car> & cars, const std::string& sortingOrder, DynamicArray<Car> (*sortByCriteria)(DynamicArray<Car>, const std::string&)) {
+std::vector<Car>
+CarController::sort(const std::vector<Car> & cars, const std::string& sortingOrder, std::vector<Car> (*sortByCriteria)(std::vector<Car>, const std::string&)) {
     return sortByCriteria(cars, sortingOrder);
 }
 

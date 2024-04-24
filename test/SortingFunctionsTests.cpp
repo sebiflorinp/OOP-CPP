@@ -66,32 +66,32 @@ void SortingFunctionsTests::testSortCarsByType() {
     // Arrange
     Car car1 = Car("RO123AA", "Dacia", "A12", "Regular");
     Car car2 = Car("RO234AA", "Dacia", "A45", "Sports");
-    DynamicArray<Car> cars;
-    cars.add(car1);
-    cars.add(car2);
+    std::vector<Car> cars;
+    cars.push_back(car1);
+    cars.push_back(car2);
 
     // Act
-    DynamicArray<Car> actual = sortCarsByType(cars, "DESC");
+    std::vector<Car> actual = sortCarsByType(cars, "DESC");
 
     // Assert
-    assert(actual.get(0).getRegistrationNumber() == car2.getRegistrationNumber());
-    assert(actual.get(1).getRegistrationNumber() == car1.getRegistrationNumber());
+    assert(actual.at(0).getRegistrationNumber() == car2.getRegistrationNumber());
+    assert(actual.at(1).getRegistrationNumber() == car1.getRegistrationNumber());
 }
 
 void SortingFunctionsTests::testSortCarsByRegistrationNumber() {
     // Arrange
     Car car1 = Car("RO123AA", "Dacia", "A12", "Regular");
     Car car2 = Car("RO234AA", "Dacia", "A45", "Sports");
-    DynamicArray<Car> cars;
-    cars.add(car1);
-    cars.add(car2);
+    std::vector<Car> cars;
+    cars.push_back(car1);
+    cars.push_back(car2);
 
     // Act
-    DynamicArray<Car> actual = sortCarsByRegistrationNumber(cars, "DESC");
+    std::vector<Car> actual = sortCarsByRegistrationNumber(cars, "DESC");
 
     // Assert
-    assert(actual.get(0).getRegistrationNumber() == car2.getRegistrationNumber());
-    assert(actual.get(1).getRegistrationNumber() == car1.getRegistrationNumber());
+    assert(actual.at(0).getRegistrationNumber() == car2.getRegistrationNumber());
+    assert(actual.at(1).getRegistrationNumber() == car1.getRegistrationNumber());
 }
 
 void SortingFunctionsTests::testSortCarsByProducerAndModel() {
@@ -99,15 +99,15 @@ void SortingFunctionsTests::testSortCarsByProducerAndModel() {
     Car car1 = Car("RO123AA", "Dacia", "A12", "Regular");
     Car car2 = Car("RO234AA", "Dacia", "A45", "Sports");
     Car car3 = Car("RO123GG", "Mercedes", "A45", "Regular");
-    DynamicArray<Car> cars;
-    cars.add(car1);
-    cars.add(car2);
-    cars.add(car3);
+    std::vector<Car> cars;
+    cars.push_back(car1);
+    cars.push_back(car2);
+    cars.push_back(car3);
     // Act
-    DynamicArray<Car> actual = sortCarsByProducerAndModel(cars, "DESC");
+    std::vector<Car> actual = sortCarsByProducerAndModel(cars, "DESC");
 
     // Assert
-    assert(actual.get(0).getRegistrationNumber() == car3.getRegistrationNumber());
-    assert(actual.get(1).getRegistrationNumber() == car2.getRegistrationNumber());
-    assert(actual.get(2).getRegistrationNumber() == car1.getRegistrationNumber());
+    assert(actual.at(0).getRegistrationNumber() == car3.getRegistrationNumber());
+    assert(actual.at(1).getRegistrationNumber() == car2.getRegistrationNumber());
+    assert(actual.at(2).getRegistrationNumber() == car1.getRegistrationNumber());
 }
