@@ -2105,6 +2105,271 @@ call    2 returned 2
         -: 2058:  template<typename _RandomAccessIterator, typename _Predicate>
         -: 2059:    _GLIBCXX20_CONSTEXPR
         -: 2060:    _RandomAccessIterator
+       52: 2061:    __find_if(_RandomAccessIterator __first, _RandomAccessIterator __last,
+        -: 2062:	      _Predicate __pred, random_access_iterator_tag)
+        -: 2063:    {
+        -: 2064:      typename iterator_traits<_RandomAccessIterator>::difference_type
+       52: 2065:	__trip_count = (__last - __first) >> 2;
+        -: 2066:
+      52*: 2067:      for (; __trip_count > 0; --__trip_count)
+        -: 2068:	{
+    #####: 2069:	  if (__pred(__first))
+    #####: 2070:	    return __first;
+    #####: 2071:	  ++__first;
+        -: 2072:
+    #####: 2073:	  if (__pred(__first))
+    #####: 2074:	    return __first;
+    #####: 2075:	  ++__first;
+        -: 2076:
+    #####: 2077:	  if (__pred(__first))
+    #####: 2078:	    return __first;
+    #####: 2079:	  ++__first;
+        -: 2080:
+    #####: 2081:	  if (__pred(__first))
+    #####: 2082:	    return __first;
+    #####: 2083:	  ++__first;
+        -: 2084:	}
+        -: 2085:
+       52: 2086:      switch (__last - __first)
+        -: 2087:	{
+       1*: 2088:	case 3:
+       1*: 2089:	  if (__pred(__first))
+    #####: 2090:	    return __first;
+       1*: 2091:	  ++__first;
+        -: 2092:	  // FALLTHRU
+       20: 2093:	case 2:
+       20: 2094:	  if (__pred(__first))
+       7*: 2095:	    return __first;
+       13: 2096:	  ++__first;
+        -: 2097:	  // FALLTHRU
+       32: 2098:	case 1:
+       32: 2099:	  if (__pred(__first))
+       9*: 2100:	    return __first;
+       23: 2101:	  ++__first;
+        -: 2102:	  // FALLTHRU
+       36: 2103:	case 0:
+        -: 2104:	default:
+       36: 2105:	  return __last;
+        -: 2106:	}
+        -: 2107:    }
+------------------
+_ZSt9__find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEENS0_5__ops10_Iter_predIZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRKS2_E_EEET_SN_SN_T0_St26random_access_iterator_tag:
+function _ZSt9__find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEENS0_5__ops10_Iter_predIZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRKS2_E_EEET_SN_SN_T0_St26random_access_iterator_tag called 4 returned 100% blocks executed 39%
+        4: 2061:    __find_if(_RandomAccessIterator __first, _RandomAccessIterator __last,
+        -: 2062:	      _Predicate __pred, random_access_iterator_tag)
+        -: 2063:    {
+        -: 2064:      typename iterator_traits<_RandomAccessIterator>::difference_type
+        4: 2065:	__trip_count = (__last - __first) >> 2;
+        4: 2065-block  0
+call    0 returned 4
+        -: 2066:
+       4*: 2067:      for (; __trip_count > 0; --__trip_count)
+        4: 2067-block  0
+branch  0 taken 0
+branch  1 taken 4 (fallthrough)
+        -: 2068:	{
+    #####: 2069:	  if (__pred(__first))
+    %%%%%: 2069-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2070:	    return __first;
+    %%%%%: 2070-block  0
+    #####: 2071:	  ++__first;
+    %%%%%: 2071-block  0
+call    0 never executed
+        -: 2072:
+    #####: 2073:	  if (__pred(__first))
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2074:	    return __first;
+    %%%%%: 2074-block  0
+    #####: 2075:	  ++__first;
+    %%%%%: 2075-block  0
+call    0 never executed
+        -: 2076:
+    #####: 2077:	  if (__pred(__first))
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2078:	    return __first;
+    %%%%%: 2078-block  0
+    #####: 2079:	  ++__first;
+    %%%%%: 2079-block  0
+call    0 never executed
+        -: 2080:
+    #####: 2081:	  if (__pred(__first))
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2082:	    return __first;
+    %%%%%: 2082-block  0
+    #####: 2083:	  ++__first;
+    %%%%%: 2083-block  0
+call    0 never executed
+        -: 2084:	}
+        -: 2085:
+        4: 2086:      switch (__last - __first)
+        4: 2086-block  0
+call    0 returned 4
+branch  1 taken 0
+branch  2 taken 4
+branch  3 taken 0
+branch  4 taken 0
+        -: 2087:	{
+    #####: 2088:	case 3:
+    #####: 2089:	  if (__pred(__first))
+    %%%%%: 2089-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2090:	    return __first;
+    %%%%%: 2090-block  0
+    #####: 2091:	  ++__first;
+    %%%%%: 2091-block  0
+call    0 never executed
+        -: 2092:	  // FALLTHRU
+        4: 2093:	case 2:
+        4: 2094:	  if (__pred(__first))
+        4: 2094-block  0
+call    0 returned 4
+branch  1 taken 2 (fallthrough)
+branch  2 taken 2
+        2: 2095:	    return __first;
+        2: 2095-block  0
+        2: 2096:	  ++__first;
+        2: 2096-block  0
+call    0 returned 2
+        -: 2097:	  // FALLTHRU
+        2: 2098:	case 1:
+        2: 2099:	  if (__pred(__first))
+        2: 2099-block  0
+call    0 returned 2
+branch  1 taken 0 (fallthrough)
+branch  2 taken 2
+    #####: 2100:	    return __first;
+    %%%%%: 2100-block  0
+        2: 2101:	  ++__first;
+        2: 2101-block  0
+call    0 returned 2
+        -: 2102:	  // FALLTHRU
+        2: 2103:	case 0:
+        -: 2104:	default:
+        2: 2105:	  return __last;
+        2: 2105-block  0
+        -: 2106:	}
+        -: 2107:    }
+------------------
+_ZSt9__find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEENS0_5__ops10_Iter_predIZN13CarRepository9addNewCarERKS2_EUlSC_E_EEET_SF_SF_T0_St26random_access_iterator_tag:
+function _ZSt9__find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEENS0_5__ops10_Iter_predIZN13CarRepository9addNewCarERKS2_EUlSC_E_EEET_SF_SF_T0_St26random_access_iterator_tag called 30 returned 100% blocks executed 47%
+       30: 2061:    __find_if(_RandomAccessIterator __first, _RandomAccessIterator __last,
+        -: 2062:	      _Predicate __pred, random_access_iterator_tag)
+        -: 2063:    {
+        -: 2064:      typename iterator_traits<_RandomAccessIterator>::difference_type
+       30: 2065:	__trip_count = (__last - __first) >> 2;
+       30: 2065-block  0
+call    0 returned 30
+        -: 2066:
+      30*: 2067:      for (; __trip_count > 0; --__trip_count)
+       30: 2067-block  0
+branch  0 taken 0
+branch  1 taken 30 (fallthrough)
+        -: 2068:	{
+    #####: 2069:	  if (__pred(__first))
+    %%%%%: 2069-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2070:	    return __first;
+    %%%%%: 2070-block  0
+    #####: 2071:	  ++__first;
+    %%%%%: 2071-block  0
+call    0 never executed
+        -: 2072:
+    #####: 2073:	  if (__pred(__first))
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2074:	    return __first;
+    %%%%%: 2074-block  0
+    #####: 2075:	  ++__first;
+    %%%%%: 2075-block  0
+call    0 never executed
+        -: 2076:
+    #####: 2077:	  if (__pred(__first))
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2078:	    return __first;
+    %%%%%: 2078-block  0
+    #####: 2079:	  ++__first;
+    %%%%%: 2079-block  0
+call    0 never executed
+        -: 2080:
+    #####: 2081:	  if (__pred(__first))
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####: 2082:	    return __first;
+    %%%%%: 2082-block  0
+    #####: 2083:	  ++__first;
+    %%%%%: 2083-block  0
+call    0 never executed
+        -: 2084:	}
+        -: 2085:
+       30: 2086:      switch (__last - __first)
+       30: 2086-block  0
+call    0 returned 30
+branch  1 taken 1
+branch  2 taken 2
+branch  3 taken 14
+branch  4 taken 13
+        -: 2087:	{
+        1: 2088:	case 3:
+        1: 2089:	  if (__pred(__first))
+        1: 2089-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####: 2090:	    return __first;
+    %%%%%: 2090-block  0
+        1: 2091:	  ++__first;
+        1: 2091-block  0
+call    0 returned 1
+        -: 2092:	  // FALLTHRU
+        3: 2093:	case 2:
+        3: 2094:	  if (__pred(__first))
+        3: 2094-block  0
+call    0 returned 3
+branch  1 taken 0 (fallthrough)
+branch  2 taken 3
+    #####: 2095:	    return __first;
+    %%%%%: 2095-block  0
+        3: 2096:	  ++__first;
+        3: 2096-block  0
+call    0 returned 3
+        -: 2097:	  // FALLTHRU
+       17: 2098:	case 1:
+       17: 2099:	  if (__pred(__first))
+       17: 2099-block  0
+call    0 returned 17
+branch  1 taken 2 (fallthrough)
+branch  2 taken 15
+        2: 2100:	    return __first;
+        2: 2100-block  0
+       15: 2101:	  ++__first;
+       15: 2101-block  0
+call    0 returned 15
+        -: 2102:	  // FALLTHRU
+       28: 2103:	case 0:
+        -: 2104:	default:
+       28: 2105:	  return __last;
+       28: 2105-block  0
+        -: 2106:	}
+        -: 2107:    }
+------------------
+_ZSt9__find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEENS0_5__ops10_Iter_predIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRKS2_E_EEET_SN_SN_T0_St26random_access_iterator_tag:
 function _ZSt9__find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEENS0_5__ops10_Iter_predIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRKS2_E_EEET_SN_SN_T0_St26random_access_iterator_tag called 18 returned 100% blocks executed 42%
        18: 2061:    __find_if(_RandomAccessIterator __first, _RandomAccessIterator __last,
         -: 2062:	      _Predicate __pred, random_access_iterator_tag)
@@ -2211,18 +2476,15 @@ call    0 returned 6
         6: 2105-block  0
         -: 2106:	}
         -: 2107:    }
+------------------
         -: 2108:
         -: 2109:  template<typename _Iterator, typename _Predicate>
         -: 2110:    _GLIBCXX20_CONSTEXPR
         -: 2111:    inline _Iterator
-function _ZSt9__find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEENS0_5__ops10_Iter_predIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRKS2_E_EEET_SN_SN_T0_ called 18 returned 100% blocks executed 100%
-       18: 2112:    __find_if(_Iterator __first, _Iterator __last, _Predicate __pred)
+       52: 2112:    __find_if(_Iterator __first, _Iterator __last, _Predicate __pred)
         -: 2113:    {
-       18: 2114:      return __find_if(__first, __last, __pred,
-call    0 returned 18
-       36: 2115:		       std::__iterator_category(__first));
-       18: 2115-block  0
-call    0 returned 18
+       52: 2114:      return __find_if(__first, __last, __pred,
+      104: 2115:		       std::__iterator_category(__first));
         -: 2116:    }
         -: 2117:
         -: 2118:  template<typename _InputIterator, typename _Predicate>

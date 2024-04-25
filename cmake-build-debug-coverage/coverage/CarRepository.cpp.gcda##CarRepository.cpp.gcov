@@ -4,8 +4,8 @@
         -:    0:Runs:1
         -:    1:#include <algorithm>
         -:    2:#include "CarRepository.h"
-        -:    3:
-function _ZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 18 returned 67% blocks executed 100%
+        -:    3:#include "../misc/Exceptions.h"
+function _ZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 18 returned 67% blocks executed 79%
        18:    4:Car CarRepository::getCarByRegistrationNumber(const std::string& registrationNumber) {
         -:    5:    // find the car with the received registration
 function _ZZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK3CarE_clESA_ called 26 returned 100% blocks executed 100%
@@ -26,11 +26,23 @@ call    0 returned 18
 call    1 returned 18
 branch  2 taken 6 (fallthrough)
 branch  3 taken 12
-        6:    8:        throw std::exception();
+        6:    8:        throw CarNotFoundError("There is no car with the input registration number.");
         6:    8-block  0
 call    0 returned 6
 call    1 returned 6
 call    2 returned 6
+branch  3 taken 6 (fallthrough)
+branch  4 taken 0 (throw)
+        6:    8-block  1
+call    5 returned 6
+call    6 returned 6
+call    7 returned 6
+call    8 returned 6
+    $$$$$:    8-block  2
+call    9 never executed
+    $$$$$:    8-block  3
+    $$$$$:    8-block  4
+call   10 never executed
         -:    9:    } else {
        24:   10:        return *result;
        12:   10-block  0
@@ -48,181 +60,225 @@ function _ZNK13CarRepository10getAllCarsEv called 4 returned 100% blocks execute
         4:   15-block  0
         -:   16:}
         -:   17:
-function _ZN13CarRepository9addNewCarERK3Car called 30 returned 93% blocks executed 86%
+function _ZN13CarRepository9addNewCarERK3Car called 30 returned 93% blocks executed 77%
        30:   18:void CarRepository::addNewCar(const Car& newCar) {
         -:   19:    // check if there is already a Car with the registrationNumber of the received one.
-       49:   20:    for (auto & car : cars) {
+function _ZZN13CarRepository9addNewCarERK3CarENKUlS2_E_clES2_ called 21 returned 100% blocks executed 80%
+       51:   20:    auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return newCar.getRegistrationNumber() == car.getRegistrationNumber();});
        30:   20-block  0
 call    0 returned 30
 call    1 returned 30
+call    2 returned 30
+branch  3 taken 30 (fallthrough)
+branch  4 taken 0 (throw)
        21:   20-block  1
-call    2 returned 21
-       19:   20-block  2
-call    3 returned 19
-       49:   20-block  3
-call    4 returned 49
-branch  5 taken 21
-branch  6 taken 28 (fallthrough)
-       21:   21:        if (car.getRegistrationNumber() == newCar.getRegistrationNumber()) {
-call    0 returned 21
-branch  1 taken 21 (fallthrough)
-branch  2 taken 0 (throw)
-       21:   21-block  0
-call    3 returned 21
-branch  4 taken 21 (fallthrough)
-branch  5 taken 0 (throw)
-       21:   21-block  1
+call    5 returned 21
 call    6 returned 21
-call    7 returned 21
-call    8 returned 21
-branch  9 taken 2 (fallthrough)
-branch 10 taken 19
-    $$$$$:   21-block  2
-call   11 never executed
-    $$$$$:   21-block  3
-        -:   22:            // throw an error because there is already another car with the registrationNumber of the received car
-        2:   23:            throw std::exception();
-        2:   23-block  0
+branch  7 taken 21 (fallthrough)
+branch  8 taken 0 (throw)
+       21:   20-block  2
+call    9 returned 21
+call   10 returned 21
+call   11 returned 21
+       21:   20-block  3
+    $$$$$:   20-block  4
+call   12 never executed
+       30:   21:    if (result == cars.end()) {
+       30:   21-block  0
+call    0 returned 30
+call    1 returned 30
+branch  2 taken 28 (fallthrough)
+branch  3 taken 2
+       28:   22:        cars.push_back(newCar);
+       28:   22-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   23:        return;
+       28:   23-block  0
+       28:   23-block  1
+        -:   24:    } else {
+        2:   25:        throw DuplicateDataError("The is already a car with the input registration number");
+        2:   25-block  0
 call    0 returned 2
 call    1 returned 2
 call    2 returned 2
-        -:   24:        }
-        -:   25:    }
-        -:   26:
-        -:   27:    // add the new car
-       28:   28:    cars.push_back(newCar);
-       28:   28-block  0
-call    0 returned 28
-       28:   29:}
-        -:   30:
-function _ZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 50% blocks executed 90%
-        4:   31:void CarRepository::deleteCarByRegistrationNumber(const std::string& registrationNumber) {
-        -:   32:    // find the car that needs to be deleted
-        8:   33:    for (int i = 0; i < cars.size(); i++) {
-        4:   33-block  0
-        4:   33-block  1
-        8:   33-block  2
-call    0 returned 8
-branch  1 taken 6
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   25-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   25-block  2
+call    9 never executed
+    $$$$$:   25-block  3
+    $$$$$:   25-block  4
+call   10 never executed
+        -:   26:    }
+        -:   27:}
+        -:   28:
+function _ZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 50% blocks executed 75%
+        4:   29:void CarRepository::deleteCarByRegistrationNumber(const std::string& registrationNumber) {
+        -:   30:    // find the car that needs to be deleted
+function _ZZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK3CarE_clESA_ called 6 returned 100% blocks executed 100%
+       10:   31:    auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return car.getRegistrationNumber() == registrationNumber;});
+        4:   31-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+branch  3 taken 4 (fallthrough)
+branch  4 taken 0 (throw)
+        6:   31-block  1
+call    5 returned 6
+call    6 returned 6
+call    7 returned 6
+        4:   32:    if (result != cars.end()) {
+        4:   32-block  0
+call    0 returned 4
+call    1 returned 4
 branch  2 taken 2 (fallthrough)
-        6:   34:        if (cars.at(i).getRegistrationNumber() == registrationNumber) {
-        6:   34-block  0
-call    0 returned 6
-call    1 returned 6
-call    2 returned 6
-call    3 returned 6
-branch  4 taken 2 (fallthrough)
-branch  5 taken 4
-        -:   35:            // delete the car
-        2:   36:            cars.erase(cars.begin() + i);
+branch  3 taken 2
+        2:   33:        cars.erase(result);
+        2:   33-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   33-block  1
+        2:   34:        return ;
+        2:   34-block  0
+        2:   34-block  1
+        -:   35:    } else {
+        2:   36:        throw CarNotFoundError("The is no car with the input registration number");
         2:   36-block  0
 call    0 returned 2
 call    1 returned 2
 call    2 returned 2
-call    3 returned 2
-branch  4 taken 2 (fallthrough)
-branch  5 taken 0 (throw)
-    $$$$$:   36-block  1
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   36-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
     $$$$$:   36-block  2
-        2:   37:            return;
-        2:   37-block  0
-        2:   37-block  1
-        -:   38:        }
-        -:   39:    }
-        -:   40:
-        -:   41:    // throw an error if no car was deleted
-        2:   42:    throw std::exception();
-        2:   42-block  0
-call    0 returned 2
-call    1 returned 2
-call    2 returned 0
-        -:   43:}
-        -:   44:
-function _ZN13CarRepository29updateCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE3Car called 6 returned 33% blocks executed 93%
-        6:   45:void CarRepository::updateCarByRegistrationNumber(const std::string& registrationNumber, Car updatedCar) {
-        -:   46:    // ensure that the update operation will not lead to multiple cars with the same registration number
-        6:   47:    if (registrationNumber != updatedCar.getRegistrationNumber()) {
-        6:   47-block  0
+call    9 never executed
+    $$$$$:   36-block  3
+    $$$$$:   36-block  4
+call   10 never executed
+        -:   37:    }
+        -:   38:}
+        -:   39:
+function _ZN13CarRepository29updateCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE3Car called 6 returned 33% blocks executed 78%
+        6:   40:void CarRepository::updateCarByRegistrationNumber(const std::string& registrationNumber, Car updatedCar) {
+        -:   41:    // ensure that the update operation will not lead to multiple cars with the same registration number
+        6:   42:    if (registrationNumber != updatedCar.getRegistrationNumber()) {
+        6:   42-block  0
 call    0 returned 6
 call    1 returned 6
 call    2 returned 6
 branch  3 taken 6 (fallthrough)
 branch  4 taken 0
-       16:   48:        for (auto & car : cars) {
-        6:   48-block  0
+       16:   43:        for (auto & car : cars) {
+        6:   43-block  0
 call    0 returned 6
 call    1 returned 6
-       12:   48-block  1
+       12:   43-block  1
 call    2 returned 12
-       10:   48-block  2
+       10:   43-block  2
 call    3 returned 10
-       16:   48-block  3
+       16:   43-block  3
 call    4 returned 16
 branch  5 taken 12
 branch  6 taken 4 (fallthrough)
-       12:   49:            if (car.getRegistrationNumber() == updatedCar.getRegistrationNumber()) {
+       12:   44:            if (car.getRegistrationNumber() == updatedCar.getRegistrationNumber()) {
 call    0 returned 12
 branch  1 taken 12 (fallthrough)
 branch  2 taken 0 (throw)
-       12:   49-block  0
+       12:   44-block  0
 call    3 returned 12
 branch  4 taken 12 (fallthrough)
 branch  5 taken 0 (throw)
-       12:   49-block  1
+       12:   44-block  1
 call    6 returned 12
 call    7 returned 12
 call    8 returned 12
 branch  9 taken 2 (fallthrough)
 branch 10 taken 10
-    $$$$$:   49-block  2
+    $$$$$:   44-block  2
 call   11 never executed
-    $$$$$:   49-block  3
-        -:   50:                // throw an error because the update will create multiple cars with the same registration number
-        2:   51:                throw std::exception();
-        2:   51-block  0
+    $$$$$:   44-block  3
+        -:   45:                // throw an error because the update will create multiple cars with the same registration number
+        2:   46:                throw DuplicateDataError("The update operation would create multiple cars with the same registration number.");
+        2:   46-block  0
 call    0 returned 2
 call    1 returned 2
 call    2 returned 2
-        -:   52:            }
-        -:   53:        }
-        -:   54:    }
-        -:   55:    // find the car that will be updated
-        8:   56:    for (auto & car : cars) {
-        4:   56-block  0
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   46-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   46-block  2
+call    9 never executed
+    $$$$$:   46-block  3
+    $$$$$:   46-block  4
+call   10 never executed
+        -:   47:            }
+        -:   48:        }
+        -:   49:    }
+        -:   50:    // find the car that will be updated
+        8:   51:    for (auto & car : cars) {
+        4:   51-block  0
 call    0 returned 4
 call    1 returned 4
-        6:   56-block  1
+        6:   51-block  1
 call    2 returned 6
-        4:   56-block  2
+        4:   51-block  2
 call    3 returned 4
-        8:   56-block  3
+        8:   51-block  3
 call    4 returned 8
 branch  5 taken 6
 branch  6 taken 2 (fallthrough)
-        6:   57:        if (car.getRegistrationNumber() == registrationNumber) {
+        6:   52:        if (car.getRegistrationNumber() == registrationNumber) {
 call    0 returned 6
 branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
-        6:   57-block  0
+        6:   52-block  0
 call    3 returned 6
 call    4 returned 6
 branch  5 taken 2 (fallthrough)
 branch  6 taken 4
-        2:   58:            car = updatedCar;
-        2:   58-block  0
+        2:   53:            car = updatedCar;
+        2:   53-block  0
 call    0 returned 2
 branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        2:   59:            return;
+        2:   54:            return;
+        2:   54-block  0
+        2:   54-block  1
+        -:   55:        }
+        -:   56:    }
+        -:   57:
+        -:   58:    // if no car was found throw an error
+        2:   59:    throw  CarNotFoundError("There is not car with the input registration number.");
         2:   59-block  0
-        2:   59-block  1
-        -:   60:        }
-        -:   61:    }
-        -:   62:
-        -:   63:    // if no car was found throw an error
-        2:   64:    throw  std::exception();
-        2:   64-block  0
 call    0 returned 2
 call    1 returned 2
-call    2 returned 0
-        -:   65:}
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   59-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 0
+    $$$$$:   59-block  2
+call    9 never executed
+    $$$$$:   59-block  3
+    $$$$$:   59-block  4
+call   10 never executed
+        -:   60:}

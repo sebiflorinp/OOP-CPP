@@ -1129,12 +1129,12 @@ function _ZNKSt6vectorI3CarSaIS0_EE4sizeEv called 0 returned 0% blocks executed 
         -: 1040:       *  see at().)
         -: 1041:       */
         -: 1042:      reference
-function _ZNSt6vectorI3CarSaIS0_EEixEm called 0 returned 0% blocks executed 0%
-    #####: 1043:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorI3CarSaIS0_EEixEm called 18 returned 100% blocks executed 100%
+       18: 1043:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
         -: 1044:      {
         -: 1045:	__glibcxx_requires_subscript(__n);
-    #####: 1046:	return *(this->_M_impl._M_start + __n);
-    %%%%%: 1046-block  0
+       18: 1046:	return *(this->_M_impl._M_start + __n);
+       18: 1046-block  0
         -: 1047:      }
         -: 1048:
         -: 1049:      /**
@@ -1158,14 +1158,14 @@ function _ZNSt6vectorI3CarSaIS0_EEixEm called 0 returned 0% blocks executed 0%
         -: 1067:    protected:
         -: 1068:      /// Safety check used only from at().
         -: 1069:      void
-function _ZNKSt6vectorI3CarSaIS0_EE14_M_range_checkEm called 0 returned 0% blocks executed 0%
-    #####: 1070:      _M_range_check(size_type __n) const
+function _ZNKSt6vectorI3CarSaIS0_EE14_M_range_checkEm called 18 returned 100% blocks executed 60%
+       18: 1070:      _M_range_check(size_type __n) const
         -: 1071:      {
-    #####: 1072:	if (__n >= this->size())
-    %%%%%: 1072-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+       18: 1072:	if (__n >= this->size())
+       18: 1072-block  0
+call    0 returned 18
+branch  1 taken 0 (fallthrough)
+branch  2 taken 18
     #####: 1073:	  __throw_out_of_range_fmt(__N("vector::_M_range_check: __n "
     %%%%%: 1073-block  0
 call    0 never executed
@@ -1173,7 +1173,7 @@ call    1 never executed
         -: 1074:				       "(which is %zu) >= this->size() "
         -: 1075:				       "(which is %zu)"),
         -: 1076:				   __n, this->size());
-    #####: 1077:      }
+       18: 1077:      }
         -: 1078:
         -: 1079:    public:
         -: 1080:      /**
@@ -1188,14 +1188,14 @@ call    1 never executed
         -: 1089:       *  function throws out_of_range if the check fails.
         -: 1090:       */
         -: 1091:      reference
-function _ZNSt6vectorI3CarSaIS0_EE2atEm called 0 returned 0% blocks executed 0%
-    #####: 1092:      at(size_type __n)
+function _ZNSt6vectorI3CarSaIS0_EE2atEm called 18 returned 100% blocks executed 100%
+       18: 1092:      at(size_type __n)
         -: 1093:      {
-    #####: 1094:	_M_range_check(__n);
-    %%%%%: 1094-block  0
-call    0 never executed
-    #####: 1095:	return (*this)[__n];
-call    0 never executed
+       18: 1094:	_M_range_check(__n);
+       18: 1094-block  0
+call    0 returned 18
+       18: 1095:	return (*this)[__n];
+call    0 returned 18
         -: 1096:      }
         -: 1097:
         -: 1098:      /**

@@ -1,0 +1,12 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/misc/Exceptions.cpp
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/Exceptions.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/Exceptions.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Exceptions.h"
+        -:    2:
+function _ZN16GenericException15getErrorMessageB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:    3:std::string GenericException::getErrorMessage() {
+        1:    4:    return message;
+        1:    4-block  0
+call    0 returned 1
+        -:    5:}

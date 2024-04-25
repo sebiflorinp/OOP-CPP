@@ -239,10 +239,21 @@
         -:  235:  template<typename _Iter>
         -:  236:    inline _GLIBCXX_CONSTEXPR
         -:  237:    typename iterator_traits<_Iter>::iterator_category
-function _ZSt19__iterator_categoryIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEEENSt15iterator_traitsIT_E17iterator_categoryERKS9_ called 18 returned 100% blocks executed 100%
-       18:  238:    __iterator_category(const _Iter&)
-       18:  239:    { return typename iterator_traits<_Iter>::iterator_category(); }
-       18:  239-block  0
+      52*:  238:    __iterator_category(const _Iter&)
+      52*:  239:    { return typename iterator_traits<_Iter>::iterator_category(); }
+------------------
+_ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_:
+function _ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_ called 0 returned 0% blocks executed 0%
+    #####:  238:    __iterator_category(const _Iter&)
+    #####:  239:    { return typename iterator_traits<_Iter>::iterator_category(); }
+    %%%%%:  239-block  0
+------------------
+_ZSt19__iterator_categoryIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEEENSt15iterator_traitsIT_E17iterator_categoryERKS9_:
+function _ZSt19__iterator_categoryIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEEENSt15iterator_traitsIT_E17iterator_categoryERKS9_ called 52 returned 100% blocks executed 100%
+       52:  238:    __iterator_category(const _Iter&)
+       52:  239:    { return typename iterator_traits<_Iter>::iterator_category(); }
+       52:  239-block  0
+------------------
         -:  240:
         -:  241:  ///@}
         -:  242:

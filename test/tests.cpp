@@ -7,6 +7,7 @@
 #include "FiltersTests.h"
 #include "SortingFunctionsTests.h"
 #include "DynamicArrayTests.h"
+#include "GenericExceptionTests.h"
 
 void testAll();
 
@@ -60,6 +61,10 @@ void runAllTests() {
     // DynamicArray tests
     DynamicArrayTests dynamicArrayTests = DynamicArrayTests();
     dynamicArrayTests.testDynamicArray();
+
+    // GenericException tests
+    GenericExceptionTests genericExceptionTests = GenericExceptionTests();
+    genericExceptionTests.testGetErrorMessage();
 }
 
 

@@ -311,33 +311,97 @@
         -:  307:
         -:  308:      _GLIBCXX20_CONSTEXPR
         -:  309:      explicit
+       52:  310:      _Iter_pred(_Predicate __pred)
+       52:  311:	: _M_pred(_GLIBCXX_MOVE(__pred))
+       52:  312:      { }
+------------------
+_ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EC2ESE_:
+function _ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EC2ESE_ called 4 returned 100% blocks executed 100%
+        4:  310:      _Iter_pred(_Predicate __pred)
+        4:  311:	: _M_pred(_GLIBCXX_MOVE(__pred))
+        4:  311-block  0
+call    0 returned 4
+        4:  312:      { }
+------------------
+_ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository9addNewCarERK3CarEUlS5_E_EC2ES6_:
+function _ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository9addNewCarERK3CarEUlS5_E_EC2ES6_ called 30 returned 100% blocks executed 100%
+       30:  310:      _Iter_pred(_Predicate __pred)
+       30:  311:	: _M_pred(_GLIBCXX_MOVE(__pred))
+       30:  311-block  0
+call    0 returned 30
+       30:  312:      { }
+------------------
+_ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EC2ESE_:
 function _ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EC2ESE_ called 18 returned 100% blocks executed 100%
        18:  310:      _Iter_pred(_Predicate __pred)
        18:  311:	: _M_pred(_GLIBCXX_MOVE(__pred))
        18:  311-block  0
 call    0 returned 18
        18:  312:      { }
+------------------
         -:  313:
         -:  314:      template<typename _Iterator>
         -:  315:	_GLIBCXX20_CONSTEXPR
         -:  316:	bool
+       53:  317:	operator()(_Iterator __it)
+       53:  318:	{ return bool(_M_pred(*__it)); }
+------------------
+_ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EclINS_17__normal_iteratorIPSB_St6vectorISB_SaISB_EEEEEEbT_:
+function _ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EclINS_17__normal_iteratorIPSB_St6vectorISB_SaISB_EEEEEEbT_ called 6 returned 100% blocks executed 100%
+        6:  317:	operator()(_Iterator __it)
+        6:  318:	{ return bool(_M_pred(*__it)); }
+        6:  318-block  0
+call    0 returned 6
+call    1 returned 6
+------------------
+_ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository9addNewCarERK3CarEUlS5_E_EclINS_17__normal_iteratorIPS3_St6vectorIS3_SaIS3_EEEEEEbT_:
+function _ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository9addNewCarERK3CarEUlS5_E_EclINS_17__normal_iteratorIPS3_St6vectorIS3_SaIS3_EEEEEEbT_ called 21 returned 100% blocks executed 100%
+       21:  317:	operator()(_Iterator __it)
+       21:  318:	{ return bool(_M_pred(*__it)); }
+       21:  318-block  0
+call    0 returned 21
+call    1 returned 21
+------------------
+_ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EclINS_17__normal_iteratorIPSB_St6vectorISB_SaISB_EEEEEEbT_:
 function _ZN9__gnu_cxx5__ops10_Iter_predIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EclINS_17__normal_iteratorIPSB_St6vectorISB_SaISB_EEEEEEbT_ called 26 returned 100% blocks executed 100%
        26:  317:	operator()(_Iterator __it)
        26:  318:	{ return bool(_M_pred(*__it)); }
        26:  318-block  0
 call    0 returned 26
 call    1 returned 26
+------------------
         -:  319:    };
         -:  320:
         -:  321:  template<typename _Predicate>
         -:  322:    _GLIBCXX20_CONSTEXPR
         -:  323:    inline _Iter_pred<_Predicate>
+       52:  324:    __pred_iter(_Predicate __pred)
+       52:  325:    { return _Iter_pred<_Predicate>(_GLIBCXX_MOVE(__pred)); }
+------------------
+_ZN9__gnu_cxx5__ops11__pred_iterIZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EENS0_10_Iter_predIT_EESG_:
+function _ZN9__gnu_cxx5__ops11__pred_iterIZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EENS0_10_Iter_predIT_EESG_ called 4 returned 100% blocks executed 100%
+        4:  324:    __pred_iter(_Predicate __pred)
+        4:  325:    { return _Iter_pred<_Predicate>(_GLIBCXX_MOVE(__pred)); }
+        4:  325-block  0
+call    0 returned 4
+call    1 returned 4
+------------------
+_ZN9__gnu_cxx5__ops11__pred_iterIZN13CarRepository9addNewCarERK3CarEUlS5_E_EENS0_10_Iter_predIT_EES8_:
+function _ZN9__gnu_cxx5__ops11__pred_iterIZN13CarRepository9addNewCarERK3CarEUlS5_E_EENS0_10_Iter_predIT_EES8_ called 30 returned 100% blocks executed 100%
+       30:  324:    __pred_iter(_Predicate __pred)
+       30:  325:    { return _Iter_pred<_Predicate>(_GLIBCXX_MOVE(__pred)); }
+       30:  325-block  0
+call    0 returned 30
+call    1 returned 30
+------------------
+_ZN9__gnu_cxx5__ops11__pred_iterIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EENS0_10_Iter_predIT_EESG_:
 function _ZN9__gnu_cxx5__ops11__pred_iterIZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EENS0_10_Iter_predIT_EESG_ called 18 returned 100% blocks executed 100%
        18:  324:    __pred_iter(_Predicate __pred)
        18:  325:    { return _Iter_pred<_Predicate>(_GLIBCXX_MOVE(__pred)); }
        18:  325-block  0
 call    0 returned 18
 call    1 returned 18
+------------------
         -:  326:
         -:  327:  template<typename _Compare, typename _Value>
         -:  328:    struct _Iter_comp_to_val

@@ -207,66 +207,66 @@
         -:  203:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  204:    template<typename _InIterator>
         -:  205:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag called 402 returned 100% blocks executed 48%
-      402:  206:      basic_string<_CharT, _Traits, _Alloc>::
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag called 500 returned 100% blocks executed 61%
+      500:  206:      basic_string<_CharT, _Traits, _Alloc>::
         -:  207:      _M_construct(_InIterator __beg, _InIterator __end,
         -:  208:		   std::forward_iterator_tag)
         -:  209:      {
         -:  210:	// NB: Not required, but considered best practice.
-     402*:  211:	if (__gnu_cxx::__is_null_pointer(__beg) && __beg != __end)
-      402:  211-block  0
-call    0 returned 402
+     500*:  211:	if (__gnu_cxx::__is_null_pointer(__beg) && __beg != __end)
+      500:  211-block  0
+call    0 returned 500
 branch  1 taken 0 (fallthrough)
-branch  2 taken 402
+branch  2 taken 500
     %%%%%:  211-block  1
 branch  3 never executed
 branch  4 never executed
     %%%%%:  211-block  2
-      402:  211-block  3
-      402:  211-block  4
+      500:  211-block  3
+      500:  211-block  4
 branch  5 taken 0 (fallthrough)
-branch  6 taken 402
+branch  6 taken 500
     #####:  212:	  std::__throw_logic_error(__N("basic_string::"
     %%%%%:  212-block  0
 call    0 never executed
         -:  213:				       "_M_construct null not valid"));
         -:  214:
-      402:  215:	size_type __dnew = static_cast<size_type>(std::distance(__beg, __end));
-      402:  215-block  0
-call    0 returned 402
-branch  1 taken 402 (fallthrough)
+      500:  215:	size_type __dnew = static_cast<size_type>(std::distance(__beg, __end));
+      500:  215-block  0
+call    0 returned 500
+branch  1 taken 500 (fallthrough)
 branch  2 taken 0 (throw)
         -:  216:
-      402:  217:	if (__dnew > size_type(_S_local_capacity))
-      402:  217-block  0
-branch  0 taken 0 (fallthrough)
-branch  1 taken 402
+      500:  217:	if (__dnew > size_type(_S_local_capacity))
+      500:  217-block  0
+branch  0 taken 14 (fallthrough)
+branch  1 taken 486
         -:  218:	  {
-    #####:  219:	    _M_data(_M_create(__dnew, size_type(0)));
-    %%%%%:  219-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  219-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  220:	    _M_capacity(__dnew);
-    %%%%%:  220-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+       14:  219:	    _M_data(_M_create(__dnew, size_type(0)));
+       14:  219-block  0
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
+       14:  219-block  1
+call    3 returned 14
+branch  4 taken 14 (fallthrough)
+branch  5 taken 0 (throw)
+       14:  220:	    _M_capacity(__dnew);
+       14:  220-block  0
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
         -:  221:	  }
         -:  222:
         -:  223:	// Check for out_of_range and length_error exceptions.
         -:  224:	__try
-      402:  225:	  { this->_S_copy_chars(_M_data(), __beg, __end); }
-      402:  225-block  0
-call    0 returned 402
-branch  1 taken 402 (fallthrough)
+      500:  225:	  { this->_S_copy_chars(_M_data(), __beg, __end); }
+      500:  225-block  0
+call    0 returned 500
+branch  1 taken 500 (fallthrough)
 branch  2 taken 0 (throw)
-      402:  225-block  1
-call    3 returned 402
+      500:  225-block  1
+call    3 returned 500
     =====:  226:	__catch(...)
     $$$$$:  226-block  0
     $$$$$:  226-block  1
@@ -283,12 +283,12 @@ branch  2 never executed
 call    0 never executed
         -:  230:	  }
         -:  231:
-      402:  232:	_M_set_length(__dnew);
-call    0 returned 402
-branch  1 taken 402 (fallthrough)
+      500:  232:	_M_set_length(__dnew);
+call    0 returned 500
+branch  1 taken 500 (fallthrough)
 branch  2 taken 0 (throw)
-      402:  233:      }
-      402:  233-block  0
+      500:  233:      }
+      500:  233-block  0
         -:  234:
         -:  235:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  236:    void

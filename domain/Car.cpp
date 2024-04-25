@@ -1,23 +1,48 @@
+#include <stdexcept>
 #include "Car.h"
+#include "../misc/Exceptions.h"
 
 
 Car::Car(const std::string& registrationNumber, const std::string& producer, const std::string& model,
          const std::string& type) {
+    std::string errors = "";
+
     // check if the registrationNumber is valid and assign it if it is
-    CarValidators::validateRegistrationNumber(registrationNumber);
-    this->registrationNumber = registrationNumber;
+    try {
+        CarValidators::validateRegistrationNumber(registrationNumber);
+        this->registrationNumber = registrationNumber;
+    } catch (const std::runtime_error& error) {
+        errors.append(error.what());
+    }
 
     // check if the producer is valid and assign it if it is
-    CarValidators::validateProducer(producer);
-    this->producer = producer;
+    try {
+        CarValidators::validateProducer(producer);
+        this->producer = producer;
+    } catch (const std::runtime_error& error) {
+        errors.append(error.what());
+    }
 
     // check if the model is valid and assign it if it is
-    CarValidators::validateModel(model);
-    this->model = model;
+    try {
+        CarValidators::validateModel(model);
+        this->model = model;
+    } catch (const std::runtime_error& error) {
+        errors.append(error.what());
+    }
 
     // check if the type is valid and assign it if it is
-    CarValidators::validateType(type);
-    this->type = type;
+    try {
+        CarValidators::validateType(type);
+        this->type = type;
+    } catch (const std::runtime_error& error) {
+        errors.append(error.what());
+    }
+
+    if (!errors.empty()) {
+        throw InvalidDataError(errors);
+    }
+
 }
 
 

@@ -1,4 +1,5 @@
 #include <cassert>
+#include <iostream>
 #include "DynamicArrayTests.h"
 #include "../domain/Car.h"
 #include "../misc/DynamicArray.h"
@@ -63,4 +64,11 @@ void DynamicArrayTests::testDynamicArray() {
     assert(car1.getRegistrationNumber() == cars1.get(0).getRegistrationNumber());
     assert(car1.getRegistrationNumber() == cars1.get(1).getRegistrationNumber());
     assert(car1.getRegistrationNumber() == cars1.get(2).getRegistrationNumber());
+
+    // Act
+    cars.erase(0);
+    cars.erase(0);
+
+    // Assert
+    assert(cars.size() == 1);
 }

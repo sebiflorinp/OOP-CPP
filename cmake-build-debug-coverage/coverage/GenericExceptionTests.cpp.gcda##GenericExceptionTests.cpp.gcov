@@ -1,0 +1,53 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/test/GenericExceptionTests.cpp
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/GenericExceptionTests.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/GenericExceptionTests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <cassert>
+        -:    2:#include "GenericExceptionTests.h"
+        -:    3:#include "../misc/Exceptions.h"
+        -:    4:
+function _ZN21GenericExceptionTests19testGetErrorMessageEv called 1 returned 100% blocks executed 67%
+        1:    5:void GenericExceptionTests::testGetErrorMessage() {
+        -:    6:    // Act
+        -:    7:    try {
+        1:    8:        throw GenericException("Eroare");
+        1:    8-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:    8-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:    8-block  2
+call    9 never executed
+    $$$$$:    8-block  3
+    $$$$$:    8-block  4
+call   10 never executed
+        1:    9:    } catch (GenericException& error) {
+        1:    9-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:    9-block  1
+call    2 returned 1
+        -:   10:        // Assert
+        1:   11:        assert(error.getErrorMessage() == "Eroare");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:   11-block  1
+call    6 never executed
+        1:   11-block  2
+call    7 returned 1
+        1:   12:    }
+call    0 returned 1
+    $$$$$:   12-block  0
+call    1 never executed
+        1:   13:}

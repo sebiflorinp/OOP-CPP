@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "cpplab::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-cpplab-Debug-b8143b7ce2093a5670bc.json",
+					"jsonFile" : "target-cpplab-Debug-cb389e6442fa853dc54f.json",
 					"name" : "cpplab",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/sebifp/ubb/cpplab/cmake-build-debug-coverage",
+		"build" : "/home/sebifp/ubb/cpplab/cmake-build-debug",
 		"source" : "/home/sebifp/ubb/cpplab"
 	},
 	"version" : 

@@ -1105,8 +1105,13 @@ function _ZNKSt6vectorI3CarSaIS0_EE8capacityEv called 0 returned 0% blocks execu
         -: 1004:       *  equal end().)
         -: 1005:       */
         -: 1006:      _GLIBCXX_NODISCARD bool
-        -: 1007:      empty() const _GLIBCXX_NOEXCEPT
-        -: 1008:      { return begin() == end(); }
+function _ZNKSt6vectorI3CarSaIS0_EE5emptyEv called 0 returned 0% blocks executed 0%
+    #####: 1007:      empty() const _GLIBCXX_NOEXCEPT
+    #####: 1008:      { return begin() == end(); }
+    %%%%%: 1008-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
         -: 1009:
         -: 1010:      /**
         -: 1011:       *  @brief  Attempt to preallocate enough memory for specified number of

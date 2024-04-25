@@ -1223,10 +1223,14 @@ function _ZNK9__gnu_cxx17__normal_iteratorIPK3CarSt6vectorIS1_SaIS1_EEE4baseEv c
         -: 1160:  template<typename _Iterator, typename _Container>
         -: 1161:    _GLIBCXX20_CONSTEXPR
         -: 1162:    inline bool
-        -: 1163:    operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+function _ZN9__gnu_cxxeqIPK3CarSt6vectorIS1_SaIS1_EEEEbRKNS_17__normal_iteratorIT_T0_EESC_ called 0 returned 0% blocks executed 0%
+    #####: 1163:    operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
         -: 1164:	       const __normal_iterator<_Iterator, _Container>& __rhs)
         -: 1165:    _GLIBCXX_NOEXCEPT
-        -: 1166:    { return __lhs.base() == __rhs.base(); }
+    #####: 1166:    { return __lhs.base() == __rhs.base(); }
+    %%%%%: 1166-block  0
+call    0 never executed
+call    1 never executed
         -: 1167:
         -: 1168:  template<typename _IteratorL, typename _IteratorR, typename _Container>
         -: 1169:    _GLIBCXX20_CONSTEXPR

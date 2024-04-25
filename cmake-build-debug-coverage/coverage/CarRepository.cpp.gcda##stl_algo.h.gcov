@@ -3902,8 +3902,7 @@
         -: 3898:  template<typename _InputIterator, typename _Predicate>
         -: 3899:    _GLIBCXX20_CONSTEXPR
         -: 3900:    inline _InputIterator
-function _ZSt7find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEEEZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRKS2_E_ET_SK_SK_T0_ called 18 returned 100% blocks executed 100%
-       18: 3901:    find_if(_InputIterator __first, _InputIterator __last,
+       52: 3901:    find_if(_InputIterator __first, _InputIterator __last,
         -: 3902:	    _Predicate __pred)
         -: 3903:    {
         -: 3904:      // concept requirements
@@ -3912,11 +3911,8 @@ function _ZSt7find_ifIN9__gnu_cxx17__normal_iteratorIP3CarSt6vectorIS2_SaIS2_EEE
         -: 3907:	      typename iterator_traits<_InputIterator>::value_type>)
         -: 3908:      __glibcxx_requires_valid_range(__first, __last);
         -: 3909:
-       18: 3910:      return std::__find_if(__first, __last,
-       18: 3910-block  0
-call    0 returned 18
-call    1 returned 18
-       18: 3911:			    __gnu_cxx::__ops::__pred_iter(__pred));
+       52: 3910:      return std::__find_if(__first, __last,
+       52: 3911:			    __gnu_cxx::__ops::__pred_iter(__pred));
         -: 3912:    }
         -: 3913:
         -: 3914:  /**

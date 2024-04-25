@@ -2,6 +2,7 @@
 #include "UI.h"
 #include "../misc/Filters.h"
 #include "../misc/SortingFunctions.h"
+#include "../misc/Exceptions.h"
 
 using std::string;
 using std::cout;
@@ -65,8 +66,10 @@ void UI::runApp() {
                 try {
                     this->carController.addNewCar(registrationNumber, type, model, producer);
                     cout << "The car was added successfully" << endl;
-                } catch (...) {
-                    cout << "The entered data is invalid or there is already a car with the input registration number" << endl;
+                } catch (InvalidDataError& error) {
+                    cout << error.getErrorMessage();
+                } catch (DuplicateDataError& error) {
+                    cout << error.getErrorMessage() << endl;
                 }
                 break;
             case 2:
@@ -80,8 +83,8 @@ void UI::runApp() {
                 try {
                     this->carController.deleteCarByRegistrationNumber(registrationNumber);
                     cout << "The car was deleted successfully!" << endl;
-                } catch (...) {
-                    cout << "There is no car with the input registration number." << endl;
+                } catch (CarNotFoundError& error) {
+                    cout << error.getErrorMessage() << endl;
                 }
                 break;
             case 3:
@@ -110,20 +113,21 @@ void UI::runApp() {
                     this->carController.updateCarByRegistrationNumber(registrationNumber, newRegistrationNumber, type,
                             model, producer);
                     cout << "The car was updated successfully." << endl;
-                } catch (...) {
-                    cout << "The update could not be performed." << endl;
+                } catch (InvalidDataError& error) {
+                    cout << error.getErrorMessage();
+                } catch (DuplicateDataError& error) {
+                    cout << error.getErrorMessage() << endl;
                 }
-
                 break;
             case 4:
-                if (carController.getAllCars().size() == 0) {
+                if (carController.getAllCars().empty()) {
                     cout << "There are no cars to display" << endl;
                 } else {
                     UI::displayCars(carController.getAllCars());
                 }
                 break;
             case 5:
-                if (this->carController.getAllCars().size() == 0) {
+                if (this->carController.getAllCars().empty()) {
                     cout << "There are no cars." << endl;
                     break;
                 }
@@ -134,12 +138,12 @@ void UI::runApp() {
                     std::vector<Car> displayCar;
                     displayCar.push_back(foundCar);
                     UI::displayCars(displayCar);
-                } catch (...) {
-                    cout << "There is no car with the input registration number" << endl;
+                } catch (CarNotFoundError& error) {
+                    cout << error.getErrorMessage() << endl;
                 }
                 break;
             case 6:
-                if (this->carController.getAllCars().size() == 0) {
+                if (this->carController.getAllCars().empty()) {
                     cout << "There are no cars to filter." << endl;
                     break;
                 }
@@ -149,7 +153,7 @@ void UI::runApp() {
 
                 {
                     std::vector<Car> filteredCars = carController.filter(producer, filterByProducer);
-                    if (filteredCars.size() == 0) {
+                    if (filteredCars.empty()) {
                         cout << "There are no cars with the input producer." << endl;
                     } else {
                         displayCars(filteredCars);
@@ -157,7 +161,7 @@ void UI::runApp() {
                 }
                 break;
             case 7:
-                if (this->carController.getAllCars().size() == 0) {
+                if (this->carController.getAllCars().empty()) {
                     cout << "There are no cars to filter." << endl;
                     break;
                 }
@@ -167,7 +171,7 @@ void UI::runApp() {
 
                 {
                     std::vector<Car> filteredCars = carController.filter(type, filterByType);
-                    if (filteredCars.size() == 0) {
+                    if (filteredCars.empty()) {
                         cout << "There are no cars with the input type." << endl;
                     } else {
                         displayCars(filteredCars);
@@ -191,7 +195,7 @@ void UI::runApp() {
                 }
                 break;
             case 9:
-                if (this->carController.getAllCars().size() == 0) {
+                if (this->carController.getAllCars().empty()) {
                     cout << "There are no cars to sort." << endl;
                     break;
                 }
@@ -207,7 +211,7 @@ void UI::runApp() {
                 }
                 break;
             case 10:
-                if (this->carController.getAllCars().size() == 0) {
+                if (this->carController.getAllCars().empty()) {
                     cout << "There are no cars to sort." << endl;
                     break;
                 }

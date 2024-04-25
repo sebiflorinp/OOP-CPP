@@ -1,11 +1,11 @@
 #include <algorithm>
 #include "CarRepository.h"
-
+#include "../misc/Exceptions.h"
 Car CarRepository::getCarByRegistrationNumber(const std::string& registrationNumber) {
     // find the car with the received registration
     auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return car.getRegistrationNumber() == registrationNumber;});
     if (result == cars.end()) {
-        throw std::exception();
+        throw CarNotFoundError("There is no car with the input registration number.");
     } else {
         return *result;
     }
@@ -22,7 +22,7 @@ void CarRepository::addNewCar(const Car& newCar) {
         cars.push_back(newCar);
         return;
     } else {
-        throw std::exception();
+        throw DuplicateDataError("The is already a car with the input registration number");
     }
 }
 
@@ -33,7 +33,7 @@ void CarRepository::deleteCarByRegistrationNumber(const std::string& registratio
         cars.erase(result);
         return ;
     } else {
-        throw std::exception();
+        throw CarNotFoundError("The is no car with the input registration number");
     }
 }
 
@@ -43,7 +43,7 @@ void CarRepository::updateCarByRegistrationNumber(const std::string& registratio
         for (auto & car : cars) {
             if (car.getRegistrationNumber() == updatedCar.getRegistrationNumber()) {
                 // throw an error because the update will create multiple cars with the same registration number
-                throw std::exception();
+                throw DuplicateDataError("The update operation would create multiple cars with the same registration number.");
             }
         }
     }
@@ -56,5 +56,5 @@ void CarRepository::updateCarByRegistrationNumber(const std::string& registratio
     }
 
     // if no car was found throw an error
-    throw  std::exception();
+    throw  CarNotFoundError("There is not car with the input registration number.");
 }

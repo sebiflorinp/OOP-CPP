@@ -1,0 +1,38 @@
+        -:    0:Source:/home/sebifp/ubb/cpplab/misc/Exceptions.h
+        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcno
+        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef CPPLAB_EXCEPTIONS_H
+        -:    2:#define CPPLAB_EXCEPTIONS_H
+        -:    3:
+        -:    4:#include <exception>
+        -:    5:#include <stdexcept>
+        -:    6:#include <utility>
+        -:    7:
+        -:    8:class GenericException: std::exception {
+        -:    9:public:
+function _ZN16GenericExceptionC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 17 returned 100% blocks executed 100%
+       17:   10:    explicit GenericException(std::string  errorMessage) : message(std::move(errorMessage)) {}
+       17:   10-block  0
+call    0 returned 17
+call    1 returned 17
+call    2 returned 17
+        -:   11:
+        -:   12:    std::string getErrorMessage();
+        -:   13:private:
+        -:   14:    const std::string message;
+        -:   15:};
+        -:   16:
+        -:   17:class CarNotFoundError : public GenericException {
+        -:   18:    using GenericException::GenericException;
+        -:   19:};
+        -:   20:
+        -:   21:class InvalidDataError : public GenericException {
+        -:   22:    using GenericException::GenericException;
+        -:   23:};
+        -:   24:
+        -:   25:class DuplicateDataError : public GenericException {
+        -:   26:    using GenericException::GenericException;
+        -:   27:};
+        -:   28:
+        -:   29:#endif //CPPLAB_EXCEPTIONS_H
