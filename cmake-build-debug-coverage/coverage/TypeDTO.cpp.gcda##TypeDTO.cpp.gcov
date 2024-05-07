@@ -1,0 +1,18 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/domain/TypeDTO.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/TypeDTO.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/TypeDTO.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "TypeDTO.h"
+        -:    2:
+function _ZN7TypeDTO7getTypeB5cxx11Ev called 4 returned 100% blocks executed 100%
+        4:    3:std::string TypeDTO::getType() {
+        4:    4:    return this->type;
+        4:    4-block  0
+call    0 returned 4
+        -:    5:}
+        -:    6:
+function _ZNK7TypeDTO8getCountEv called 4 returned 100% blocks executed 100%
+        4:    7:int TypeDTO::getCount() const {
+        4:    8:    return this->count;
+        4:    8-block  0
+        -:    9:}

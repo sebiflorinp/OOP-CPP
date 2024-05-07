@@ -39,4 +39,14 @@ add_executable(cpplab main.cpp
         misc/Exceptions.h
         misc/Exceptions.cpp
         test/GenericExceptionTests.cpp
-        test/GenericExceptionTests.h)
+        test/GenericExceptionTests.h
+        controller/CarsToWashController.cpp
+        controller/CarsToWashController.h
+        misc/Utils.cpp
+        misc/Utils.h
+        test/CarstToWashControllerTests.cpp
+        test/CarstToWashControllerTests.h
+        domain/TypeDTO.h
+        domain/TypeDTO.cpp
+        test/TypeDTOTests.cpp
+        test/TypeDTOTests.h)

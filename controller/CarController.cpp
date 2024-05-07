@@ -1,10 +1,9 @@
 #include "CarController.h"
+#include "../domain/TypeDTO.h"
 
 #include <utility>
 
-CarController::CarController(const CarRepository& carRepository) {
-    this->carRepository = carRepository;
-}
+CarController::CarController(CarRepository& carRepository): carRepository(carRepository) {}
 
 void CarController::addNewCar(
         const std::string& registrationNumber,
@@ -45,6 +44,22 @@ std::vector<Car> CarController::filter(std::string toEqual,std::vector<Car> (*fi
 std::vector<Car>
 CarController::sort(const std::vector<Car> & cars, const std::string& sortingOrder, std::vector<Car> (*sortByCriteria)(std::vector<Car>, const std::string&)) {
     return sortByCriteria(cars, sortingOrder);
+}
+
+std::unordered_map<std::string, TypeDTO> CarController::createTypeReport() {
+    // Use a map to store the types of cars and their frequency
+    std::unordered_map<std::string, int> typeReportWithoutDTO;
+    for (auto car: carRepository.getAllCars()) {
+        typeReportWithoutDTO[car.getType()]++;
+    }
+
+    // Create a map with TypeDTOs
+    std::unordered_map<std::string, TypeDTO> typeReportWithDTO;
+    for (auto pair: typeReportWithoutDTO) {
+        typeReportWithDTO[pair.first] = TypeDTO(pair.first, pair.second);
+
+    }
+    return typeReportWithDTO;
 }
 
 

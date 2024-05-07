@@ -1,0 +1,56 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/domain/TypeDTO.h
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef CPPLAB_TYPEDTO_H
+        -:    2:#define CPPLAB_TYPEDTO_H
+        -:    3:
+        -:    4:
+        -:    5:#include <string>
+        -:    6:#include <utility>
+        -:    7:
+        -:    8:class TypeDTO {
+        -:    9:private:
+        -:   10:    std::string type;
+        -:   11:    int count;
+        -:   12:public:
+        -:   13:    /*
+        -:   14:     * Default constructor
+        -:   15:     * Preconditions: -
+        -:   16:     */
+function _ZN7TypeDTOC2Ev called 0 returned 0% blocks executed 0%
+    #####:   17:    TypeDTO(): type("Undefined"), count(0) {};
+    %%%%%:   17-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   17-block  1
+call    4 never executed
+    $$$$$:   17-block  2
+call    5 never executed
+        -:   18:
+        -:   19:    /*
+        -:   20:     * Constructor
+        -:   21:     * Preconditions: type: a string
+        -:   22:     *                count: an integer
+        -:   23:     */
+        -:   24:    TypeDTO(std::string type, const int& count) : type(std::move(type)), count(count) {};
+        -:   25:
+        -:   26:    /*
+        -:   27:     * Type getter.
+        -:   28:     * Preconditions: -
+        -:   29:     * Post-conditions: a string
+        -:   30:     */
+        -:   31:    std::string getType();
+        -:   32:
+        -:   33:    /*
+        -:   34:     * Count getter.
+        -:   35:     * Preconditions: -
+        -:   36:     * Post-conditions: an integer
+        -:   37:     */
+        -:   38:    int getCount() const;
+        -:   39:};
+        -:   40:
+        -:   41:
+        -:   42:#endif //CPPLAB_TYPEDTO_H

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cpplab"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpplab">
+				<Option output="/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/cpplab" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 cpplab"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpplab/fast">
+				<Option output="/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/cpplab" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 cpplab/fast"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/controller/CarController.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/controller/CarController.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/controller/CarsToWashController.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/controller/CarsToWashController.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/domain/Car.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/domain/Car.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/domain/CarValidators.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/domain/CarValidators.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/domain/TypeDTO.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/domain/TypeDTO.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/main.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/DynamicArray.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/Exceptions.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/Exceptions.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/Filters.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/Filters.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/SortingFunctions.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/SortingFunctions.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/Utils.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/Utils.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/repository/CarRepository.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/repository/CarRepository.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarControllerTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarControllerTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarRepositoryTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarRepositoryTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarValidatorsTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarValidatorsTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarstToWashControllerTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarstToWashControllerTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/DynamicArrayTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/DynamicArrayTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/FiltersTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/FiltersTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/GenericExceptionTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/GenericExceptionTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/SortingFunctionsTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/SortingFunctionsTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/TypeDTOTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/TypeDTOTests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/tests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/tests.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/ui/UI.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/ui/UI.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

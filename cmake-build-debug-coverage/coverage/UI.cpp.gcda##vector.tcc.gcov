@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/vector.tcc
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/ui/UI.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/ui/UI.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/ui/UI.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/ui/UI.cpp.gcda
         -:    0:Runs:1
         -:    1:// Vector implementation (out of line) -*- C++ -*-
         -:    2:
@@ -199,123 +199,61 @@
         -:  195:
         -:  196:  template<typename _Tp, typename _Alloc>
         -:  197:    vector<_Tp, _Alloc>&
-function _ZNSt6vectorI3CarSaIS0_EEaSERKS2_ called 0 returned 0% blocks executed 0%
-    #####:  198:    vector<_Tp, _Alloc>::
+        -:  198:    vector<_Tp, _Alloc>::
         -:  199:    operator=(const vector<_Tp, _Alloc>& __x)
         -:  200:    {
-    #####:  201:      if (&__x != this)
-    %%%%%:  201-block  0
-branch  0 never executed
-branch  1 never executed
+        -:  201:      if (&__x != this)
         -:  202:	{
         -:  203:	  _GLIBCXX_ASAN_ANNOTATE_REINIT;
         -:  204:#if __cplusplus >= 201103L
-    #####:  205:	  if (_Alloc_traits::_S_propagate_on_copy_assign())
-    %%%%%:  205-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+        -:  205:	  if (_Alloc_traits::_S_propagate_on_copy_assign())
         -:  206:	    {
-    #####:  207:	      if (!_Alloc_traits::_S_always_equal()
-    %%%%%:  207-block  0
-call    0 never executed
-    #####:  208:	          && _M_get_Tp_allocator() != __x._M_get_Tp_allocator())
-branch  0 never executed
-branch  1 never executed
-    %%%%%:  208-block  0
-call    2 never executed
-call    3 never executed
-call    4 never executed
-branch  5 never executed
-branch  6 never executed
-    %%%%%:  208-block  1
-    %%%%%:  208-block  2
-    %%%%%:  208-block  3
-branch  7 never executed
-branch  8 never executed
+        -:  207:	      if (!_Alloc_traits::_S_always_equal()
+        -:  208:	          && _M_get_Tp_allocator() != __x._M_get_Tp_allocator())
         -:  209:	        {
         -:  210:		  // replacement allocator cannot free existing storage
-    #####:  211:		  this->clear();
-    %%%%%:  211-block  0
-call    0 never executed
-    #####:  212:		  _M_deallocate(this->_M_impl._M_start,
-    #####:  213:				this->_M_impl._M_end_of_storage
-    #####:  214:				- this->_M_impl._M_start);
-call    0 never executed
-    #####:  215:		  this->_M_impl._M_start = nullptr;
-    #####:  216:		  this->_M_impl._M_finish = nullptr;
-    #####:  217:		  this->_M_impl._M_end_of_storage = nullptr;
+        -:  211:		  this->clear();
+        -:  212:		  _M_deallocate(this->_M_impl._M_start,
+        -:  213:				this->_M_impl._M_end_of_storage
+        -:  214:				- this->_M_impl._M_start);
+        -:  215:		  this->_M_impl._M_start = nullptr;
+        -:  216:		  this->_M_impl._M_finish = nullptr;
+        -:  217:		  this->_M_impl._M_end_of_storage = nullptr;
         -:  218:		}
-    #####:  219:	      std::__alloc_on_copy(_M_get_Tp_allocator(),
-call    0 never executed
-call    1 never executed
-    #####:  220:				   __x._M_get_Tp_allocator());
-    %%%%%:  220-block  0
-call    0 never executed
+        -:  219:	      std::__alloc_on_copy(_M_get_Tp_allocator(),
+        -:  220:				   __x._M_get_Tp_allocator());
         -:  221:	    }
         -:  222:#endif
-    #####:  223:	  const size_type __xlen = __x.size();
-    %%%%%:  223-block  0
-call    0 never executed
-    #####:  224:	  if (__xlen > capacity())
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+        -:  223:	  const size_type __xlen = __x.size();
+        -:  224:	  if (__xlen > capacity())
         -:  225:	    {
-    #####:  226:	      pointer __tmp = _M_allocate_and_copy(__xlen, __x.begin(),
-    %%%%%:  226-block  0
-call    0 never executed
-call    1 never executed
-call    2 never executed
+        -:  226:	      pointer __tmp = _M_allocate_and_copy(__xlen, __x.begin(),
         -:  227:						   __x.end());
-    #####:  228:	      std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
-call    0 never executed
-    #####:  229:			    _M_get_Tp_allocator());
-call    0 never executed
-    #####:  230:	      _M_deallocate(this->_M_impl._M_start,
-    #####:  231:			    this->_M_impl._M_end_of_storage
-    #####:  232:			    - this->_M_impl._M_start);
-call    0 never executed
-    #####:  233:	      this->_M_impl._M_start = __tmp;
-    #####:  234:	      this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __xlen;
+        -:  228:	      std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+        -:  229:			    _M_get_Tp_allocator());
+        -:  230:	      _M_deallocate(this->_M_impl._M_start,
+        -:  231:			    this->_M_impl._M_end_of_storage
+        -:  232:			    - this->_M_impl._M_start);
+        -:  233:	      this->_M_impl._M_start = __tmp;
+        -:  234:	      this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __xlen;
         -:  235:	    }
-    #####:  236:	  else if (size() >= __xlen)
-    %%%%%:  236-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+        -:  236:	  else if (size() >= __xlen)
         -:  237:	    {
-    #####:  238:	      std::_Destroy(std::copy(__x.begin(), __x.end(), begin()),
-call    0 never executed
-call    1 never executed
-call    2 never executed
-call    3 never executed
-call    4 never executed
-call    5 never executed
-    #####:  239:			    end(), _M_get_Tp_allocator());
-    %%%%%:  239-block  0
-call    0 never executed
+        -:  238:	      std::_Destroy(std::copy(__x.begin(), __x.end(), begin()),
+        -:  239:			    end(), _M_get_Tp_allocator());
         -:  240:	    }
         -:  241:	  else
         -:  242:	    {
-    #####:  243:	      std::copy(__x._M_impl._M_start, __x._M_impl._M_start + size(),
-    %%%%%:  243-block  0
-call    0 never executed
-call    1 never executed
+        -:  243:	      std::copy(__x._M_impl._M_start, __x._M_impl._M_start + size(),
         -:  244:			this->_M_impl._M_start);
-    #####:  245:	      std::__uninitialized_copy_a(__x._M_impl._M_start + size(),
-call    0 never executed
-    #####:  246:					  __x._M_impl._M_finish,
-call    0 never executed
+        -:  245:	      std::__uninitialized_copy_a(__x._M_impl._M_start + size(),
+        -:  246:					  __x._M_impl._M_finish,
         -:  247:					  this->_M_impl._M_finish,
-    #####:  248:					  _M_get_Tp_allocator());
-call    0 never executed
+        -:  248:					  _M_get_Tp_allocator());
         -:  249:	    }
-    #####:  250:	  this->_M_impl._M_finish = this->_M_impl._M_start + __xlen;
-    %%%%%:  250-block  0
+        -:  250:	  this->_M_impl._M_finish = this->_M_impl._M_start + __xlen;
         -:  251:	}
-    #####:  252:      return *this;
-    %%%%%:  252-block  0
+        -:  252:      return *this;
         -:  253:    }
         -:  254:
         -:  255:  template<typename _Tp, typename _Alloc>

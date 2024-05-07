@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/alloc_traits.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/repository/CarRepository.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/repository/CarRepository.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/repository/CarRepository.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/repository/CarRepository.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocator traits -*- C++ -*-
         -:    2:
@@ -464,11 +464,11 @@
         -:  460:       *  Calls @c a.allocate(n)
         -:  461:      */
         -:  462:      _GLIBCXX_NODISCARD static _GLIBCXX20_CONSTEXPR pointer
-function _ZNSt16allocator_traitsISaI3CarEE8allocateERS1_m called 51 returned 100% blocks executed 100%
-       51:  463:      allocate(allocator_type& __a, size_type __n)
-       51:  464:      { return __a.allocate(__n); }
-       51:  464-block  0
-call    0 returned 51
+function _ZNSt16allocator_traitsISaI3CarEE8allocateERS1_m called 0 returned 0% blocks executed 0%
+    #####:  463:      allocate(allocator_type& __a, size_type __n)
+    #####:  464:      { return __a.allocate(__n); }
+    %%%%%:  464-block  0
+call    0 never executed
         -:  465:
         -:  466:      /**
         -:  467:       *  @brief  Allocate memory.
@@ -518,20 +518,20 @@ call    0 never executed
         -:  508:      */
         -:  509:      template<typename _Up, typename... _Args>
         -:  510:	static _GLIBCXX20_CONSTEXPR void
-function _ZNSt16allocator_traitsISaI3CarEE9constructIS0_JRKS0_EEEvRS1_PT_DpOT0_ called 47 returned 100% blocks executed 100%
-       47:  511:	construct(allocator_type& __a __attribute__((__unused__)), _Up* __p,
+function _ZNSt16allocator_traitsISaI3CarEE9constructIS0_JRKS0_EEEvRS1_PT_DpOT0_ called 86 returned 100% blocks executed 100%
+       86:  511:	construct(allocator_type& __a __attribute__((__unused__)), _Up* __p,
         -:  512:		  _Args&&... __args)
         -:  513:	noexcept(std::is_nothrow_constructible<_Up, _Args...>::value)
         -:  514:	{
         -:  515:#if __cplusplus <= 201703L
-       47:  516:	  __a.construct(__p, std::forward<_Args>(__args)...);
-       47:  516-block  0
-call    0 returned 47
-call    1 returned 47
+       86:  516:	  __a.construct(__p, std::forward<_Args>(__args)...);
+       86:  516-block  0
+call    0 returned 86
+call    1 returned 86
         -:  517:#else
         -:  518:	  std::construct_at(__p, std::forward<_Args>(__args)...);
         -:  519:#endif
-       47:  520:	}
+       86:  520:	}
         -:  521:
         -:  522:      /**
         -:  523:       *  @brief  Destroy an object of type @a _Up
@@ -542,18 +542,18 @@ call    1 returned 47
         -:  528:      */
         -:  529:      template<typename _Up>
         -:  530:	static _GLIBCXX20_CONSTEXPR void
-function _ZNSt16allocator_traitsISaI3CarEE7destroyIS0_EEvRS1_PT_ called 2 returned 100% blocks executed 100%
-        2:  531:	destroy(allocator_type& __a __attribute__((__unused__)), _Up* __p)
+function _ZNSt16allocator_traitsISaI3CarEE7destroyIS0_EEvRS1_PT_ called 6 returned 100% blocks executed 100%
+        6:  531:	destroy(allocator_type& __a __attribute__((__unused__)), _Up* __p)
         -:  532:	noexcept(is_nothrow_destructible<_Up>::value)
         -:  533:	{
         -:  534:#if __cplusplus <= 201703L
-        2:  535:	  __a.destroy(__p);
-        2:  535-block  0
-call    0 returned 2
+        6:  535:	  __a.destroy(__p);
+        6:  535-block  0
+call    0 returned 6
         -:  536:#else
         -:  537:	  std::destroy_at(__p);
         -:  538:#endif
-        2:  539:	}
+        6:  539:	}
         -:  540:
         -:  541:      /**
         -:  542:       *  @brief  The maximum supported allocation size
@@ -561,13 +561,13 @@ call    0 returned 2
         -:  544:       *  @return @c __a.max_size()
         -:  545:      */
         -:  546:      static _GLIBCXX20_CONSTEXPR size_type
-function _ZNSt16allocator_traitsISaI3CarEE8max_sizeERKS1_ called 88 returned 100% blocks executed 100%
-       88:  547:      max_size(const allocator_type& __a __attribute__((__unused__))) noexcept
+function _ZNSt16allocator_traitsISaI3CarEE8max_sizeERKS1_ called 156 returned 100% blocks executed 100%
+      156:  547:      max_size(const allocator_type& __a __attribute__((__unused__))) noexcept
         -:  548:      {
         -:  549:#if __cplusplus <= 201703L
-       88:  550:	return __a.max_size();
-       88:  550-block  0
-call    0 returned 88
+      156:  550:	return __a.max_size();
+      156:  550-block  0
+call    0 returned 156
         -:  551:#else
         -:  552:	return size_t(-1) / sizeof(value_type);
         -:  553:#endif

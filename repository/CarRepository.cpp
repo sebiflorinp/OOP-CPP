@@ -58,3 +58,7 @@ void CarRepository::updateCarByRegistrationNumber(const std::string& registratio
     // if no car was found throw an error
     throw  CarNotFoundError("There is not car with the input registration number.");
 }
+
+void CarRepository::emptyRepository() {
+    cars.clear();
+}

@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/basic_string.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcda
         -:    0:Runs:1
         -:    1:// Components for manipulating sequences of characters -*- C++ -*-
         -:    2:
@@ -6264,27 +6264,27 @@ call    0 never executed
         -: 6231:  template<typename _CharT>
         -: 6232:    inline
         -: 6233:    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value, bool>::__type
-function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 189 returned 100% blocks executed 100%
-      189: 6234:    operator==(const basic_string<_CharT>& __lhs,
+function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 326 returned 100% blocks executed 100%
+      326: 6234:    operator==(const basic_string<_CharT>& __lhs,
         -: 6235:	       const basic_string<_CharT>& __rhs) _GLIBCXX_NOEXCEPT
-      189: 6236:    { return (__lhs.size() == __rhs.size()
-      189: 6236-block  0
-call    0 returned 189
-call    1 returned 189
-      189: 6237:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
-branch  0 taken 184 (fallthrough)
+      326: 6236:    { return (__lhs.size() == __rhs.size()
+      326: 6236-block  0
+call    0 returned 326
+call    1 returned 326
+      326: 6237:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
+branch  0 taken 321 (fallthrough)
 branch  1 taken 5
-      184: 6237-block  0
-call    2 returned 184
-call    3 returned 184
-call    4 returned 184
-call    5 returned 184
-branch  6 taken 125 (fallthrough)
-branch  7 taken 59
-      125: 6237-block  1
-       64: 6237-block  2
-      189: 6238:						    __lhs.size())); }
-      189: 6238-block  0
+      321: 6237-block  0
+call    2 returned 321
+call    3 returned 321
+call    4 returned 321
+call    5 returned 321
+branch  6 taken 168 (fallthrough)
+branch  7 taken 153
+      168: 6237-block  1
+      158: 6237-block  2
+      326: 6238:						    __lhs.size())); }
+      326: 6238-block  0
         -: 6239:
         -: 6240:  /**
         -: 6241:   *  @brief  Test equivalence of string and C string.

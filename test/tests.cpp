@@ -8,6 +8,8 @@
 #include "SortingFunctionsTests.h"
 #include "DynamicArrayTests.h"
 #include "GenericExceptionTests.h"
+#include "CarstToWashControllerTests.h"
+#include "TypeDTOTests.h"
 
 void testAll();
 
@@ -43,6 +45,7 @@ void runAllTests() {
     carControllerTests.testDeleteCarByRegistrationNumber();
     carControllerTests.testFilter();
     carControllerTests.testSort();
+    carControllerTests.testCreateTypeReport();
 
     // Filters tests
     FiltersTests filtersTests = FiltersTests();
@@ -65,6 +68,18 @@ void runAllTests() {
     // GenericException tests
     GenericExceptionTests genericExceptionTests = GenericExceptionTests();
     genericExceptionTests.testGetErrorMessage();
+
+    // CarsToWashController tests
+    CarsToWashControllerTests carsToWashControllerTests = CarsToWashControllerTests();
+    carsToWashControllerTests.TestGetAllCars();
+    carsToWashControllerTests.TestAddCarToWashRepository();
+    carsToWashControllerTests.TestEmptyRepository();
+    carsToWashControllerTests.TestAddRandomCars();
+    carsToWashControllerTests.TestExportCarsToWash();
+
+    // TypeDTO tests
+    TypeDTOTests typeDTOTests = TypeDTOTests();
+    typeDTOTests.testTypeDTO();
 }
 
 

@@ -26,4 +26,12 @@ class DuplicateDataError : public GenericException {
     using GenericException::GenericException;
 };
 
+class InvalidExportFormatError : public GenericException {
+    using GenericException::GenericException;
+};
+
+class AddRandomCarsError : public GenericException {
+    using GenericException::GenericException;
+};
+
 #endif //CPPLAB_EXCEPTIONS_H

@@ -1,6 +1,6 @@
-        -:    0:Source:/home/sebifp/ubb/cpplab/misc/SortingFunctions.cpp
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.gcda
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/misc/SortingFunctions.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/SortingFunctions.cpp.gcda
         -:    0:Runs:1
         -:    1:#include <vector>
         -:    2:#include <algorithm>

@@ -11,7 +11,7 @@ class CarRepository {
 
     public:
         /*
-         * Returns an instace of the Car class with the received registrationNumber.
+         * Returns an instance of the Car class with the received registrationNumber.
          * Preconditions: registrationNumber: a non-empty string made of 7 characters
          * Post-conditions: an instance of the Car class
          * Raises: No car with the received registrationNumber exists.
@@ -49,6 +49,8 @@ class CarRepository {
          * Raises: No car with the received registrationNumber exists.
          */
         void updateCarByRegistrationNumber(const std::string& registrationNumber, Car updatedCar);
+
+    void emptyRepository();
 };
 
 #endif //CPPLAB_CARREPOSITORY_H

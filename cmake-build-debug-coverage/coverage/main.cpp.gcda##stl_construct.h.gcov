@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/stl_construct.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcda
         -:    0:Runs:1
         -:    1:// nonstandard construct and destroy functions -*- C++ -*-
         -:    2:
@@ -110,7 +110,8 @@
         -:  106:  template<typename _Tp, typename... _Args>
         -:  107:    _GLIBCXX20_CONSTEXPR
         -:  108:    inline void
-        -:  109:    _Construct(_Tp* __p, _Args&&... __args)
+function _ZSt10_ConstructI3CarJRKS0_EEvPT_DpOT0_ called 106 returned 100% blocks executed 83%
+      106:  109:    _Construct(_Tp* __p, _Args&&... __args)
         -:  110:    {
         -:  111:#if __cplusplus >= 202002L && __has_builtin(__builtin_is_constant_evaluated)
         -:  112:      if (__builtin_is_constant_evaluated())
@@ -120,8 +121,17 @@
         -:  116:	  return;
         -:  117:	}
         -:  118:#endif
-        -:  119:      ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
-        -:  120:    }
+      106:  119:      ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
+      106:  119-block  0
+call    0 returned 106
+call    1 returned 106
+call    2 returned 106
+branch  3 taken 106 (fallthrough)
+branch  4 taken 0 (throw)
+    $$$$$:  119-block  1
+call    5 never executed
+      106:  120:    }
+      106:  120-block  0
         -:  121:#else
         -:  122:  template<typename _T1, typename _T2>
         -:  123:    inline void
@@ -147,36 +157,36 @@
         -:  143:   */
         -:  144:  template<typename _Tp>
         -:  145:    _GLIBCXX14_CONSTEXPR inline void
-function _ZSt8_DestroyI3CarEvPT_ called 91 returned 100% blocks executed 100%
-       91:  146:    _Destroy(_Tp* __pointer)
+function _ZSt8_DestroyI3CarEvPT_ called 186 returned 100% blocks executed 100%
+      186:  146:    _Destroy(_Tp* __pointer)
         -:  147:    {
         -:  148:#if __cplusplus > 201703L
         -:  149:      std::destroy_at(__pointer);
         -:  150:#else
-       91:  151:      __pointer->~_Tp();
-       91:  151-block  0
-call    0 returned 91
+      186:  151:      __pointer->~_Tp();
+      186:  151-block  0
+call    0 returned 186
         -:  152:#endif
-       91:  153:    }
+      186:  153:    }
         -:  154:
         -:  155:  template<bool>
         -:  156:    struct _Destroy_aux
         -:  157:    {
         -:  158:      template<typename _ForwardIterator>
         -:  159:	static _GLIBCXX20_CONSTEXPR void
-function _ZNSt12_Destroy_auxILb0EE9__destroyIP3CarEEvT_S4_ called 84 returned 100% blocks executed 100%
-       84:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZNSt12_Destroy_auxILb0EE9__destroyIP3CarEEvT_S4_ called 133 returned 100% blocks executed 100%
+      133:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  161:	{
-      175:  162:	  for (; __first != __last; ++__first)
-       84:  162-block  0
-      175:  162-block  1
-branch  0 taken 91
-branch  1 taken 84 (fallthrough)
-       91:  163:	    std::_Destroy(std::__addressof(*__first));
-       91:  163-block  0
-call    0 returned 91
-call    1 returned 91
-       84:  164:	}
+      319:  162:	  for (; __first != __last; ++__first)
+      133:  162-block  0
+      319:  162-block  1
+branch  0 taken 186
+branch  1 taken 133 (fallthrough)
+      186:  163:	    std::_Destroy(std::__addressof(*__first));
+      186:  163-block  0
+call    0 returned 186
+call    1 returned 186
+      133:  164:	}
         -:  165:    };
         -:  166:
         -:  167:  template<>
@@ -194,8 +204,8 @@ call    1 returned 91
         -:  179:   */
         -:  180:  template<typename _ForwardIterator>
         -:  181:    _GLIBCXX20_CONSTEXPR inline void
-function _ZSt8_DestroyIP3CarEvT_S2_ called 84 returned 100% blocks executed 100%
-       84:  182:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZSt8_DestroyIP3CarEvT_S2_ called 133 returned 100% blocks executed 100%
+      133:  182:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  183:    {
         -:  184:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  185:                       _Value_type;
@@ -209,10 +219,10 @@ function _ZSt8_DestroyIP3CarEvT_S2_ called 84 returned 100% blocks executed 100%
         -:  193:	return _Destroy_aux<false>::__destroy(__first, __last);
         -:  194:#endif
         -:  195:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-       84:  196:	__destroy(__first, __last);
-       84:  196-block  0
-call    0 returned 84
-       84:  197:    }
+      133:  196:	__destroy(__first, __last);
+      133:  196-block  0
+call    0 returned 133
+      133:  197:    }
         -:  198:
         -:  199:  template<bool>
         -:  200:    struct _Destroy_n_aux

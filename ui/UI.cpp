@@ -1,4 +1,6 @@
 #include <iostream>
+#include <utility>
+#include <unordered_map>
 #include "UI.h"
 #include "../misc/Filters.h"
 #include "../misc/SortingFunctions.h"
@@ -9,9 +11,8 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-UI::UI(const CarController& carController) : carController(carController) {
-    this->carController = carController;
-}
+UI::UI(CarController  carController, CarsToWashController  carsToWashController) : carController(std::move(carController)),
+                                                                                               carsToWashController(std::move(carsToWashController)) {}
 
 
 
@@ -31,7 +32,9 @@ void UI::runApp() {
                 "  8. Sort cars by registration number.\n"
                 "  9. Sort cars by type.\n"
                 "  10. Sort cars by producer and model.\n"
-                "  11. Exit the application.\n";
+                "  11. Create and display type report.\n"
+                "  12. Access the menu for managing the cars that will be washed.\n"
+                "  13. Exit the application.\n";
         try {
             cin >> option;
         } catch (...) {
@@ -45,7 +48,7 @@ void UI::runApp() {
         string model;
         string producer;
         string producerToFilterBy;
-
+        std::unordered_map<string, TypeDTO> typeReport;
 
         switch (option) {
             case 1:
@@ -227,6 +230,20 @@ void UI::runApp() {
                 }
                 break;
             case 11:
+                // Check if there are any cars
+                if (carController.getAllCars().empty()) {
+                    cout << "There are no cars." << endl;
+                    break;
+                }
+
+                // Create the report and display it
+                typeReport = carController.createTypeReport();
+                displayTypeReport(typeReport);
+                break;
+            case 12:
+                carsToWashMenu();
+                break;
+            case 13:
                 running = false;
                 cout << "Thank you for using this application." << endl;
                 break;
@@ -251,5 +268,115 @@ void UI::displayCars(const std::vector<Car>& cars) {
         printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", " ", " ", " ", " ");
         printf("+------------------------+-------------------+-------------------+-------------------+\n");
 
+    }
+}
+
+void UI::carsToWashMenu() {
+    cout << "This is the menu for managing the cars that will be washed." << endl;
+    cout << "In order to use it you have to choose one of the following options:\n";
+    cout << "  1. Add a car in the list by the registration number.\n"
+            "  2. Empty the list.\n"
+            "  3. Add random cars until the list has a certain number of cars.\n"
+            "  4. Export the list as a CSV or HTML.\n"
+            "  5. Exit the menu.\n";
+    int option;
+    while (true) {
+        cout << "Choose an option." << endl;
+        try {
+            cin >> option;
+            if (option < 1 || option > 5) {
+                throw std::exception();
+            }
+        } catch (...) {
+            cout << "The input option is not valid, please input a valid action." << std::endl;
+            continue;
+        }
+        string registrationNumber;
+        int totalNumberOfCars;
+        string exportFormat;
+        string fileName;
+
+        switch (option) {
+            case 1:
+                displayCars(carController.getAllCars());
+                cout << "Input the registration number of the car." << endl;
+                cin >> registrationNumber;
+                try {
+                    carsToWashController.addCarToWashRepository(registrationNumber);
+                    cout << "The car was added to the list successfully." << endl;
+                } catch (CarNotFoundError& error) {
+                    cout << error.getErrorMessage() << endl;
+                } catch (DuplicateDataError& error) {
+                    cout << error.getErrorMessage() << endl;
+                }
+                break;
+            case 2:
+                carsToWashController.emptyRepository();
+                cout << "The list was emptied successfully." << endl;
+                break;
+            case 3:
+                cout << "Input the total number of cars that will be in the list." << endl;
+                try {
+                    cin >> totalNumberOfCars;
+                } catch (...) {
+                    cout << "The input is not an integer." << endl;
+                    break;
+                }
+
+                if (totalNumberOfCars < carsToWashController.GetAllCars().size()) {
+                    cout << "The list already has more cars than the input number." << endl;
+                    break;
+                }
+
+                if (totalNumberOfCars > carController.getAllCars().size()) {
+                    cout << "There are not enough cars to add in the list." << endl;
+                    break;
+                }
+
+                carsToWashController.addRandomCars(totalNumberOfCars);
+                cout << "The cars were added successfully." << endl;
+                break;
+            case 4:
+                // Get the export format
+                cout << "Choose the export format between CSV and HTML." << endl;
+                cin >> exportFormat;
+                if (exportFormat != "CSV" && exportFormat != "HTML") {
+                    cout << "Invalid export format." << endl;
+                    break;
+                }
+
+                // Get the name of the file
+                cout << "Input the name of the file that will be created." << endl;
+                cin >> fileName;
+
+                // Export the cars
+                try {
+                    carsToWashController.exportCarsToWash(exportFormat, fileName);
+                    cout << "The cars were exported successfully." << endl;
+                } catch (InvalidExportFormatError& error) {
+                    cout << error.getErrorMessage() << endl;
+                }
+                break;
+            case 5:
+                return;
+                break;
+        }
+    }
+
+
+}
+
+void UI::displayTypeReport(const std::unordered_map<std::string, TypeDTO> &typeReport) {
+    printf("+------------------------+-------------------+\n");
+    printf("|  %-20s  |  %-15s  |\n", "Type", "Count");
+    printf("+------------------------+-------------------+\n");
+
+    for (auto& pair: typeReport) {
+        printf("|  %-20s  |  %-15d  |\n", pair.first.c_str(), pair.second.getCount());
+        printf("+------------------------+-------------------+\n");
+    }
+    if (typeReport.empty()) {
+        printf("|  %-20s  |  %-15s  |\n", " ", " ");
+        printf("+------------------------+-------------------+\n");
     }
 }

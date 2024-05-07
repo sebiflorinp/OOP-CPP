@@ -1,37 +1,37 @@
-        -:    0:Source:/home/sebifp/ubb/cpplab/domain/Car.cpp
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcda
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/domain/Car.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/Car.cpp.gcda
         -:    0:Runs:1
         -:    1:#include <stdexcept>
         -:    2:#include "Car.h"
         -:    3:#include "../misc/Exceptions.h"
         -:    4:
         -:    5:
-function _ZN3CarC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 83 returned 98% blocks executed 76%
-       83:    6:Car::Car(const std::string& registrationNumber, const std::string& producer, const std::string& model,
-       83:    7:         const std::string& type) {
-       83:    7-block  0
-call    0 returned 83
-call    1 returned 83
-call    2 returned 83
-call    3 returned 83
-       83:    8:    std::string errors = "";
-call    0 returned 83
-call    1 returned 83
-branch  2 taken 83 (fallthrough)
+function _ZN3CarC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 112 returned 98% blocks executed 76%
+      112:    6:Car::Car(const std::string& registrationNumber, const std::string& producer, const std::string& model,
+      112:    7:         const std::string& type) {
+      112:    7-block  0
+call    0 returned 112
+call    1 returned 112
+call    2 returned 112
+call    3 returned 112
+      112:    8:    std::string errors = "";
+call    0 returned 112
+call    1 returned 112
+branch  2 taken 112 (fallthrough)
 branch  3 taken 0 (throw)
     $$$$$:    8-block  0
         -:    9:
         -:   10:    // check if the registrationNumber is valid and assign it if it is
         -:   11:    try {
-       83:   12:        CarValidators::validateRegistrationNumber(registrationNumber);
-call    0 returned 83
-branch  1 taken 81 (fallthrough)
+      112:   12:        CarValidators::validateRegistrationNumber(registrationNumber);
+call    0 returned 112
+branch  1 taken 110 (fallthrough)
 branch  2 taken 2 (throw)
-       81:   13:        this->registrationNumber = registrationNumber;
-       81:   13-block  0
-call    0 returned 81
-branch  1 taken 81 (fallthrough)
+      110:   13:        this->registrationNumber = registrationNumber;
+      110:   13-block  0
+call    0 returned 110
+branch  1 taken 110 (fallthrough)
 branch  2 taken 0 (throw)
         2:   14:    } catch (const std::runtime_error& error) {
         2:   14-block  0
@@ -52,15 +52,15 @@ call    1 never executed
         -:   17:
         -:   18:    // check if the producer is valid and assign it if it is
         -:   19:    try {
-       83:   20:        CarValidators::validateProducer(producer);
-       83:   20-block  0
-call    0 returned 83
-branch  1 taken 82 (fallthrough)
+      112:   20:        CarValidators::validateProducer(producer);
+      112:   20-block  0
+call    0 returned 112
+branch  1 taken 111 (fallthrough)
 branch  2 taken 1 (throw)
-       82:   21:        this->producer = producer;
-       82:   21-block  0
-call    0 returned 82
-branch  1 taken 82 (fallthrough)
+      111:   21:        this->producer = producer;
+      111:   21-block  0
+call    0 returned 111
+branch  1 taken 111 (fallthrough)
 branch  2 taken 0 (throw)
         1:   22:    } catch (const std::runtime_error& error) {
         1:   22-block  0
@@ -81,15 +81,15 @@ call    1 never executed
         -:   25:
         -:   26:    // check if the model is valid and assign it if it is
         -:   27:    try {
-       83:   28:        CarValidators::validateModel(model);
-       83:   28-block  0
-call    0 returned 83
-branch  1 taken 82 (fallthrough)
+      112:   28:        CarValidators::validateModel(model);
+      112:   28-block  0
+call    0 returned 112
+branch  1 taken 111 (fallthrough)
 branch  2 taken 1 (throw)
-       82:   29:        this->model = model;
-       82:   29-block  0
-call    0 returned 82
-branch  1 taken 82 (fallthrough)
+      111:   29:        this->model = model;
+      111:   29-block  0
+call    0 returned 111
+branch  1 taken 111 (fallthrough)
 branch  2 taken 0 (throw)
         1:   30:    } catch (const std::runtime_error& error) {
         1:   30-block  0
@@ -110,15 +110,15 @@ call    1 never executed
         -:   33:
         -:   34:    // check if the type is valid and assign it if it is
         -:   35:    try {
-       83:   36:        CarValidators::validateType(type);
-       83:   36-block  0
-call    0 returned 83
-branch  1 taken 82 (fallthrough)
+      112:   36:        CarValidators::validateType(type);
+      112:   36-block  0
+call    0 returned 112
+branch  1 taken 111 (fallthrough)
 branch  2 taken 1 (throw)
-       82:   37:        this->type = type;
-       82:   37-block  0
-call    0 returned 82
-branch  1 taken 82 (fallthrough)
+      111:   37:        this->type = type;
+      111:   37-block  0
+call    0 returned 111
+branch  1 taken 111 (fallthrough)
 branch  2 taken 0 (throw)
         1:   38:    } catch (const std::runtime_error& error) {
         1:   38-block  0
@@ -137,11 +137,11 @@ call    0 returned 1
     $$$$$:   40-block  1
 call    1 never executed
         -:   41:
-       83:   42:    if (!errors.empty()) {
-       83:   42-block  0
-call    0 returned 83
+      112:   42:    if (!errors.empty()) {
+      112:   42-block  0
+call    0 returned 112
 branch  1 taken 2 (fallthrough)
-branch  2 taken 81
+branch  2 taken 110
         2:   43:        throw InvalidDataError(errors);
         2:   43-block  0
 call    0 returned 2
@@ -156,9 +156,9 @@ call    6 returned 2
 call    7 never executed
         -:   44:    }
         -:   45:
-       91:   46:}
-       81:   46-block  0
-call    0 returned 81
+      120:   46:}
+      110:   46-block  0
+call    0 returned 110
         2:   46-block  1
 call    1 returned 2
         2:   46-block  2
@@ -172,32 +172,32 @@ call    5 returned 2
         -:   47:
         -:   48:
         -:   49:
-function _ZNK3Car21getRegistrationNumberB5cxx11Ev called 201 returned 100% blocks executed 100%
-      201:   50:std::string Car::getRegistrationNumber() const {
-      201:   51:    return this->registrationNumber;
-      201:   51-block  0
-call    0 returned 201
+function _ZNK3Car21getRegistrationNumberB5cxx11Ev called 429 returned 100% blocks executed 100%
+      429:   50:std::string Car::getRegistrationNumber() const {
+      429:   51:    return this->registrationNumber;
+      429:   51-block  0
+call    0 returned 429
         -:   52:}
         -:   53:
-function _ZNK3Car8getModelB5cxx11Ev called 33 returned 100% blocks executed 100%
-       33:   54:std::string Car::getModel() const {
-       33:   55:    return this->model;
-       33:   55-block  0
-call    0 returned 33
+function _ZNK3Car8getModelB5cxx11Ev called 48 returned 100% blocks executed 100%
+       48:   54:std::string Car::getModel() const {
+       48:   55:    return this->model;
+       48:   55-block  0
+call    0 returned 48
         -:   56:}
         -:   57:
-function _ZNK3Car11getProducerB5cxx11Ev called 53 returned 100% blocks executed 100%
-       53:   58:std::string Car::getProducer() const {
-       53:   59:    return this->producer;
-       53:   59-block  0
-call    0 returned 53
+function _ZNK3Car11getProducerB5cxx11Ev called 68 returned 100% blocks executed 100%
+       68:   58:std::string Car::getProducer() const {
+       68:   59:    return this->producer;
+       68:   59-block  0
+call    0 returned 68
         -:   60:}
         -:   61:
-function _ZNK3Car7getTypeB5cxx11Ev called 39 returned 100% blocks executed 100%
-       39:   62:std::string Car::getType() const {
-       39:   63:    return this->type;
-       39:   63-block  0
-call    0 returned 39
+function _ZNK3Car7getTypeB5cxx11Ev called 58 returned 100% blocks executed 100%
+       58:   62:std::string Car::getType() const {
+       58:   63:    return this->type;
+       58:   63-block  0
+call    0 returned 58
         -:   64:}
         -:   65:
 function _ZN3Car21setRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 100%
@@ -336,40 +336,40 @@ call   11 never executed
        17:  100-block  0
         -:  101:}
         -:  102:
-function _ZN3CarC2ERKS_ called 134 returned 100% blocks executed 61%
-      134:  103:Car::Car(const Car &car) {
-      134:  103-block  0
-call    0 returned 134
-call    1 returned 134
-call    2 returned 134
-call    3 returned 134
-      134:  104:    registrationNumber = car.registrationNumber;
-call    0 returned 134
-branch  1 taken 134 (fallthrough)
+function _ZN3CarC2ERKS_ called 272 returned 100% blocks executed 61%
+      272:  103:Car::Car(const Car &car) {
+      272:  103-block  0
+call    0 returned 272
+call    1 returned 272
+call    2 returned 272
+call    3 returned 272
+      272:  104:    registrationNumber = car.registrationNumber;
+call    0 returned 272
+branch  1 taken 272 (fallthrough)
 branch  2 taken 0 (throw)
-      134:  105:    model = car.model;
-      134:  105-block  0
-call    0 returned 134
-branch  1 taken 134 (fallthrough)
+      272:  105:    model = car.model;
+      272:  105-block  0
+call    0 returned 272
+branch  1 taken 272 (fallthrough)
 branch  2 taken 0 (throw)
-      134:  106:    producer = car.producer;
-      134:  106-block  0
-call    0 returned 134
-branch  1 taken 134 (fallthrough)
+      272:  106:    producer = car.producer;
+      272:  106-block  0
+call    0 returned 272
+branch  1 taken 272 (fallthrough)
 branch  2 taken 0 (throw)
-      134:  107:    type = car.type;
-      134:  107-block  0
-call    0 returned 134
-branch  1 taken 134 (fallthrough)
+      272:  107:    type = car.type;
+      272:  107-block  0
+call    0 returned 272
+branch  1 taken 272 (fallthrough)
 branch  2 taken 0 (throw)
         -:  108:
-      134:  109:    printf("Constructor\n");
-      134:  109-block  0
-call    0 returned 134
-branch  1 taken 134 (fallthrough)
+      272:  109:    printf("Constructor\n");
+      272:  109-block  0
+call    0 returned 272
+branch  1 taken 272 (fallthrough)
 branch  2 taken 0 (throw)
-      134:  110:}
-      134:  110-block  0
+      272:  110:}
+      272:  110-block  0
     $$$$$:  110-block  1
 call    0 never executed
     $$$$$:  110-block  2

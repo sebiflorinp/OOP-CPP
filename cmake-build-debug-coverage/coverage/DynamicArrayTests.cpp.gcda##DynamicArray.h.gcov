@@ -1,6 +1,6 @@
-        -:    0:Source:/home/sebifp/ubb/cpplab/misc/DynamicArray.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcda
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/misc/DynamicArray.h
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/DynamicArrayTests.cpp.gcda
         -:    0:Runs:1
         -:    1:#ifndef CPPLAB_DYNAMICARRAY_H
         -:    2:#define CPPLAB_DYNAMICARRAY_H

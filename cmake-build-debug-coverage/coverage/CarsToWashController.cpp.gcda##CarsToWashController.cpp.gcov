@@ -1,0 +1,552 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/controller/CarsToWashController.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/controller/CarsToWashController.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/controller/CarsToWashController.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <fstream>
+        -:    2:#include "CarsToWashController.h"
+        -:    3:#include "../misc/Utils.h"
+        -:    4:#include "../misc/Exceptions.h"
+        -:    5:
+function _ZN20CarsToWashControllerC2ER13CarRepository called 6 returned 100% blocks executed 100%
+        6:    6:CarsToWashController::CarsToWashController(CarRepository& carRepositoryReference): carRepositoryReference(carRepositoryReference) {
+        6:    6-block  0
+call    0 returned 6
+        6:    7:}
+        -:    8:
+function _ZN20CarsToWashController10GetAllCarsEv called 6 returned 100% blocks executed 100%
+        6:    9:std::vector<Car> CarsToWashController::GetAllCars() {
+        6:   10:    return carsToWashRepository.getAllCars();
+        6:   10-block  0
+call    0 returned 6
+call    1 returned 6
+        -:   11:}
+        -:   12:
+function _ZN20CarsToWashController22addCarToWashRepositoryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 15 returned 87% blocks executed 100%
+       15:   13:void CarsToWashController::addCarToWashRepository(const std::string& registrationNumber) {
+       15:   14:    Car car = carRepositoryReference.getCarByRegistrationNumber(registrationNumber);
+       15:   14-block  0
+call    0 returned 15
+branch  1 taken 14 (fallthrough)
+branch  2 taken 1 (throw)
+       14:   15:    carsToWashRepository.addNewCar(car);
+       14:   15-block  0
+call    0 returned 14
+branch  1 taken 13 (fallthrough)
+branch  2 taken 1 (throw)
+       14:   16:}
+       13:   16-block  0
+call    0 returned 13
+        1:   16-block  1
+call    1 returned 1
+        -:   17:
+function _ZN20CarsToWashController15emptyRepositoryEv called 1 returned 100% blocks executed 100%
+        1:   18:void CarsToWashController::emptyRepository() {
+        1:   19:    carsToWashRepository.emptyRepository();
+        1:   19-block  0
+call    0 returned 1
+        1:   20:}
+        -:   21:
+function _ZN20CarsToWashController13addRandomCarsEi called 3 returned 33% blocks executed 72%
+        3:   22:void CarsToWashController::addRandomCars(int totalNumberOfCars) {
+        3:   23:    CarRepository carsToChooseFrom = carRepositoryReference;
+        3:   23-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   24:
+        -:   25:    // Check if there are already more cars in the carsToWashRepository than the total number of cars
+        3:   26:    if (carsToWashRepository.getAllCars().size() >= totalNumberOfCars) {
+        3:   26-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   26-block  1
+call    3 returned 3
+branch  4 taken 1 (fallthrough)
+branch  5 taken 2
+        1:   27:        throw AddRandomCarsError("There are already more cars in the carsToWashRepository than the total number of cars.");
+        1:   27-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   27-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   27-block  2
+call    9 never executed
+    $$$$$:   27-block  3
+    $$$$$:   27-block  4
+call   10 never executed
+        -:   28:    }
+        -:   29:
+        -:   30:    // Check if there are enough cars in the carRepository
+        2:   31:    if (carRepositoryReference.getAllCars().size() < totalNumberOfCars) {
+        2:   31-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   31-block  1
+call    3 returned 2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 1
+        1:   32:        throw AddRandomCarsError("There are not enough cars in the carRepository.");
+        1:   32-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   32-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   32-block  2
+call    9 never executed
+    $$$$$:   32-block  3
+    $$$$$:   32-block  4
+call   10 never executed
+        -:   33:    }
+        -:   34:
+        -:   35:    // Remove all the cars that are already in the carsToWashRepository
+        2:   36:    for (const Car& car : carsToWashRepository.getAllCars()) {
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  1
+call    3 returned 1
+call    4 returned 1
+        1:   36-block  2
+call    5 returned 1
+        2:   36-block  3
+call    6 returned 2
+branch  7 taken 1
+branch  8 taken 1 (fallthrough)
+        1:   37:        carsToChooseFrom.deleteCarByRegistrationNumber(car.getRegistrationNumber());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   37-block  1
+call    6 returned 1
+call    7 returned 1
+    $$$$$:   37-block  2
+call    8 never executed
+    $$$$$:   37-block  3
+        -:   38:    }
+        -:   39:
+        -:   40:    // Add random cars to the carsToWashRepository until there are enough cars
+        1:   41:    unsigned currentNumberOfCarsInWashRepository = carsToWashRepository.getAllCars().size();
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+        2:   42:    while (currentNumberOfCarsInWashRepository < totalNumberOfCars) {
+        2:   42-block  0
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        -:   43:        // Get a random index
+        1:   44:        int size = carsToChooseFrom.getAllCars().size();
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+call    3 returned 1
+        1:   45:        unsigned randomIndex = getRandomIndex(size);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   46:
+        -:   47:        // Add the car and delete it from carsToChooseFrom
+        1:   48:        Car randomCar = carsToChooseFrom.getAllCars()[randomIndex];
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   49:        carsToWashRepository.addNewCar(randomCar);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50:        carsToChooseFrom.deleteCarByRegistrationNumber(randomCar.getRegistrationNumber());
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   50-block  2
+call    6 returned 1
+    $$$$$:   50-block  3
+call    7 never executed
+    $$$$$:   50-block  4
+        1:   51:        currentNumberOfCarsInWashRepository++;
+        1:   52:    }
+call    0 returned 1
+    $$$$$:   52-block  0
+call    1 never executed
+        3:   53:}
+        1:   53-block  0
+call    0 returned 1
+        2:   53-block  1
+call    1 returned 2
+        -:   54:
+function _ZN20CarsToWashController16exportCarsToWashENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_ called 3 returned 67% blocks executed 63%
+        3:   55:void CarsToWashController::exportCarsToWash(std::string exportFormat, std::string exportName) {
+        -:   56:    // Delete all cars that are not in the reference but are in the carsToWashRepository
+        8:   57:    for (const Car& car : carsToWashRepository.getAllCars()) {
+        3:   57-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   57-block  1
+call    3 returned 3
+call    4 returned 3
+        6:   57-block  2
+call    5 returned 6
+        5:   57-block  3
+call    6 returned 5
+        8:   57-block  4
+call    7 returned 8
+branch  8 taken 6
+branch  9 taken 2 (fallthrough)
+        -:   58:        try {
+        7:   59:            carRepositoryReference.getCarByRegistrationNumber(car.getRegistrationNumber());
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   59-block  0
+call    3 returned 6
+branch  4 taken 5 (fallthrough)
+branch  5 taken 1 (throw)
+        5:   59-block  1
+call    6 returned 5
+call    7 returned 5
+        1:   59-block  2
+call    8 returned 1
+        1:   59-block  3
+        1:   60:        } catch (CarNotFoundError& e) {
+        1:   60-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   60-block  1
+call    2 returned 1
+        1:   61:            carsToWashRepository.deleteCarByRegistrationNumber(car.getRegistrationNumber());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   61-block  1
+call    6 returned 1
+    $$$$$:   61-block  2
+call    7 never executed
+    $$$$$:   61-block  3
+        1:   62:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   62-block  0
+call    3 never executed
+        -:   63:
+        6:   64:    if (exportFormat == "CSV") {
+        6:   64-block  0
+call    0 returned 6
+branch  1 taken 2 (fallthrough)
+branch  2 taken 4
+        2:   65:        std::ofstream csv(exportName + ".csv");
+        2:   65-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   65-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   65-block  2
+        6:   66:        for (auto car: carsToWashRepository.getAllCars()) {
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   66-block  0
+call    3 returned 2
+call    4 returned 2
+        4:   66-block  1
+call    5 returned 4
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 4
+        6:   66-block  2
+call   10 returned 6
+branch 11 taken 4
+branch 12 taken 2 (fallthrough)
+        4:   67:            csv << car.getRegistrationNumber() << "," << car.getType() << "," << car.getModel() << "," << car.getProducer() + "\n";
+        4:   67-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   67-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   67-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   67-block  3
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   67-block  4
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+        4:   67-block  5
+call   15 returned 4
+branch 16 taken 4 (fallthrough)
+branch 17 taken 0 (throw)
+        4:   67-block  6
+call   18 returned 4
+branch 19 taken 4 (fallthrough)
+branch 20 taken 0 (throw)
+        4:   67-block  7
+call   21 returned 4
+branch 22 taken 4 (fallthrough)
+branch 23 taken 0 (throw)
+        4:   67-block  8
+call   24 returned 4
+branch 25 taken 4 (fallthrough)
+branch 26 taken 0 (throw)
+        4:   67-block  9
+call   27 returned 4
+branch 28 taken 4 (fallthrough)
+branch 29 taken 0 (throw)
+        4:   67-block 10
+call   30 returned 4
+branch 31 taken 4 (fallthrough)
+branch 32 taken 0 (throw)
+        4:   67-block 11
+call   33 returned 4
+branch 34 taken 4 (fallthrough)
+branch 35 taken 0 (throw)
+        4:   67-block 12
+call   36 returned 4
+call   37 returned 4
+call   38 returned 4
+call   39 returned 4
+call   40 returned 4
+    $$$$$:   67-block 13
+call   41 never executed
+    $$$$$:   67-block 14
+    $$$$$:   67-block 15
+call   42 never executed
+    $$$$$:   67-block 16
+    $$$$$:   67-block 17
+call   43 never executed
+    $$$$$:   67-block 18
+    $$$$$:   67-block 19
+call   44 never executed
+    $$$$$:   67-block 20
+    $$$$$:   67-block 21
+call   45 never executed
+    $$$$$:   67-block 22
+        4:   68:        }
+call    0 returned 4
+    $$$$$:   68-block  0
+call    1 never executed
+        2:   69:        csv.close();
+        2:   69-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   70:    } else if (exportFormat == "HTML") {
+        2:   70-block  0
+call    0 returned 2
+        4:   70-block  1
+call    1 returned 4
+branch  2 taken 3 (fallthrough)
+branch  3 taken 1
+    $$$$$:   70-block  2
+call    4 never executed
+        3:   71:        std::ofstream html(exportName + ".html");
+        3:   71-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   71-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   71-block  2
+        3:   72:        html << "<!DOCTYPE html><html><head><title>" + exportName + "</title></head><body><table><tr><th>Registration number</th><th>Type</th><th>Model</th><th>Producer</th></tr>" << std::endl;
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   72-block  0
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   72-block  1
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   72-block  2
+call    9 returned 3
+branch 10 taken 3 (fallthrough)
+branch 11 taken 0 (throw)
+        3:   72-block  3
+call   12 returned 3
+call   13 returned 3
+    $$$$$:   72-block  4
+call   14 never executed
+    $$$$$:   72-block  5
+    $$$$$:   72-block  6
+call   15 never executed
+    $$$$$:   72-block  7
+       10:   73:        for (auto car: carsToWashRepository.getAllCars()) {
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   73-block  0
+call    3 returned 3
+call    4 returned 3
+        7:   73-block  1
+call    5 returned 7
+call    6 returned 7
+branch  7 taken 7 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 7
+       10:   73-block  2
+call   10 returned 10
+branch 11 taken 7
+branch 12 taken 3 (fallthrough)
+        7:   74:            html << "<tr><td>" << car.getRegistrationNumber() << "</td><td>" << car.getType() << "</td><td>" << car.getModel() << "</td><td>" << car.getProducer() << "</td></tr>" << std::endl;
+        7:   74-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   74-block  1
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+        7:   74-block  2
+call    6 returned 7
+branch  7 taken 7 (fallthrough)
+branch  8 taken 0 (throw)
+        7:   74-block  3
+call    9 returned 7
+branch 10 taken 7 (fallthrough)
+branch 11 taken 0 (throw)
+        7:   74-block  4
+call   12 returned 7
+branch 13 taken 7 (fallthrough)
+branch 14 taken 0 (throw)
+        7:   74-block  5
+call   15 returned 7
+branch 16 taken 7 (fallthrough)
+branch 17 taken 0 (throw)
+        7:   74-block  6
+call   18 returned 7
+branch 19 taken 7 (fallthrough)
+branch 20 taken 0 (throw)
+        7:   74-block  7
+call   21 returned 7
+branch 22 taken 7 (fallthrough)
+branch 23 taken 0 (throw)
+        7:   74-block  8
+call   24 returned 7
+branch 25 taken 7 (fallthrough)
+branch 26 taken 0 (throw)
+        7:   74-block  9
+call   27 returned 7
+branch 28 taken 7 (fallthrough)
+branch 29 taken 0 (throw)
+        7:   74-block 10
+call   30 returned 7
+branch 31 taken 7 (fallthrough)
+branch 32 taken 0 (throw)
+        7:   74-block 11
+call   33 returned 7
+branch 34 taken 7 (fallthrough)
+branch 35 taken 0 (throw)
+        7:   74-block 12
+call   36 returned 7
+branch 37 taken 7 (fallthrough)
+branch 38 taken 0 (throw)
+        7:   74-block 13
+call   39 returned 7
+branch 40 taken 7 (fallthrough)
+branch 41 taken 0 (throw)
+        7:   74-block 14
+call   42 returned 7
+call   43 returned 7
+call   44 returned 7
+call   45 returned 7
+    $$$$$:   74-block 15
+call   46 never executed
+    $$$$$:   74-block 16
+    $$$$$:   74-block 17
+call   47 never executed
+    $$$$$:   74-block 18
+    $$$$$:   74-block 19
+call   48 never executed
+    $$$$$:   74-block 20
+    $$$$$:   74-block 21
+call   49 never executed
+    $$$$$:   74-block 22
+        7:   75:        }
+call    0 returned 7
+    $$$$$:   75-block  0
+call    1 never executed
+        3:   76:        html << "</table></body></html>";
+        3:   76-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   77:    } else {
+        3:   77-block  0
+call    0 returned 3
+    $$$$$:   77-block  1
+call    1 never executed
+        1:   78:        throw InvalidExportFormatError("The export format is invalid.");
+        1:   78-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   78-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   78-block  2
+call    9 never executed
+    $$$$$:   78-block  3
+    $$$$$:   78-block  4
+call   10 never executed
+        -:   79:    }
+        -:   80:}
+        2:   81:}
+        2:   81-block  0

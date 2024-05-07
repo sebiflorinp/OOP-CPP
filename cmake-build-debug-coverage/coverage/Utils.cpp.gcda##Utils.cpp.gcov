@@ -1,0 +1,39 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/misc/Utils.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/Utils.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/misc/Utils.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Utils.h"
+        -:    2:#include <random>
+        -:    3:
+function _Z14getRandomIndexi called 1 returned 100% blocks executed 75%
+        1:    4:unsigned getRandomIndex(int size) {
+        1:    5:    std::mt19937 mt{ std::random_device{}() };
+        1:    5-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    5-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:    5-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:    5-block  3
+call    9 returned 1
+    $$$$$:    5-block  4
+call   10 never executed
+    $$$$$:    5-block  5
+        1:    6:    std::uniform_int_distribution<> dist(0, size - 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    7:    return dist(mt);
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    7-block  1
+        1:    7-block  2
+        -:    8:}

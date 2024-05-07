@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/char_traits.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcda
         -:    0:Runs:1
         -:    1:// Character Traits for use by standard string and iostream -*- C++ -*-
         -:    2:
@@ -301,7 +301,7 @@ branch  2 never executed
         -:  287:#ifdef _GLIBCXX_HAVE_BUILTIN_IS_CONSTANT_EVALUATED
         -:  288:      (void) __s;
         -:  289:      // In constexpr contexts all strings should be constant.
-      500:  290:      return __builtin_is_constant_evaluated();
+      687:  290:      return __builtin_is_constant_evaluated();
         -:  291:#else
         -:  292:      while (__builtin_constant_p(*__s) && *__s)
         -:  293:	__s++;
@@ -404,21 +404,21 @@ branch  2 never executed
         -:  390:      }
         -:  391:
         -:  392:      static _GLIBCXX17_CONSTEXPR size_t
-function _ZNSt11char_traitsIcE6lengthEPKc called 500 returned 100% blocks executed 71%
-      500:  393:      length(const char_type* __s)
-      500:  393-block  0
+function _ZNSt11char_traitsIcE6lengthEPKc called 687 returned 100% blocks executed 71%
+      687:  393:      length(const char_type* __s)
+      687:  393-block  0
         -:  394:      {
         -:  395:#if __cplusplus >= 201703L
-      500:  396:	if (__constant_string_p(__s))
-      500:  396-block  0
+      687:  396:	if (__constant_string_p(__s))
+      687:  396-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 500
+branch  1 taken 687
     #####:  397:	  return __gnu_cxx::char_traits<char_type>::length(__s);
     %%%%%:  397-block  0
 call    0 never executed
         -:  398:#endif
-      500:  399:	return __builtin_strlen(__s);
-      500:  399-block  0
+      687:  399:	return __builtin_strlen(__s);
+      687:  399-block  0
         -:  400:      }
         -:  401:
         -:  402:      static _GLIBCXX17_CONSTEXPR const char_type*

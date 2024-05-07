@@ -1,6 +1,6 @@
-        -:    0:Source:/home/sebifp/ubb/cpplab/misc/Exceptions.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/GenericExceptionTests.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/GenericExceptionTests.cpp.gcda
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/misc/Exceptions.h
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/GenericExceptionTests.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/GenericExceptionTests.cpp.gcda
         -:    0:Runs:1
         -:    1:#ifndef CPPLAB_EXCEPTIONS_H
         -:    2:#define CPPLAB_EXCEPTIONS_H
@@ -35,4 +35,12 @@ call    2 never executed
         -:   26:    using GenericException::GenericException;
         -:   27:};
         -:   28:
-        -:   29:#endif //CPPLAB_EXCEPTIONS_H
+        -:   29:class InvalidExportFormatError : public GenericException {
+        -:   30:    using GenericException::GenericException;
+        -:   31:};
+        -:   32:
+        -:   33:class AddRandomCarsError : public GenericException {
+        -:   34:    using GenericException::GenericException;
+        -:   35:};
+        -:   36:
+        -:   37:#endif //CPPLAB_EXCEPTIONS_H

@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/allocator.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocators -*- C++ -*-
         -:    2:
@@ -176,15 +176,34 @@ call    0 never executed
         -:  166:
         -:  167:      template<typename _Tp1>
         -:  168:	_GLIBCXX20_CONSTEXPR
-        -:  169:	allocator(const allocator<_Tp1>&) _GLIBCXX_NOTHROW { }
+function _ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEERKSaIT_E called 0 returned 0% blocks executed 0%
+    #####:  169:	allocator(const allocator<_Tp1>&) _GLIBCXX_NOTHROW { }
+    %%%%%:  169-block  0
+call    0 never executed
         -:  170:
         -:  171:#if __cpp_constexpr_dynamic_alloc
         -:  172:      constexpr
         -:  173:#endif
+    #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+------------------
+_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev:
+function _ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev called 0 returned 0% blocks executed 0%
+    #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+    %%%%%:  174-block  0
+call    0 never executed
+------------------
+_ZNSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev:
+function _ZNSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev called 0 returned 0% blocks executed 0%
+    #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+    %%%%%:  174-block  0
+call    0 never executed
+------------------
+_ZNSaI3CarED2Ev:
 function _ZNSaI3CarED2Ev called 0 returned 0% blocks executed 0%
     #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }
     %%%%%:  174-block  0
 call    0 never executed
+------------------
         -:  175:
         -:  176:#if __cplusplus > 201703L
         -:  177:      [[nodiscard,__gnu__::__always_inline__]]

@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/basic_string.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarControllerTests.cpp.gcda
         -:    0:Runs:1
         -:    1:// Components for manipulating sequences of characters -*- C++ -*-
         -:    2:
@@ -6285,9 +6285,12 @@ branch  7 never executed
         -: 6245:   */
         -: 6246:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 6247:    inline bool
-        -: 6248:    operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+function _ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_ called 0 returned 0% blocks executed 0%
+    #####: 6248:    operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 6249:	       const _CharT* __rhs)
-        -: 6250:    { return __lhs.compare(__rhs) == 0; }
+    #####: 6250:    { return __lhs.compare(__rhs) == 0; }
+    %%%%%: 6250-block  0
+call    0 never executed
         -: 6251:
         -: 6252:#if __cpp_lib_three_way_comparison
         -: 6253:  /**
@@ -6912,8 +6915,13 @@ branch  7 never executed
         -: 6872:    : public __hash_base<size_t, string>
         -: 6873:    {
         -: 6874:      size_t
-        -: 6875:      operator()(const string& __s) const noexcept
-        -: 6876:      { return std::_Hash_impl::hash(__s.data(), __s.length()); }
+function _ZNKSt4hashINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEclERKS5_ called 0 returned 0% blocks executed 0%
+    #####: 6875:      operator()(const string& __s) const noexcept
+    #####: 6876:      { return std::_Hash_impl::hash(__s.data(), __s.length()); }
+    %%%%%: 6876-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
         -: 6877:    };
         -: 6878:
         -: 6879:  template<>

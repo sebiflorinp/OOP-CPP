@@ -16,6 +16,8 @@ class CarControllerTests {
         void testFilter();
 
         void testSort();
+
+        void testCreateTypeReport();
 };
 
 #endif //CPPLAB_CARCONTROLLERTESTS_H

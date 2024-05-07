@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/ext/new_allocator.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/ui/UI.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/ui/UI.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/ui/UI.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/ui/UI.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocator that wraps operator new -*- C++ -*-
         -:    2:
@@ -82,8 +82,16 @@
         -:   78:      _GLIBCXX20_CONSTEXPR
     #####:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
+_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEEC2Ev:
+function _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEEC2Ev called 0 returned 0% blocks executed 0%
+    #####:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+------------------
 _ZN9__gnu_cxx13new_allocatorI3CarEC2Ev:
 function _ZN9__gnu_cxx13new_allocatorI3CarEC2Ev called 0 returned 0% blocks executed 0%
+    #####:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+------------------
+_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEC2Ev:
+function _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEC2Ev called 0 returned 0% blocks executed 0%
     #####:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorIcEC2Ev:
@@ -94,12 +102,12 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
         -:   81:      _GLIBCXX20_CONSTEXPR
     #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
-_ZN9__gnu_cxx13new_allocatorI3CarEC2ERKS2_:
-function _ZN9__gnu_cxx13new_allocatorI3CarEC2ERKS2_ called 0 returned 0% blocks executed 0%
-    #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
-------------------
 _ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_:
 function _ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_ called 0 returned 0% blocks executed 0%
+    #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+------------------
+_ZN9__gnu_cxx13new_allocatorI3CarEC2ERKS2_:
+function _ZN9__gnu_cxx13new_allocatorI3CarEC2ERKS2_ called 0 returned 0% blocks executed 0%
     #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
         -:   83:
@@ -108,6 +116,14 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_ called 0 returned 0% blocks exe
         -:   86:	new_allocator(const new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
         -:   87:
         -:   88:#if __cplusplus <= 201703L
+    #####:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+------------------
+_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev:
+function _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev called 0 returned 0% blocks executed 0%
+    #####:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+------------------
+_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev:
+function _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev called 0 returned 0% blocks executed 0%
     #####:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorI3CarED2Ev:
@@ -174,6 +190,77 @@ call    0 never executed
         -:  129:
         -:  130:      // __p is not permitted to be a null pointer.
         -:  131:      void
+    #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
+        -:  133:      {
+        -:  134:#if __cpp_aligned_new
+        -:  135:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+        -:  136:	  {
+        -:  137:	    ::operator delete(__p,
+        -:  138:# if __cpp_sized_deallocation
+        -:  139:			      __t * sizeof(_Tp),
+        -:  140:# endif
+        -:  141:			      std::align_val_t(alignof(_Tp)));
+        -:  142:	    return;
+        -:  143:	  }
+        -:  144:#endif
+    #####:  145:	::operator delete(__p
+        -:  146:#if __cpp_sized_deallocation
+        -:  147:			  , __t * sizeof(_Tp)
+        -:  148:#endif
+        -:  149:			 );
+        -:  150:      }
+------------------
+_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEE10deallocateEPSD_m:
+function _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEE10deallocateEPSD_m called 0 returned 0% blocks executed 0%
+    #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
+    %%%%%:  132-block  0
+        -:  133:      {
+        -:  134:#if __cpp_aligned_new
+        -:  135:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+        -:  136:	  {
+        -:  137:	    ::operator delete(__p,
+        -:  138:# if __cpp_sized_deallocation
+        -:  139:			      __t * sizeof(_Tp),
+        -:  140:# endif
+        -:  141:			      std::align_val_t(alignof(_Tp)));
+        -:  142:	    return;
+        -:  143:	  }
+        -:  144:#endif
+    #####:  145:	::operator delete(__p
+    %%%%%:  145-block  0
+call    0 never executed
+        -:  146:#if __cpp_sized_deallocation
+        -:  147:			  , __t * sizeof(_Tp)
+        -:  148:#endif
+        -:  149:			 );
+        -:  150:      }
+------------------
+_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m:
+function _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m called 0 returned 0% blocks executed 0%
+    #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
+    %%%%%:  132-block  0
+        -:  133:      {
+        -:  134:#if __cpp_aligned_new
+        -:  135:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+        -:  136:	  {
+        -:  137:	    ::operator delete(__p,
+        -:  138:# if __cpp_sized_deallocation
+        -:  139:			      __t * sizeof(_Tp),
+        -:  140:# endif
+        -:  141:			      std::align_val_t(alignof(_Tp)));
+        -:  142:	    return;
+        -:  143:	  }
+        -:  144:#endif
+    #####:  145:	::operator delete(__p
+    %%%%%:  145-block  0
+call    0 never executed
+        -:  146:#if __cpp_sized_deallocation
+        -:  147:			  , __t * sizeof(_Tp)
+        -:  148:#endif
+        -:  149:			 );
+        -:  150:      }
+------------------
+_ZN9__gnu_cxx13new_allocatorI3CarE10deallocateEPS1_m:
 function _ZN9__gnu_cxx13new_allocatorI3CarE10deallocateEPS1_m called 0 returned 0% blocks executed 0%
     #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
     %%%%%:  132-block  0
@@ -197,6 +284,7 @@ call    0 never executed
         -:  148:#endif
         -:  149:			 );
         -:  150:      }
+------------------
         -:  151:
         -:  152:#if __cplusplus <= 201703L
         -:  153:      size_type
@@ -225,12 +313,26 @@ call    5 never executed
         -:  163:
         -:  164:      template<typename _Up>
         -:  165:	void
+    #####:  166:	destroy(_Up* __p)
+        -:  167:	noexcept(std::is_nothrow_destructible<_Up>::value)
+    #####:  168:	{ __p->~_Up(); }
+------------------
+_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEE7destroyISC_EEvPT_:
+function _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEE7destroyISC_EEvPT_ called 0 returned 0% blocks executed 0%
+    #####:  166:	destroy(_Up* __p)
+        -:  167:	noexcept(std::is_nothrow_destructible<_Up>::value)
+    #####:  168:	{ __p->~_Up(); }
+    %%%%%:  168-block  0
+call    0 never executed
+------------------
+_ZN9__gnu_cxx13new_allocatorI3CarE7destroyIS1_EEvPT_:
 function _ZN9__gnu_cxx13new_allocatorI3CarE7destroyIS1_EEvPT_ called 0 returned 0% blocks executed 0%
     #####:  166:	destroy(_Up* __p)
         -:  167:	noexcept(std::is_nothrow_destructible<_Up>::value)
     #####:  168:	{ __p->~_Up(); }
     %%%%%:  168-block  0
 call    0 never executed
+------------------
         -:  169:#else
         -:  170:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  171:      // 402. wrong new expression in [some_] allocator::construct

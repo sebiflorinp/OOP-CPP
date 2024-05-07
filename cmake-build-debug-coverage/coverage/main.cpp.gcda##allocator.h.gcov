@@ -1,6 +1,6 @@
         -:    0:Source:/usr/include/c++/11/bits/allocator.h
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcda
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/main.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocators -*- C++ -*-
         -:    2:
@@ -157,14 +157,17 @@
         -:  153:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  154:      // 3035. std::allocator's constructors should be constexpr
         -:  155:      _GLIBCXX20_CONSTEXPR
-function _ZNSaI3CarEC2Ev called 29 returned 100% blocks executed 100%
-       29:  156:      allocator() _GLIBCXX_NOTHROW { }
-       29:  156-block  0
-call    0 returned 29
+function _ZNSaI3CarEC2Ev called 33 returned 100% blocks executed 100%
+       33:  156:      allocator() _GLIBCXX_NOTHROW { }
+       33:  156-block  0
+call    0 returned 33
         -:  157:
         -:  158:      _GLIBCXX20_CONSTEXPR
-        -:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-        -:  160:      : __allocator_base<_Tp>(__a) { }
+function _ZNSaI3CarEC2ERKS0_ called 37 returned 100% blocks executed 100%
+       37:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       37:  160:      : __allocator_base<_Tp>(__a) { }
+       37:  160-block  0
+call    0 returned 37
         -:  161:
         -:  162:#if __cplusplus >= 201103L
         -:  163:      // Avoid implicit deprecation.
@@ -178,10 +181,10 @@ call    0 returned 29
         -:  171:#if __cpp_constexpr_dynamic_alloc
         -:  172:      constexpr
         -:  173:#endif
-function _ZNSaI3CarED2Ev called 47 returned 100% blocks executed 100%
-       47:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-       47:  174-block  0
-call    0 returned 47
+function _ZNSaI3CarED2Ev called 70 returned 100% blocks executed 100%
+       70:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       70:  174-block  0
+call    0 returned 70
         -:  175:
         -:  176:#if __cplusplus > 201703L
         -:  177:      [[nodiscard,__gnu__::__always_inline__]]

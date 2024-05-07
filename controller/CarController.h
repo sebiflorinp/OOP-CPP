@@ -2,19 +2,21 @@
 #define CPPLAB_CARCONTROLLER_H
 
 #include <vector>
+#include <unordered_map>
 #include "../domain/Car.h"
 #include "../repository/CarRepository.h"
+#include "../domain/TypeDTO.h"
 
 class CarController {
     private:
-        CarRepository carRepository;
+        CarRepository& carRepository;
     public:
         /*
          * The constructor of the CarController class.
          * Preconditions: carRepository: an instance of the CarRepository class
          * Post-conditions: -
          */
-        explicit CarController(const CarRepository& carRepository);
+        explicit CarController(CarRepository& carRepository);
 
         /*
          * Returns the car with the received registrationNumber.
@@ -75,6 +77,13 @@ class CarController {
          *                sortByCriteria: a function that takes as arguments an instance of the DynamicArray<Car> class and a string.
          */
         std::vector<Car> sort(const std::vector<Car>& cars, const std::string& sortingOrder, std::vector<Car> (*sortByCriteria)(std::vector<Car>,const std::string&));
+
+        /*
+         * Creates a report with the number of time each type appears in the repository.
+         * Preconditions: -
+         * Post-conditions: an unordered_map with the type as the key and the number of appearances as the value
+         */
+        std::unordered_map<std::string, TypeDTO> createTypeReport();
 };
 
 #endif //CPPLAB_CARCONTROLLER_H

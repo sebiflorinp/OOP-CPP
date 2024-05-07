@@ -1,18 +1,18 @@
-        -:    0:Source:/home/sebifp/ubb/cpplab/domain/CarValidators.cpp
-        -:    0:Graph:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/CarValidators.cpp.gcno
-        -:    0:Data:/home/sebifp/ubb/cpplab/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/CarValidators.cpp.gcda
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/domain/CarValidators.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/CarValidators.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/domain/CarValidators.cpp.gcda
         -:    0:Runs:1
         -:    1:#include "CarValidators.h"
         -:    2:#include "../misc/Exceptions.h"
         -:    3:
-function _ZN13CarValidators26validateRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 88 returned 94% blocks executed 80%
-       88:    4:void CarValidators::validateRegistrationNumber(const std::string &registrationNumber) {
+function _ZN13CarValidators26validateRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 117 returned 96% blocks executed 80%
+      117:    4:void CarValidators::validateRegistrationNumber(const std::string &registrationNumber) {
         -:    5:    // check if the string is empty
-       88:    6:    if (registrationNumber.empty()) {
-       88:    6-block  0
-call    0 returned 88
+      117:    6:    if (registrationNumber.empty()) {
+      117:    6-block  0
+call    0 returned 117
 branch  1 taken 3 (fallthrough)
-branch  2 taken 85
+branch  2 taken 114
         3:    7:        throw std::runtime_error("The registration number is invalid.\n");
         3:    7-block  0
 call    0 returned 3
@@ -26,11 +26,11 @@ call    5 never executed
         -:    8:    }
         -:    9:
         -:   10:    // check if it is made of 7 characters
-       85:   11:    if (registrationNumber.size() != 7) {
-       85:   11-block  0
-call    0 returned 85
+      114:   11:    if (registrationNumber.size() != 7) {
+      114:   11-block  0
+call    0 returned 114
 branch  1 taken 2 (fallthrough)
-branch  2 taken 83
+branch  2 taken 112
         2:   12:        throw std::runtime_error("The registration number is invalid.\n");
         2:   12-block  0
 call    0 returned 2
@@ -42,17 +42,17 @@ call    4 returned 0
     $$$$$:   12-block  2
 call    5 never executed
         -:   13:    }
-       83:   14:}
-       83:   14-block  0
+      112:   14:}
+      112:   14-block  0
         -:   15:
-function _ZN13CarValidators13validateModelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 87 returned 97% blocks executed 88%
-       87:   16:void CarValidators::validateModel(const std::string &model) {
+function _ZN13CarValidators13validateModelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 116 returned 97% blocks executed 88%
+      116:   16:void CarValidators::validateModel(const std::string &model) {
         -:   17:    // check if the string is empty
-       87:   18:    if (model.empty()) {
-       87:   18-block  0
-call    0 returned 87
+      116:   18:    if (model.empty()) {
+      116:   18-block  0
+call    0 returned 116
 branch  1 taken 3 (fallthrough)
-branch  2 taken 84
+branch  2 taken 113
         3:   19:        throw std::runtime_error("The model is invalid.\n");
         3:   19-block  0
 call    0 returned 3
@@ -64,17 +64,17 @@ call    4 returned 0
     $$$$$:   19-block  2
 call    5 never executed
         -:   20:    }
-       84:   21:}
-       84:   21-block  0
+      113:   21:}
+      113:   21-block  0
         -:   22:
-function _ZN13CarValidators12validateTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 87 returned 97% blocks executed 88%
-       87:   23:void CarValidators::validateType(const std::string &type) {
+function _ZN13CarValidators12validateTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 116 returned 97% blocks executed 88%
+      116:   23:void CarValidators::validateType(const std::string &type) {
         -:   24:    // check if the string is empty
-       87:   25:    if (type.empty()) {
-       87:   25-block  0
-call    0 returned 87
+      116:   25:    if (type.empty()) {
+      116:   25-block  0
+call    0 returned 116
 branch  1 taken 3 (fallthrough)
-branch  2 taken 84
+branch  2 taken 113
         3:   26:        throw std::runtime_error("The type is invalid.\n");
         3:   26-block  0
 call    0 returned 3
@@ -86,17 +86,17 @@ call    4 returned 0
     $$$$$:   26-block  2
 call    5 never executed
         -:   27:    }
-       84:   28:}
-       84:   28-block  0
+      113:   28:}
+      113:   28-block  0
         -:   29:
-function _ZN13CarValidators16validateProducerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 87 returned 97% blocks executed 88%
-       87:   30:void CarValidators::validateProducer(const std::string &producer) {
+function _ZN13CarValidators16validateProducerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 116 returned 97% blocks executed 88%
+      116:   30:void CarValidators::validateProducer(const std::string &producer) {
         -:   31:    // check if the string is empty
-       87:   32:    if (producer.empty()) {
-       87:   32-block  0
-call    0 returned 87
+      116:   32:    if (producer.empty()) {
+      116:   32-block  0
+call    0 returned 116
 branch  1 taken 3 (fallthrough)
-branch  2 taken 84
+branch  2 taken 113
         3:   33:        throw std::runtime_error("The producer is invalid.\n");
         3:   33-block  0
 call    0 returned 3
@@ -108,5 +108,5 @@ call    4 returned 0
     $$$$$:   33-block  2
 call    5 never executed
         -:   34:    }
-       84:   35:}
-       84:   35-block  0
+      113:   35:}
+      113:   35-block  0
