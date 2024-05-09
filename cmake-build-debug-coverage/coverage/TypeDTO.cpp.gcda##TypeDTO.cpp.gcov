@@ -4,15 +4,15 @@
         -:    0:Runs:1
         -:    1:#include "TypeDTO.h"
         -:    2:
-function _ZN7TypeDTO7getTypeB5cxx11Ev called 4 returned 100% blocks executed 100%
-        4:    3:std::string TypeDTO::getType() {
-        4:    4:    return this->type;
-        4:    4-block  0
-call    0 returned 4
+function _ZN7TypeDTO7getTypeB5cxx11Ev called 7 returned 100% blocks executed 100%
+        7:    3:std::string TypeDTO::getType() {
+        7:    4:    return this->type;
+        7:    4-block  0
+call    0 returned 7
         -:    5:}
         -:    6:
-function _ZNK7TypeDTO8getCountEv called 4 returned 100% blocks executed 100%
-        4:    7:int TypeDTO::getCount() const {
-        4:    8:    return this->count;
-        4:    8-block  0
+function _ZNK7TypeDTO8getCountEv called 7 returned 100% blocks executed 100%
+        7:    7:int TypeDTO::getCount() const {
+        7:    8:    return this->count;
+        7:    8-block  0
         -:    9:}

@@ -43,4 +43,12 @@ call    2 never executed
         -:   34:    using GenericException::GenericException;
         -:   35:};
         -:   36:
-        -:   37:#endif //CPPLAB_EXCEPTIONS_H
+        -:   37:class UndoError : public GenericException {
+        -:   38:    using GenericException::GenericException;
+        -:   39:};
+        -:   40:
+        -:   41:class RandomError : public GenericException {
+        -:   42:    using GenericException::GenericException;
+        -:   43:};
+        -:   44:
+        -:   45:#endif //CPPLAB_EXCEPTIONS_H

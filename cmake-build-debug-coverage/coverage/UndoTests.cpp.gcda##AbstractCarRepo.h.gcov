@@ -1,0 +1,72 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/repository/AbstractCarRepo.h
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/UndoTests.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/UndoTests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef CPPLAB_ABSTRACTCARREPO_H
+        -:    2:#define CPPLAB_ABSTRACTCARREPO_H
+        -:    3:
+        -:    4:
+        -:    5:#include <vector>
+        -:    6:#include "../domain/Car.h"
+        -:    7:
+        -:    8:class AbstractCarRepo {
+        -:    9:
+        -:   10:protected:
+        -:   11:    std::vector<Car> cars;
+        -:   12:public:
+        -:   13:
+function _ZN15AbstractCarRepoC2Ev called 0 returned 0% blocks executed 0%
+    #####:   14:        AbstractCarRepo() = default;
+    %%%%%:   14-block  0
+call    0 never executed
+        -:   15:
+        -:   16:        /*
+        -:   17:         * Returns an instance of the Car class with the received registrationNumber.
+        -:   18:         * Preconditions: registrationNumber: a non-empty string made of 7 characters
+        -:   19:         * Post-conditions: an instance of the Car class
+        -:   20:         * Raises: No car with the received registrationNumber exists.
+        -:   21:         */
+        -:   22:        virtual Car getCarByRegistrationNumber(const std::string& registrationNumber) = 0;
+        -:   23:
+        -:   24:        /*
+        -:   25:         * Returns a vector with all Car instances.
+        -:   26:         * Preconditions: -
+        -:   27:         * Post-conditions: a vector with instances of the Car class
+        -:   28:         */
+        -:   29:        virtual const std::vector<Car>& getAllCars() const = 0;
+        -:   30:
+        -:   31:        /*
+        -:   32:         * Adds the received Car instance in the repository.
+        -:   33:         * Preconditions: newCar: an instance of the Car class.
+        -:   34:         * Post-conditions: -
+        -:   35:         * Raises: There is already another car with the same registrationNumber
+        -:   36:         */
+        -:   37:        virtual void addNewCar(const Car& newCar) = 0;
+        -:   38:
+        -:   39:        /*
+        -:   40:         * Deletes the instance of the Car class with the received registrationNumber
+        -:   41:         * Preconditions: registrationNumber: a string made of 7 characters
+        -:   42:         * Post-conditions: -
+        -:   43:         * Raises: No car with the received registrationNumber exists.
+        -:   44:         */
+        -:   45:        virtual void deleteCarByRegistrationNumber(const std::string& registrationNumber) = 0;
+        -:   46:
+        -:   47:        /*
+        -:   48:         * Updates the instance of the Car class with the received registrationNumber to match updatedCar.
+        -:   49:         * Preconditions: registrationNumber: a string made of 7 characters
+        -:   50:         *                updatedCar: an instance of the Car class.
+        -:   51:         * Post-conditions: -
+        -:   52:         * Raises: No car with the received registrationNumber exists.
+        -:   53:         */
+        -:   54:        virtual void updateCarByRegistrationNumber(const std::string& registrationNumber, Car updatedCar) = 0;
+        -:   55:
+        -:   56:        /*
+        -:   57:         * Empties the repository.
+        -:   58:         * Preconditions: -
+        -:   59:         * Post-conditions: -
+        -:   60:         */
+        -:   61:        virtual void emptyRepository() = 0;
+        -:   62:};
+        -:   63:
+        -:   64:
+        -:   65:#endif //CPPLAB_ABSTRACTCARREPO_H

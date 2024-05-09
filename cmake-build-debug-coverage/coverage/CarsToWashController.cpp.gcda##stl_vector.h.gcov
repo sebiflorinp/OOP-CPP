@@ -1147,12 +1147,12 @@ function _ZNKSt6vectorI3CarSaIS0_EE4sizeEv called 0 returned 0% blocks executed 
         -: 1058:       *  see at().)
         -: 1059:       */
         -: 1060:      const_reference
-function _ZNKSt6vectorI3CarSaIS0_EEixEm called 1 returned 100% blocks executed 100%
-        1: 1061:      operator[](size_type __n) const _GLIBCXX_NOEXCEPT
+function _ZNKSt6vectorI3CarSaIS0_EEixEm called 6 returned 100% blocks executed 100%
+        6: 1061:      operator[](size_type __n) const _GLIBCXX_NOEXCEPT
         -: 1062:      {
         -: 1063:	__glibcxx_requires_subscript(__n);
-        1: 1064:	return *(this->_M_impl._M_start + __n);
-        1: 1064-block  0
+        6: 1064:	return *(this->_M_impl._M_start + __n);
+        6: 1064-block  0
         -: 1065:      }
         -: 1066:
         -: 1067:    protected:

@@ -1,0 +1,476 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/repository/ProbabilityRepo.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/repository/ProbabilityRepo.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/repository/ProbabilityRepo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <algorithm>
+        -:    2:#include "ProbabilityRepo.h"
+        -:    3:#include "../misc/Exceptions.h"
+        -:    4:#include "../misc/Utils.h"
+        -:    5:
+function _ZN15ProbabilityRepo26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:    6:Car ProbabilityRepo::getCarByRegistrationNumber(const std::string &registrationNumber) {
+        -:    7:    // Throw the dice
+    #####:    8:    unsigned int diceResult = getRandomIndex(100);
+    %%%%%:    8-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:    9:
+        -:   10:    // If the result is less than 50, throw an error
+    #####:   11:    if (diceResult < 50) {
+    %%%%%:   11-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   12:        throw RandomError("You are unlucky. Try again.");
+    %%%%%:   12-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   12-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   12-block  2
+call    9 never executed
+    $$$$$:   12-block  3
+    $$$$$:   12-block  4
+call   10 never executed
+        -:   13:    }
+        -:   14:
+        -:   15:    // find the car with the received registration
+function _ZZN15ProbabilityRepo26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK3CarE_clESA_ called 0 returned 0% blocks executed 0%
+    #####:   16:    auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return car.getRegistrationNumber() == registrationNumber;});
+    %%%%%:   16-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   16-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+    #####:   17:    if (result == cars.end()) {
+    %%%%%:   17-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   18:        throw CarNotFoundError("There is no car with the input registration number.");
+    %%%%%:   18-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   18-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   18-block  2
+call    9 never executed
+    $$$$$:   18-block  3
+    $$$$$:   18-block  4
+call   10 never executed
+        -:   19:    } else {
+    #####:   20:        return *result;
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   20-block  1
+        -:   21:    }
+        -:   22:
+        -:   23:}
+        -:   24:
+function _ZNK15ProbabilityRepo10getAllCarsEv called 0 returned 0% blocks executed 0%
+    #####:   25:const std::vector<Car> &ProbabilityRepo::getAllCars() const {
+        -:   26:    // Throw the dice
+    #####:   27:    unsigned int diceResult = getRandomIndex(100);
+    %%%%%:   27-block  0
+call    0 never executed
+        -:   28:
+        -:   29:    // If the result is less than 50, throw an error
+    #####:   30:    if (diceResult < 50) {
+branch  0 never executed
+branch  1 never executed
+    #####:   31:        throw RandomError("You are unlucky. Try again.");
+    %%%%%:   31-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   31-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   31-block  2
+call    9 never executed
+    $$$$$:   31-block  3
+    $$$$$:   31-block  4
+call   10 never executed
+        -:   32:    }
+        -:   33:
+    #####:   34:    return cars;
+    %%%%%:   34-block  0
+    %%%%%:   34-block  1
+        -:   35:}
+        -:   36:
+function _ZN15ProbabilityRepo9addNewCarERK3Car called 0 returned 0% blocks executed 0%
+    #####:   37:void ProbabilityRepo::addNewCar(const Car &newCar) {
+        -:   38:    // Throw the dice
+    #####:   39:    unsigned int diceResult = getRandomIndex(100);
+    %%%%%:   39-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   40:
+        -:   41:    // If the result is less than 50, throw an error
+    #####:   42:    if (diceResult < 50) {
+    %%%%%:   42-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   43:        throw RandomError("You are unlucky. Try again.");
+    %%%%%:   43-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   43-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   43-block  2
+call    9 never executed
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+call   10 never executed
+        -:   44:    }
+        -:   45:
+        -:   46:    // check if there is already a Car with the registrationNumber of the received one.
+function _ZZN15ProbabilityRepo9addNewCarERK3CarENKUlS2_E_clES2_ called 0 returned 0% blocks executed 0%
+    #####:   47:    auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return newCar.getRegistrationNumber() == car.getRegistrationNumber();});
+    %%%%%:   47-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   47-block  1
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   47-block  2
+call    9 never executed
+call   10 never executed
+call   11 never executed
+    %%%%%:   47-block  3
+    $$$$$:   47-block  4
+call   12 never executed
+    #####:   48:    if (result == cars.end()) {
+    %%%%%:   48-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   49:        cars.push_back(newCar);
+    %%%%%:   49-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   50:        return;
+    %%%%%:   50-block  0
+    %%%%%:   50-block  1
+        -:   51:    } else {
+    #####:   52:        throw DuplicateDataError("The is already a car with the input registration number");
+    %%%%%:   52-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   52-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   52-block  2
+call    9 never executed
+    $$$$$:   52-block  3
+    $$$$$:   52-block  4
+call   10 never executed
+        -:   53:    }
+        -:   54:
+        -:   55:}
+        -:   56:
+function _ZN15ProbabilityRepo29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   57:void ProbabilityRepo::deleteCarByRegistrationNumber(const std::string &registrationNumber) {
+        -:   58:    // Throw the dice
+    #####:   59:    unsigned int diceResult = getRandomIndex(100);
+    %%%%%:   59-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   60:
+        -:   61:    // If the result is less than 50, throw an error
+    #####:   62:    if (diceResult < 50) {
+    %%%%%:   62-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   63:        throw RandomError("You are unlucky. Try again.");
+    %%%%%:   63-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   63-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   63-block  2
+call    9 never executed
+    $$$$$:   63-block  3
+    $$$$$:   63-block  4
+call   10 never executed
+        -:   64:    }
+        -:   65:
+        -:   66:    // find the car that needs to be deleted
+function _ZZN15ProbabilityRepo29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK3CarE_clESA_ called 0 returned 0% blocks executed 0%
+    #####:   67:    auto result = std::find_if(cars.begin(), cars.end(), [&](const Car& car){return car.getRegistrationNumber() == registrationNumber;});
+    %%%%%:   67-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   67-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+    #####:   68:    if (result != cars.end()) {
+    %%%%%:   68-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   69:        cars.erase(result);
+    %%%%%:   69-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:   69-block  1
+    #####:   70:        return ;
+    %%%%%:   70-block  0
+    %%%%%:   70-block  1
+        -:   71:    } else {
+    #####:   72:        throw CarNotFoundError("The is no car with the input registration number");
+    %%%%%:   72-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   72-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   72-block  2
+call    9 never executed
+    $$$$$:   72-block  3
+    $$$$$:   72-block  4
+call   10 never executed
+        -:   73:    }
+        -:   74:
+        -:   75:}
+        -:   76:
+function _ZN15ProbabilityRepo29updateCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE3Car called 0 returned 0% blocks executed 0%
+    #####:   77:void ProbabilityRepo::updateCarByRegistrationNumber(const std::string &registrationNumber, Car updatedCar) {
+        -:   78:    // Throw the dice
+    #####:   79:    unsigned int diceResult = getRandomIndex(100);
+    %%%%%:   79-block  0
+call    0 never executed
+        -:   80:
+        -:   81:    // If the result is less than 50, throw an error
+    #####:   82:    if (diceResult < 50) {
+branch  0 never executed
+branch  1 never executed
+    #####:   83:        throw RandomError("You are unlucky. Try again.");
+    %%%%%:   83-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   83-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   83-block  2
+call    9 never executed
+    $$$$$:   83-block  3
+    $$$$$:   83-block  4
+call   10 never executed
+        -:   84:    }
+        -:   85:
+        -:   86:
+        -:   87:    // ensure that the update operation will not lead to multiple cars with the same registration number
+    #####:   88:    if (registrationNumber != updatedCar.getRegistrationNumber()) {
+    %%%%%:   88-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:   89:        for (auto & car : cars) {
+    %%%%%:   89-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   89-block  1
+call    2 never executed
+    %%%%%:   89-block  2
+call    3 never executed
+    %%%%%:   89-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   90:            if (car.getRegistrationNumber() == updatedCar.getRegistrationNumber()) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   90-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   90-block  1
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   90-block  2
+call   11 never executed
+    $$$$$:   90-block  3
+        -:   91:                // throw an error because the update will create multiple cars with the same registration number
+    #####:   92:                throw DuplicateDataError("The update operation would create multiple cars with the same registration number.");
+    %%%%%:   92-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   92-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   92-block  2
+call    9 never executed
+    $$$$$:   92-block  3
+    $$$$$:   92-block  4
+call   10 never executed
+        -:   93:            }
+        -:   94:        }
+        -:   95:    }
+        -:   96:    // find the car that will be updated
+    #####:   97:    for (auto & car : cars) {
+    %%%%%:   97-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   97-block  1
+call    2 never executed
+    %%%%%:   97-block  2
+call    3 never executed
+    %%%%%:   97-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   98:        if (car.getRegistrationNumber() == registrationNumber) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   98-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   99:            car = updatedCar;
+    %%%%%:   99-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  100:            return;
+    %%%%%:  100-block  0
+    %%%%%:  100-block  1
+        -:  101:        }
+        -:  102:    }
+        -:  103:
+        -:  104:    // if no car was found throw an error
+    #####:  105:    throw  CarNotFoundError("There is not car with the input registration number.");
+    %%%%%:  105-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  105-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:  105-block  2
+call    9 never executed
+    $$$$$:  105-block  3
+    $$$$$:  105-block  4
+call   10 never executed
+        -:  106:
+        -:  107:}
+        -:  108:
+function _ZN15ProbabilityRepo15emptyRepositoryEv called 0 returned 0% blocks executed 0%
+    #####:  109:void ProbabilityRepo::emptyRepository() {
+        -:  110:    // Throw the dice
+    #####:  111:    unsigned int diceResult = getRandomIndex(100);
+    %%%%%:  111-block  0
+call    0 never executed
+        -:  112:
+        -:  113:    // If the result is less than 50, throw an error
+    #####:  114:    if (diceResult < 50) {
+branch  0 never executed
+branch  1 never executed
+    #####:  115:        throw RandomError("You are unlucky. Try again.");
+    %%%%%:  115-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  115-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:  115-block  2
+call    9 never executed
+    $$$$$:  115-block  3
+    $$$$$:  115-block  4
+call   10 never executed
+        -:  116:    }
+        -:  117:
+    #####:  118:    cars.clear();
+    %%%%%:  118-block  0
+call    0 never executed
+    #####:  119:}

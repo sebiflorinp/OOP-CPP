@@ -252,12 +252,18 @@
         -:  248:      // requires special behaviour if _InIterator is an integral type
         -:  249:      template<typename _InIterator>
         -:  250:        void
-        -:  251:        _M_construct_aux(_InIterator __beg, _InIterator __end,
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_construct_auxIPcEEvT_S7_St12__false_type called 0 returned 0% blocks executed 0%
+    #####:  251:        _M_construct_aux(_InIterator __beg, _InIterator __end,
         -:  252:			 std::__false_type)
         -:  253:	{
         -:  254:          typedef typename iterator_traits<_InIterator>::iterator_category _Tag;
-        -:  255:          _M_construct(__beg, __end, _Tag());
-        -:  256:	}
+    #####:  255:          _M_construct(__beg, __end, _Tag());
+    %%%%%:  255-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  256:	}
+    %%%%%:  256-block  0
         -:  257:
         -:  258:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  259:      // 438. Ambiguity in the "do the right thing" clause
@@ -272,11 +278,14 @@
         -:  268:
         -:  269:      template<typename _InIterator>
         -:  270:        void
-        -:  271:        _M_construct(_InIterator __beg, _InIterator __end)
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_ called 0 returned 0% blocks executed 0%
+    #####:  271:        _M_construct(_InIterator __beg, _InIterator __end)
         -:  272:	{
         -:  273:	  typedef typename std::__is_integer<_InIterator>::__type _Integral;
-        -:  274:	  _M_construct_aux(__beg, __end, _Integral());
-        -:  275:        }
+    #####:  274:	  _M_construct_aux(__beg, __end, _Integral());
+    %%%%%:  274-block  0
+call    0 never executed
+    #####:  275:        }
         -:  276:
         -:  277:      // For Input Iterators, used in istreambuf_iterators, etc.
         -:  278:      template<typename _InIterator>

@@ -132,8 +132,8 @@ function _ZSt7forwardIRK3CarEOT_RNSt16remove_referenceIS3_E4typeE called 0 retur
         -:  101:  template<typename _Tp>
         -:  102:    _GLIBCXX_NODISCARD
         -:  103:    constexpr typename std::remove_reference<_Tp>::type&&
-      12*:  104:    move(_Tp&& __t) noexcept
-      12*:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+    #####:  104:    move(_Tp&& __t) noexcept
+    #####:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
 ------------------
 _ZSt4moveIRSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEEONSt16remove_referenceIT_E4typeEOSG_:
 function _ZSt4moveIRSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEEONSt16remove_referenceIT_E4typeEOSG_ called 0 returned 0% blocks executed 0%
@@ -147,29 +147,11 @@ function _ZSt4moveIRSt10_HashtableINSt7__cxx1112basic_stringIcSt11char_traitsIcE
     #####:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
     %%%%%:  105-block  0
 ------------------
-_ZSt4moveIRNSt12_Vector_baseI3CarSaIS1_EE12_Vector_implEEONSt16remove_referenceIT_E4typeEOS7_:
-function _ZSt4moveIRNSt12_Vector_baseI3CarSaIS1_EE12_Vector_implEEONSt16remove_referenceIT_E4typeEOS7_ called 10 returned 100% blocks executed 100%
-       10:  104:    move(_Tp&& __t) noexcept
-       10:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-       10:  105-block  0
-------------------
 _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_:
 function _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_ called 0 returned 0% blocks executed 0%
     #####:  104:    move(_Tp&& __t) noexcept
     #####:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
     %%%%%:  105-block  0
-------------------
-_ZSt4moveIR20CarsToWashControllerEONSt16remove_referenceIT_E4typeEOS3_:
-function _ZSt4moveIR20CarsToWashControllerEONSt16remove_referenceIT_E4typeEOS3_ called 1 returned 100% blocks executed 100%
-        1:  104:    move(_Tp&& __t) noexcept
-        1:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-        1:  105-block  0
-------------------
-_ZSt4moveIR13CarControllerEONSt16remove_referenceIT_E4typeEOS3_:
-function _ZSt4moveIR13CarControllerEONSt16remove_referenceIT_E4typeEOS3_ called 1 returned 100% blocks executed 100%
-        1:  104:    move(_Tp&& __t) noexcept
-        1:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-        1:  105-block  0
 ------------------
         -:  106:
         -:  107:

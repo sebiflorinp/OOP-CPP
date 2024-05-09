@@ -157,17 +157,14 @@
         -:  153:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  154:      // 3035. std::allocator's constructors should be constexpr
         -:  155:      _GLIBCXX20_CONSTEXPR
-function _ZNSaI3CarEC2Ev called 33 returned 100% blocks executed 100%
-       33:  156:      allocator() _GLIBCXX_NOTHROW { }
-       33:  156-block  0
-call    0 returned 33
+function _ZNSaI3CarEC2Ev called 72 returned 100% blocks executed 100%
+       72:  156:      allocator() _GLIBCXX_NOTHROW { }
+       72:  156-block  0
+call    0 returned 72
         -:  157:
         -:  158:      _GLIBCXX20_CONSTEXPR
-function _ZNSaI3CarEC2ERKS0_ called 37 returned 100% blocks executed 100%
-       37:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-       37:  160:      : __allocator_base<_Tp>(__a) { }
-       37:  160-block  0
-call    0 returned 37
+        -:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+        -:  160:      : __allocator_base<_Tp>(__a) { }
         -:  161:
         -:  162:#if __cplusplus >= 201103L
         -:  163:      // Avoid implicit deprecation.
@@ -181,10 +178,20 @@ call    0 returned 37
         -:  171:#if __cpp_constexpr_dynamic_alloc
         -:  172:      constexpr
         -:  173:#endif
-function _ZNSaI3CarED2Ev called 70 returned 100% blocks executed 100%
-       70:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-       70:  174-block  0
-call    0 returned 70
+      128:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+------------------
+_ZNSaISt10unique_ptrI4UndoSt14default_deleteIS0_EEED2Ev:
+function _ZNSaISt10unique_ptrI4UndoSt14default_deleteIS0_EEED2Ev called 16 returned 100% blocks executed 100%
+       16:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       16:  174-block  0
+call    0 returned 16
+------------------
+_ZNSaI3CarED2Ev:
+function _ZNSaI3CarED2Ev called 112 returned 100% blocks executed 100%
+      112:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+      112:  174-block  0
+call    0 returned 112
+------------------
         -:  175:
         -:  176:#if __cplusplus > 201703L
         -:  177:      [[nodiscard,__gnu__::__always_inline__]]

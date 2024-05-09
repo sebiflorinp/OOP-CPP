@@ -15,92 +15,108 @@
         -:   11:using std::cin;
         -:   12:using std::endl;
         -:   13:
-function _ZN2UIC2E13CarController20CarsToWashController called 1 returned 100% blocks executed 100%
-        1:   14:UI::UI(CarController  carController, CarsToWashController  carsToWashController) : carController(std::move(carController)),
-        1:   14-block  0
-call    0 returned 1
-        1:   15:                                                                                               carsToWashController(std::move(carsToWashController)) {}
-call    0 returned 1
-call    1 returned 1
+function _ZN2UIC2ER13CarControllerR20CarsToWashController called 1 returned 100% blocks executed 100%
+        1:   14:UI::UI(CarController&  carController, CarsToWashController&  carsToWashController) : carController(carController),
+        1:   15:                                                                                               carsToWashController(carsToWashController) {}
         -:   16:
         -:   17:
         -:   18:
 function _ZN2UI6runAppEv called 1 returned 100% blocks executed 7%
         1:   19:void UI::runApp() {
-        1:   20:    bool running = true;
-        1:   21:    cout << "This is a car management application." << std::endl;
-        1:   21-block  0
+        1:   20:    carController.loadData();
+        1:   20-block  0
 call    0 returned 1
 call    1 returned 1
-        1:   22:    cout << "In order to use it you have to choose one of the following options:\n";
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   20-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   20-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   20-block  3
+call    9 never executed
+    $$$$$:   20-block  4
+    $$$$$:   20-block  5
+call   10 never executed
+    $$$$$:   20-block  6
+call   11 never executed
+        1:   21:    bool running = true;
+        1:   22:    cout << "This is a car management application." << std::endl;
 call    0 returned 1
-        2:   23:    while (running) {
-        2:   23-block  0
+call    1 returned 1
+        1:   23:    cout << "In order to use it you have to choose one of the following options:\n";
+call    0 returned 1
+        2:   24:    while (running) {
+        2:   24-block  0
 branch  0 taken 1
 branch  1 taken 1 (fallthrough)
-        1:   24:        int option = 6;
-        -:   25:        cout << "  1. Add a new car. \n"
-        -:   26:                "  2. Delete a car. \n"
-        -:   27:                "  3. Update a car. \n"
-        -:   28:                "  4. Display all the cars.\n"
-        -:   29:                "  5. Find a car by registration number.\n"
-        -:   30:                "  6. Filter cars by producer.\n"
-        -:   31:                "  7. Filter cars by type.\n"
-        -:   32:                "  8. Sort cars by registration number.\n"
-        -:   33:                "  9. Sort cars by type.\n"
-        -:   34:                "  10. Sort cars by producer and model.\n"
-        -:   35:                "  11. Create and display type report.\n"
-        -:   36:                "  12. Access the menu for managing the cars that will be washed.\n"
-        1:   37:                "  13. Exit the application.\n";
-        1:   37-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        -:   38:        try {
-        1:   39:            cin >> option;
+        1:   25:        int option = 6;
+        -:   26:        cout << "  1. Add a new car. \n"
+        -:   27:                "  2. Delete a car. \n"
+        -:   28:                "  3. Update a car. \n"
+        -:   29:                "  4. Display all the cars.\n"
+        -:   30:                "  5. Find a car by registration number.\n"
+        -:   31:                "  6. Filter cars by producer.\n"
+        -:   32:                "  7. Filter cars by type.\n"
+        -:   33:                "  8. Sort cars by registration number.\n"
+        -:   34:                "  9. Sort cars by type.\n"
+        -:   35:                "  10. Sort cars by producer and model.\n"
+        -:   36:                "  11. Create and display type report.\n"
+        -:   37:                "  12. Access the menu for managing the cars that will be washed.\n"
+        -:   38:                "  13. Undo the previous action.\n"
+        1:   39:                "  14. Exit the application.\n";
         1:   39-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    =====:   40:        } catch (...) {
-    $$$$$:   40-block  0
-    $$$$$:   40-block  1
+        -:   40:        try {
+        1:   41:            cin >> option;
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    =====:   42:        } catch (...) {
+    $$$$$:   42-block  0
+    $$$$$:   42-block  1
 call    0 never executed
-    =====:   41:            cout << "The option is not an integer. Please input an integer." << std::endl;
+    =====:   43:            cout << "The option is not an integer. Please input an integer." << std::endl;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   41-block  0
+    $$$$$:   43-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    =====:   42:            continue;
-    $$$$$:   42-block  0
-    =====:   43:        }
-    $$$$$:   43-block  0
+    =====:   44:            continue;
+    $$$$$:   44-block  0
+    =====:   45:        }
+    $$$$$:   45-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   43-block  1
+    $$$$$:   45-block  1
 call    3 never executed
-        -:   44:        // variables required for adding a new car
-        1:   45:        string newRegistrationNumber;
-        1:   45-block  0
+        -:   46:        // variables required for adding a new car
+        1:   47:        string newRegistrationNumber;
+        1:   47-block  0
 call    0 returned 1
-        1:   46:        string registrationNumber;
+        1:   48:        string registrationNumber;
 call    0 returned 1
-        1:   47:        string type;
+        1:   49:        string type;
 call    0 returned 1
-        1:   48:        string model;
+        1:   50:        string model;
 call    0 returned 1
-        1:   49:        string producer;
+        1:   51:        string producer;
 call    0 returned 1
-        1:   50:        string producerToFilterBy;
+        1:   52:        string producerToFilterBy;
 call    0 returned 1
-        1:   51:        std::unordered_map<string, TypeDTO> typeReport;
+        1:   53:        std::unordered_map<string, TypeDTO> typeReport;
 call    0 returned 1
-        -:   52:
-        1:   53:        switch (option) {
+        -:   54:
+        1:   55:        switch (option) {
 branch  0 taken 0
 branch  1 taken 0
 branch  2 taken 0
@@ -113,162 +129,162 @@ branch  8 taken 0
 branch  9 taken 0
 branch 10 taken 0
 branch 11 taken 0
-branch 12 taken 1
-branch 13 taken 0
-    #####:   54:            case 1:
-        -:   55:                // get required fields from the user
-    #####:   56:                cout << "Input the registration number of the car" << std::endl;
-    %%%%%:   56-block  0
+branch 12 taken 0
+branch 13 taken 1
+branch 14 taken 0
+    #####:   56:            case 1:
+        -:   57:                // get required fields from the user
+    #####:   58:                cout << "Input the registration number of the car" << std::endl;
+    %%%%%:   58-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:   56-block  1
+    %%%%%:   58-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:   57:                cin >> registrationNumber;
-    %%%%%:   57-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-        -:   58:
-    #####:   59:                cout << "Input the type of the car" << std::endl;
+    #####:   59:                cin >> registrationNumber;
     %%%%%:   59-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:   59-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:   60:                cin >> type;
-    %%%%%:   60-block  0
+        -:   60:
+    #####:   61:                cout << "Input the type of the car" << std::endl;
+    %%%%%:   61-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:   61:
-    #####:   62:                cout << "Input the model of the car" << std::endl;
+    %%%%%:   61-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   62:                cin >> type;
     %%%%%:   62-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:   62-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:   63:                cin >> model;
-    %%%%%:   63-block  0
+        -:   63:
+    #####:   64:                cout << "Input the model of the car" << std::endl;
+    %%%%%:   64-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:   64:
-    #####:   65:                cout << "Input the producer of the car" << std::endl;
+    %%%%%:   64-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   65:                cin >> model;
     %%%%%:   65-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:   65-block  1
+        -:   66:
+    #####:   67:                cout << "Input the producer of the car" << std::endl;
+    %%%%%:   67-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   67-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:   66:                cin >> producer;
-    %%%%%:   66-block  0
+    #####:   68:                cin >> producer;
+    %%%%%:   68-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:   67:
-        -:   68:                // try to push_back the car
-        -:   69:                try {
-    #####:   70:                    this->carController.addNewCar(registrationNumber, type, model, producer);
-    %%%%%:   70-block  0
+        -:   69:
+        -:   70:                // try to push_back the car
+        -:   71:                try {
+    #####:   72:                    this->carController.addNewCar(registrationNumber, type, model, producer);
+    %%%%%:   72-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   71:                    cout << "The car was added successfully" << endl;
-    %%%%%:   71-block  0
+    #####:   73:                    cout << "The car was added successfully" << endl;
+    %%%%%:   73-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:   71-block  1
+    %%%%%:   73-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    =====:   72:                } catch (InvalidDataError& error) {
-    $$$$$:   72-block  0
+        -:   74:                    // Save the data
+    #####:   75:                    carController.saveData();
+    %%%%%:   75-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   75-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   75-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:   75-block  3
+call    9 never executed
+    $$$$$:   75-block  4
+    $$$$$:   75-block  5
+call   10 never executed
+    $$$$$:   75-block  6
+    =====:   76:                } catch (InvalidDataError& error) {
+    $$$$$:   76-block  0
 branch  0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   72-block  1
+    $$$$$:   76-block  1
 call    3 never executed
-    =====:   73:                    cout << error.getErrorMessage();
+    =====:   77:                    cout << error.getErrorMessage();
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   73-block  0
+    $$$$$:   77-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:   73-block  1
+    $$$$$:   77-block  1
 call    6 never executed
-    $$$$$:   73-block  2
+    $$$$$:   77-block  2
 call    7 never executed
-    $$$$$:   73-block  3
-    =====:   74:                } catch (DuplicateDataError& error) {
+    $$$$$:   77-block  3
+    =====:   78:                } catch (DuplicateDataError& error) {
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   74-block  0
+    $$$$$:   78-block  0
 call    3 never executed
-    $$$$$:   74-block  1
+    $$$$$:   78-block  1
 call    4 never executed
-    =====:   75:                    cout << error.getErrorMessage() << endl;
+    =====:   79:                    cout << error.getErrorMessage() << endl;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   75-block  0
+    $$$$$:   79-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:   75-block  1
+    $$$$$:   79-block  1
 call    6 never executed
 branch  7 never executed
 branch  8 never executed
-    $$$$$:   75-block  2
+    $$$$$:   79-block  2
 call    9 never executed
-    $$$$$:   75-block  3
+    $$$$$:   79-block  3
 call   10 never executed
-    $$$$$:   75-block  4
-    =====:   76:                }
+    $$$$$:   79-block  4
+    =====:   80:                }
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   76-block  0
+    $$$$$:   80-block  0
 call    3 never executed
-    #####:   77:                break;
-    %%%%%:   77-block  0
-    #####:   78:            case 2:
-    #####:   79:                if (this->carController.getAllCars().size() == 0) {
-    %%%%%:   79-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   79-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:   80:                    cout << "There are no cars to delete" << endl;
-    %%%%%:   80-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   80-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:   81:                    break;
+    #####:   81:                break;
     %%%%%:   81-block  0
-        -:   82:                }
-    #####:   83:                this->displayCars(this->carController.getAllCars());
+    #####:   82:            case 2:
+    #####:   83:                if (this->carController.getAllCars().size() == 0) {
     %%%%%:   83-block  0
 call    0 never executed
 branch  1 never executed
@@ -277,7 +293,7 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:   84:                cout << "Input the registration number of the car that will be deleted:" << endl;
+    #####:   84:                    cout << "There are no cars to delete" << endl;
     %%%%%:   84-block  0
 call    0 never executed
 branch  1 never executed
@@ -286,18 +302,19 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:   85:                cin >> registrationNumber;
+    #####:   85:                    break;
     %%%%%:   85-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-        -:   86:                try {
-    #####:   87:                    this->carController.deleteCarByRegistrationNumber(registrationNumber);
+        -:   86:                }
+    #####:   87:                this->displayCars(this->carController.getAllCars());
     %%%%%:   87-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:   88:                    cout << "The car was deleted successfully!" << endl;
+    %%%%%:   87-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   88:                cout << "Input the registration number of the car that will be deleted:" << endl;
     %%%%%:   88-block  0
 call    0 never executed
 branch  1 never executed
@@ -306,70 +323,79 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    =====:   89:                } catch (CarNotFoundError& error) {
-    $$$$$:   89-block  0
-branch  0 never executed
-branch  1 never executed
-    $$$$$:   89-block  1
-call    2 never executed
-    =====:   90:                    cout << error.getErrorMessage() << endl;
+    #####:   89:                cin >> registrationNumber;
+    %%%%%:   89-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   90-block  0
+        -:   90:                try {
+    #####:   91:                    this->carController.deleteCarByRegistrationNumber(registrationNumber);
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:                    cout << "The car was deleted successfully!" << endl;
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   92-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:   90-block  1
+        -:   93:                    // Save the data
+    #####:   94:                    carController.saveData();
+    %%%%%:   94-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   94-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   94-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:   94-block  3
+call    9 never executed
+    $$$$$:   94-block  4
+    $$$$$:   94-block  5
+call   10 never executed
+    $$$$$:   94-block  6
+    =====:   95:                } catch (CarNotFoundError& error) {
+    $$$$$:   95-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:   95-block  1
+call    2 never executed
+    =====:   96:                    cout << error.getErrorMessage() << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   96-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   96-block  1
 call    6 never executed
 branch  7 never executed
 branch  8 never executed
-    $$$$$:   90-block  2
+    $$$$$:   96-block  2
 call    9 never executed
-    $$$$$:   90-block  3
+    $$$$$:   96-block  3
 call   10 never executed
-    $$$$$:   90-block  4
-    =====:   91:                }
+    $$$$$:   96-block  4
+    =====:   97:                }
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:   91-block  0
+    $$$$$:   97-block  0
 call    3 never executed
-    #####:   92:                break;
-    %%%%%:   92-block  0
-    #####:   93:            case 3:
-    #####:   94:                if (this->carController.getAllCars().size() == 0) {
-    %%%%%:   94-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   94-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:   95:                    cout << "There are no cars to update." <<endl;
-    %%%%%:   95-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   95-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:   96:                    break;
-    %%%%%:   96-block  0
-        -:   97:                }
-    #####:   98:                UI::displayCars(this->carController.getAllCars());
+    #####:   98:                break;
     %%%%%:   98-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:   98-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-        -:   99:
-    #####:  100:                cout << "Input the registration number of the car that will be updated." << endl;
+    #####:   99:            case 3:
+    #####:  100:                if (this->carController.getAllCars().size() == 0) {
     %%%%%:  100-block  0
 call    0 never executed
 branch  1 never executed
@@ -378,28 +404,29 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  101:                cin >> registrationNumber;
+    #####:  101:                    cout << "There are no cars to update." <<endl;
     %%%%%:  101-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  102:
-    #####:  103:                cout << "Input the updated registration number." << endl;
-    %%%%%:  103-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  103-block  1
+    %%%%%:  101-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  104:                cin >> newRegistrationNumber;
+    #####:  102:                    break;
+    %%%%%:  102-block  0
+        -:  103:                }
+    #####:  104:                UI::displayCars(this->carController.getAllCars());
     %%%%%:  104-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
+    %%%%%:  104-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
         -:  105:
-    #####:  106:                cout << "Input the updated type." << endl;
+    #####:  106:                cout << "Input the registration number of the car that will be updated." << endl;
     %%%%%:  106-block  0
 call    0 never executed
 branch  1 never executed
@@ -408,13 +435,13 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  107:                cin >> type;
+    #####:  107:                cin >> registrationNumber;
     %%%%%:  107-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
         -:  108:
-    #####:  109:                cout << "Input the updated model." << endl;
+    #####:  109:                cout << "Input the updated registration number." << endl;
     %%%%%:  109-block  0
 call    0 never executed
 branch  1 never executed
@@ -423,13 +450,13 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  110:                cin >> model;
+    #####:  110:                cin >> newRegistrationNumber;
     %%%%%:  110-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
         -:  111:
-    #####:  112:                cout << "Input the updated producer." << endl;
+    #####:  112:                cout << "Input the updated type." << endl;
     %%%%%:  112-block  0
 call    0 never executed
 branch  1 never executed
@@ -438,20 +465,28 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  113:                cin >> producer;
+    #####:  113:                cin >> type;
     %%%%%:  113-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
         -:  114:
-        -:  115:                try {
-    #####:  116:                    this->carController.updateCarByRegistrationNumber(registrationNumber, newRegistrationNumber, type,
+    #####:  115:                cout << "Input the updated model." << endl;
+    %%%%%:  115-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  115-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  116:                cin >> model;
     %%%%%:  116-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  117:                            model, producer);
-    #####:  118:                    cout << "The car was updated successfully." << endl;
+        -:  117:
+    #####:  118:                cout << "Input the updated producer." << endl;
     %%%%%:  118-block  0
 call    0 never executed
 branch  1 never executed
@@ -460,102 +495,103 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    =====:  119:                } catch (InvalidDataError& error) {
-    $$$$$:  119-block  0
+    #####:  119:                cin >> producer;
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  120:
+        -:  121:                try {
+    #####:  122:                    this->carController.updateCarByRegistrationNumber(registrationNumber, newRegistrationNumber, type,
+    %%%%%:  122-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  123:                            model, producer);
+    #####:  124:                    cout << "The car was updated successfully." << endl;
+    %%%%%:  124-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  124-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  125:                    // Save the data
+    #####:  126:                    carController.saveData();
+    %%%%%:  126-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  126-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  126-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:  126-block  3
+call    9 never executed
+    $$$$$:  126-block  4
+    $$$$$:  126-block  5
+call   10 never executed
+    $$$$$:  126-block  6
+    =====:  127:                } catch (InvalidDataError& error) {
+    $$$$$:  127-block  0
 branch  0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  119-block  1
+    $$$$$:  127-block  1
 call    3 never executed
-    =====:  120:                    cout << error.getErrorMessage();
+    =====:  128:                    cout << error.getErrorMessage();
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  120-block  0
+    $$$$$:  128-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:  120-block  1
+    $$$$$:  128-block  1
 call    6 never executed
-    $$$$$:  120-block  2
+    $$$$$:  128-block  2
 call    7 never executed
-    $$$$$:  120-block  3
-    =====:  121:                } catch (DuplicateDataError& error) {
+    $$$$$:  128-block  3
+    =====:  129:                } catch (DuplicateDataError& error) {
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  121-block  0
+    $$$$$:  129-block  0
 call    3 never executed
-    $$$$$:  121-block  1
+    $$$$$:  129-block  1
 call    4 never executed
-    =====:  122:                    cout << error.getErrorMessage() << endl;
+    =====:  130:                    cout << error.getErrorMessage() << endl;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  122-block  0
+    $$$$$:  130-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:  122-block  1
+    $$$$$:  130-block  1
 call    6 never executed
 branch  7 never executed
 branch  8 never executed
-    $$$$$:  122-block  2
+    $$$$$:  130-block  2
 call    9 never executed
-    $$$$$:  122-block  3
+    $$$$$:  130-block  3
 call   10 never executed
-    $$$$$:  122-block  4
-    =====:  123:                }
+    $$$$$:  130-block  4
+    =====:  131:                }
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  123-block  0
+    $$$$$:  131-block  0
 call    3 never executed
-    #####:  124:                break;
-    %%%%%:  124-block  0
-    #####:  125:            case 4:
-    #####:  126:                if (carController.getAllCars().empty()) {
-    %%%%%:  126-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  126-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  127:                    cout << "There are no cars to display" << endl;
-    %%%%%:  127-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  127-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-        -:  128:                } else {
-    #####:  129:                    UI::displayCars(carController.getAllCars());
-    %%%%%:  129-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  129-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-        -:  130:                }
-    #####:  131:                break;
-    %%%%%:  131-block  0
-    #####:  132:            case 5:
-    #####:  133:                if (this->carController.getAllCars().empty()) {
-    %%%%%:  133-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  133-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  134:                    cout << "There are no cars." << endl;
+    #####:  132:                break;
+    %%%%%:  132-block  0
+    #####:  133:            case 4:
+    #####:  134:                if (carController.getAllCars().empty()) {
     %%%%%:  134-block  0
 call    0 never executed
 branch  1 never executed
@@ -564,10 +600,17 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  135:                    break;
+    #####:  135:                    cout << "There are no cars to display" << endl;
     %%%%%:  135-block  0
-        -:  136:                }
-    #####:  137:                cout << "Input the registration number of the car you are looking for." << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  135-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  136:                } else {
+    #####:  137:                    UI::displayCars(carController.getAllCars());
     %%%%%:  137-block  0
 call    0 never executed
 branch  1 never executed
@@ -576,107 +619,112 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  138:                cin >> registrationNumber;
-    %%%%%:  138-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-        -:  139:                try {
-    #####:  140:                    Car foundCar = this->carController.findCarByRegistrationNumber(registrationNumber);
-    %%%%%:  140-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  141:                    std::vector<Car> displayCar;
+        -:  138:                }
+    #####:  139:                break;
+    %%%%%:  139-block  0
+    #####:  140:            case 5:
+    #####:  141:                if (this->carController.getAllCars().empty()) {
     %%%%%:  141-block  0
 call    0 never executed
-    #####:  142:                    displayCar.push_back(foundCar);
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  141-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  142:                    cout << "There are no cars." << endl;
+    %%%%%:  142-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  143:                    UI::displayCars(displayCar);
+    %%%%%:  142-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  143:                    break;
     %%%%%:  143-block  0
+        -:  144:                }
+    #####:  145:                cout << "Input the registration number of the car you are looking for." << endl;
+    %%%%%:  145-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  144:                } catch (CarNotFoundError& error) {
-    %%%%%:  144-block  0
+    %%%%%:  145-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  146:                cin >> registrationNumber;
+    %%%%%:  146-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  147:                try {
+    #####:  148:                    Car foundCar = this->carController.findCarByRegistrationNumber(registrationNumber);
+    %%%%%:  148-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  149:                    std::vector<Car> displayCar;
+    %%%%%:  149-block  0
+call    0 never executed
+    #####:  150:                    displayCar.push_back(foundCar);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  151:                    UI::displayCars(displayCar);
+    %%%%%:  151-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  152:                } catch (CarNotFoundError& error) {
+    %%%%%:  152-block  0
 call    0 never executed
 call    1 never executed
-    $$$$$:  144-block  1
+    $$$$$:  152-block  1
 call    2 never executed
-    $$$$$:  144-block  2
+    $$$$$:  152-block  2
 call    3 never executed
-    $$$$$:  144-block  3
+    $$$$$:  152-block  3
 branch  4 never executed
 branch  5 never executed
-    $$$$$:  144-block  4
+    $$$$$:  152-block  4
 call    6 never executed
-    =====:  145:                    cout << error.getErrorMessage() << endl;
+    =====:  153:                    cout << error.getErrorMessage() << endl;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  145-block  0
+    $$$$$:  153-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:  145-block  1
+    $$$$$:  153-block  1
 call    6 never executed
 branch  7 never executed
 branch  8 never executed
-    $$$$$:  145-block  2
+    $$$$$:  153-block  2
 call    9 never executed
-    $$$$$:  145-block  3
+    $$$$$:  153-block  3
 call   10 never executed
-    $$$$$:  145-block  4
-    =====:  146:                }
+    $$$$$:  153-block  4
+    =====:  154:                }
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  146-block  0
+    $$$$$:  154-block  0
 call    3 never executed
-    #####:  147:                break;
-    %%%%%:  147-block  0
-    #####:  148:            case 6:
-    #####:  149:                if (this->carController.getAllCars().empty()) {
-    %%%%%:  149-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  149-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  150:                    cout << "There are no cars to filter." << endl;
-    %%%%%:  150-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  150-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  151:                    break;
-    %%%%%:  151-block  0
-        -:  152:                }
-        -:  153:
-    #####:  154:                cout << "Input the producer of the car." << endl;
-    %%%%%:  154-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  154-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  155:                cin >> producer;
+    #####:  155:                break;
     %%%%%:  155-block  0
+    #####:  156:            case 6:
+    #####:  157:                if (this->carController.getAllCars().empty()) {
+    %%%%%:  157-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  156:
-        -:  157:                {
-    #####:  158:                    std::vector<Car> filteredCars = carController.filter(producer, filterByProducer);
+    %%%%%:  157-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  158:                    cout << "There are no cars to filter." << endl;
     %%%%%:  158-block  0
 call    0 never executed
 branch  1 never executed
@@ -685,44 +733,41 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:  158-block  2
-    #####:  159:                    if (filteredCars.empty()) {
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  160:                        cout << "There are no cars with the input producer." << endl;
-    %%%%%:  160-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  160-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-        -:  161:                    } else {
-    #####:  162:                        displayCars(filteredCars);
+    #####:  159:                    break;
+    %%%%%:  159-block  0
+        -:  160:                }
+        -:  161:
+    #####:  162:                cout << "Input the producer of the car." << endl;
     %%%%%:  162-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  163:                    }
-    #####:  164:                }
-    %%%%%:  164-block  0
-call    0 never executed
-    $$$$$:  164-block  1
-call    1 never executed
-    #####:  165:                break;
-    #####:  166:            case 7:
-    #####:  167:                if (this->carController.getAllCars().empty()) {
-    %%%%%:  167-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  167-block  1
+    %%%%%:  162-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  168:                    cout << "There are no cars to filter." << endl;
+    #####:  163:                cin >> producer;
+    %%%%%:  163-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  164:
+        -:  165:                {
+    #####:  166:                    std::vector<Car> filteredCars = carController.filter(producer, filterByProducer);
+    %%%%%:  166-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  166-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  166-block  2
+    #####:  167:                    if (filteredCars.empty()) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  168:                        cout << "There are no cars with the input producer." << endl;
     %%%%%:  168-block  0
 call    0 never executed
 branch  1 never executed
@@ -731,27 +776,30 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  169:                    break;
-    %%%%%:  169-block  0
-        -:  170:                }
-        -:  171:
-    #####:  172:                cout << "Input the type of the car." << endl;
-    %%%%%:  172-block  0
+        -:  169:                    } else {
+    #####:  170:                        displayCars(filteredCars);
+    %%%%%:  170-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  172-block  1
+        -:  171:                    }
+    #####:  172:                }
+    %%%%%:  172-block  0
+call    0 never executed
+    $$$$$:  172-block  1
+call    1 never executed
+    #####:  173:                break;
+    #####:  174:            case 7:
+    #####:  175:                if (this->carController.getAllCars().empty()) {
+    %%%%%:  175-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  175-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  173:                cin >> type;
-    %%%%%:  173-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-        -:  174:
-        -:  175:                {
-    #####:  176:                    std::vector<Car> filteredCars = carController.filter(type, filterByType);
+    #####:  176:                    cout << "There are no cars to filter." << endl;
     %%%%%:  176-block  0
 call    0 never executed
 branch  1 never executed
@@ -760,44 +808,41 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:  176-block  2
-    #####:  177:                    if (filteredCars.empty()) {
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  178:                        cout << "There are no cars with the input type." << endl;
-    %%%%%:  178-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  178-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-        -:  179:                    } else {
-    #####:  180:                        displayCars(filteredCars);
+    #####:  177:                    break;
+    %%%%%:  177-block  0
+        -:  178:                }
+        -:  179:
+    #####:  180:                cout << "Input the type of the car." << endl;
     %%%%%:  180-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  181:                    }
-    #####:  182:                }
-    %%%%%:  182-block  0
-call    0 never executed
-    $$$$$:  182-block  1
-call    1 never executed
-    #####:  183:                break;
-    #####:  184:            case 8:
-    #####:  185:                if (this->carController.getAllCars().size() == 0) {
-    %%%%%:  185-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  185-block  1
+    %%%%%:  180-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  186:                    cout << "There are no cars to sort." << endl;
+    #####:  181:                cin >> type;
+    %%%%%:  181-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  182:
+        -:  183:                {
+    #####:  184:                    std::vector<Car> filteredCars = carController.filter(type, filterByType);
+    %%%%%:  184-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  184-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  184-block  2
+    #####:  185:                    if (filteredCars.empty()) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  186:                        cout << "There are no cars with the input type." << endl;
     %%%%%:  186-block  0
 call    0 never executed
 branch  1 never executed
@@ -806,47 +851,30 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  187:                    break;
-    %%%%%:  187-block  0
-        -:  188:                }
-    #####:  189:                cout << "Input sorting order: ASC / DESC." <<endl;
-    %%%%%:  189-block  0
+        -:  187:                    } else {
+    #####:  188:                        displayCars(filteredCars);
+    %%%%%:  188-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  189-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-        -:  190:                {
-    #####:  191:                    string ordering;
-    %%%%%:  191-block  0
+        -:  189:                    }
+    #####:  190:                }
+    %%%%%:  190-block  0
 call    0 never executed
-    #####:  192:                    cin >> ordering;
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  193:                    if (ordering != "ASC" && ordering != "DESC") {
+    $$$$$:  190-block  1
+call    1 never executed
+    #####:  191:                break;
+    #####:  192:            case 8:
+    #####:  193:                if (this->carController.getAllCars().size() == 0) {
     %%%%%:  193-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:  193-block  1
-branch  3 never executed
+call    3 never executed
 branch  4 never executed
-    %%%%%:  193-block  2
-call    5 never executed
-branch  6 never executed
-branch  7 never executed
-    %%%%%:  193-block  3
-branch  8 never executed
-branch  9 never executed
-    %%%%%:  193-block  4
-    %%%%%:  193-block  5
-    %%%%%:  193-block  6
-branch 10 never executed
-branch 11 never executed
-    #####:  194:                        cout << "Invalid sorting order." << endl;
+branch  5 never executed
+    #####:  194:                    cout << "There are no cars to sort." << endl;
     %%%%%:  194-block  0
 call    0 never executed
 branch  1 never executed
@@ -855,10 +883,10 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  195:                        break;
+    #####:  195:                    break;
     %%%%%:  195-block  0
-        -:  196:                    }
-    #####:  197:                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByRegistrationNumber));
+        -:  196:                }
+    #####:  197:                cout << "Input sorting order: ASC / DESC." <<endl;
     %%%%%:  197-block  0
 call    0 never executed
 branch  1 never executed
@@ -867,35 +895,35 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    %%%%%:  197-block  2
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-    %%%%%:  197-block  3
-call    9 never executed
-    $$$$$:  197-block  4
-call   10 never executed
-    $$$$$:  197-block  5
-    #####:  198:                }
-    %%%%%:  198-block  0
+        -:  198:                {
+    #####:  199:                    string ordering;
+    %%%%%:  199-block  0
+call    0 never executed
+    #####:  200:                    cin >> ordering;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  198-block  1
-call    3 never executed
-    #####:  199:                break;
-    %%%%%:  199-block  0
-    #####:  200:            case 9:
-    #####:  201:                if (this->carController.getAllCars().empty()) {
+    #####:  201:                    if (ordering != "ASC" && ordering != "DESC") {
     %%%%%:  201-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:  201-block  1
-call    3 never executed
+branch  3 never executed
 branch  4 never executed
-branch  5 never executed
-    #####:  202:                    cout << "There are no cars to sort." << endl;
+    %%%%%:  201-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  201-block  3
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  201-block  4
+    %%%%%:  201-block  5
+    %%%%%:  201-block  6
+branch 10 never executed
+branch 11 never executed
+    #####:  202:                        cout << "Invalid sorting order." << endl;
     %%%%%:  202-block  0
 call    0 never executed
 branch  1 never executed
@@ -904,10 +932,10 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  203:                    break;
+    #####:  203:                        break;
     %%%%%:  203-block  0
-        -:  204:                }
-    #####:  205:                cout << "Input sorting order: ASC / DESC." <<endl;
+        -:  204:                    }
+    #####:  205:                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByRegistrationNumber));
     %%%%%:  205-block  0
 call    0 never executed
 branch  1 never executed
@@ -916,35 +944,35 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-        -:  206:                {
-    #####:  207:                    string ordering;
-    %%%%%:  207-block  0
-call    0 never executed
-    #####:  208:                    cin >> ordering;
+    %%%%%:  205-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  205-block  3
+call    9 never executed
+    $$$$$:  205-block  4
+call   10 never executed
+    $$$$$:  205-block  5
+    #####:  206:                }
+    %%%%%:  206-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  209:                    if (ordering != "ASC" && ordering != "DESC") {
+    $$$$$:  206-block  1
+call    3 never executed
+    #####:  207:                break;
+    %%%%%:  207-block  0
+    #####:  208:            case 9:
+    #####:  209:                if (this->carController.getAllCars().empty()) {
     %%%%%:  209-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:  209-block  1
-branch  3 never executed
+call    3 never executed
 branch  4 never executed
-    %%%%%:  209-block  2
-call    5 never executed
-branch  6 never executed
-branch  7 never executed
-    %%%%%:  209-block  3
-branch  8 never executed
-branch  9 never executed
-    %%%%%:  209-block  4
-    %%%%%:  209-block  5
-    %%%%%:  209-block  6
-branch 10 never executed
-branch 11 never executed
-    #####:  210:                        cout << "Invalid sorting order." << endl;
+branch  5 never executed
+    #####:  210:                    cout << "There are no cars to sort." << endl;
     %%%%%:  210-block  0
 call    0 never executed
 branch  1 never executed
@@ -953,10 +981,10 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  211:                        break;
+    #####:  211:                    break;
     %%%%%:  211-block  0
-        -:  212:                    }
-    #####:  213:                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByType));
+        -:  212:                }
+    #####:  213:                cout << "Input sorting order: ASC / DESC." <<endl;
     %%%%%:  213-block  0
 call    0 never executed
 branch  1 never executed
@@ -965,35 +993,35 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    %%%%%:  213-block  2
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-    %%%%%:  213-block  3
-call    9 never executed
-    $$$$$:  213-block  4
-call   10 never executed
-    $$$$$:  213-block  5
-    #####:  214:                }
-    %%%%%:  214-block  0
+        -:  214:                {
+    #####:  215:                    string ordering;
+    %%%%%:  215-block  0
+call    0 never executed
+    #####:  216:                    cin >> ordering;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  214-block  1
-call    3 never executed
-    #####:  215:                break;
-    %%%%%:  215-block  0
-    #####:  216:            case 10:
-    #####:  217:                if (this->carController.getAllCars().empty()) {
+    #####:  217:                    if (ordering != "ASC" && ordering != "DESC") {
     %%%%%:  217-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:  217-block  1
-call    3 never executed
+branch  3 never executed
 branch  4 never executed
-branch  5 never executed
-    #####:  218:                    cout << "There are no cars to sort." << endl;
+    %%%%%:  217-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  217-block  3
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  217-block  4
+    %%%%%:  217-block  5
+    %%%%%:  217-block  6
+branch 10 never executed
+branch 11 never executed
+    #####:  218:                        cout << "Invalid sorting order." << endl;
     %%%%%:  218-block  0
 call    0 never executed
 branch  1 never executed
@@ -1002,10 +1030,10 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  219:                    break;
+    #####:  219:                        break;
     %%%%%:  219-block  0
-        -:  220:                }
-    #####:  221:                cout << "Input sorting order: ASC / DESC." <<endl;
+        -:  220:                    }
+    #####:  221:                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByType));
     %%%%%:  221-block  0
 call    0 never executed
 branch  1 never executed
@@ -1014,35 +1042,35 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-        -:  222:                {
-    #####:  223:                    string ordering;
-    %%%%%:  223-block  0
-call    0 never executed
-    #####:  224:                    cin >> ordering;
+    %%%%%:  221-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  221-block  3
+call    9 never executed
+    $$$$$:  221-block  4
+call   10 never executed
+    $$$$$:  221-block  5
+    #####:  222:                }
+    %%%%%:  222-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  225:                    if (ordering != "ASC" && ordering != "DESC") {
+    $$$$$:  222-block  1
+call    3 never executed
+    #####:  223:                break;
+    %%%%%:  223-block  0
+    #####:  224:            case 10:
+    #####:  225:                if (this->carController.getAllCars().empty()) {
     %%%%%:  225-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:  225-block  1
-branch  3 never executed
+call    3 never executed
 branch  4 never executed
-    %%%%%:  225-block  2
-call    5 never executed
-branch  6 never executed
-branch  7 never executed
-    %%%%%:  225-block  3
-branch  8 never executed
-branch  9 never executed
-    %%%%%:  225-block  4
-    %%%%%:  225-block  5
-    %%%%%:  225-block  6
-branch 10 never executed
-branch 11 never executed
-    #####:  226:                        cout << "Invalid sorting order." << endl;
+branch  5 never executed
+    #####:  226:                    cout << "There are no cars to sort." << endl;
     %%%%%:  226-block  0
 call    0 never executed
 branch  1 never executed
@@ -1051,10 +1079,10 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  227:                        break;
+    #####:  227:                    break;
     %%%%%:  227-block  0
-        -:  228:                    }
-    #####:  229:                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByProducerAndModel));
+        -:  228:                }
+    #####:  229:                cout << "Input sorting order: ASC / DESC." <<endl;
     %%%%%:  229-block  0
 call    0 never executed
 branch  1 never executed
@@ -1063,27 +1091,35 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    %%%%%:  229-block  2
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-    %%%%%:  229-block  3
-call    9 never executed
-    $$$$$:  229-block  4
-call   10 never executed
-    $$$$$:  229-block  5
-    #####:  230:                }
-    %%%%%:  230-block  0
+        -:  230:                {
+    #####:  231:                    string ordering;
+    %%%%%:  231-block  0
+call    0 never executed
+    #####:  232:                    cin >> ordering;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  230-block  1
-call    3 never executed
-    #####:  231:                break;
-    %%%%%:  231-block  0
-    #####:  232:            case 11:
-        -:  233:                // Check if there are any cars
-    #####:  234:                if (carController.getAllCars().empty()) {
+    #####:  233:                    if (ordering != "ASC" && ordering != "DESC") {
+    %%%%%:  233-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  233-block  1
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  233-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  233-block  3
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  233-block  4
+    %%%%%:  233-block  5
+    %%%%%:  233-block  6
+branch 10 never executed
+branch 11 never executed
+    #####:  234:                        cout << "Invalid sorting order." << endl;
     %%%%%:  234-block  0
 call    0 never executed
 branch  1 never executed
@@ -1092,71 +1128,179 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  235:                    cout << "There are no cars." << endl;
+    #####:  235:                        break;
     %%%%%:  235-block  0
+        -:  236:                    }
+    #####:  237:                    displayCars(carController.sort(carController.getAllCars(), ordering, sortCarsByProducerAndModel));
+    %%%%%:  237-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  235-block  1
+    %%%%%:  237-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  236:                    break;
-    %%%%%:  236-block  0
-        -:  237:                }
-        -:  238:
-        -:  239:                // Create the report and display it
-    #####:  240:                typeReport = carController.createTypeReport();
-    %%%%%:  240-block  0
+    %%%%%:  237-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  237-block  3
+call    9 never executed
+    $$$$$:  237-block  4
+call   10 never executed
+    $$$$$:  237-block  5
+    #####:  238:                }
+    %%%%%:  238-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  240-block  1
+    $$$$$:  238-block  1
+call    3 never executed
+    #####:  239:                break;
+    %%%%%:  239-block  0
+    #####:  240:            case 11:
+        -:  241:                // Check if there are any cars
+    #####:  242:                if (carController.getAllCars().empty()) {
+    %%%%%:  242-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  242-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  243:                    cout << "There are no cars." << endl;
+    %%%%%:  243-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  243-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  244:                    break;
+    %%%%%:  244-block  0
+        -:  245:                }
+        -:  246:
+        -:  247:                // Create the report and display it
+    #####:  248:                typeReport = carController.createTypeReport();
+    %%%%%:  248-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  248-block  1
 call    3 never executed
 call    4 never executed
-    #####:  241:                displayTypeReport(typeReport);
+    #####:  249:                displayTypeReport(typeReport);
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  242:                break;
-    %%%%%:  242-block  0
-    #####:  243:            case 12:
-    #####:  244:                carsToWashMenu();
-    %%%%%:  244-block  0
+    #####:  250:                break;
+    %%%%%:  250-block  0
+    #####:  251:            case 12:
+    #####:  252:                carsToWashMenu();
+    %%%%%:  252-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  245:                break;
-    %%%%%:  245-block  0
-        1:  246:            case 13:
-        1:  247:                running = false;
-        1:  248:                cout << "Thank you for using this application." << endl;
-        1:  248-block  0
+    #####:  253:                break;
+    %%%%%:  253-block  0
+    #####:  254:            case 13:
+        -:  255:                try {
+    #####:  256:                    carController.undo();
+    %%%%%:  256-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  257:                    cout << "The previous action was undone successfully." << endl;
+    %%%%%:  257-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  257-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  258:                    // Save the data
+    #####:  259:                    carController.saveData();
+    %%%%%:  259-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  259-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  259-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:  259-block  3
+call    9 never executed
+    $$$$$:  259-block  4
+    $$$$$:  259-block  5
+call   10 never executed
+    $$$$$:  259-block  6
+    =====:  260:                } catch (UndoError& e) {
+    $$$$$:  260-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:  260-block  1
+call    2 never executed
+    =====:  261:                    cout << e.getErrorMessage() << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  261-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  261-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  261-block  2
+call    9 never executed
+    $$$$$:  261-block  3
+call   10 never executed
+    $$$$$:  261-block  4
+    =====:  262:                }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  262-block  0
+call    3 never executed
+    #####:  263:                break;
+    %%%%%:  263-block  0
+        1:  264:            case 14:
+        1:  265:                running = false;
+        1:  266:                cout << "Thank you for using this application." << endl;
+        1:  266-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:  248-block  1
+        1:  266-block  1
 call    3 returned 1
 branch  4 taken 1 (fallthrough)
 branch  5 taken 0 (throw)
-        1:  249:                break;
-        1:  249-block  0
-    #####:  250:            default:
-    #####:  251:                cout << "The input option is not valid." << endl;
-    %%%%%:  251-block  0
+        1:  267:                break;
+        1:  267-block  0
+    #####:  268:            default:
+    #####:  269:                cout << "The input option is not valid." << endl;
+    %%%%%:  269-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  251-block  1
+    %%%%%:  269-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  252:                break;
-    %%%%%:  252-block  0
-        -:  253:        }
-        -:  254:
-        1:  255:    }
-        1:  255-block  0
+    #####:  270:                break;
+    %%%%%:  270-block  0
+        -:  271:        }
+        -:  272:
+        1:  273:    }
+        1:  273-block  0
 call    0 returned 1
 call    1 returned 1
 call    2 returned 1
@@ -1164,208 +1308,133 @@ call    3 returned 1
 call    4 returned 1
 call    5 returned 1
 call    6 returned 1
-    $$$$$:  255-block  1
+    $$$$$:  273-block  1
 call    7 never executed
-    $$$$$:  255-block  2
+    $$$$$:  273-block  2
 call    8 never executed
-    $$$$$:  255-block  3
+    $$$$$:  273-block  3
 call    9 never executed
-    $$$$$:  255-block  4
+    $$$$$:  273-block  4
 call   10 never executed
-    $$$$$:  255-block  5
+    $$$$$:  273-block  5
 call   11 never executed
-    $$$$$:  255-block  6
+    $$$$$:  273-block  6
 call   12 never executed
-    $$$$$:  255-block  7
+    $$$$$:  273-block  7
 call   13 never executed
-        1:  256:}
-        1:  256-block  0
-        -:  257:
+        1:  274:}
+        1:  274-block  0
+        -:  275:
 function _ZN2UI11displayCarsERKSt6vectorI3CarSaIS1_EE called 0 returned 0% blocks executed 0%
-    #####:  258:void UI::displayCars(const std::vector<Car>& cars) {
-    #####:  259:    printf("+------------------------+-------------------+-------------------+-------------------+\n");
-    %%%%%:  259-block  0
+    #####:  276:void UI::displayCars(const std::vector<Car>& cars) {
+    #####:  277:    printf("+------------------------+-------------------+-------------------+-------------------+\n");
+    %%%%%:  277-block  0
 call    0 never executed
-    #####:  260:    printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", "Registration Number", "Type", "Model", "Producer");
+    #####:  278:    printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", "Registration Number", "Type", "Model", "Producer");
 call    0 never executed
-    #####:  261:    printf("+------------------------+-------------------+-------------------+-------------------+\n");
+    #####:  279:    printf("+------------------------+-------------------+-------------------+-------------------+\n");
 call    0 never executed
-        -:  262:
-    #####:  263:    for (auto& car: cars) {
+        -:  280:
+    #####:  281:    for (auto& car: cars) {
 call    0 never executed
 call    1 never executed
-    %%%%%:  263-block  0
+    %%%%%:  281-block  0
 call    2 never executed
-    %%%%%:  263-block  1
+    %%%%%:  281-block  1
 call    3 never executed
-    %%%%%:  263-block  2
+    %%%%%:  281-block  2
 call    4 never executed
 branch  5 never executed
 branch  6 never executed
-    #####:  264:        printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", car.getRegistrationNumber().c_str(), car.getType().c_str(), car.getModel().c_str(), car.getProducer().c_str());
+    #####:  282:        printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", car.getRegistrationNumber().c_str(), car.getType().c_str(), car.getModel().c_str(), car.getProducer().c_str());
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  264-block  0
+    %%%%%:  282-block  0
 call    3 never executed
 call    4 never executed
 branch  5 never executed
 branch  6 never executed
-    %%%%%:  264-block  1
+    %%%%%:  282-block  1
 call    7 never executed
 call    8 never executed
 branch  9 never executed
 branch 10 never executed
-    %%%%%:  264-block  2
+    %%%%%:  282-block  2
 call   11 never executed
 call   12 never executed
 branch 13 never executed
 branch 14 never executed
-    %%%%%:  264-block  3
+    %%%%%:  282-block  3
 call   15 never executed
 call   16 never executed
 branch 17 never executed
 branch 18 never executed
-    %%%%%:  264-block  4
+    %%%%%:  282-block  4
 call   19 never executed
 call   20 never executed
 call   21 never executed
 call   22 never executed
-    $$$$$:  264-block  5
+    $$$$$:  282-block  5
 call   23 never executed
-    $$$$$:  264-block  6
-    $$$$$:  264-block  7
+    $$$$$:  282-block  6
+    $$$$$:  282-block  7
 call   24 never executed
-    $$$$$:  264-block  8
-    $$$$$:  264-block  9
+    $$$$$:  282-block  8
+    $$$$$:  282-block  9
 call   25 never executed
-    $$$$$:  264-block 10
-    $$$$$:  264-block 11
+    $$$$$:  282-block 10
+    $$$$$:  282-block 11
 call   26 never executed
-    $$$$$:  264-block 12
-    #####:  265:        printf("+------------------------+-------------------+-------------------+-------------------+\n");
+    $$$$$:  282-block 12
+    #####:  283:        printf("+------------------------+-------------------+-------------------+-------------------+\n");
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  266:    }
-    #####:  267:    if (cars.size() == 0) {
-    %%%%%:  267-block  0
+        -:  284:    }
+    #####:  285:    if (cars.size() == 0) {
+    %%%%%:  285-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  268:        printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", " ", " ", " ", " ");
-    %%%%%:  268-block  0
-call    0 never executed
-    #####:  269:        printf("+------------------------+-------------------+-------------------+-------------------+\n");
-call    0 never executed
-        -:  270:
-        -:  271:    }
-    #####:  272:}
-    %%%%%:  272-block  0
-        -:  273:
-function _ZN2UI14carsToWashMenuEv called 0 returned 0% blocks executed 0%
-    #####:  274:void UI::carsToWashMenu() {
-    #####:  275:    cout << "This is the menu for managing the cars that will be washed." << endl;
-    %%%%%:  275-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  275-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  276:    cout << "In order to use it you have to choose one of the following options:\n";
-    %%%%%:  276-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-        -:  277:    cout << "  1. Add a car in the list by the registration number.\n"
-        -:  278:            "  2. Empty the list.\n"
-        -:  279:            "  3. Add random cars until the list has a certain number of cars.\n"
-        -:  280:            "  4. Export the list as a CSV or HTML.\n"
-    #####:  281:            "  5. Exit the menu.\n";
-    %%%%%:  281-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-        -:  282:    int option;
-        -:  283:    while (true) {
-    #####:  284:        cout << "Choose an option." << endl;
-    %%%%%:  284-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  284-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-        -:  285:        try {
-    #####:  286:            cin >> option;
+    #####:  286:        printf("|  %-20s  |  %-15s  |  %-15s  |  %-15s  |\n", " ", " ", " ", " ");
     %%%%%:  286-block  0
 call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  287:            if (option < 1 || option > 5) {
-    %%%%%:  287-block  0
-branch  0 never executed
-branch  1 never executed
-    %%%%%:  287-block  1
-branch  2 never executed
-branch  3 never executed
-    #####:  288:                throw std::exception();
-    %%%%%:  288-block  0
+    #####:  287:        printf("+------------------------+-------------------+-------------------+-------------------+\n");
 call    0 never executed
-call    1 never executed
-call    2 never executed
-        -:  289:            }
-    =====:  290:        } catch (...) {
-    $$$$$:  290-block  0
-    $$$$$:  290-block  1
-call    0 never executed
-    =====:  291:            cout << "The input option is not valid, please input a valid action." << std::endl;
+        -:  288:
+        -:  289:    }
+    #####:  290:}
+    %%%%%:  290-block  0
+        -:  291:
+function _ZN2UI14carsToWashMenuEv called 0 returned 0% blocks executed 0%
+    #####:  292:void UI::carsToWashMenu() {
+    #####:  293:    cout << "This is the menu for managing the cars that will be washed." << endl;
+    %%%%%:  293-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  291-block  0
+    %%%%%:  293-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    =====:  292:            continue;
-    $$$$$:  292-block  0
-    =====:  293:        }
-    $$$$$:  293-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    $$$$$:  293-block  1
-call    3 never executed
-    #####:  294:        string registrationNumber;
+    #####:  294:    cout << "In order to use it you have to choose one of the following options:\n";
     %%%%%:  294-block  0
 call    0 never executed
-        -:  295:        int totalNumberOfCars;
-    #####:  296:        string exportFormat;
-call    0 never executed
-    #####:  297:        string fileName;
-call    0 never executed
-        -:  298:
-    #####:  299:        switch (option) {
-branch  0 never executed
 branch  1 never executed
 branch  2 never executed
-branch  3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  300:            case 1:
-    #####:  301:                displayCars(carController.getAllCars());
-    %%%%%:  301-block  0
+        -:  295:    cout << "  1. Add a car in the list by the registration number.\n"
+        -:  296:            "  2. Empty the list.\n"
+        -:  297:            "  3. Add random cars until the list has a certain number of cars.\n"
+        -:  298:            "  4. Export the list as a CSV or HTML.\n"
+    #####:  299:            "  5. Exit the menu.\n";
+    %%%%%:  299-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  301-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  302:                cout << "Input the registration number of the car." << endl;
+        -:  300:    int option;
+        -:  301:    while (true) {
+    #####:  302:        cout << "Choose an option." << endl;
     %%%%%:  302-block  0
 call    0 never executed
 branch  1 never executed
@@ -1374,250 +1443,237 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  303:                cin >> registrationNumber;
-    %%%%%:  303-block  0
+        -:  303:        try {
+    #####:  304:            cin >> option;
+    %%%%%:  304-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  304:                try {
-    #####:  305:                    carsToWashController.addCarToWashRepository(registrationNumber);
+    #####:  305:            if (option < 1 || option > 5) {
     %%%%%:  305-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:  306:                    cout << "The car was added to the list successfully." << endl;
-    %%%%%:  306-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  306-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    =====:  307:                } catch (CarNotFoundError& error) {
-    $$$$$:  307-block  0
 branch  0 never executed
 branch  1 never executed
+    %%%%%:  305-block  1
 branch  2 never executed
-    $$$$$:  307-block  1
-call    3 never executed
-    =====:  308:                    cout << error.getErrorMessage() << endl;
+branch  3 never executed
+    #####:  306:                throw std::exception();
+    %%%%%:  306-block  0
 call    0 never executed
-branch  1 never executed
-branch  2 never executed
+call    1 never executed
+call    2 never executed
+        -:  307:            }
+    =====:  308:        } catch (...) {
     $$$$$:  308-block  0
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
     $$$$$:  308-block  1
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-    $$$$$:  308-block  2
-call    9 never executed
-    $$$$$:  308-block  3
-call   10 never executed
-    $$$$$:  308-block  4
-    =====:  309:                } catch (DuplicateDataError& error) {
+call    0 never executed
+    =====:  309:            cout << "The input option is not valid, please input a valid action." << std::endl;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     $$$$$:  309-block  0
 call    3 never executed
-    $$$$$:  309-block  1
-call    4 never executed
-    =====:  310:                    cout << error.getErrorMessage() << endl;
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  310:            continue;
     $$$$$:  310-block  0
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    $$$$$:  310-block  1
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-    $$$$$:  310-block  2
-call    9 never executed
-    $$$$$:  310-block  3
-call   10 never executed
-    $$$$$:  310-block  4
-    =====:  311:                }
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+    =====:  311:        }
     $$$$$:  311-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  311-block  1
 call    3 never executed
-    #####:  312:                break;
+    #####:  312:        string registrationNumber;
     %%%%%:  312-block  0
-    #####:  313:            case 2:
-    #####:  314:                carsToWashController.emptyRepository();
-    %%%%%:  314-block  0
+call    0 never executed
+        -:  313:        int totalNumberOfCars;
+    #####:  314:        string exportFormat;
+call    0 never executed
+    #####:  315:        string fileName;
+call    0 never executed
+        -:  316:
+    #####:  317:        switch (option) {
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  318:            case 1:
+    #####:  319:                displayCars(carController.getAllCars());
+    %%%%%:  319-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  315:                cout << "The list was emptied successfully." << endl;
-    %%%%%:  315-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  315-block  1
+    %%%%%:  319-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  316:                break;
-    %%%%%:  316-block  0
-    #####:  317:            case 3:
-    #####:  318:                cout << "Input the total number of cars that will be in the list." << endl;
-    %%%%%:  318-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  318-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-        -:  319:                try {
-    #####:  320:                    cin >> totalNumberOfCars;
+    #####:  320:                cout << "Input the registration number of the car." << endl;
     %%%%%:  320-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    =====:  321:                } catch (...) {
-    $$$$$:  321-block  0
-    $$$$$:  321-block  1
-call    0 never executed
-    =====:  322:                    cout << "The input is not an integer." << endl;
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    $$$$$:  322-block  0
+    %%%%%:  320-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    =====:  323:                    break;
-    $$$$$:  323-block  0
-    =====:  324:                }
-    $$$$$:  324-block  0
+    #####:  321:                cin >> registrationNumber;
+    %%%%%:  321-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  324-block  1
-call    3 never executed
-        -:  325:
-    #####:  326:                if (totalNumberOfCars < carsToWashController.GetAllCars().size()) {
-    %%%%%:  326-block  0
+        -:  322:                try {
+    #####:  323:                    carsToWashController.addCarToWashRepository(registrationNumber);
+    %%%%%:  323-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  326-block  1
+    #####:  324:                    cout << "The car was added to the list successfully." << endl;
+    %%%%%:  324-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  324-block  1
 call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  325:                } catch (CarNotFoundError& error) {
+    $$$$$:  325-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  325-block  1
+call    3 never executed
+    =====:  326:                    cout << error.getErrorMessage() << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  326-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  326-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  326-block  2
+call    9 never executed
+    $$$$$:  326-block  3
+call   10 never executed
+    $$$$$:  326-block  4
+    =====:  327:                } catch (DuplicateDataError& error) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  327-block  0
+call    3 never executed
+    $$$$$:  327-block  1
 call    4 never executed
-branch  5 never executed
-branch  6 never executed
-    #####:  327:                    cout << "The list already has more cars than the input number." << endl;
-    %%%%%:  327-block  0
+    =====:  328:                    cout << error.getErrorMessage() << endl;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  327-block  1
+    $$$$$:  328-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  328:                    break;
-    %%%%%:  328-block  0
-        -:  329:                }
-        -:  330:
-    #####:  331:                if (totalNumberOfCars > carController.getAllCars().size()) {
-    %%%%%:  331-block  0
+    $$$$$:  328-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  328-block  2
+call    9 never executed
+    $$$$$:  328-block  3
+call   10 never executed
+    $$$$$:  328-block  4
+    =====:  329:                }
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  331-block  1
+    $$$$$:  329-block  0
 call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    #####:  332:                    cout << "There are not enough cars to add in the list." << endl;
+    #####:  330:                break;
+    %%%%%:  330-block  0
+    #####:  331:            case 2:
+    #####:  332:                carsToWashController.emptyRepository();
     %%%%%:  332-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  332-block  1
+    #####:  333:                cout << "The list was emptied successfully." << endl;
+    %%%%%:  333-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  333-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  333:                    break;
-    %%%%%:  333-block  0
-        -:  334:                }
-        -:  335:
-    #####:  336:                carsToWashController.addRandomCars(totalNumberOfCars);
+    #####:  334:                break;
+    %%%%%:  334-block  0
+    #####:  335:            case 3:
+    #####:  336:                cout << "Input the total number of cars that will be in the list." << endl;
     %%%%%:  336-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  337:                cout << "The cars were added successfully." << endl;
-    %%%%%:  337-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  337-block  1
+    %%%%%:  336-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  338:                break;
+        -:  337:                try {
+    #####:  338:                    cin >> totalNumberOfCars;
     %%%%%:  338-block  0
-    #####:  339:            case 4:
-        -:  340:                // Get the export format
-    #####:  341:                cout << "Choose the export format between CSV and HTML." << endl;
-    %%%%%:  341-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  341-block  1
+    =====:  339:                } catch (...) {
+    $$$$$:  339-block  0
+    $$$$$:  339-block  1
+call    0 never executed
+    =====:  340:                    cout << "The input is not an integer." << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  340-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  342:                cin >> exportFormat;
-    %%%%%:  342-block  0
+    =====:  341:                    break;
+    $$$$$:  341-block  0
+    =====:  342:                }
+    $$$$$:  342-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  343:                if (exportFormat != "CSV" && exportFormat != "HTML") {
-    %%%%%:  343-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  343-block  1
-branch  3 never executed
-branch  4 never executed
-    %%%%%:  343-block  2
-call    5 never executed
-branch  6 never executed
-branch  7 never executed
-    %%%%%:  343-block  3
-branch  8 never executed
-branch  9 never executed
-    %%%%%:  343-block  4
-    %%%%%:  343-block  5
-    %%%%%:  343-block  6
-branch 10 never executed
-branch 11 never executed
-    #####:  344:                    cout << "Invalid export format." << endl;
+    $$$$$:  342-block  1
+call    3 never executed
+        -:  343:
+    #####:  344:                if (totalNumberOfCars < carsToWashController.GetAllCars().size()) {
     %%%%%:  344-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
     %%%%%:  344-block  1
 call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  345:                    cout << "The list already has more cars than the input number." << endl;
+    %%%%%:  345-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  345-block  1
+call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  345:                    break;
-    %%%%%:  345-block  0
-        -:  346:                }
-        -:  347:
-        -:  348:                // Get the name of the file
-    #####:  349:                cout << "Input the name of the file that will be created." << endl;
+    #####:  346:                    break;
+    %%%%%:  346-block  0
+        -:  347:                }
+        -:  348:
+    #####:  349:                if (totalNumberOfCars > carController.getAllCars().size()) {
     %%%%%:  349-block  0
 call    0 never executed
 branch  1 never executed
@@ -1626,154 +1682,242 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    #####:  350:                cin >> fileName;
+    #####:  350:                    cout << "There are not enough cars to add in the list." << endl;
     %%%%%:  350-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  351:
-        -:  352:                // Export the cars
-        -:  353:                try {
-    #####:  354:                    carsToWashController.exportCarsToWash(exportFormat, fileName);
+    %%%%%:  350-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  351:                    break;
+    %%%%%:  351-block  0
+        -:  352:                }
+        -:  353:
+    #####:  354:                carsToWashController.addRandomCars(totalNumberOfCars);
     %%%%%:  354-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  354-block  1
-call    3 never executed
-branch  4 never executed
-branch  5 never executed
-    %%%%%:  354-block  2
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-    %%%%%:  354-block  3
-call    9 never executed
-call   10 never executed
-    $$$$$:  354-block  4
-call   11 never executed
-    $$$$$:  354-block  5
-    $$$$$:  354-block  6
-call   12 never executed
-    $$$$$:  354-block  7
-    #####:  355:                    cout << "The cars were exported successfully." << endl;
+    #####:  355:                cout << "The cars were added successfully." << endl;
+    %%%%%:  355-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  355-block  0
+    %%%%%:  355-block  1
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    =====:  356:                } catch (InvalidExportFormatError& error) {
-    $$$$$:  356-block  0
+    #####:  356:                break;
+    %%%%%:  356-block  0
+    #####:  357:            case 4:
+        -:  358:                // Get the export format
+    #####:  359:                cout << "Choose the export format between CSV and HTML." << endl;
+    %%%%%:  359-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  359-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  360:                cin >> exportFormat;
+    %%%%%:  360-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  361:                if (exportFormat != "CSV" && exportFormat != "HTML") {
+    %%%%%:  361-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  361-block  1
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  361-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  361-block  3
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  361-block  4
+    %%%%%:  361-block  5
+    %%%%%:  361-block  6
+branch 10 never executed
+branch 11 never executed
+    #####:  362:                    cout << "Invalid export format." << endl;
+    %%%%%:  362-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  362-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  363:                    break;
+    %%%%%:  363-block  0
+        -:  364:                }
+        -:  365:
+        -:  366:                // Get the name of the file
+    #####:  367:                cout << "Input the name of the file that will be created." << endl;
+    %%%%%:  367-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  367-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  368:                cin >> fileName;
+    %%%%%:  368-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  369:
+        -:  370:                // Export the cars
+        -:  371:                try {
+    #####:  372:                    carsToWashController.exportCarsToWash(exportFormat, fileName);
+    %%%%%:  372-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  372-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  372-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  372-block  3
+call    9 never executed
+call   10 never executed
+    $$$$$:  372-block  4
+call   11 never executed
+    $$$$$:  372-block  5
+    $$$$$:  372-block  6
+call   12 never executed
+    $$$$$:  372-block  7
+    #####:  373:                    cout << "The cars were exported successfully." << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  373-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  374:                } catch (InvalidExportFormatError& error) {
+    $$$$$:  374-block  0
 branch  0 never executed
 branch  1 never executed
-    $$$$$:  356-block  1
+    $$$$$:  374-block  1
 call    2 never executed
-    =====:  357:                    cout << error.getErrorMessage() << endl;
+    =====:  375:                    cout << error.getErrorMessage() << endl;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  357-block  0
+    $$$$$:  375-block  0
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    $$$$$:  357-block  1
+    $$$$$:  375-block  1
 call    6 never executed
 branch  7 never executed
 branch  8 never executed
-    $$$$$:  357-block  2
+    $$$$$:  375-block  2
 call    9 never executed
-    $$$$$:  357-block  3
+    $$$$$:  375-block  3
 call   10 never executed
-    $$$$$:  357-block  4
-    =====:  358:                }
+    $$$$$:  375-block  4
+    =====:  376:                }
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    $$$$$:  358-block  0
+    $$$$$:  376-block  0
 call    3 never executed
-    #####:  359:                break;
-    %%%%%:  359-block  0
-    #####:  360:            case 5:
-    #####:  361:                return;
-    %%%%%:  361-block  0
-    %%%%%:  361-block  1
-        -:  362:                break;
-        -:  363:        }
-    #####:  364:    }
-    %%%%%:  364-block  0
-    %%%%%:  364-block  1
+    #####:  377:                break;
+    %%%%%:  377-block  0
+    #####:  378:            case 5:
+    #####:  379:                return;
+    %%%%%:  379-block  0
+    %%%%%:  379-block  1
+        -:  380:                break;
+        -:  381:        }
+    #####:  382:    }
+    %%%%%:  382-block  0
+    %%%%%:  382-block  1
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  364-block  2
-    %%%%%:  364-block  3
+    %%%%%:  382-block  2
+    %%%%%:  382-block  3
 call    3 never executed
 branch  4 never executed
 branch  5 never executed
-    %%%%%:  364-block  4
-    %%%%%:  364-block  5
+    %%%%%:  382-block  4
+    %%%%%:  382-block  5
 call    6 never executed
 branch  7 never executed
 branch  8 never executed
-    %%%%%:  364-block  6
-    $$$$$:  364-block  7
+    %%%%%:  382-block  6
+    $$$$$:  382-block  7
 call    9 never executed
-    $$$$$:  364-block  8
+    $$$$$:  382-block  8
 call   10 never executed
-    $$$$$:  364-block  9
+    $$$$$:  382-block  9
 call   11 never executed
-        -:  365:
-        -:  366:
-        -:  367:}
-        -:  368:
+        -:  383:
+        -:  384:
+        -:  385:}
+        -:  386:
 function _ZN2UI17displayTypeReportERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOSt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEE called 0 returned 0% blocks executed 0%
-    #####:  369:void UI::displayTypeReport(const std::unordered_map<std::string, TypeDTO> &typeReport) {
-    #####:  370:    printf("+------------------------+-------------------+\n");
-    %%%%%:  370-block  0
+    #####:  387:void UI::displayTypeReport(const std::unordered_map<std::string, TypeDTO> &typeReport) {
+    #####:  388:    printf("+------------------------+-------------------+\n");
+    %%%%%:  388-block  0
 call    0 never executed
-    #####:  371:    printf("|  %-20s  |  %-15s  |\n", "Type", "Count");
+    #####:  389:    printf("|  %-20s  |  %-15s  |\n", "Type", "Count");
 call    0 never executed
-    #####:  372:    printf("+------------------------+-------------------+\n");
+    #####:  390:    printf("+------------------------+-------------------+\n");
 call    0 never executed
-        -:  373:
-    #####:  374:    for (auto& pair: typeReport) {
+        -:  391:
+    #####:  392:    for (auto& pair: typeReport) {
 call    0 never executed
 call    1 never executed
-    %%%%%:  374-block  0
+    %%%%%:  392-block  0
 call    2 never executed
-    %%%%%:  374-block  1
+    %%%%%:  392-block  1
 call    3 never executed
-    %%%%%:  374-block  2
+    %%%%%:  392-block  2
 call    4 never executed
 branch  5 never executed
 branch  6 never executed
-    #####:  375:        printf("|  %-20s  |  %-15d  |\n", pair.first.c_str(), pair.second.getCount());
+    #####:  393:        printf("|  %-20s  |  %-15d  |\n", pair.first.c_str(), pair.second.getCount());
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    %%%%%:  375-block  0
+    %%%%%:  393-block  0
 call    3 never executed
 call    4 never executed
 branch  5 never executed
 branch  6 never executed
-    #####:  376:        printf("+------------------------+-------------------+\n");
-    %%%%%:  376-block  0
+    #####:  394:        printf("+------------------------+-------------------+\n");
+    %%%%%:  394-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-        -:  377:    }
-    #####:  378:    if (typeReport.empty()) {
-    %%%%%:  378-block  0
+        -:  395:    }
+    #####:  396:    if (typeReport.empty()) {
+    %%%%%:  396-block  0
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
-    #####:  379:        printf("|  %-20s  |  %-15s  |\n", " ", " ");
-    %%%%%:  379-block  0
+    #####:  397:        printf("|  %-20s  |  %-15s  |\n", " ", " ");
+    %%%%%:  397-block  0
 call    0 never executed
-    #####:  380:        printf("+------------------------+-------------------+\n");
+    #####:  398:        printf("+------------------------+-------------------+\n");
 call    0 never executed
-        -:  381:    }
-    #####:  382:}
-    %%%%%:  382-block  0
+        -:  399:    }
+    #####:  400:}
+    %%%%%:  400-block  0

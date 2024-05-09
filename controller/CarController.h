@@ -1,22 +1,30 @@
 #ifndef CPPLAB_CARCONTROLLER_H
 #define CPPLAB_CARCONTROLLER_H
 
-#include <vector>
 #include <unordered_map>
 #include "../domain/Car.h"
-#include "../repository/CarRepository.h"
 #include "../domain/TypeDTO.h"
+#include "../repository/CarRepository.h"
+#include "../undo/Undo.h"
+
+#include <memory>
+
 
 class CarController {
     private:
-        CarRepository& carRepository;
+        AbstractCarRepo& carRepository;
+        std::vector<std::unique_ptr<Undo>> actionsToUndo;
     public:
+        // Delete the copy constructor and the copy assignment operator in order for the unique_ptr to not break the app
+        CarController(const CarController&) = delete;
+        CarController& operator=(const CarController&) = delete;
+
         /*
-         * The constructor of the CarController class.
+         * The constructor of the CarRepository class.
          * Preconditions: carRepository: an instance of the CarRepository class
          * Post-conditions: -
          */
-        explicit CarController(CarRepository& carRepository);
+        explicit CarController(AbstractCarRepo& carRepository);
 
         /*
          * Returns the car with the received registrationNumber.
@@ -84,6 +92,28 @@ class CarController {
          * Post-conditions: an unordered_map with the type as the key and the number of appearances as the value
          */
         std::unordered_map<std::string, TypeDTO> createTypeReport();
+
+        /*
+         * Saves the data from the repository to data.txt.
+         * Preconditions: filename: a string
+         * Post-conditions: -
+         */
+        void saveData(std::string filename = "data.txt");
+
+        /*
+         * Loads the data from data.txt to the repository.
+         * Preconditions: filename: a string
+         * Post-conditions: -
+         */
+        void loadData(std::string filename = "data.txt");
+
+        /*
+         * Undoes the last action.
+         * Preconditions: -
+         * Post-conditions: -
+         * Raises: There is no action to undo.
+         */
+        void undo();
 };
 
 #endif //CPPLAB_CARCONTROLLER_H

@@ -142,10 +142,22 @@
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/misc/Utils.h">
 			<Option target="cpplab"/>
 		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/repository/AbstractCarRepo.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/repository/AbstractCarRepo.h">
+			<Option target="cpplab"/>
+		</Unit>
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/repository/CarRepository.cpp">
 			<Option target="cpplab"/>
 		</Unit>
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/repository/CarRepository.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/repository/ProbabilityRepo.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/repository/ProbabilityRepo.h">
 			<Option target="cpplab"/>
 		</Unit>
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarControllerTests.cpp">
@@ -172,10 +184,10 @@
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarValidatorsTests.h">
 			<Option target="cpplab"/>
 		</Unit>
-		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarstToWashControllerTests.cpp">
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarsToWashControllerTests.cpp">
 			<Option target="cpplab"/>
 		</Unit>
-		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarstToWashControllerTests.h">
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/CarsToWashControllerTests.h">
 			<Option target="cpplab"/>
 		</Unit>
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/DynamicArrayTests.cpp">
@@ -208,6 +220,12 @@
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/TypeDTOTests.h">
 			<Option target="cpplab"/>
 		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/UndoTests.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/UndoTests.h">
+			<Option target="cpplab"/>
+		</Unit>
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/test/tests.cpp">
 			<Option target="cpplab"/>
 		</Unit>
@@ -218,6 +236,12 @@
 			<Option target="cpplab"/>
 		</Unit>
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/ui/UI.h">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/undo/Undo.cpp">
+			<Option target="cpplab"/>
+		</Unit>
+		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/undo/Undo.h">
 			<Option target="cpplab"/>
 		</Unit>
 		<Unit filename="/home/sebifp/devStuff/repos/OOP-CPP/CMakeLists.txt">

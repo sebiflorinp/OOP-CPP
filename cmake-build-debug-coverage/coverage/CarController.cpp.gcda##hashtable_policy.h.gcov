@@ -94,27 +94,27 @@
         -:   90:  {
         -:   91:    template<typename _Tp>
         -:   92:      auto
-        7:   93:      operator()(_Tp&& __x) const noexcept
+       14:   93:      operator()(_Tp&& __x) const noexcept
         -:   94:      -> decltype(std::get<0>(std::forward<_Tp>(__x)))
-        7:   95:      { return std::get<0>(std::forward<_Tp>(__x)); }
+       14:   95:      { return std::get<0>(std::forward<_Tp>(__x)); }
 ------------------
 _ZNKSt8__detail10_Select1stclIRKSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEEEDTcl3getILi0EEcl7forwardIT_Efp_EEEOSE_:
-function _ZNKSt8__detail10_Select1stclIRKSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEEEDTcl3getILi0EEcl7forwardIT_Efp_EEEOSE_ called 6 returned 100% blocks executed 100%
-        6:   93:      operator()(_Tp&& __x) const noexcept
+function _ZNKSt8__detail10_Select1stclIRKSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEEEDTcl3getILi0EEcl7forwardIT_Efp_EEEOSE_ called 12 returned 100% blocks executed 100%
+       12:   93:      operator()(_Tp&& __x) const noexcept
         -:   94:      -> decltype(std::get<0>(std::forward<_Tp>(__x)))
-        6:   95:      { return std::get<0>(std::forward<_Tp>(__x)); }
-        6:   95-block  0
-call    0 returned 6
-call    1 returned 6
+       12:   95:      { return std::get<0>(std::forward<_Tp>(__x)); }
+       12:   95-block  0
+call    0 returned 12
+call    1 returned 12
 ------------------
 _ZNKSt8__detail10_Select1stclIRKSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEEEDTcl3getILi0EEcl7forwardIT_Efp_EEEOSD_:
-function _ZNKSt8__detail10_Select1stclIRKSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEEEDTcl3getILi0EEcl7forwardIT_Efp_EEEOSD_ called 1 returned 100% blocks executed 100%
-        1:   93:      operator()(_Tp&& __x) const noexcept
+function _ZNKSt8__detail10_Select1stclIRKSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEEEDTcl3getILi0EEcl7forwardIT_Efp_EEEOSD_ called 2 returned 100% blocks executed 100%
+        2:   93:      operator()(_Tp&& __x) const noexcept
         -:   94:      -> decltype(std::get<0>(std::forward<_Tp>(__x)))
-        1:   95:      { return std::get<0>(std::forward<_Tp>(__x)); }
-        1:   95-block  0
-call    0 returned 1
-call    1 returned 1
+        2:   95:      { return std::get<0>(std::forward<_Tp>(__x)); }
+        2:   95-block  0
+call    0 returned 2
+call    1 returned 2
 ------------------
         -:   96:  };
         -:   97:
@@ -239,8 +239,8 @@ call    1 returned 1
         -:  216:  {
         -:  217:    _Hash_node_base* _M_nxt;
         -:  218:
-function _ZNSt8__detail15_Hash_node_baseC2Ev called 9 returned 100% blocks executed 100%
-        9:  219:    _Hash_node_base() noexcept : _M_nxt() { }
+function _ZNSt8__detail15_Hash_node_baseC2Ev called 17 returned 100% blocks executed 100%
+       17:  219:    _Hash_node_base() noexcept : _M_nxt() { }
         -:  220:
         -:  221:    _Hash_node_base(_Hash_node_base* __next) noexcept : _M_nxt(__next) { }
         -:  222:  };
@@ -258,79 +258,79 @@ function _ZNSt8__detail15_Hash_node_baseC2Ev called 9 returned 100% blocks execu
         -:  234:      __gnu_cxx::__aligned_buffer<_Value> _M_storage;
         -:  235:
         -:  236:      _Value*
-       28:  237:      _M_valptr() noexcept
-       28:  238:      { return _M_storage._M_ptr(); }
+       56:  237:      _M_valptr() noexcept
+       56:  238:      { return _M_storage._M_ptr(); }
 ------------------
 _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE9_M_valptrEv:
-function _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE9_M_valptrEv called 15 returned 100% blocks executed 100%
-       15:  237:      _M_valptr() noexcept
-       15:  238:      { return _M_storage._M_ptr(); }
-       15:  238-block  0
-call    0 returned 15
+function _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE9_M_valptrEv called 30 returned 100% blocks executed 100%
+       30:  237:      _M_valptr() noexcept
+       30:  238:      { return _M_storage._M_ptr(); }
+       30:  238-block  0
+call    0 returned 30
 ------------------
 _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE9_M_valptrEv:
-function _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE9_M_valptrEv called 13 returned 100% blocks executed 100%
-       13:  237:      _M_valptr() noexcept
-       13:  238:      { return _M_storage._M_ptr(); }
-       13:  238-block  0
-call    0 returned 13
+function _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE9_M_valptrEv called 26 returned 100% blocks executed 100%
+       26:  237:      _M_valptr() noexcept
+       26:  238:      { return _M_storage._M_ptr(); }
+       26:  238-block  0
+call    0 returned 26
 ------------------
         -:  239:
         -:  240:      const _Value*
-        7:  241:      _M_valptr() const noexcept
-        7:  242:      { return _M_storage._M_ptr(); }
+       14:  241:      _M_valptr() const noexcept
+       14:  242:      { return _M_storage._M_ptr(); }
 ------------------
 _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE9_M_valptrEv:
-function _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE9_M_valptrEv called 6 returned 100% blocks executed 100%
-        6:  241:      _M_valptr() const noexcept
-        6:  242:      { return _M_storage._M_ptr(); }
-        6:  242-block  0
-call    0 returned 6
+function _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE9_M_valptrEv called 12 returned 100% blocks executed 100%
+       12:  241:      _M_valptr() const noexcept
+       12:  242:      { return _M_storage._M_ptr(); }
+       12:  242-block  0
+call    0 returned 12
 ------------------
 _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE9_M_valptrEv:
-function _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE9_M_valptrEv called 1 returned 100% blocks executed 100%
-        1:  241:      _M_valptr() const noexcept
-        1:  242:      { return _M_storage._M_ptr(); }
-        1:  242-block  0
-call    0 returned 1
+function _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE9_M_valptrEv called 2 returned 100% blocks executed 100%
+        2:  241:      _M_valptr() const noexcept
+        2:  242:      { return _M_storage._M_ptr(); }
+        2:  242-block  0
+call    0 returned 2
 ------------------
         -:  243:
         -:  244:      _Value&
-       10:  245:      _M_v() noexcept
-       10:  246:      { return *_M_valptr(); }
+       20:  245:      _M_v() noexcept
+       20:  246:      { return *_M_valptr(); }
 ------------------
 _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE4_M_vEv:
-function _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE4_M_vEv called 6 returned 100% blocks executed 100%
-        6:  245:      _M_v() noexcept
-        6:  246:      { return *_M_valptr(); }
-        6:  246-block  0
-call    0 returned 6
+function _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE4_M_vEv called 12 returned 100% blocks executed 100%
+       12:  245:      _M_v() noexcept
+       12:  246:      { return *_M_valptr(); }
+       12:  246-block  0
+call    0 returned 12
 ------------------
 _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE4_M_vEv:
-function _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE4_M_vEv called 4 returned 100% blocks executed 100%
-        4:  245:      _M_v() noexcept
-        4:  246:      { return *_M_valptr(); }
-        4:  246-block  0
-call    0 returned 4
+function _ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE4_M_vEv called 8 returned 100% blocks executed 100%
+        8:  245:      _M_v() noexcept
+        8:  246:      { return *_M_valptr(); }
+        8:  246-block  0
+call    0 returned 8
 ------------------
         -:  247:
         -:  248:      const _Value&
-        7:  249:      _M_v() const noexcept
-        7:  250:      { return *_M_valptr(); }
+       14:  249:      _M_v() const noexcept
+       14:  250:      { return *_M_valptr(); }
 ------------------
 _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE4_M_vEv:
-function _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE4_M_vEv called 6 returned 100% blocks executed 100%
-        6:  249:      _M_v() const noexcept
-        6:  250:      { return *_M_valptr(); }
-        6:  250-block  0
-call    0 returned 6
+function _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOEE4_M_vEv called 12 returned 100% blocks executed 100%
+       12:  249:      _M_v() const noexcept
+       12:  250:      { return *_M_valptr(); }
+       12:  250-block  0
+call    0 returned 12
 ------------------
 _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE4_M_vEv:
-function _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE4_M_vEv called 1 returned 100% blocks executed 100%
-        1:  249:      _M_v() const noexcept
-        1:  250:      { return *_M_valptr(); }
-        1:  250-block  0
-call    0 returned 1
+function _ZNKSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEE4_M_vEv called 2 returned 100% blocks executed 100%
+        2:  249:      _M_v() const noexcept
+        2:  250:      { return *_M_valptr(); }
+        2:  250-block  0
+call    0 returned 2
 ------------------
         -:  251:    };
         -:  252:
@@ -363,20 +363,20 @@ call    0 returned 1
         -:  279:    , _Hash_node_value<_Value, _Cache_hash_code>
         -:  280:    {
         -:  281:      _Hash_node*
-       13:  282:      _M_next() const noexcept
-       13:  283:      { return static_cast<_Hash_node*>(this->_M_nxt); }
+       26:  282:      _M_next() const noexcept
+       26:  283:      { return static_cast<_Hash_node*>(this->_M_nxt); }
 ------------------
 _ZNKSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EE7_M_nextEv:
-function _ZNKSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EE7_M_nextEv called 5 returned 100% blocks executed 100%
-        5:  282:      _M_next() const noexcept
-        5:  283:      { return static_cast<_Hash_node*>(this->_M_nxt); }
-        5:  283-block  0
+function _ZNKSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EE7_M_nextEv called 10 returned 100% blocks executed 100%
+       10:  282:      _M_next() const noexcept
+       10:  283:      { return static_cast<_Hash_node*>(this->_M_nxt); }
+       10:  283-block  0
 ------------------
 _ZNKSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EE7_M_nextEv:
-function _ZNKSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EE7_M_nextEv called 8 returned 100% blocks executed 100%
-        8:  282:      _M_next() const noexcept
-        8:  283:      { return static_cast<_Hash_node*>(this->_M_nxt); }
-        8:  283-block  0
+function _ZNKSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EE7_M_nextEv called 16 returned 100% blocks executed 100%
+       16:  282:      _M_next() const noexcept
+       16:  283:      { return static_cast<_Hash_node*>(this->_M_nxt); }
+       16:  283-block  0
 ------------------
         -:  284:    };
         -:  285:
@@ -389,26 +389,26 @@ function _ZNKSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11cha
         -:  292:      __node_type* _M_cur;
         -:  293:
         -:  294:      _Node_iterator_base() : _M_cur(nullptr) { }
-        8:  295:      _Node_iterator_base(__node_type* __p) noexcept
-        8:  296:      : _M_cur(__p) { }
+       16:  295:      _Node_iterator_base(__node_type* __p) noexcept
+       16:  296:      : _M_cur(__p) { }
 ------------------
 _ZNSt8__detail19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEC2EPNS_10_Hash_nodeISA_Lb1EEE:
-function _ZNSt8__detail19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEC2EPNS_10_Hash_nodeISA_Lb1EEE called 3 returned 100% blocks executed 100%
-        3:  295:      _Node_iterator_base(__node_type* __p) noexcept
-        3:  296:      : _M_cur(__p) { }
+function _ZNSt8__detail19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEC2EPNS_10_Hash_nodeISA_Lb1EEE called 6 returned 100% blocks executed 100%
+        6:  295:      _Node_iterator_base(__node_type* __p) noexcept
+        6:  296:      : _M_cur(__p) { }
 ------------------
 _ZNSt8__detail19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEC2EPNS_10_Hash_nodeIS9_Lb1EEE:
-function _ZNSt8__detail19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEC2EPNS_10_Hash_nodeIS9_Lb1EEE called 5 returned 100% blocks executed 100%
-        5:  295:      _Node_iterator_base(__node_type* __p) noexcept
-        5:  296:      : _M_cur(__p) { }
+function _ZNSt8__detail19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEC2EPNS_10_Hash_nodeIS9_Lb1EEE called 10 returned 100% blocks executed 100%
+       10:  295:      _Node_iterator_base(__node_type* __p) noexcept
+       10:  296:      : _M_cur(__p) { }
 ------------------
         -:  297:
         -:  298:      void
-function _ZNSt8__detail19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EE7_M_incrEv called 3 returned 100% blocks executed 100%
-        3:  299:      _M_incr() noexcept
-        3:  300:      { _M_cur = _M_cur->_M_next(); }
-        3:  300-block  0
-call    0 returned 3
+function _ZNSt8__detail19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EE7_M_incrEv called 6 returned 100% blocks executed 100%
+        6:  299:      _M_incr() noexcept
+        6:  300:      { _M_cur = _M_cur->_M_next(); }
+        6:  300-block  0
+call    0 returned 6
         -:  301:
         -:  302:      friend bool
         -:  303:      operator==(const _Node_iterator_base& __x, const _Node_iterator_base& __y)
@@ -417,11 +417,11 @@ call    0 returned 3
         -:  306:
         -:  307:#if __cpp_impl_three_way_comparison < 201907L
         -:  308:      friend bool
-function _ZNSt8__detailneERKNS_19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEESC_ called 4 returned 100% blocks executed 100%
-        4:  309:      operator!=(const _Node_iterator_base& __x, const _Node_iterator_base& __y)
+function _ZNSt8__detailneERKNS_19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEESC_ called 8 returned 100% blocks executed 100%
+        8:  309:      operator!=(const _Node_iterator_base& __x, const _Node_iterator_base& __y)
         -:  310:      noexcept
-        4:  311:      { return __x._M_cur != __y._M_cur; }
-        4:  311-block  0
+        8:  311:      { return __x._M_cur != __y._M_cur; }
+        8:  311-block  0
         -:  312:#endif
         -:  313:    };
         -:  314:
@@ -448,58 +448,58 @@ function _ZNSt8__detailneERKNS_19_Node_iterator_baseISt4pairIKNSt7__cxx1112basic
         -:  335:      _Node_iterator() = default;
         -:  336:
         -:  337:      explicit
-        8:  338:      _Node_iterator(__node_type* __p) noexcept
-        8:  339:      : __base_type(__p) { }
+       16:  338:      _Node_iterator(__node_type* __p) noexcept
+       16:  339:      : __base_type(__p) { }
 ------------------
 _ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb0ELb1EEC2EPNS_10_Hash_nodeISA_Lb1EEE:
-function _ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb0ELb1EEC2EPNS_10_Hash_nodeISA_Lb1EEE called 3 returned 100% blocks executed 100%
-        3:  338:      _Node_iterator(__node_type* __p) noexcept
-        3:  339:      : __base_type(__p) { }
-        3:  339-block  0
-call    0 returned 3
+function _ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb0ELb1EEC2EPNS_10_Hash_nodeISA_Lb1EEE called 6 returned 100% blocks executed 100%
+        6:  338:      _Node_iterator(__node_type* __p) noexcept
+        6:  339:      : __base_type(__p) { }
+        6:  339-block  0
+call    0 returned 6
 ------------------
 _ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEC2EPNS_10_Hash_nodeIS9_Lb1EEE:
-function _ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEC2EPNS_10_Hash_nodeIS9_Lb1EEE called 5 returned 100% blocks executed 100%
-        5:  338:      _Node_iterator(__node_type* __p) noexcept
-        5:  339:      : __base_type(__p) { }
-        5:  339-block  0
-call    0 returned 5
+function _ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEC2EPNS_10_Hash_nodeIS9_Lb1EEE called 10 returned 100% blocks executed 100%
+       10:  338:      _Node_iterator(__node_type* __p) noexcept
+       10:  339:      : __base_type(__p) { }
+       10:  339-block  0
+call    0 returned 10
 ------------------
         -:  340:
         -:  341:      reference
-function _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEdeEv called 3 returned 100% blocks executed 100%
-        3:  342:      operator*() const noexcept
-        3:  343:      { return this->_M_cur->_M_v(); }
-        3:  343-block  0
-call    0 returned 3
+function _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEdeEv called 6 returned 100% blocks executed 100%
+        6:  342:      operator*() const noexcept
+        6:  343:      { return this->_M_cur->_M_v(); }
+        6:  343-block  0
+call    0 returned 6
         -:  344:
         -:  345:      pointer
-        6:  346:      operator->() const noexcept
-        6:  347:      { return this->_M_cur->_M_valptr(); }
+       12:  346:      operator->() const noexcept
+       12:  347:      { return this->_M_cur->_M_valptr(); }
 ------------------
 _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb0ELb1EEptEv:
-function _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb0ELb1EEptEv called 3 returned 100% blocks executed 100%
-        3:  346:      operator->() const noexcept
-        3:  347:      { return this->_M_cur->_M_valptr(); }
-        3:  347-block  0
-call    0 returned 3
+function _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb0ELb1EEptEv called 6 returned 100% blocks executed 100%
+        6:  346:      operator->() const noexcept
+        6:  347:      { return this->_M_cur->_M_valptr(); }
+        6:  347-block  0
+call    0 returned 6
 ------------------
 _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEptEv:
-function _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEptEv called 3 returned 100% blocks executed 100%
-        3:  346:      operator->() const noexcept
-        3:  347:      { return this->_M_cur->_M_valptr(); }
-        3:  347-block  0
-call    0 returned 3
+function _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEptEv called 6 returned 100% blocks executed 100%
+        6:  346:      operator->() const noexcept
+        6:  347:      { return this->_M_cur->_M_valptr(); }
+        6:  347-block  0
+call    0 returned 6
 ------------------
         -:  348:
         -:  349:      _Node_iterator&
-function _ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEppEv called 3 returned 100% blocks executed 100%
-        3:  350:      operator++() noexcept
+function _ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb0ELb1EEppEv called 6 returned 100% blocks executed 100%
+        6:  350:      operator++() noexcept
         -:  351:      {
-        3:  352:	this->_M_incr();
-        3:  352-block  0
-call    0 returned 3
-        3:  353:	return *this;
+        6:  352:	this->_M_incr();
+        6:  352-block  0
+call    0 returned 6
+        6:  353:	return *this;
         -:  354:      }
         -:  355:
         -:  356:      _Node_iterator
@@ -574,11 +574,11 @@ call    0 returned 3
         -:  425:    typedef std::size_t result_type;
         -:  426:
         -:  427:    result_type
-function _ZNKSt8__detail18_Mod_range_hashingclEmm called 19 returned 100% blocks executed 100%
-       19:  428:    operator()(first_argument_type __num,
+function _ZNKSt8__detail18_Mod_range_hashingclEmm called 38 returned 100% blocks executed 100%
+       38:  428:    operator()(first_argument_type __num,
         -:  429:	       second_argument_type __den) const noexcept
-       19:  430:    { return __num % __den; }
-       19:  430-block  0
+       38:  430:    { return __num % __den; }
+       38:  430-block  0
         -:  431:  };
         -:  432:
         -:  433:  /// Default ranged hash function H.  In principle it should be a
@@ -594,9 +594,9 @@ function _ZNKSt8__detail18_Mod_range_hashingclEmm called 19 returned 100% blocks
         -:  443:  {
         -:  444:    using __has_load_factor = true_type;
         -:  445:
-function _ZNSt8__detail20_Prime_rehash_policyC2Ef called 3 returned 100% blocks executed 100%
-        3:  446:    _Prime_rehash_policy(float __z = 1.0) noexcept
-        3:  447:    : _M_max_load_factor(__z), _M_next_resize(0) { }
+function _ZNSt8__detail20_Prime_rehash_policyC2Ef called 5 returned 100% blocks executed 100%
+        5:  446:    _Prime_rehash_policy(float __z = 1.0) noexcept
+        5:  447:    : _M_max_load_factor(__z), _M_next_resize(0) { }
         -:  448:
         -:  449:    float
         -:  450:    max_load_factor() const noexcept
@@ -622,10 +622,10 @@ function _ZNSt8__detail20_Prime_rehash_policyC2Ef called 3 returned 100% blocks 
         -:  470:    typedef std::size_t _State;
         -:  471:
         -:  472:    _State
-function _ZNKSt8__detail20_Prime_rehash_policy8_M_stateEv called 6 returned 100% blocks executed 100%
-        6:  473:    _M_state() const
-        6:  474:    { return _M_next_resize; }
-        6:  474-block  0
+function _ZNKSt8__detail20_Prime_rehash_policy8_M_stateEv called 12 returned 100% blocks executed 100%
+       12:  473:    _M_state() const
+       12:  474:    { return _M_next_resize; }
+       12:  474-block  0
         -:  475:
         -:  476:    void
         -:  477:    _M_reset() noexcept
@@ -848,60 +848,60 @@ function _ZNSt8__detail20_Prime_rehash_policy8_M_resetEm called 0 returned 0% bl
         -:  693:	   typename _Hash, typename _RangeHash, typename _Unused,
         -:  694:	   typename _RehashPolicy, typename _Traits>
         -:  695:    auto
-function _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOESaISA_ENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEELb1EEixERS8_ called 3 returned 100% blocks executed 60%
-        3:  696:    _Map_base<_Key, _Pair, _Alloc, _Select1st, _Equal,
+function _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOESaISA_ENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEELb1EEixERS8_ called 6 returned 100% blocks executed 60%
+        6:  696:    _Map_base<_Key, _Pair, _Alloc, _Select1st, _Equal,
         -:  697:	      _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::
         -:  698:    operator[](const key_type& __k)
         -:  699:    -> mapped_type&
         -:  700:    {
-        3:  701:      __hashtable* __h = static_cast<__hashtable*>(this);
-        3:  702:      __hash_code __code = __h->_M_hash_code(__k);
-        3:  702-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+        6:  701:      __hashtable* __h = static_cast<__hashtable*>(this);
+        6:  702:      __hash_code __code = __h->_M_hash_code(__k);
+        6:  702-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
-        3:  703:      std::size_t __bkt = __h->_M_bucket_index(__code);
-        3:  703-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+        6:  703:      std::size_t __bkt = __h->_M_bucket_index(__code);
+        6:  703-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
-        3:  704:      if (auto __node = __h->_M_find_node(__bkt, __k, __code))
-        3:  704-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+        6:  704:      if (auto __node = __h->_M_find_node(__bkt, __k, __code))
+        6:  704-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
-        3:  704-block  1
+        6:  704-block  1
 branch  3 taken 0 (fallthrough)
-branch  4 taken 3
+branch  4 taken 6
     #####:  705:	return __node->_M_v().second;
     %%%%%:  705-block  0
 call    0 never executed
         -:  706:
-        3:  707:      typename __hashtable::_Scoped_node __node {
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+        6:  707:      typename __hashtable::_Scoped_node __node {
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
         -:  708:	__h,
         -:  709:	std::piecewise_construct,
-        3:  710:	std::tuple<const key_type&>(__k),
-        3:  710-block  0
-call    0 returned 3
+        6:  710:	std::tuple<const key_type&>(__k),
+        6:  710-block  0
+call    0 returned 6
     $$$$$:  710-block  1
     #####:  711:	std::tuple<>()
     $$$$$:  711-block  0
         -:  712:      };
         -:  713:      auto __pos
-        3:  714:	= __h->_M_insert_unique_node(__bkt, __code, __node._M_node);
-        3:  714-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+        6:  714:	= __h->_M_insert_unique_node(__bkt, __code, __node._M_node);
+        6:  714-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
-        3:  715:      __node._M_node = nullptr;
-        3:  716:      return __pos->second;
-        3:  716-block  0
-call    0 returned 3
-        3:  717:    }
-call    0 returned 3
+        6:  715:      __node._M_node = nullptr;
+        6:  716:      return __pos->second;
+        6:  716-block  0
+call    0 returned 6
+        6:  717:    }
+call    0 returned 6
     $$$$$:  717-block  0
 call    1 never executed
         -:  718:
@@ -909,61 +909,61 @@ call    1 never executed
         -:  720:	   typename _Hash, typename _RangeHash, typename _Unused,
         -:  721:	   typename _RehashPolicy, typename _Traits>
         -:  722:    auto
-function _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iESaIS9_ENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEELb1EEixEOS6_ called 4 returned 100% blocks executed 71%
-        4:  723:    _Map_base<_Key, _Pair, _Alloc, _Select1st, _Equal,
+function _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iESaIS9_ENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEELb1EEixEOS6_ called 8 returned 100% blocks executed 71%
+        8:  723:    _Map_base<_Key, _Pair, _Alloc, _Select1st, _Equal,
         -:  724:	      _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::
         -:  725:    operator[](key_type&& __k)
         -:  726:    -> mapped_type&
         -:  727:    {
-        4:  728:      __hashtable* __h = static_cast<__hashtable*>(this);
-        4:  729:      __hash_code __code = __h->_M_hash_code(__k);
-        4:  729-block  0
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+        8:  728:      __hashtable* __h = static_cast<__hashtable*>(this);
+        8:  729:      __hash_code __code = __h->_M_hash_code(__k);
+        8:  729-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
 branch  2 taken 0 (throw)
-        4:  730:      std::size_t __bkt = __h->_M_bucket_index(__code);
-        4:  730-block  0
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+        8:  730:      std::size_t __bkt = __h->_M_bucket_index(__code);
+        8:  730-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
 branch  2 taken 0 (throw)
-        4:  731:      if (auto __node = __h->_M_find_node(__bkt, __k, __code))
-        4:  731-block  0
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+        8:  731:      if (auto __node = __h->_M_find_node(__bkt, __k, __code))
+        8:  731-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
 branch  2 taken 0 (throw)
-        4:  731-block  1
-branch  3 taken 1 (fallthrough)
-branch  4 taken 3
-        1:  732:	return __node->_M_v().second;
-        1:  732-block  0
-call    0 returned 1
+        8:  731-block  1
+branch  3 taken 2 (fallthrough)
+branch  4 taken 6
+        2:  732:	return __node->_M_v().second;
+        2:  732-block  0
+call    0 returned 2
         -:  733:
-        3:  734:      typename __hashtable::_Scoped_node __node {
-call    0 returned 3
-call    1 returned 3
-branch  2 taken 3 (fallthrough)
+        6:  734:      typename __hashtable::_Scoped_node __node {
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
 branch  3 taken 0 (throw)
     $$$$$:  734-block  0
         -:  735:	__h,
         -:  736:	std::piecewise_construct,
-        3:  737:	std::forward_as_tuple(std::move(__k)),
-        3:  737-block  0
-call    0 returned 3
+        6:  737:	std::forward_as_tuple(std::move(__k)),
+        6:  737-block  0
+call    0 returned 6
     #####:  738:	std::tuple<>()
     $$$$$:  738-block  0
         -:  739:      };
         -:  740:      auto __pos
-        3:  741:	= __h->_M_insert_unique_node(__bkt, __code, __node._M_node);
-        3:  741-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+        6:  741:	= __h->_M_insert_unique_node(__bkt, __code, __node._M_node);
+        6:  741-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
-        3:  742:      __node._M_node = nullptr;
-        3:  743:      return __pos->second;
-        3:  743-block  0
-call    0 returned 3
-        3:  744:    }
-call    0 returned 3
+        6:  742:      __node._M_node = nullptr;
+        6:  743:      return __pos->second;
+        6:  743-block  0
+call    0 returned 6
+        6:  744:    }
+call    0 returned 6
     $$$$$:  744-block  0
 call    1 never executed
         -:  745:
@@ -1348,27 +1348,27 @@ call    1 never executed
         -: 1124:    struct _Hashtable_ebo_helper<_Nm, _Tp, true>
         -: 1125:    : private _Tp
         -: 1126:    {
-        9: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
+       15: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
 ------------------
 _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEELb1EEC2Ev:
-function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEELb1EEC2Ev called 2 returned 100% blocks executed 100%
+function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEELb1EEC2Ev called 3 returned 100% blocks executed 100%
+        3: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
+        3: 1127-block  0
+call    0 returned 3
+------------------
+_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEELb1EEC2Ev:
+function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEELb1EEC2Ev called 2 returned 100% blocks executed 100%
         2: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
         2: 1127-block  0
 call    0 returned 2
 ------------------
-_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEELb1EEC2Ev:
-function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEELb1EEC2Ev called 1 returned 100% blocks executed 100%
-        1: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
-        1: 1127-block  0
-call    0 returned 1
-------------------
 _ZNSt8__detail21_Hashtable_ebo_helperILi0ESt8equal_toINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EEC2Ev:
-function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESt8equal_toINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EEC2Ev called 3 returned 100% blocks executed 100%
-        3: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
+function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESt8equal_toINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EEC2Ev called 5 returned 100% blocks executed 100%
+        5: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
 ------------------
 _ZNSt8__detail21_Hashtable_ebo_helperILi1ESt4hashINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EEC2Ev:
-function _ZNSt8__detail21_Hashtable_ebo_helperILi1ESt4hashINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EEC2Ev called 3 returned 100% blocks executed 100%
-        3: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
+function _ZNSt8__detail21_Hashtable_ebo_helperILi1ESt4hashINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EEC2Ev called 5 returned 100% blocks executed 100%
+        5: 1127:      _Hashtable_ebo_helper() noexcept(noexcept(_Tp())) : _Tp() { }
 ------------------
         -: 1128:
         -: 1129:      template<typename _OtherTp>
@@ -1376,29 +1376,29 @@ function _ZNSt8__detail21_Hashtable_ebo_helperILi1ESt4hashINSt7__cxx1112basic_st
         -: 1131:	: _Tp(std::forward<_OtherTp>(__tp))
         -: 1132:	{ }
         -: 1133:
-       20: 1134:      const _Tp& _M_cget() const { return static_cast<const _Tp&>(*this); }
+       40: 1134:      const _Tp& _M_cget() const { return static_cast<const _Tp&>(*this); }
 ------------------
 _ZNKSt8__detail21_Hashtable_ebo_helperILi0ESt8equal_toINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EE7_M_cgetEv:
-function _ZNKSt8__detail21_Hashtable_ebo_helperILi0ESt8equal_toINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EE7_M_cgetEv called 7 returned 100% blocks executed 100%
-        7: 1134:      const _Tp& _M_cget() const { return static_cast<const _Tp&>(*this); }
-        7: 1134-block  0
+function _ZNKSt8__detail21_Hashtable_ebo_helperILi0ESt8equal_toINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EE7_M_cgetEv called 14 returned 100% blocks executed 100%
+       14: 1134:      const _Tp& _M_cget() const { return static_cast<const _Tp&>(*this); }
+       14: 1134-block  0
 ------------------
 _ZNKSt8__detail21_Hashtable_ebo_helperILi1ESt4hashINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EE7_M_cgetEv:
-function _ZNKSt8__detail21_Hashtable_ebo_helperILi1ESt4hashINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EE7_M_cgetEv called 13 returned 100% blocks executed 100%
-       13: 1134:      const _Tp& _M_cget() const { return static_cast<const _Tp&>(*this); }
-       13: 1134-block  0
+function _ZNKSt8__detail21_Hashtable_ebo_helperILi1ESt4hashINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EE7_M_cgetEv called 26 returned 100% blocks executed 100%
+       26: 1134:      const _Tp& _M_cget() const { return static_cast<const _Tp&>(*this); }
+       26: 1134-block  0
 ------------------
-       28: 1135:      _Tp& _M_get() { return static_cast<_Tp&>(*this); }
+       56: 1135:      _Tp& _M_get() { return static_cast<_Tp&>(*this); }
 ------------------
 _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEELb1EE6_M_getEv:
-function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEELb1EE6_M_getEv called 14 returned 100% blocks executed 100%
-       14: 1135:      _Tp& _M_get() { return static_cast<_Tp&>(*this); }
-       14: 1135-block  0
+function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEELb1EE6_M_getEv called 28 returned 100% blocks executed 100%
+       28: 1135:      _Tp& _M_get() { return static_cast<_Tp&>(*this); }
+       28: 1135-block  0
 ------------------
 _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEELb1EE6_M_getEv:
-function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEELb1EE6_M_getEv called 14 returned 100% blocks executed 100%
-       14: 1135:      _Tp& _M_get() { return static_cast<_Tp&>(*this); }
-       14: 1135-block  0
+function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEELb1EE6_M_getEv called 28 returned 100% blocks executed 100%
+       28: 1135:      _Tp& _M_get() { return static_cast<_Tp&>(*this); }
+       28: 1135-block  0
 ------------------
         -: 1136:    };
         -: 1137:
@@ -1474,53 +1474,53 @@ function _ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeISt4pairIKN
         -: 1207:
         -: 1208:      // We need the default constructor for the local iterators and _Hashtable
         -: 1209:      // default constructor.
-        3: 1210:      _Hash_code_base() = default;
+        5: 1210:      _Hash_code_base() = default;
 ------------------
 _ZNSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EEC2Ev:
-function _ZNSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EEC2Ev called 2 returned 100% blocks executed 100%
+function _ZNSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EEC2Ev called 3 returned 100% blocks executed 100%
+        3: 1210:      _Hash_code_base() = default;
+        3: 1210-block  0
+call    0 returned 3
+------------------
+_ZNSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EEC2Ev:
+function _ZNSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EEC2Ev called 2 returned 100% blocks executed 100%
         2: 1210:      _Hash_code_base() = default;
         2: 1210-block  0
 call    0 returned 2
-------------------
-_ZNSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EEC2Ev:
-function _ZNSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EEC2Ev called 1 returned 100% blocks executed 100%
-        1: 1210:      _Hash_code_base() = default;
-        1: 1210-block  0
-call    0 returned 1
 ------------------
         -: 1211:
         -: 1212:      _Hash_code_base(const _Hash& __hash) : __ebo_hash(__hash) { }
         -: 1213:
         -: 1214:      __hash_code
-       13: 1215:      _M_hash_code(const _Key& __k) const
+       26: 1215:      _M_hash_code(const _Key& __k) const
         -: 1216:      {
         -: 1217:	static_assert(__is_invocable<const _Hash&, const _Key&>{},
         -: 1218:	    "hash function must be invocable with an argument of key type");
-       13: 1219:	return _M_hash()(__k);
+       26: 1219:	return _M_hash()(__k);
         -: 1220:      }
 ------------------
 _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE12_M_hash_codeERS8_:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE12_M_hash_codeERS8_ called 9 returned 100% blocks executed 100%
-        9: 1215:      _M_hash_code(const _Key& __k) const
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE12_M_hash_codeERS8_ called 18 returned 100% blocks executed 100%
+       18: 1215:      _M_hash_code(const _Key& __k) const
         -: 1216:      {
         -: 1217:	static_assert(__is_invocable<const _Hash&, const _Key&>{},
         -: 1218:	    "hash function must be invocable with an argument of key type");
-        9: 1219:	return _M_hash()(__k);
-        9: 1219-block  0
-call    0 returned 9
-call    1 returned 9
+       18: 1219:	return _M_hash()(__k);
+       18: 1219-block  0
+call    0 returned 18
+call    1 returned 18
         -: 1220:      }
 ------------------
 _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE12_M_hash_codeERS8_:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE12_M_hash_codeERS8_ called 4 returned 100% blocks executed 100%
-        4: 1215:      _M_hash_code(const _Key& __k) const
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE12_M_hash_codeERS8_ called 8 returned 100% blocks executed 100%
+        8: 1215:      _M_hash_code(const _Key& __k) const
         -: 1216:      {
         -: 1217:	static_assert(__is_invocable<const _Hash&, const _Key&>{},
         -: 1218:	    "hash function must be invocable with an argument of key type");
-        4: 1219:	return _M_hash()(__k);
-        4: 1219-block  0
-call    0 returned 4
-call    1 returned 4
+        8: 1219:	return _M_hash()(__k);
+        8: 1219-block  0
+call    0 returned 8
+call    1 returned 8
         -: 1220:      }
 ------------------
         -: 1221:
@@ -1534,22 +1534,22 @@ call    1 returned 4
         -: 1229:	}
         -: 1230:
         -: 1231:      std::size_t
-       15: 1232:      _M_bucket_index(__hash_code __c, std::size_t __bkt_count) const
-       15: 1233:      { return _RangeHash{}(__c, __bkt_count); }
+       30: 1232:      _M_bucket_index(__hash_code __c, std::size_t __bkt_count) const
+       30: 1233:      { return _RangeHash{}(__c, __bkt_count); }
 ------------------
 _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexEmm:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexEmm called 10 returned 100% blocks executed 100%
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexEmm called 20 returned 100% blocks executed 100%
+       20: 1232:      _M_bucket_index(__hash_code __c, std::size_t __bkt_count) const
+       20: 1233:      { return _RangeHash{}(__c, __bkt_count); }
+       20: 1233-block  0
+call    0 returned 20
+------------------
+_ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexEmm:
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexEmm called 10 returned 100% blocks executed 100%
        10: 1232:      _M_bucket_index(__hash_code __c, std::size_t __bkt_count) const
        10: 1233:      { return _RangeHash{}(__c, __bkt_count); }
        10: 1233-block  0
 call    0 returned 10
-------------------
-_ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexEmm:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexEmm called 5 returned 100% blocks executed 100%
-        5: 1232:      _M_bucket_index(__hash_code __c, std::size_t __bkt_count) const
-        5: 1233:      { return _RangeHash{}(__c, __bkt_count); }
-        5: 1233-block  0
-call    0 returned 5
 ------------------
         -: 1234:
         -: 1235:      std::size_t
@@ -1564,31 +1564,31 @@ call    0 returned 5
         -: 1244:      }
         -: 1245:
         -: 1246:      std::size_t
+        8: 1247:      _M_bucket_index(const _Hash_node_value<_Value, true>& __n,
+        -: 1248:		      std::size_t __bkt_count) const
+        -: 1249:	noexcept( noexcept(declval<const _RangeHash&>()((__hash_code)0,
+        -: 1250:							(std::size_t)0)) )
+        8: 1251:      { return _RangeHash{}(__n._M_hash_code, __bkt_count); }
+------------------
+_ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexERKNS_16_Hash_node_valueIS9_Lb1EEEm:
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexERKNS_16_Hash_node_valueIS9_Lb1EEEm called 4 returned 100% blocks executed 100%
         4: 1247:      _M_bucket_index(const _Hash_node_value<_Value, true>& __n,
         -: 1248:		      std::size_t __bkt_count) const
         -: 1249:	noexcept( noexcept(declval<const _RangeHash&>()((__hash_code)0,
         -: 1250:							(std::size_t)0)) )
         4: 1251:      { return _RangeHash{}(__n._M_hash_code, __bkt_count); }
-------------------
-_ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexERKNS_16_Hash_node_valueIS9_Lb1EEEm:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexERKNS_16_Hash_node_valueIS9_Lb1EEEm called 2 returned 100% blocks executed 100%
-        2: 1247:      _M_bucket_index(const _Hash_node_value<_Value, true>& __n,
-        -: 1248:		      std::size_t __bkt_count) const
-        -: 1249:	noexcept( noexcept(declval<const _RangeHash&>()((__hash_code)0,
-        -: 1250:							(std::size_t)0)) )
-        2: 1251:      { return _RangeHash{}(__n._M_hash_code, __bkt_count); }
-        2: 1251-block  0
-call    0 returned 2
+        4: 1251-block  0
+call    0 returned 4
 ------------------
 _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexERKNS_16_Hash_node_valueISA_Lb1EEEm:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexERKNS_16_Hash_node_valueISA_Lb1EEEm called 2 returned 100% blocks executed 100%
-        2: 1247:      _M_bucket_index(const _Hash_node_value<_Value, true>& __n,
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE15_M_bucket_indexERKNS_16_Hash_node_valueISA_Lb1EEEm called 4 returned 100% blocks executed 100%
+        4: 1247:      _M_bucket_index(const _Hash_node_value<_Value, true>& __n,
         -: 1248:		      std::size_t __bkt_count) const
         -: 1249:	noexcept( noexcept(declval<const _RangeHash&>()((__hash_code)0,
         -: 1250:							(std::size_t)0)) )
-        2: 1251:      { return _RangeHash{}(__n._M_hash_code, __bkt_count); }
-        2: 1251-block  0
-call    0 returned 2
+        4: 1251:      { return _RangeHash{}(__n._M_hash_code, __bkt_count); }
+        4: 1251-block  0
+call    0 returned 4
 ------------------
         -: 1252:
         -: 1253:      void
@@ -1601,18 +1601,18 @@ call    0 returned 2
         -: 1260:      { }
         -: 1261:
         -: 1262:      void
+       12: 1263:      _M_store_code(_Hash_node_code_cache<true>& __n, __hash_code __c) const
+       12: 1264:      { __n._M_hash_code = __c; }
+------------------
+_ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE13_M_store_codeERNS_21_Hash_node_code_cacheILb1EEEm:
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE13_M_store_codeERNS_21_Hash_node_code_cacheILb1EEEm called 6 returned 100% blocks executed 100%
         6: 1263:      _M_store_code(_Hash_node_code_cache<true>& __n, __hash_code __c) const
         6: 1264:      { __n._M_hash_code = __c; }
 ------------------
-_ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE13_M_store_codeERNS_21_Hash_node_code_cacheILb1EEEm:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE13_M_store_codeERNS_21_Hash_node_code_cacheILb1EEEm called 3 returned 100% blocks executed 100%
-        3: 1263:      _M_store_code(_Hash_node_code_cache<true>& __n, __hash_code __c) const
-        3: 1264:      { __n._M_hash_code = __c; }
-------------------
 _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE13_M_store_codeERNS_21_Hash_node_code_cacheILb1EEEm:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE13_M_store_codeERNS_21_Hash_node_code_cacheILb1EEEm called 3 returned 100% blocks executed 100%
-        3: 1263:      _M_store_code(_Hash_node_code_cache<true>& __n, __hash_code __c) const
-        3: 1264:      { __n._M_hash_code = __c; }
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE13_M_store_codeERNS_21_Hash_node_code_cacheILb1EEEm called 6 returned 100% blocks executed 100%
+        6: 1263:      _M_store_code(_Hash_node_code_cache<true>& __n, __hash_code __c) const
+        6: 1264:      { __n._M_hash_code = __c; }
 ------------------
         -: 1265:
         -: 1266:      void
@@ -1625,19 +1625,19 @@ function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_tr
         -: 1273:      { std::swap(__ebo_hash::_M_get(), __x.__ebo_hash::_M_get()); }
         -: 1274:
         -: 1275:      const _Hash&
-       13: 1276:      _M_hash() const { return __ebo_hash::_M_cget(); }
+       26: 1276:      _M_hash() const { return __ebo_hash::_M_cget(); }
 ------------------
 _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE7_M_hashEv:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE7_M_hashEv called 9 returned 100% blocks executed 100%
-        9: 1276:      _M_hash() const { return __ebo_hash::_M_cget(); }
-        9: 1276-block  0
-call    0 returned 9
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE7_M_hashEv called 18 returned 100% blocks executed 100%
+       18: 1276:      _M_hash() const { return __ebo_hash::_M_cget(); }
+       18: 1276-block  0
+call    0 returned 18
 ------------------
 _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE7_M_hashEv:
-function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE7_M_hashEv called 4 returned 100% blocks executed 100%
-        4: 1276:      _M_hash() const { return __ebo_hash::_M_cget(); }
-        4: 1276-block  0
-call    0 returned 4
+function _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb1EE7_M_hashEv called 8 returned 100% blocks executed 100%
+        8: 1276:      _M_hash() const { return __ebo_hash::_M_cget(); }
+        8: 1276-block  0
+call    0 returned 8
 ------------------
         -: 1277:    };
         -: 1278:
@@ -1957,20 +1957,20 @@ call    0 returned 4
         -: 1592:      { return true; }
         -: 1593:
         -: 1594:      static bool
-        7: 1595:      _S_equals(__hash_code __c, const _Hash_node_code_cache<true>& __n)
-        7: 1596:      { return __c == __n._M_hash_code; }
+       14: 1595:      _S_equals(__hash_code __c, const _Hash_node_code_cache<true>& __n)
+       14: 1596:      { return __c == __n._M_hash_code; }
 ------------------
 _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_S_equalsEmRKNS_21_Hash_node_code_cacheILb1EEE:
-function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_S_equalsEmRKNS_21_Hash_node_code_cacheILb1EEE called 6 returned 100% blocks executed 100%
-        6: 1595:      _S_equals(__hash_code __c, const _Hash_node_code_cache<true>& __n)
-        6: 1596:      { return __c == __n._M_hash_code; }
-        6: 1596-block  0
+function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_S_equalsEmRKNS_21_Hash_node_code_cacheILb1EEE called 12 returned 100% blocks executed 100%
+       12: 1595:      _S_equals(__hash_code __c, const _Hash_node_code_cache<true>& __n)
+       12: 1596:      { return __c == __n._M_hash_code; }
+       12: 1596-block  0
 ------------------
 _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_S_equalsEmRKNS_21_Hash_node_code_cacheILb1EEE:
-function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_S_equalsEmRKNS_21_Hash_node_code_cacheILb1EEE called 1 returned 100% blocks executed 100%
-        1: 1595:      _S_equals(__hash_code __c, const _Hash_node_code_cache<true>& __n)
-        1: 1596:      { return __c == __n._M_hash_code; }
-        1: 1596-block  0
+function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_S_equalsEmRKNS_21_Hash_node_code_cacheILb1EEE called 2 returned 100% blocks executed 100%
+        2: 1595:      _S_equals(__hash_code __c, const _Hash_node_code_cache<true>& __n)
+        2: 1596:      { return __c == __n._M_hash_code; }
+        2: 1596-block  0
 ------------------
         -: 1597:
         -: 1598:      static bool
@@ -1979,21 +1979,21 @@ function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_tra
         -: 1601:      { return __lhn._M_hash_code == __rhn._M_hash_code; }
         -: 1602:
         -: 1603:    protected:
-        3: 1604:      _Hashtable_base() = default;
+        5: 1604:      _Hashtable_base() = default;
 ------------------
 _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEEC2Ev:
-function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEEC2Ev called 2 returned 100% blocks executed 100%
+function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEEC2Ev called 3 returned 100% blocks executed 100%
+        3: 1604:      _Hashtable_base() = default;
+        3: 1604-block  0
+call    0 returned 3
+call    1 returned 3
+------------------
+_ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEEC2Ev:
+function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEEC2Ev called 2 returned 100% blocks executed 100%
         2: 1604:      _Hashtable_base() = default;
         2: 1604-block  0
 call    0 returned 2
 call    1 returned 2
-------------------
-_ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEEC2Ev:
-function _ZNSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEEC2Ev called 1 returned 100% blocks executed 100%
-        1: 1604:      _Hashtable_base() = default;
-        1: 1604-block  0
-call    0 returned 1
-call    1 returned 1
 ------------------
         -: 1605:
         -: 1606:      _Hashtable_base(const _Hash& __hash, const _Equal& __eq)
@@ -2001,71 +2001,71 @@ call    1 returned 1
         -: 1608:      { }
         -: 1609:
         -: 1610:      bool
-        7: 1611:      _M_equals(const _Key& __k, __hash_code __c,
+       14: 1611:      _M_equals(const _Key& __k, __hash_code __c,
         -: 1612:		const _Hash_node_value<_Value, __hash_cached::value>& __n) const
         -: 1613:      {
         -: 1614:	static_assert(__is_invocable<const _Equal&, const _Key&, const _Key&>{},
         -: 1615:	  "key equality predicate must be invocable with two arguments of "
         -: 1616:	  "key type");
-       7*: 1617:	return _S_equals(__c, __n) && _M_eq()(__k, _ExtractKey{}(__n._M_v()));
+      14*: 1617:	return _S_equals(__c, __n) && _M_eq()(__k, _ExtractKey{}(__n._M_v()));
         -: 1618:      }
 ------------------
 _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_M_equalsERS8_mRKNS_16_Hash_node_valueISA_Lb1EEE:
-function _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_M_equalsERS8_mRKNS_16_Hash_node_valueISA_Lb1EEE called 6 returned 100% blocks executed 92%
-        6: 1611:      _M_equals(const _Key& __k, __hash_code __c,
+function _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_M_equalsERS8_mRKNS_16_Hash_node_valueISA_Lb1EEE called 12 returned 100% blocks executed 92%
+       12: 1611:      _M_equals(const _Key& __k, __hash_code __c,
         -: 1612:		const _Hash_node_value<_Value, __hash_cached::value>& __n) const
         -: 1613:      {
         -: 1614:	static_assert(__is_invocable<const _Equal&, const _Key&, const _Key&>{},
         -: 1615:	  "key equality predicate must be invocable with two arguments of "
         -: 1616:	  "key type");
-       6*: 1617:	return _S_equals(__c, __n) && _M_eq()(__k, _ExtractKey{}(__n._M_v()));
-        6: 1617-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
+      12*: 1617:	return _S_equals(__c, __n) && _M_eq()(__k, _ExtractKey{}(__n._M_v()));
+       12: 1617-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
 branch  2 taken 0
-        6: 1617-block  1
-call    3 returned 6
-branch  4 taken 6 (fallthrough)
+       12: 1617-block  1
+call    3 returned 12
+branch  4 taken 12 (fallthrough)
 branch  5 taken 0 (throw)
-        6: 1617-block  2
-call    6 returned 6
-call    7 returned 6
-call    8 returned 6
-branch  9 taken 6 (fallthrough)
+       12: 1617-block  2
+call    6 returned 12
+call    7 returned 12
+call    8 returned 12
+branch  9 taken 12 (fallthrough)
 branch 10 taken 0
-        6: 1617-block  3
+       12: 1617-block  3
     %%%%%: 1617-block  4
-        6: 1617-block  5
-        6: 1617-block  6
+       12: 1617-block  5
+       12: 1617-block  6
         -: 1618:      }
 ------------------
 _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_M_equalsERS8_mRKNS_16_Hash_node_valueIS9_Lb1EEE:
-function _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_M_equalsERS8_mRKNS_16_Hash_node_valueIS9_Lb1EEE called 1 returned 100% blocks executed 92%
-        1: 1611:      _M_equals(const _Key& __k, __hash_code __c,
+function _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_M_equalsERS8_mRKNS_16_Hash_node_valueIS9_Lb1EEE called 2 returned 100% blocks executed 92%
+        2: 1611:      _M_equals(const _Key& __k, __hash_code __c,
         -: 1612:		const _Hash_node_value<_Value, __hash_cached::value>& __n) const
         -: 1613:      {
         -: 1614:	static_assert(__is_invocable<const _Equal&, const _Key&, const _Key&>{},
         -: 1615:	  "key equality predicate must be invocable with two arguments of "
         -: 1616:	  "key type");
-       1*: 1617:	return _S_equals(__c, __n) && _M_eq()(__k, _ExtractKey{}(__n._M_v()));
-        1: 1617-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
+       2*: 1617:	return _S_equals(__c, __n) && _M_eq()(__k, _ExtractKey{}(__n._M_v()));
+        2: 1617-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
 branch  2 taken 0
-        1: 1617-block  1
-call    3 returned 1
-branch  4 taken 1 (fallthrough)
+        2: 1617-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
 branch  5 taken 0 (throw)
-        1: 1617-block  2
-call    6 returned 1
-call    7 returned 1
-call    8 returned 1
-branch  9 taken 1 (fallthrough)
+        2: 1617-block  2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+branch  9 taken 2 (fallthrough)
 branch 10 taken 0
-        1: 1617-block  3
+        2: 1617-block  3
     %%%%%: 1617-block  4
-        1: 1617-block  5
-        1: 1617-block  6
+        2: 1617-block  5
+        2: 1617-block  6
         -: 1618:      }
 ------------------
         -: 1619:
@@ -2099,19 +2099,19 @@ branch 10 taken 0
         -: 1647:      }
         -: 1648:
         -: 1649:      const _Equal&
-        7: 1650:      _M_eq() const { return _EqualEBO::_M_cget(); }
+       14: 1650:      _M_eq() const { return _EqualEBO::_M_cget(); }
 ------------------
 _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE5_M_eqEv:
-function _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE5_M_eqEv called 6 returned 100% blocks executed 100%
-        6: 1650:      _M_eq() const { return _EqualEBO::_M_cget(); }
-        6: 1650-block  0
-call    0 returned 6
+function _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE5_M_eqEv called 12 returned 100% blocks executed 100%
+       12: 1650:      _M_eq() const { return _EqualEBO::_M_cget(); }
+       12: 1650-block  0
+call    0 returned 12
 ------------------
 _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE5_M_eqEv:
-function _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE5_M_eqEv called 1 returned 100% blocks executed 100%
-        1: 1650:      _M_eq() const { return _EqualEBO::_M_cget(); }
-        1: 1650-block  0
-call    0 returned 1
+function _ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_iENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE5_M_eqEv called 2 returned 100% blocks executed 100%
+        2: 1650:      _M_eq() const { return _EqualEBO::_M_cget(); }
+        2: 1650-block  0
+call    0 returned 2
 ------------------
         -: 1651:    };
         -: 1652:
@@ -2285,19 +2285,19 @@ call    0 returned 1
         -: 1820:      using __buckets_alloc_traits = std::allocator_traits<__buckets_alloc_type>;
         -: 1821:      using __buckets_ptr = __node_base_ptr*;
         -: 1822:
-        3: 1823:      _Hashtable_alloc() = default;
+        5: 1823:      _Hashtable_alloc() = default;
 ------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEEC2Ev:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEEC2Ev called 2 returned 100% blocks executed 100%
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEEC2Ev called 3 returned 100% blocks executed 100%
+        3: 1823:      _Hashtable_alloc() = default;
+        3: 1823-block  0
+call    0 returned 3
+------------------
+_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEEC2Ev:
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEEC2Ev called 2 returned 100% blocks executed 100%
         2: 1823:      _Hashtable_alloc() = default;
         2: 1823-block  0
 call    0 returned 2
-------------------
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEEC2Ev:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEEC2Ev called 1 returned 100% blocks executed 100%
-        1: 1823:      _Hashtable_alloc() = default;
-        1: 1823-block  0
-call    0 returned 1
 ------------------
         -: 1824:      _Hashtable_alloc(const _Hashtable_alloc&) = default;
         -: 1825:      _Hashtable_alloc(_Hashtable_alloc&&) = default;
@@ -2308,22 +2308,22 @@ call    0 returned 1
         -: 1830:	{ }
         -: 1831:
         -: 1832:      __node_alloc_type&
-       28: 1833:      _M_node_allocator()
-       28: 1834:      { return __ebo_node_alloc::_M_get(); }
+       56: 1833:      _M_node_allocator()
+       56: 1834:      { return __ebo_node_alloc::_M_get(); }
 ------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE17_M_node_allocatorEv:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE17_M_node_allocatorEv called 14 returned 100% blocks executed 100%
-       14: 1833:      _M_node_allocator()
-       14: 1834:      { return __ebo_node_alloc::_M_get(); }
-       14: 1834-block  0
-call    0 returned 14
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE17_M_node_allocatorEv called 28 returned 100% blocks executed 100%
+       28: 1833:      _M_node_allocator()
+       28: 1834:      { return __ebo_node_alloc::_M_get(); }
+       28: 1834-block  0
+call    0 returned 28
 ------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE17_M_node_allocatorEv:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE17_M_node_allocatorEv called 14 returned 100% blocks executed 100%
-       14: 1833:      _M_node_allocator()
-       14: 1834:      { return __ebo_node_alloc::_M_get(); }
-       14: 1834-block  0
-call    0 returned 14
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE17_M_node_allocatorEv called 28 returned 100% blocks executed 100%
+       28: 1833:      _M_node_allocator()
+       28: 1834:      { return __ebo_node_alloc::_M_get(); }
+       28: 1834-block  0
+call    0 returned 28
 ------------------
         -: 1835:
         -: 1836:      const __node_alloc_type&
@@ -2360,18 +2360,18 @@ call    0 returned 14
         -: 1867:  template<typename _NodeAlloc>
         -: 1868:    template<typename... _Args>
         -: 1869:      auto
-        6: 1870:      _Hashtable_alloc<_NodeAlloc>::_M_allocate_node(_Args&&... __args)
+       12: 1870:      _Hashtable_alloc<_NodeAlloc>::_M_allocate_node(_Args&&... __args)
         -: 1871:      -> __node_ptr
         -: 1872:      {
-        6: 1873:	auto __nptr = __node_alloc_traits::allocate(_M_node_allocator(), 1);
-        6: 1874:	__node_ptr __n = std::__to_address(__nptr);
+       12: 1873:	auto __nptr = __node_alloc_traits::allocate(_M_node_allocator(), 1);
+       12: 1874:	__node_ptr __n = std::__to_address(__nptr);
         -: 1875:	__try
         -: 1876:	  {
-        6: 1877:	    ::new ((void*)__n) __node_type;
-        6: 1878:	    __node_alloc_traits::construct(_M_node_allocator(),
+       12: 1877:	    ::new ((void*)__n) __node_type;
+       12: 1878:	    __node_alloc_traits::construct(_M_node_allocator(),
         -: 1879:					   __n->_M_valptr(),
         -: 1880:					   std::forward<_Args>(__args)...);
-        6: 1881:	    return __n;
+       12: 1881:	    return __n;
         -: 1882:	  }
     =====: 1883:	__catch(...)
         -: 1884:	  {
@@ -2381,38 +2381,38 @@ call    0 returned 14
         -: 1888:      }
 ------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE16_M_allocate_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS9_EESJ_IJEEEEEPSC_DpOT_:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE16_M_allocate_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS9_EESJ_IJEEEEEPSC_DpOT_ called 3 returned 100% blocks executed 70%
-        3: 1870:      _Hashtable_alloc<_NodeAlloc>::_M_allocate_node(_Args&&... __args)
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE16_M_allocate_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS9_EESJ_IJEEEEEPSC_DpOT_ called 6 returned 100% blocks executed 70%
+        6: 1870:      _Hashtable_alloc<_NodeAlloc>::_M_allocate_node(_Args&&... __args)
         -: 1871:      -> __node_ptr
         -: 1872:      {
-        3: 1873:	auto __nptr = __node_alloc_traits::allocate(_M_node_allocator(), 1);
-        3: 1873-block  0
-call    0 returned 3
-call    1 returned 3
-        3: 1874:	__node_ptr __n = std::__to_address(__nptr);
-call    0 returned 3
+        6: 1873:	auto __nptr = __node_alloc_traits::allocate(_M_node_allocator(), 1);
+        6: 1873-block  0
+call    0 returned 6
+call    1 returned 6
+        6: 1874:	__node_ptr __n = std::__to_address(__nptr);
+call    0 returned 6
         -: 1875:	__try
         -: 1876:	  {
-        3: 1877:	    ::new ((void*)__n) __node_type;
-call    0 returned 3
-call    1 returned 3
-        3: 1878:	    __node_alloc_traits::construct(_M_node_allocator(),
-call    0 returned 3
-call    1 returned 3
-call    2 returned 3
-call    3 returned 3
-call    4 returned 3
-branch  5 taken 3 (fallthrough)
+        6: 1877:	    ::new ((void*)__n) __node_type;
+call    0 returned 6
+call    1 returned 6
+        6: 1878:	    __node_alloc_traits::construct(_M_node_allocator(),
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+call    3 returned 6
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
 branch  6 taken 0 (throw)
-        3: 1878-block  0
-call    7 returned 3
-branch  8 taken 3 (fallthrough)
+        6: 1878-block  0
+call    7 returned 6
+branch  8 taken 6 (fallthrough)
 branch  9 taken 0 (throw)
         -: 1879:					   __n->_M_valptr(),
         -: 1880:					   std::forward<_Args>(__args)...);
-        3: 1881:	    return __n;
-        3: 1881-block  0
-        3: 1881-block  1
+        6: 1881:	    return __n;
+        6: 1881-block  0
+        6: 1881-block  1
         -: 1882:	  }
     =====: 1883:	__catch(...)
     $$$$$: 1883-block  0
@@ -2436,38 +2436,38 @@ call    0 never executed
         -: 1888:      }
 ------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE16_M_allocate_nodeIJRKSt21piecewise_construct_tSt5tupleIJOS8_EESI_IJEEEEEPSB_DpOT_:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE16_M_allocate_nodeIJRKSt21piecewise_construct_tSt5tupleIJOS8_EESI_IJEEEEEPSB_DpOT_ called 3 returned 100% blocks executed 70%
-        3: 1870:      _Hashtable_alloc<_NodeAlloc>::_M_allocate_node(_Args&&... __args)
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE16_M_allocate_nodeIJRKSt21piecewise_construct_tSt5tupleIJOS8_EESI_IJEEEEEPSB_DpOT_ called 6 returned 100% blocks executed 70%
+        6: 1870:      _Hashtable_alloc<_NodeAlloc>::_M_allocate_node(_Args&&... __args)
         -: 1871:      -> __node_ptr
         -: 1872:      {
-        3: 1873:	auto __nptr = __node_alloc_traits::allocate(_M_node_allocator(), 1);
-        3: 1873-block  0
-call    0 returned 3
-call    1 returned 3
-        3: 1874:	__node_ptr __n = std::__to_address(__nptr);
-call    0 returned 3
+        6: 1873:	auto __nptr = __node_alloc_traits::allocate(_M_node_allocator(), 1);
+        6: 1873-block  0
+call    0 returned 6
+call    1 returned 6
+        6: 1874:	__node_ptr __n = std::__to_address(__nptr);
+call    0 returned 6
         -: 1875:	__try
         -: 1876:	  {
-        3: 1877:	    ::new ((void*)__n) __node_type;
-call    0 returned 3
-call    1 returned 3
-        3: 1878:	    __node_alloc_traits::construct(_M_node_allocator(),
-call    0 returned 3
-call    1 returned 3
-call    2 returned 3
-call    3 returned 3
-call    4 returned 3
-branch  5 taken 3 (fallthrough)
+        6: 1877:	    ::new ((void*)__n) __node_type;
+call    0 returned 6
+call    1 returned 6
+        6: 1878:	    __node_alloc_traits::construct(_M_node_allocator(),
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+call    3 returned 6
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
 branch  6 taken 0 (throw)
-        3: 1878-block  0
-call    7 returned 3
-branch  8 taken 3 (fallthrough)
+        6: 1878-block  0
+call    7 returned 6
+branch  8 taken 6 (fallthrough)
 branch  9 taken 0 (throw)
         -: 1879:					   __n->_M_valptr(),
         -: 1880:					   std::forward<_Args>(__args)...);
-        3: 1881:	    return __n;
-        3: 1881-block  0
-        3: 1881-block  1
+        6: 1881:	    return __n;
+        6: 1881-block  0
+        6: 1881-block  1
         -: 1882:	  }
     =====: 1883:	__catch(...)
     $$$$$: 1883-block  0
@@ -2493,260 +2493,260 @@ call    0 never executed
         -: 1889:
         -: 1890:  template<typename _NodeAlloc>
         -: 1891:    void
+       12: 1892:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node(__node_ptr __n)
+        -: 1893:    {
+       12: 1894:      __node_alloc_traits::destroy(_M_node_allocator(), __n->_M_valptr());
+       12: 1895:      _M_deallocate_node_ptr(__n);
+       12: 1896:    }
+------------------
+_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE18_M_deallocate_nodeEPSC_:
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE18_M_deallocate_nodeEPSC_ called 6 returned 100% blocks executed 100%
         6: 1892:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node(__node_ptr __n)
         -: 1893:    {
         6: 1894:      __node_alloc_traits::destroy(_M_node_allocator(), __n->_M_valptr());
+        6: 1894-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
         6: 1895:      _M_deallocate_node_ptr(__n);
+call    0 returned 6
         6: 1896:    }
 ------------------
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE18_M_deallocate_nodeEPSC_:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE18_M_deallocate_nodeEPSC_ called 3 returned 100% blocks executed 100%
-        3: 1892:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node(__node_ptr __n)
-        -: 1893:    {
-        3: 1894:      __node_alloc_traits::destroy(_M_node_allocator(), __n->_M_valptr());
-        3: 1894-block  0
-call    0 returned 3
-call    1 returned 3
-call    2 returned 3
-        3: 1895:      _M_deallocate_node_ptr(__n);
-call    0 returned 3
-        3: 1896:    }
-------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE18_M_deallocate_nodeEPSB_:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE18_M_deallocate_nodeEPSB_ called 3 returned 100% blocks executed 100%
-        3: 1892:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node(__node_ptr __n)
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE18_M_deallocate_nodeEPSB_ called 6 returned 100% blocks executed 100%
+        6: 1892:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node(__node_ptr __n)
         -: 1893:    {
-        3: 1894:      __node_alloc_traits::destroy(_M_node_allocator(), __n->_M_valptr());
-        3: 1894-block  0
-call    0 returned 3
-call    1 returned 3
-call    2 returned 3
-        3: 1895:      _M_deallocate_node_ptr(__n);
-call    0 returned 3
-        3: 1896:    }
+        6: 1894:      __node_alloc_traits::destroy(_M_node_allocator(), __n->_M_valptr());
+        6: 1894-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+        6: 1895:      _M_deallocate_node_ptr(__n);
+call    0 returned 6
+        6: 1896:    }
 ------------------
         -: 1897:
         -: 1898:  template<typename _NodeAlloc>
         -: 1899:    void
+       12: 1900:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node_ptr(__node_ptr __n)
+        -: 1901:    {
+        -: 1902:      typedef typename __node_alloc_traits::pointer _Ptr;
+       12: 1903:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__n);
+       12: 1904:      __n->~__node_type();
+       12: 1905:      __node_alloc_traits::deallocate(_M_node_allocator(), __ptr, 1);
+       12: 1906:    }
+------------------
+_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE22_M_deallocate_node_ptrEPSC_:
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE22_M_deallocate_node_ptrEPSC_ called 6 returned 100% blocks executed 100%
         6: 1900:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node_ptr(__node_ptr __n)
         -: 1901:    {
         -: 1902:      typedef typename __node_alloc_traits::pointer _Ptr;
         6: 1903:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__n);
+        6: 1903-block  0
+call    0 returned 6
         6: 1904:      __n->~__node_type();
         6: 1905:      __node_alloc_traits::deallocate(_M_node_allocator(), __ptr, 1);
+call    0 returned 6
+call    1 returned 6
         6: 1906:    }
 ------------------
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE22_M_deallocate_node_ptrEPSC_:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE22_M_deallocate_node_ptrEPSC_ called 3 returned 100% blocks executed 100%
-        3: 1900:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node_ptr(__node_ptr __n)
-        -: 1901:    {
-        -: 1902:      typedef typename __node_alloc_traits::pointer _Ptr;
-        3: 1903:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__n);
-        3: 1903-block  0
-call    0 returned 3
-        3: 1904:      __n->~__node_type();
-        3: 1905:      __node_alloc_traits::deallocate(_M_node_allocator(), __ptr, 1);
-call    0 returned 3
-call    1 returned 3
-        3: 1906:    }
-------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE22_M_deallocate_node_ptrEPSB_:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE22_M_deallocate_node_ptrEPSB_ called 3 returned 100% blocks executed 100%
-        3: 1900:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node_ptr(__node_ptr __n)
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE22_M_deallocate_node_ptrEPSB_ called 6 returned 100% blocks executed 100%
+        6: 1900:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_node_ptr(__node_ptr __n)
         -: 1901:    {
         -: 1902:      typedef typename __node_alloc_traits::pointer _Ptr;
-        3: 1903:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__n);
-        3: 1903-block  0
-call    0 returned 3
-        3: 1904:      __n->~__node_type();
-        3: 1905:      __node_alloc_traits::deallocate(_M_node_allocator(), __ptr, 1);
-call    0 returned 3
-call    1 returned 3
-        3: 1906:    }
+        6: 1903:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__n);
+        6: 1903-block  0
+call    0 returned 6
+        6: 1904:      __n->~__node_type();
+        6: 1905:      __node_alloc_traits::deallocate(_M_node_allocator(), __ptr, 1);
+call    0 returned 6
+call    1 returned 6
+        6: 1906:    }
 ------------------
         -: 1907:
         -: 1908:  template<typename _NodeAlloc>
         -: 1909:    void
+        5: 1910:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_nodes(__node_ptr __n)
+        -: 1911:    {
+       17: 1912:      while (__n)
+        -: 1913:	{
+       12: 1914:	  __node_ptr __tmp = __n;
+       12: 1915:	  __n = __n->_M_next();
+       12: 1916:	  _M_deallocate_node(__tmp);
+        -: 1917:	}
+        5: 1918:    }
+------------------
+_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE19_M_deallocate_nodesEPSC_:
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE19_M_deallocate_nodesEPSC_ called 3 returned 100% blocks executed 100%
         3: 1910:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_nodes(__node_ptr __n)
         -: 1911:    {
         9: 1912:      while (__n)
+        3: 1912-block  0
+        9: 1912-block  1
+branch  0 taken 6
+branch  1 taken 3 (fallthrough)
         -: 1913:	{
         6: 1914:	  __node_ptr __tmp = __n;
         6: 1915:	  __n = __n->_M_next();
+        6: 1915-block  0
+call    0 returned 6
         6: 1916:	  _M_deallocate_node(__tmp);
+call    0 returned 6
         -: 1917:	}
         3: 1918:    }
 ------------------
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE19_M_deallocate_nodesEPSC_:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE19_M_deallocate_nodesEPSC_ called 2 returned 100% blocks executed 100%
+_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE19_M_deallocate_nodesEPSB_:
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE19_M_deallocate_nodesEPSB_ called 2 returned 100% blocks executed 100%
         2: 1910:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_nodes(__node_ptr __n)
         -: 1911:    {
-        5: 1912:      while (__n)
+        8: 1912:      while (__n)
         2: 1912-block  0
-        5: 1912-block  1
-branch  0 taken 3
+        8: 1912-block  1
+branch  0 taken 6
 branch  1 taken 2 (fallthrough)
         -: 1913:	{
-        3: 1914:	  __node_ptr __tmp = __n;
-        3: 1915:	  __n = __n->_M_next();
-        3: 1915-block  0
-call    0 returned 3
-        3: 1916:	  _M_deallocate_node(__tmp);
-call    0 returned 3
+        6: 1914:	  __node_ptr __tmp = __n;
+        6: 1915:	  __n = __n->_M_next();
+        6: 1915-block  0
+call    0 returned 6
+        6: 1916:	  _M_deallocate_node(__tmp);
+call    0 returned 6
         -: 1917:	}
         2: 1918:    }
-------------------
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE19_M_deallocate_nodesEPSB_:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE19_M_deallocate_nodesEPSB_ called 1 returned 100% blocks executed 100%
-        1: 1910:    _Hashtable_alloc<_NodeAlloc>::_M_deallocate_nodes(__node_ptr __n)
-        -: 1911:    {
-        4: 1912:      while (__n)
-        1: 1912-block  0
-        4: 1912-block  1
-branch  0 taken 3
-branch  1 taken 1 (fallthrough)
-        -: 1913:	{
-        3: 1914:	  __node_ptr __tmp = __n;
-        3: 1915:	  __n = __n->_M_next();
-        3: 1915-block  0
-call    0 returned 3
-        3: 1916:	  _M_deallocate_node(__tmp);
-call    0 returned 3
-        -: 1917:	}
-        1: 1918:    }
 ------------------
         -: 1919:
         -: 1920:  template<typename _NodeAlloc>
         -: 1921:    auto
+        4: 1922:    _Hashtable_alloc<_NodeAlloc>::_M_allocate_buckets(std::size_t __bkt_count)
+        -: 1923:    -> __buckets_ptr
+        -: 1924:    {
+        4: 1925:      __buckets_alloc_type __alloc(_M_node_allocator());
+        -: 1926:
+        4: 1927:      auto __ptr = __buckets_alloc_traits::allocate(__alloc, __bkt_count);
+        4: 1928:      __buckets_ptr __p = std::__to_address(__ptr);
+        4: 1929:      __builtin_memset(__p, 0, __bkt_count * sizeof(__node_base_ptr));
+        4: 1930:      return __p;
+        4: 1931:    }
+------------------
+_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE19_M_allocate_bucketsEm:
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE19_M_allocate_bucketsEm called 2 returned 100% blocks executed 80%
         2: 1922:    _Hashtable_alloc<_NodeAlloc>::_M_allocate_buckets(std::size_t __bkt_count)
         -: 1923:    -> __buckets_ptr
         -: 1924:    {
         2: 1925:      __buckets_alloc_type __alloc(_M_node_allocator());
+        2: 1925-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2: 1925-block  1
+call    3 returned 2
         -: 1926:
         2: 1927:      auto __ptr = __buckets_alloc_traits::allocate(__alloc, __bkt_count);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
         2: 1928:      __buckets_ptr __p = std::__to_address(__ptr);
+        2: 1928-block  0
+call    0 returned 2
         2: 1929:      __builtin_memset(__p, 0, __bkt_count * sizeof(__node_base_ptr));
         2: 1930:      return __p;
+        2: 1930-block  0
         2: 1931:    }
-------------------
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE19_M_allocate_bucketsEm:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE19_M_allocate_bucketsEm called 1 returned 100% blocks executed 80%
-        1: 1922:    _Hashtable_alloc<_NodeAlloc>::_M_allocate_buckets(std::size_t __bkt_count)
-        -: 1923:    -> __buckets_ptr
-        -: 1924:    {
-        1: 1925:      __buckets_alloc_type __alloc(_M_node_allocator());
-        1: 1925-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1: 1925-block  1
-call    3 returned 1
-        -: 1926:
-        1: 1927:      auto __ptr = __buckets_alloc_traits::allocate(__alloc, __bkt_count);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1: 1928:      __buckets_ptr __p = std::__to_address(__ptr);
-        1: 1928-block  0
-call    0 returned 1
-        1: 1929:      __builtin_memset(__p, 0, __bkt_count * sizeof(__node_base_ptr));
-        1: 1930:      return __p;
-        1: 1930-block  0
-        1: 1931:    }
-call    0 returned 1
+call    0 returned 2
     $$$$$: 1931-block  0
 call    1 never executed
 ------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE19_M_allocate_bucketsEm:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE19_M_allocate_bucketsEm called 1 returned 100% blocks executed 80%
-        1: 1922:    _Hashtable_alloc<_NodeAlloc>::_M_allocate_buckets(std::size_t __bkt_count)
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE19_M_allocate_bucketsEm called 2 returned 100% blocks executed 80%
+        2: 1922:    _Hashtable_alloc<_NodeAlloc>::_M_allocate_buckets(std::size_t __bkt_count)
         -: 1923:    -> __buckets_ptr
         -: 1924:    {
-        1: 1925:      __buckets_alloc_type __alloc(_M_node_allocator());
-        1: 1925-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
+        2: 1925:      __buckets_alloc_type __alloc(_M_node_allocator());
+        2: 1925-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        1: 1925-block  1
-call    3 returned 1
+        2: 1925-block  1
+call    3 returned 2
         -: 1926:
-        1: 1927:      auto __ptr = __buckets_alloc_traits::allocate(__alloc, __bkt_count);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
+        2: 1927:      auto __ptr = __buckets_alloc_traits::allocate(__alloc, __bkt_count);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        1: 1928:      __buckets_ptr __p = std::__to_address(__ptr);
-        1: 1928-block  0
-call    0 returned 1
-        1: 1929:      __builtin_memset(__p, 0, __bkt_count * sizeof(__node_base_ptr));
-        1: 1930:      return __p;
-        1: 1930-block  0
-        1: 1931:    }
-call    0 returned 1
+        2: 1928:      __buckets_ptr __p = std::__to_address(__ptr);
+        2: 1928-block  0
+call    0 returned 2
+        2: 1929:      __builtin_memset(__p, 0, __bkt_count * sizeof(__node_base_ptr));
+        2: 1930:      return __p;
+        2: 1930-block  0
+        2: 1931:    }
+call    0 returned 2
     $$$$$: 1931-block  0
 call    1 never executed
 ------------------
         -: 1932:
         -: 1933:  template<typename _NodeAlloc>
         -: 1934:    void
+        4: 1935:    _Hashtable_alloc<_NodeAlloc>::
+        -: 1936:    _M_deallocate_buckets(__buckets_ptr __bkts,
+        -: 1937:			  std::size_t __bkt_count)
+        -: 1938:    {
+        -: 1939:      typedef typename __buckets_alloc_traits::pointer _Ptr;
+        4: 1940:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__bkts);
+        4: 1941:      __buckets_alloc_type __alloc(_M_node_allocator());
+        4: 1942:      __buckets_alloc_traits::deallocate(__alloc, __ptr, __bkt_count);
+        4: 1943:    }
+------------------
+_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm:
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm called 2 returned 100% blocks executed 78%
         2: 1935:    _Hashtable_alloc<_NodeAlloc>::
         -: 1936:    _M_deallocate_buckets(__buckets_ptr __bkts,
         -: 1937:			  std::size_t __bkt_count)
         -: 1938:    {
         -: 1939:      typedef typename __buckets_alloc_traits::pointer _Ptr;
         2: 1940:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__bkts);
+        2: 1940-block  0
+call    0 returned 2
         2: 1941:      __buckets_alloc_type __alloc(_M_node_allocator());
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2: 1941-block  0
+call    3 returned 2
         2: 1942:      __buckets_alloc_traits::deallocate(__alloc, __ptr, __bkt_count);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
         2: 1943:    }
-------------------
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm called 1 returned 100% blocks executed 78%
-        1: 1935:    _Hashtable_alloc<_NodeAlloc>::
-        -: 1936:    _M_deallocate_buckets(__buckets_ptr __bkts,
-        -: 1937:			  std::size_t __bkt_count)
-        -: 1938:    {
-        -: 1939:      typedef typename __buckets_alloc_traits::pointer _Ptr;
-        1: 1940:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__bkts);
-        1: 1940-block  0
-call    0 returned 1
-        1: 1941:      __buckets_alloc_type __alloc(_M_node_allocator());
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1: 1941-block  0
-call    3 returned 1
-        1: 1942:      __buckets_alloc_traits::deallocate(__alloc, __ptr, __bkt_count);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1: 1943:    }
-        1: 1943-block  0
-call    0 returned 1
+        2: 1943-block  0
+call    0 returned 2
     $$$$$: 1943-block  1
 call    1 never executed
 ------------------
 _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm:
-function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm called 1 returned 100% blocks executed 78%
-        1: 1935:    _Hashtable_alloc<_NodeAlloc>::
+function _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm called 2 returned 100% blocks executed 78%
+        2: 1935:    _Hashtable_alloc<_NodeAlloc>::
         -: 1936:    _M_deallocate_buckets(__buckets_ptr __bkts,
         -: 1937:			  std::size_t __bkt_count)
         -: 1938:    {
         -: 1939:      typedef typename __buckets_alloc_traits::pointer _Ptr;
-        1: 1940:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__bkts);
-        1: 1940-block  0
-call    0 returned 1
-        1: 1941:      __buckets_alloc_type __alloc(_M_node_allocator());
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
+        2: 1940:      auto __ptr = std::pointer_traits<_Ptr>::pointer_to(*__bkts);
+        2: 1940-block  0
+call    0 returned 2
+        2: 1941:      __buckets_alloc_type __alloc(_M_node_allocator());
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        1: 1941-block  0
-call    3 returned 1
-        1: 1942:      __buckets_alloc_traits::deallocate(__alloc, __ptr, __bkt_count);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
+        2: 1941-block  0
+call    3 returned 2
+        2: 1942:      __buckets_alloc_traits::deallocate(__alloc, __ptr, __bkt_count);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        1: 1943:    }
-        1: 1943-block  0
-call    0 returned 1
+        2: 1943:    }
+        2: 1943-block  0
+call    0 returned 2
     $$$$$: 1943-block  1
 call    1 never executed
 ------------------

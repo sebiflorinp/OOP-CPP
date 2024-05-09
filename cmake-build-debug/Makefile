@@ -369,6 +369,30 @@ misc/Utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/misc/Utils.cpp.s
 .PHONY : misc/Utils.cpp.s
 
+repository/AbstractCarRepo.o: repository/AbstractCarRepo.cpp.o
+.PHONY : repository/AbstractCarRepo.o
+
+# target to build an object file
+repository/AbstractCarRepo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/repository/AbstractCarRepo.cpp.o
+.PHONY : repository/AbstractCarRepo.cpp.o
+
+repository/AbstractCarRepo.i: repository/AbstractCarRepo.cpp.i
+.PHONY : repository/AbstractCarRepo.i
+
+# target to preprocess a source file
+repository/AbstractCarRepo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/repository/AbstractCarRepo.cpp.i
+.PHONY : repository/AbstractCarRepo.cpp.i
+
+repository/AbstractCarRepo.s: repository/AbstractCarRepo.cpp.s
+.PHONY : repository/AbstractCarRepo.s
+
+# target to generate assembly for a file
+repository/AbstractCarRepo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/repository/AbstractCarRepo.cpp.s
+.PHONY : repository/AbstractCarRepo.cpp.s
+
 repository/CarRepository.o: repository/CarRepository.cpp.o
 .PHONY : repository/CarRepository.o
 
@@ -392,6 +416,30 @@ repository/CarRepository.s: repository/CarRepository.cpp.s
 repository/CarRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/repository/CarRepository.cpp.s
 .PHONY : repository/CarRepository.cpp.s
+
+repository/ProbabilityRepo.o: repository/ProbabilityRepo.cpp.o
+.PHONY : repository/ProbabilityRepo.o
+
+# target to build an object file
+repository/ProbabilityRepo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/repository/ProbabilityRepo.cpp.o
+.PHONY : repository/ProbabilityRepo.cpp.o
+
+repository/ProbabilityRepo.i: repository/ProbabilityRepo.cpp.i
+.PHONY : repository/ProbabilityRepo.i
+
+# target to preprocess a source file
+repository/ProbabilityRepo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/repository/ProbabilityRepo.cpp.i
+.PHONY : repository/ProbabilityRepo.cpp.i
+
+repository/ProbabilityRepo.s: repository/ProbabilityRepo.cpp.s
+.PHONY : repository/ProbabilityRepo.s
+
+# target to generate assembly for a file
+repository/ProbabilityRepo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/repository/ProbabilityRepo.cpp.s
+.PHONY : repository/ProbabilityRepo.cpp.s
 
 test/CarControllerTests.o: test/CarControllerTests.cpp.o
 .PHONY : test/CarControllerTests.o
@@ -489,29 +537,29 @@ test/CarValidatorsTests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/CarValidatorsTests.cpp.s
 .PHONY : test/CarValidatorsTests.cpp.s
 
-test/CarstToWashControllerTests.o: test/CarstToWashControllerTests.cpp.o
-.PHONY : test/CarstToWashControllerTests.o
+test/CarsToWashControllerTests.o: test/CarsToWashControllerTests.cpp.o
+.PHONY : test/CarsToWashControllerTests.o
 
 # target to build an object file
-test/CarstToWashControllerTests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/CarstToWashControllerTests.cpp.o
-.PHONY : test/CarstToWashControllerTests.cpp.o
+test/CarsToWashControllerTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/CarsToWashControllerTests.cpp.o
+.PHONY : test/CarsToWashControllerTests.cpp.o
 
-test/CarstToWashControllerTests.i: test/CarstToWashControllerTests.cpp.i
-.PHONY : test/CarstToWashControllerTests.i
+test/CarsToWashControllerTests.i: test/CarsToWashControllerTests.cpp.i
+.PHONY : test/CarsToWashControllerTests.i
 
 # target to preprocess a source file
-test/CarstToWashControllerTests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/CarstToWashControllerTests.cpp.i
-.PHONY : test/CarstToWashControllerTests.cpp.i
+test/CarsToWashControllerTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/CarsToWashControllerTests.cpp.i
+.PHONY : test/CarsToWashControllerTests.cpp.i
 
-test/CarstToWashControllerTests.s: test/CarstToWashControllerTests.cpp.s
-.PHONY : test/CarstToWashControllerTests.s
+test/CarsToWashControllerTests.s: test/CarsToWashControllerTests.cpp.s
+.PHONY : test/CarsToWashControllerTests.s
 
 # target to generate assembly for a file
-test/CarstToWashControllerTests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/CarstToWashControllerTests.cpp.s
-.PHONY : test/CarstToWashControllerTests.cpp.s
+test/CarsToWashControllerTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/CarsToWashControllerTests.cpp.s
+.PHONY : test/CarsToWashControllerTests.cpp.s
 
 test/DynamicArrayTests.o: test/DynamicArrayTests.cpp.o
 .PHONY : test/DynamicArrayTests.o
@@ -633,6 +681,30 @@ test/TypeDTOTests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/TypeDTOTests.cpp.s
 .PHONY : test/TypeDTOTests.cpp.s
 
+test/UndoTests.o: test/UndoTests.cpp.o
+.PHONY : test/UndoTests.o
+
+# target to build an object file
+test/UndoTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/UndoTests.cpp.o
+.PHONY : test/UndoTests.cpp.o
+
+test/UndoTests.i: test/UndoTests.cpp.i
+.PHONY : test/UndoTests.i
+
+# target to preprocess a source file
+test/UndoTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/UndoTests.cpp.i
+.PHONY : test/UndoTests.cpp.i
+
+test/UndoTests.s: test/UndoTests.cpp.s
+.PHONY : test/UndoTests.s
+
+# target to generate assembly for a file
+test/UndoTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/test/UndoTests.cpp.s
+.PHONY : test/UndoTests.cpp.s
+
 test/tests.o: test/tests.cpp.o
 .PHONY : test/tests.o
 
@@ -681,6 +753,30 @@ ui/UI.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/ui/UI.cpp.s
 .PHONY : ui/UI.cpp.s
 
+undo/Undo.o: undo/Undo.cpp.o
+.PHONY : undo/Undo.o
+
+# target to build an object file
+undo/Undo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/undo/Undo.cpp.o
+.PHONY : undo/Undo.cpp.o
+
+undo/Undo.i: undo/Undo.cpp.i
+.PHONY : undo/Undo.i
+
+# target to preprocess a source file
+undo/Undo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/undo/Undo.cpp.i
+.PHONY : undo/Undo.cpp.i
+
+undo/Undo.s: undo/Undo.cpp.s
+.PHONY : undo/Undo.s
+
+# target to generate assembly for a file
+undo/Undo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpplab.dir/build.make CMakeFiles/cpplab.dir/undo/Undo.cpp.s
+.PHONY : undo/Undo.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -720,9 +816,15 @@ help:
 	@echo "... misc/Utils.o"
 	@echo "... misc/Utils.i"
 	@echo "... misc/Utils.s"
+	@echo "... repository/AbstractCarRepo.o"
+	@echo "... repository/AbstractCarRepo.i"
+	@echo "... repository/AbstractCarRepo.s"
 	@echo "... repository/CarRepository.o"
 	@echo "... repository/CarRepository.i"
 	@echo "... repository/CarRepository.s"
+	@echo "... repository/ProbabilityRepo.o"
+	@echo "... repository/ProbabilityRepo.i"
+	@echo "... repository/ProbabilityRepo.s"
 	@echo "... test/CarControllerTests.o"
 	@echo "... test/CarControllerTests.i"
 	@echo "... test/CarControllerTests.s"
@@ -735,9 +837,9 @@ help:
 	@echo "... test/CarValidatorsTests.o"
 	@echo "... test/CarValidatorsTests.i"
 	@echo "... test/CarValidatorsTests.s"
-	@echo "... test/CarstToWashControllerTests.o"
-	@echo "... test/CarstToWashControllerTests.i"
-	@echo "... test/CarstToWashControllerTests.s"
+	@echo "... test/CarsToWashControllerTests.o"
+	@echo "... test/CarsToWashControllerTests.i"
+	@echo "... test/CarsToWashControllerTests.s"
 	@echo "... test/DynamicArrayTests.o"
 	@echo "... test/DynamicArrayTests.i"
 	@echo "... test/DynamicArrayTests.s"
@@ -753,12 +855,18 @@ help:
 	@echo "... test/TypeDTOTests.o"
 	@echo "... test/TypeDTOTests.i"
 	@echo "... test/TypeDTOTests.s"
+	@echo "... test/UndoTests.o"
+	@echo "... test/UndoTests.i"
+	@echo "... test/UndoTests.s"
 	@echo "... test/tests.o"
 	@echo "... test/tests.i"
 	@echo "... test/tests.s"
 	@echo "... ui/UI.o"
 	@echo "... ui/UI.i"
 	@echo "... ui/UI.s"
+	@echo "... undo/Undo.o"
+	@echo "... undo/Undo.i"
+	@echo "... undo/Undo.s"
 .PHONY : help
 
 

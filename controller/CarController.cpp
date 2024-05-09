@@ -1,9 +1,9 @@
 #include "CarController.h"
-#include "../domain/TypeDTO.h"
+#include "../misc/Exceptions.h"
+#include "../undo/Undo.h"
+#include <fstream>
 
-#include <utility>
-
-CarController::CarController(CarRepository& carRepository): carRepository(carRepository) {}
+CarController::CarController(AbstractCarRepo& carRepository): carRepository(carRepository) {}
 
 void CarController::addNewCar(
         const std::string& registrationNumber,
@@ -12,8 +12,10 @@ void CarController::addNewCar(
         const std::string& producer
         ) {
     // create new car object and try to add it in the repository
-    Car newCar = Car(registrationNumber, producer, model, type);
+    Car newCar(registrationNumber, producer, model, type);
     carRepository.addNewCar(newCar);
+    // Add the action in the list of actions that will be undone
+    actionsToUndo.push_back(std::make_unique<UndoAdd>(newCar, carRepository));
 }
 
 Car CarController::findCarByRegistrationNumber(const std::string& registrationNumber) {
@@ -26,15 +28,23 @@ const std::vector<Car>& CarController::getAllCars() {
 }
 
 void CarController::deleteCarByRegistrationNumber(const std::string& registrationNumber) {
-    // deletes the car with the given registrationNumber or throw an error if there is no car with the given registrationNumber
+    // Save a copy of the car that will be deleted
+    Car carToDelete = findCarByRegistrationNumber(registrationNumber);
+    // Deletes the car with the given registrationNumber or throw an error if there is no car with the given registrationNumber
     this->carRepository.deleteCarByRegistrationNumber(registrationNumber);
+    // Add the action in the list of actions that will be undone
+    actionsToUndo.push_back(std::make_unique<UndoDelete>(carToDelete, carRepository));
 }
 
 void CarController::updateCarByRegistrationNumber(const std::string& registrationNumber, const std::string& newRegistrationNumber, const std::string& type, const std::string& model, const std::string& producer) {
+    // Save a copy of the old car.
+    Car oldCar = findCarByRegistrationNumber(registrationNumber);
     // Create the updated car
     Car updatedCar = Car(newRegistrationNumber, producer, model, type);
     // Updates the car
     this->carRepository.updateCarByRegistrationNumber(registrationNumber, updatedCar);
+    // Add the action in the list of actions to be undone
+    actionsToUndo.push_back(std::make_unique<UndoUpdate>(oldCar, updatedCar, carRepository));
 }
 
 std::vector<Car> CarController::filter(std::string toEqual,std::vector<Car> (*filterByCriteria)(const std::vector<Car>&,const std::string&)) {
@@ -60,6 +70,40 @@ std::unordered_map<std::string, TypeDTO> CarController::createTypeReport() {
 
     }
     return typeReportWithDTO;
+}
+
+void CarController::saveData(std::string filename) {
+    // Create (or override) a data.txt file and save the data.
+    std::ofstream out(filename);
+    for (auto car: carRepository.getAllCars()) {
+        out << car.getRegistrationNumber() << " " << car.getType() << " " << car.getModel() << " " << car.getProducer() << "\n";
+    }
+}
+
+void CarController::loadData(std::string filename) {
+    // Empty the repository
+    for (auto car: carRepository.getAllCars()) {
+        carRepository.deleteCarByRegistrationNumber(car.getRegistrationNumber());
+    }
+
+    // Load the data from the data.txt file
+    std::ifstream in(filename);
+    std::string registrationNumber, type, model, producer;
+    while (in >> registrationNumber >> type >> model >> producer) {
+        Car newCar = Car(registrationNumber, producer, model, type);
+        carRepository.addNewCar(newCar);
+    }
+}
+
+void CarController::undo() {
+    // Check if there is any action to undo.
+   if (actionsToUndo.empty()) {
+        throw UndoError("There is no action to undo.");
+    }
+
+    // Perform the undo and delete the last element from the list.
+    actionsToUndo.back()->doUndo();
+    actionsToUndo.pop_back();
 }
 
 

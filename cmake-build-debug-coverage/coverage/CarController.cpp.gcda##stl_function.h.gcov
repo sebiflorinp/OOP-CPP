@@ -370,11 +370,11 @@
         -:  366:    {
         -:  367:      _GLIBCXX14_CONSTEXPR
         -:  368:      bool
-function _ZNKSt8equal_toINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEclERKS5_S8_ called 7 returned 100% blocks executed 100%
-        7:  369:      operator()(const _Tp& __x, const _Tp& __y) const
-        7:  370:      { return __x == __y; }
-        7:  370-block  0
-call    0 returned 7
+function _ZNKSt8equal_toINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEclERKS5_S8_ called 14 returned 100% blocks executed 100%
+       14:  369:      operator()(const _Tp& __x, const _Tp& __y) const
+       14:  370:      { return __x == __y; }
+       14:  370-block  0
+call    0 returned 14
         -:  371:    };
         -:  372:
         -:  373:  /// One of the @link comparison_functors comparison functors@endlink.

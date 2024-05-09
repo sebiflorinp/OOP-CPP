@@ -34,4 +34,12 @@ class AddRandomCarsError : public GenericException {
     using GenericException::GenericException;
 };
 
+class UndoError : public GenericException {
+    using GenericException::GenericException;
+};
+
+class RandomError : public GenericException {
+    using GenericException::GenericException;
+};
+
 #endif //CPPLAB_EXCEPTIONS_H

@@ -3,205 +3,533 @@
         -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/controller/CarController.cpp.gcda
         -:    0:Runs:1
         -:    1:#include "CarController.h"
-        -:    2:#include "../domain/TypeDTO.h"
-        -:    3:
-        -:    4:#include <utility>
+        -:    2:#include "../misc/Exceptions.h"
+        -:    3:#include "../undo/Undo.h"
+        -:    4:#include <fstream>
         -:    5:
-function _ZN13CarControllerC2ER13CarRepository called 9 returned 100% blocks executed 100%
-        9:    6:CarController::CarController(CarRepository& carRepository): carRepository(carRepository) {}
+function _ZN13CarControllerC2ER15AbstractCarRepo called 16 returned 100% blocks executed 100%
+       16:    6:CarController::CarController(AbstractCarRepo& carRepository): carRepository(carRepository) {}
+       16:    6-block  0
+call    0 returned 16
         -:    7:
-function _ZN13CarController9addNewCarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 29 returned 97% blocks executed 100%
-       29:    8:void CarController::addNewCar(
+function _ZN13CarController9addNewCarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 35 returned 97% blocks executed 67%
+       35:    8:void CarController::addNewCar(
         -:    9:        const std::string& registrationNumber,
         -:   10:        const std::string& type,
         -:   11:        const std::string& model,
         -:   12:        const std::string& producer
         -:   13:        ) {
         -:   14:    // create new car object and try to add it in the repository
-       29:   15:    Car newCar = Car(registrationNumber, producer, model, type);
-       29:   15-block  0
-call    0 returned 29
-branch  1 taken 29 (fallthrough)
+       35:   15:    Car newCar(registrationNumber, producer, model, type);
+       35:   15-block  0
+call    0 returned 35
+branch  1 taken 35 (fallthrough)
 branch  2 taken 0 (throw)
-       29:   16:    carRepository.addNewCar(newCar);
-       29:   16-block  0
-call    0 returned 29
-branch  1 taken 28 (fallthrough)
+       35:   16:    carRepository.addNewCar(newCar);
+       35:   16-block  0
+call    0 returned 35
+branch  1 taken 34 (fallthrough)
 branch  2 taken 1 (throw)
-       29:   17:}
-       28:   17-block  0
-call    0 returned 28
-        1:   17-block  1
+        -:   17:    // Add the action in the list of actions that will be undone
+       34:   18:    actionsToUndo.push_back(std::make_unique<UndoAdd>(newCar, carRepository));
+       34:   18-block  0
+call    0 returned 34
+branch  1 taken 34 (fallthrough)
+branch  2 taken 0 (throw)
+       34:   18-block  1
+call    3 returned 34
+call    4 returned 34
+branch  5 taken 34 (fallthrough)
+branch  6 taken 0 (throw)
+       34:   18-block  2
+call    7 returned 34
+call    8 returned 34
+    $$$$$:   18-block  3
+call    9 never executed
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+call   10 never executed
+    $$$$$:   18-block  6
+       35:   19:}
+call    0 returned 34
+        1:   19-block  0
 call    1 returned 1
-        -:   18:
-function _ZN13CarController27findCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 9 returned 67% blocks executed 100%
-        9:   19:Car CarController::findCarByRegistrationNumber(const std::string& registrationNumber) {
-        -:   20:    // return the car with the given registrationNumber or throw an error
-        9:   21:    return this->carRepository.getCarByRegistrationNumber(registrationNumber);
-        9:   21-block  0
-call    0 returned 6
-        -:   22:}
-        -:   23:
-function _ZN13CarController10getAllCarsEv called 2 returned 100% blocks executed 100%
-        2:   24:const std::vector<Car>& CarController::getAllCars() {
-        2:   25:    return this->carRepository.getAllCars();
-        2:   25-block  0
+        -:   20:
+function _ZN13CarController27findCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 19 returned 74% blocks executed 100%
+       19:   21:Car CarController::findCarByRegistrationNumber(const std::string& registrationNumber) {
+        -:   22:    // return the car with the given registrationNumber or throw an error
+       19:   23:    return this->carRepository.getCarByRegistrationNumber(registrationNumber);
+       19:   23-block  0
+call    0 returned 14
+        -:   24:}
+        -:   25:
+function _ZN13CarController10getAllCarsEv called 13 returned 100% blocks executed 100%
+       13:   26:const std::vector<Car>& CarController::getAllCars() {
+       13:   27:    return this->carRepository.getAllCars();
+       13:   27-block  0
+call    0 returned 13
+        -:   28:}
+        -:   29:
+function _ZN13CarController29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 67% blocks executed 56%
+        3:   30:void CarController::deleteCarByRegistrationNumber(const std::string& registrationNumber) {
+        -:   31:    // Save a copy of the car that will be deleted
+        3:   32:    Car carToDelete = findCarByRegistrationNumber(registrationNumber);
+        3:   32-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   33:    // Deletes the car with the given registrationNumber or throw an error if there is no car with the given registrationNumber
+        2:   34:    this->carRepository.deleteCarByRegistrationNumber(registrationNumber);
+        2:   34-block  0
 call    0 returned 2
-        -:   26:}
-        -:   27:
-function _ZN13CarController29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 100%
-        2:   28:void CarController::deleteCarByRegistrationNumber(const std::string& registrationNumber) {
-        -:   29:    // deletes the car with the given registrationNumber or throw an error if there is no car with the given registrationNumber
-        2:   30:    this->carRepository.deleteCarByRegistrationNumber(registrationNumber);
-        2:   30-block  0
-call    0 returned 1
-        1:   31:}
-        -:   32:
-function _ZN13CarController29updateCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_S7_ called 3 returned 33% blocks executed 100%
-        3:   33:void CarController::updateCarByRegistrationNumber(const std::string& registrationNumber, const std::string& newRegistrationNumber, const std::string& type, const std::string& model, const std::string& producer) {
-        -:   34:    // Create the updated car
-        3:   35:    Car updatedCar = Car(newRegistrationNumber, producer, model, type);
-        3:   35-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   36:    // Updates the car
-        5:   37:    this->carRepository.updateCarByRegistrationNumber(registrationNumber, updatedCar);
-        3:   37-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+        -:   35:    // Add the action in the list of actions that will be undone
+        2:   36:    actionsToUndo.push_back(std::make_unique<UndoDelete>(carToDelete, carRepository));
+        2:   36-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
-        3:   37-block  1
-call    3 returned 3
-branch  4 taken 1 (fallthrough)
-branch  5 taken 2 (throw)
-        1:   37-block  2
-call    6 returned 1
-        2:   37-block  3
+        2:   36-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   36-block  2
 call    7 returned 2
-        2:   37-block  4
-        3:   38:}
-call    0 returned 1
-        2:   38-block  0
+call    8 returned 2
+    $$$$$:   36-block  3
+call    9 never executed
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+call   10 never executed
+    $$$$$:   36-block  6
+        2:   37:}
+call    0 returned 2
+    $$$$$:   37-block  0
+call    1 never executed
+        -:   38:
+function _ZN13CarController29updateCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_S7_ called 4 returned 50% blocks executed 78%
+        4:   39:void CarController::updateCarByRegistrationNumber(const std::string& registrationNumber, const std::string& newRegistrationNumber, const std::string& type, const std::string& model, const std::string& producer) {
+        -:   40:    // Save a copy of the old car.
+        4:   41:    Car oldCar = findCarByRegistrationNumber(registrationNumber);
+        4:   41-block  0
+call    0 returned 4
+branch  1 taken 3 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   42:    // Create the updated car
+        3:   43:    Car updatedCar = Car(newRegistrationNumber, producer, model, type);
+        3:   43-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   44:    // Updates the car
+        4:   45:    this->carRepository.updateCarByRegistrationNumber(registrationNumber, updatedCar);
+        3:   45-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   45-block  1
+call    3 returned 3
+branch  4 taken 2 (fallthrough)
+branch  5 taken 1 (throw)
+        2:   45-block  2
+call    6 returned 2
+        1:   45-block  3
+call    7 returned 1
+        1:   45-block  4
+        -:   46:    // Add the action in the list of actions to be undone
+        2:   47:    actionsToUndo.push_back(std::make_unique<UndoUpdate>(oldCar, updatedCar, carRepository));
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   47-block  0
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   47-block  1
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   47-block  2
+call    9 never executed
+    $$$$$:   47-block  3
+    $$$$$:   47-block  4
+call   10 never executed
+    $$$$$:   47-block  5
+        4:   48:}
+call    0 returned 2
 call    1 returned 2
-        -:   39:
+        1:   48-block  0
+call    2 returned 1
+        1:   48-block  1
+call    3 returned 1
+        -:   49:
 function _ZN13CarController6filterENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFSt6vectorI3CarSaIS7_EERKS9_RKS5_E called 1 returned 100% blocks executed 100%
-        1:   40:std::vector<Car> CarController::filter(std::string toEqual,std::vector<Car> (*filterByCriteria)(const std::vector<Car>&,const std::string&)) {
-        1:   41:    return filterByCriteria(carRepository.getAllCars(), toEqual);
-        1:   41-block  0
+        1:   50:std::vector<Car> CarController::filter(std::string toEqual,std::vector<Car> (*filterByCriteria)(const std::vector<Car>&,const std::string&)) {
+        1:   51:    return filterByCriteria(carRepository.getAllCars(), toEqual);
+        1:   51-block  0
 call    0 returned 1
 call    1 returned 1
-        -:   42:}
-        -:   43:
-        -:   44:std::vector<Car>
+        -:   52:}
+        -:   53:
+        -:   54:std::vector<Car>
 function _ZN13CarController4sortERKSt6vectorI3CarSaIS1_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFS3_S3_SD_E called 1 returned 100% blocks executed 75%
-        1:   45:CarController::sort(const std::vector<Car> & cars, const std::string& sortingOrder, std::vector<Car> (*sortByCriteria)(std::vector<Car>, const std::string&)) {
-        1:   46:    return sortByCriteria(cars, sortingOrder);
-        1:   46-block  0
+        1:   55:CarController::sort(const std::vector<Car> & cars, const std::string& sortingOrder, std::vector<Car> (*sortByCriteria)(std::vector<Car>, const std::string&)) {
+        1:   56:    return sortByCriteria(cars, sortingOrder);
+        1:   56-block  0
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   46-block  1
+        1:   56-block  1
 call    4 returned 1
-        1:   46-block  2
-    $$$$$:   46-block  3
+        1:   56-block  2
+    $$$$$:   56-block  3
 call    5 never executed
-        -:   47:}
-        -:   48:
-function _ZN13CarController16createTypeReportB5cxx11Ev called 1 returned 100% blocks executed 63%
-        1:   49:std::unordered_map<std::string, TypeDTO> CarController::createTypeReport() {
-        -:   50:    // Use a map to store the types of cars and their frequency
-        1:   51:    std::unordered_map<std::string, int> typeReportWithoutDTO;
-        1:   51-block  0
-call    0 returned 1
-        5:   52:    for (auto car: carRepository.getAllCars()) {
+        -:   57:}
+        -:   58:
+function _ZN13CarController16createTypeReportB5cxx11Ev called 2 returned 100% blocks executed 63%
+        2:   59:std::unordered_map<std::string, TypeDTO> CarController::createTypeReport() {
+        -:   60:    // Use a map to store the types of cars and their frequency
+        2:   61:    std::unordered_map<std::string, int> typeReportWithoutDTO;
+        2:   61-block  0
+call    0 returned 2
+       10:   62:    for (auto car: carRepository.getAllCars()) {
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   62-block  0
+call    3 returned 2
+call    4 returned 2
+        8:   62-block  1
+call    5 returned 8
+call    6 returned 8
+branch  7 taken 8 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 8
+       10:   62-block  2
+call   10 returned 10
+branch 11 taken 8
+branch 12 taken 2 (fallthrough)
+        8:   63:        typeReportWithoutDTO[car.getType()]++;
+        8:   63-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   63-block  1
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:   63-block  2
+call    6 returned 8
+    $$$$$:   63-block  3
+call    7 never executed
+    $$$$$:   63-block  4
+        8:   64:    }
+call    0 returned 8
+    $$$$$:   64-block  0
+call    1 never executed
+        -:   65:
+        -:   66:    // Create a map with TypeDTOs
+        2:   67:    std::unordered_map<std::string, TypeDTO> typeReportWithDTO;
+        2:   67-block  0
+call    0 returned 2
+        8:   68:    for (auto pair: typeReportWithoutDTO) {
+call    0 returned 2
+call    1 returned 2
+        6:   68-block  0
+call    2 returned 6
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 6
+        8:   68-block  1
+call    7 returned 8
+branch  8 taken 6
+branch  9 taken 2 (fallthrough)
+        6:   69:        typeReportWithDTO[pair.first] = TypeDTO(pair.first, pair.second);
+        6:   69-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   69-block  1
+call    3 returned 6
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   69-block  2
+call    7 returned 6
+call    8 returned 6
+call    9 returned 6
+    $$$$$:   69-block  3
+call   10 never executed
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+call   11 never executed
+    $$$$$:   69-block  6
+        -:   70:
+        6:   71:    }
+call    0 returned 6
+    $$$$$:   71-block  0
+call    1 never executed
+        4:   72:    return typeReportWithDTO;
+        2:   72-block  0
+        2:   72-block  1
+        2:   73:}
+        2:   73-block  0
+call    0 returned 2
+    $$$$$:   73-block  1
+call    1 never executed
+    $$$$$:   73-block  2
+call    2 never executed
+        -:   74:
+function _ZN13CarController8saveDataENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 63%
+        1:   75:void CarController::saveData(std::string filename) {
+        -:   76:    // Create (or override) a data.txt file and save the data.
+        1:   77:    std::ofstream out(filename);
+        1:   77-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   52-block  0
+        4:   78:    for (auto car: carRepository.getAllCars()) {
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   78-block  1
 call    3 returned 1
 call    4 returned 1
-        4:   52-block  1
-call    5 returned 4
-call    6 returned 4
-branch  7 taken 4 (fallthrough)
-branch  8 taken 0 (throw)
-call    9 returned 4
-        5:   52-block  2
-call   10 returned 5
-branch 11 taken 4
-branch 12 taken 1 (fallthrough)
-        4:   53:        typeReportWithoutDTO[car.getType()]++;
-        4:   53-block  0
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
-branch  2 taken 0 (throw)
-        4:   53-block  1
-call    3 returned 4
-branch  4 taken 4 (fallthrough)
-branch  5 taken 0 (throw)
-        4:   53-block  2
-call    6 returned 4
-    $$$$$:   53-block  3
-call    7 never executed
-    $$$$$:   53-block  4
-        4:   54:    }
-call    0 returned 4
-    $$$$$:   54-block  0
-call    1 never executed
-        -:   55:
-        -:   56:    // Create a map with TypeDTOs
-        1:   57:    std::unordered_map<std::string, TypeDTO> typeReportWithDTO;
-        1:   57-block  0
-call    0 returned 1
-        4:   58:    for (auto pair: typeReportWithoutDTO) {
-call    0 returned 1
-call    1 returned 1
-        3:   58-block  0
-call    2 returned 3
-call    3 returned 3
-branch  4 taken 3 (fallthrough)
-branch  5 taken 0 (throw)
+        3:   78-block  2
+call    5 returned 3
 call    6 returned 3
-        4:   58-block  1
-call    7 returned 4
-branch  8 taken 3
-branch  9 taken 1 (fallthrough)
-        3:   59:        typeReportWithDTO[pair.first] = TypeDTO(pair.first, pair.second);
-        3:   59-block  0
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 3
+        4:   78-block  3
+call   10 returned 4
+branch 11 taken 3
+branch 12 taken 1 (fallthrough)
+        3:   79:        out << car.getRegistrationNumber() << " " << car.getType() << " " << car.getModel() << " " << car.getProducer() << "\n";
+        3:   79-block  0
 call    0 returned 3
 branch  1 taken 3 (fallthrough)
 branch  2 taken 0 (throw)
-        3:   59-block  1
+        3:   79-block  1
 call    3 returned 3
-call    4 returned 3
-branch  5 taken 3 (fallthrough)
-branch  6 taken 0 (throw)
-        3:   59-block  2
-call    7 returned 3
-call    8 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   79-block  2
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   79-block  3
 call    9 returned 3
-    $$$$$:   59-block  3
-call   10 never executed
-    $$$$$:   59-block  4
-    $$$$$:   59-block  5
-call   11 never executed
-    $$$$$:   59-block  6
-        -:   60:
-        3:   61:    }
+branch 10 taken 3 (fallthrough)
+branch 11 taken 0 (throw)
+        3:   79-block  4
+call   12 returned 3
+branch 13 taken 3 (fallthrough)
+branch 14 taken 0 (throw)
+        3:   79-block  5
+call   15 returned 3
+branch 16 taken 3 (fallthrough)
+branch 17 taken 0 (throw)
+        3:   79-block  6
+call   18 returned 3
+branch 19 taken 3 (fallthrough)
+branch 20 taken 0 (throw)
+        3:   79-block  7
+call   21 returned 3
+branch 22 taken 3 (fallthrough)
+branch 23 taken 0 (throw)
+        3:   79-block  8
+call   24 returned 3
+branch 25 taken 3 (fallthrough)
+branch 26 taken 0 (throw)
+        3:   79-block  9
+call   27 returned 3
+branch 28 taken 3 (fallthrough)
+branch 29 taken 0 (throw)
+        3:   79-block 10
+call   30 returned 3
+branch 31 taken 3 (fallthrough)
+branch 32 taken 0 (throw)
+        3:   79-block 11
+call   33 returned 3
+branch 34 taken 3 (fallthrough)
+branch 35 taken 0 (throw)
+        3:   79-block 12
+call   36 returned 3
+call   37 returned 3
+call   38 returned 3
+call   39 returned 3
+    $$$$$:   79-block 13
+call   40 never executed
+    $$$$$:   79-block 14
+    $$$$$:   79-block 15
+call   41 never executed
+    $$$$$:   79-block 16
+    $$$$$:   79-block 17
+call   42 never executed
+    $$$$$:   79-block 18
+    $$$$$:   79-block 19
+call   43 never executed
+    $$$$$:   79-block 20
+        3:   80:    }
 call    0 returned 3
-    $$$$$:   61-block  0
+    $$$$$:   80-block  0
 call    1 never executed
-        2:   62:    return typeReportWithDTO;
-        1:   62-block  0
-        1:   62-block  1
-        1:   63:}
-        1:   63-block  0
+        1:   81:}
+        1:   81-block  0
 call    0 returned 1
-    $$$$$:   63-block  1
+    $$$$$:   81-block  1
 call    1 never executed
-    $$$$$:   63-block  2
-call    2 never executed
-        -:   64:
-        -:   65:
+        -:   82:
+function _ZN13CarController8loadDataENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 65%
+        2:   83:void CarController::loadData(std::string filename) {
+        -:   84:    // Empty the repository
+        3:   85:    for (auto car: carRepository.getAllCars()) {
+        2:   85-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   85-block  1
+call    3 returned 2
+call    4 returned 2
+        1:   85-block  2
+call    5 returned 1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+        3:   85-block  3
+call   10 returned 3
+branch 11 taken 1
+branch 12 taken 2 (fallthrough)
+        1:   86:        carRepository.deleteCarByRegistrationNumber(car.getRegistrationNumber());
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   86-block  2
+call    6 returned 1
+    $$$$$:   86-block  3
+call    7 never executed
+    $$$$$:   86-block  4
+        1:   87:    }
+call    0 returned 1
+    $$$$$:   87-block  0
+call    1 never executed
+        -:   88:
+        -:   89:    // Load the data from the data.txt file
+        2:   90:    std::ifstream in(filename);
+        2:   90-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   91:    std::string registrationNumber, type, model, producer;
+        2:   91-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+       10:   92:    while (in >> registrationNumber >> type >> model >> producer) {
+       10:   92-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   92-block  1
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   92-block  2
+call    6 returned 10
+branch  7 taken 10 (fallthrough)
+branch  8 taken 0 (throw)
+       10:   92-block  3
+call    9 returned 10
+branch 10 taken 10 (fallthrough)
+branch 11 taken 0 (throw)
+       10:   92-block  4
+call   12 returned 10
+branch 13 taken 10 (fallthrough)
+branch 14 taken 0 (throw)
+       10:   92-block  5
+branch 15 taken 8
+branch 16 taken 2 (fallthrough)
+        8:   93:        Car newCar = Car(registrationNumber, producer, model, type);
+        8:   93-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   94:        carRepository.addNewCar(newCar);
+        8:   94-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   95:    }
+        8:   95-block  0
+call    0 returned 8
+    $$$$$:   95-block  1
+call    1 never executed
+        2:   96:}
+        2:   96-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+    $$$$$:   96-block  1
+call    5 never executed
+    $$$$$:   96-block  2
+call    6 never executed
+    $$$$$:   96-block  3
+call    7 never executed
+    $$$$$:   96-block  4
+call    8 never executed
+    $$$$$:   96-block  5
+call    9 never executed
+        -:   97:
+function _ZN13CarController4undoEv called 6 returned 83% blocks executed 79%
+        6:   98:void CarController::undo() {
+        -:   99:    // Check if there is any action to undo.
+        6:  100:   if (actionsToUndo.empty()) {
+        6:  100-block  0
+call    0 returned 6
+branch  1 taken 1 (fallthrough)
+branch  2 taken 5
+        1:  101:        throw UndoError("There is no action to undo.");
+        1:  101-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  101-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:  101-block  2
+call    9 never executed
+    $$$$$:  101-block  3
+    $$$$$:  101-block  4
+call   10 never executed
+        -:  102:    }
+        -:  103:
+        -:  104:    // Perform the undo and delete the last element from the list.
+        5:  105:    actionsToUndo.back()->doUndo();
+        5:  105-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+        5:  106:    actionsToUndo.pop_back();
+call    0 returned 5
+        5:  107:}
+        -:  108:
+        -:  109:

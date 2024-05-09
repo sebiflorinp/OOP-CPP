@@ -103,11 +103,11 @@
         -:   99:	{ }
         -:  100:
         -:  101:#if __cplusplus >= 201103L
-function _ZNSt12_Vector_baseI3CarSaIS0_EE17_Vector_impl_dataC2EOS3_ called 0 returned 0% blocks executed 0%
-    #####:  102:	_Vector_impl_data(_Vector_impl_data&& __x) noexcept
-    #####:  103:	: _M_start(__x._M_start), _M_finish(__x._M_finish),
-    #####:  104:	  _M_end_of_storage(__x._M_end_of_storage)
-    #####:  105:	{ __x._M_start = __x._M_finish = __x._M_end_of_storage = pointer(); }
+function _ZNSt12_Vector_baseI3CarSaIS0_EE17_Vector_impl_dataC2EOS3_ called 4 returned 100% blocks executed 100%
+        4:  102:	_Vector_impl_data(_Vector_impl_data&& __x) noexcept
+        4:  103:	: _M_start(__x._M_start), _M_finish(__x._M_finish),
+        4:  104:	  _M_end_of_storage(__x._M_end_of_storage)
+        4:  105:	{ __x._M_start = __x._M_finish = __x._M_end_of_storage = pointer(); }
         -:  106:#endif
         -:  107:
         -:  108:	void
@@ -145,15 +145,15 @@ function _ZNSt12_Vector_baseI3CarSaIS0_EE17_Vector_impl_dataC2EOS3_ called 0 ret
         -:  140:#if __cplusplus >= 201103L
         -:  141:	// Not defaulted, to enforce noexcept(true) even when
         -:  142:	// !is_nothrow_move_constructible<_Tp_alloc_type>.
-function _ZNSt12_Vector_baseI3CarSaIS0_EE12_Vector_implC2EOS3_ called 0 returned 0% blocks executed 0%
-    #####:  143:	_Vector_impl(_Vector_impl&& __x) noexcept
-    #####:  144:	: _Tp_alloc_type(std::move(__x)), _Vector_impl_data(std::move(__x))
-    %%%%%:  144-block  0
-call    0 never executed
-call    1 never executed
-call    2 never executed
-call    3 never executed
-    #####:  145:	{ }
+function _ZNSt12_Vector_baseI3CarSaIS0_EE12_Vector_implC2EOS3_ called 4 returned 100% blocks executed 100%
+        4:  143:	_Vector_impl(_Vector_impl&& __x) noexcept
+        4:  144:	: _Tp_alloc_type(std::move(__x)), _Vector_impl_data(std::move(__x))
+        4:  144-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+call    3 returned 4
+        4:  145:	{ }
         -:  146:
         -:  147:	_Vector_impl(_Tp_alloc_type&& __a) noexcept
         -:  148:	: _Tp_alloc_type(std::move(__a))
@@ -316,10 +316,10 @@ call    3 never executed
         -:  305:      { _M_create_storage(__n); }
         -:  306:
         -:  307:#if __cplusplus >= 201103L
-function _ZNSt12_Vector_baseI3CarSaIS0_EEC2EOS2_ called 0 returned 0% blocks executed 0%
-    #####:  308:      _Vector_base(_Vector_base&&) = default;
-    %%%%%:  308-block  0
-call    0 never executed
+function _ZNSt12_Vector_baseI3CarSaIS0_EEC2EOS2_ called 4 returned 100% blocks executed 100%
+        4:  308:      _Vector_base(_Vector_base&&) = default;
+        4:  308-block  0
+call    0 returned 4
         -:  309:
         -:  310:      // Kept for ABI compatibility.
         -:  311:# if !_GLIBCXX_INLINE_VERSION
@@ -583,10 +583,10 @@ call    0 never executed
         -:  569:       *  The contents of the moved instance are a valid, but unspecified
         -:  570:       *  %vector.
         -:  571:       */
-function _ZNSt6vectorI3CarSaIS0_EEC2EOS2_ called 0 returned 0% blocks executed 0%
-    #####:  572:      vector(vector&&) noexcept = default;
-    %%%%%:  572-block  0
-call    0 never executed
+function _ZNSt6vectorI3CarSaIS0_EEC2EOS2_ called 4 returned 100% blocks executed 100%
+        4:  572:      vector(vector&&) noexcept = default;
+        4:  572-block  0
+call    0 returned 4
         -:  573:
         -:  574:      /// Copy constructor with alternative allocator
         -:  575:      vector(const vector& __x, const allocator_type& __a)

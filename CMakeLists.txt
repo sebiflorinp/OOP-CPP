@@ -44,9 +44,18 @@ add_executable(cpplab main.cpp
         controller/CarsToWashController.h
         misc/Utils.cpp
         misc/Utils.h
-        test/CarstToWashControllerTests.cpp
-        test/CarstToWashControllerTests.h
+        test/CarsToWashControllerTests.cpp
+        test/CarsToWashControllerTests.h
         domain/TypeDTO.h
         domain/TypeDTO.cpp
         test/TypeDTOTests.cpp
-        test/TypeDTOTests.h)
+        test/TypeDTOTests.h
+        undo/Undo.h
+        undo/Undo.cpp
+        test/UndoTests.cpp
+        test/UndoTests.h
+        repository/AbstractCarRepo.cpp
+        repository/AbstractCarRepo.h
+        repository/ProbabilityRepo.cpp
+        repository/ProbabilityRepo.h)
+

@@ -1,0 +1,1815 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/test/CarsToWashControllerTests.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarsToWashControllerTests.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/test/CarsToWashControllerTests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <cassert>
+        -:    2:#include <fstream>
+        -:    3:#include <iostream>
+        -:    4:#include "CarsToWashControllerTests.h"
+        -:    5:#include "../repository/CarRepository.h"
+        -:    6:#include "../controller/CarsToWashController.h"
+        -:    7:#include "../misc/Exceptions.h"
+        -:    8:
+function _ZN25CarsToWashControllerTests14TestGetAllCarsEv called 1 returned 100% blocks executed 47%
+        1:    9:void CarsToWashControllerTests::TestGetAllCars() {
+        -:   10:    // Arrange
+        1:   11:    CarRepository carRepository;
+        1:   11-block  0
+call    0 returned 1
+        2:   12:    Car car1("RO123AA", "Dacia", "AAAA", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   12-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   12-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   12-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   12-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   12-block  4
+    $$$$$:   12-block  5
+    $$$$$:   12-block  6
+    $$$$$:   12-block  7
+    $$$$$:   12-block  8
+    $$$$$:   12-block  9
+    $$$$$:   12-block 10
+    $$$$$:   12-block 11
+        2:   13:    Car car2("EN123BB", "Ferrari", "AS12", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   13-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   13-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   13-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   13-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   13-block  4
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+    $$$$$:   13-block  7
+    $$$$$:   13-block  8
+    $$$$$:   13-block  9
+    $$$$$:   13-block 10
+    $$$$$:   13-block 11
+        2:   14:    Car car3("DE123AA", "BMW", "BB55", "Luxury");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   14-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   14-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   14-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   14-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   14-block  4
+    $$$$$:   14-block  5
+    $$$$$:   14-block  6
+    $$$$$:   14-block  7
+    $$$$$:   14-block  8
+    $$$$$:   14-block  9
+    $$$$$:   14-block 10
+    $$$$$:   14-block 11
+        -:   15:
+        1:   16:    carRepository.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17:    carRepository.addNewCar(car2);
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18:    carRepository.addNewCar(car3);
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   19:
+        1:   20:    CarsToWashController carsToWashController(carRepository);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21:    carsToWashController.addCarToWashRepository("RO123AA");
+        1:   21-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   21-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   21-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   21-block  3
+call    9 never executed
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+call   10 never executed
+    $$$$$:   21-block  6
+        1:   22:    carsToWashController.addCarToWashRepository("EN123BB");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   22-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   22-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   22-block  2
+call    9 never executed
+    $$$$$:   22-block  3
+    $$$$$:   22-block  4
+call   10 never executed
+    $$$$$:   22-block  5
+        1:   23:    carsToWashController.addCarToWashRepository("DE123AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   23-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   23-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   23-block  2
+call    9 never executed
+    $$$$$:   23-block  3
+    $$$$$:   23-block  4
+call   10 never executed
+    $$$$$:   23-block  5
+        -:   24:
+        -:   25:    // Act
+        1:   26:    std::vector<Car> cars = carsToWashController.GetAllCars();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   27:
+        -:   28:    // Assert
+       1*:   29:    assert(cars.size() == 3);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   29-block  1
+call    3 never executed
+        -:   30:
+       1*:   31:    assert(cars[0].getRegistrationNumber() == car1.getRegistrationNumber());
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   31-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   31-block  3
+call   10 never executed
+        1:   31-block  4
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   31-block  5
+call   13 never executed
+    $$$$$:   31-block  6
+       1*:   32:    assert(cars[1].getRegistrationNumber() == car2.getRegistrationNumber());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   32-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   32-block  2
+call   10 never executed
+        1:   32-block  3
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   32-block  4
+call   13 never executed
+    $$$$$:   32-block  5
+       1*:   33:    assert(cars[2].getRegistrationNumber() == car3.getRegistrationNumber());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   33-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   33-block  2
+call   10 never executed
+        1:   33-block  3
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   33-block  4
+call   13 never executed
+    $$$$$:   33-block  5
+        -:   34:
+        1:   35:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:   35-block  0
+call    6 never executed
+    $$$$$:   35-block  1
+call    7 never executed
+    $$$$$:   35-block  2
+call    8 never executed
+    $$$$$:   35-block  3
+call    9 never executed
+    $$$$$:   35-block  4
+call   10 never executed
+    $$$$$:   35-block  5
+call   11 never executed
+        -:   36:
+function _ZN25CarsToWashControllerTests26TestAddCarToWashRepositoryEv called 1 returned 100% blocks executed 51%
+        1:   37:void CarsToWashControllerTests::TestAddCarToWashRepository() {
+        -:   38:    // Arrange
+        1:   39:    CarRepository carRepository;
+        1:   39-block  0
+call    0 returned 1
+        2:   40:    Car car1("RO123AA", "Dacia", "AAAA", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   40-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   40-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   40-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   40-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   40-block  4
+    $$$$$:   40-block  5
+    $$$$$:   40-block  6
+    $$$$$:   40-block  7
+    $$$$$:   40-block  8
+    $$$$$:   40-block  9
+    $$$$$:   40-block 10
+    $$$$$:   40-block 11
+        2:   41:    Car car2("EN123BB", "Ferrari", "AS12", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   41-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   41-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   41-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   41-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   41-block  4
+    $$$$$:   41-block  5
+    $$$$$:   41-block  6
+    $$$$$:   41-block  7
+    $$$$$:   41-block  8
+    $$$$$:   41-block  9
+    $$$$$:   41-block 10
+    $$$$$:   41-block 11
+        2:   42:    Car car3("DE123AA", "BMW", "BB55", "Luxury");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   42-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   42-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   42-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   42-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   42-block  4
+    $$$$$:   42-block  5
+    $$$$$:   42-block  6
+    $$$$$:   42-block  7
+    $$$$$:   42-block  8
+    $$$$$:   42-block  9
+    $$$$$:   42-block 10
+    $$$$$:   42-block 11
+        -:   43:
+        1:   44:    carRepository.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45:    carRepository.addNewCar(car2);
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46:    carRepository.addNewCar(car3);
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   47:
+        1:   48:    CarsToWashController carsToWashController(carRepository);
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   49:
+        -:   50:    // Act
+        1:   51:    carsToWashController.addCarToWashRepository("RO123AA");
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   51-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   51-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   51-block  3
+call    9 never executed
+    $$$$$:   51-block  4
+    $$$$$:   51-block  5
+call   10 never executed
+    $$$$$:   51-block  6
+        1:   52:    carsToWashController.addCarToWashRepository("EN123BB");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   52-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   52-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   52-block  2
+call    9 never executed
+    $$$$$:   52-block  3
+    $$$$$:   52-block  4
+call   10 never executed
+    $$$$$:   52-block  5
+        1:   53:    carsToWashController.addCarToWashRepository("DE123AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   53-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   53-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   53-block  2
+call    9 never executed
+    $$$$$:   53-block  3
+    $$$$$:   53-block  4
+call   10 never executed
+    $$$$$:   53-block  5
+        -:   54:
+        -:   55:    // Assert
+        -:   56:    try {
+       3*:   57:        carsToWashController.addCarToWashRepository("RO123AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   57-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1 (throw)
+    %%%%%:   57-block  1
+call    7 never executed
+call    8 never executed
+        1:   57-block  2
+call    9 returned 1
+        1:   57-block  3
+        1:   57-block  4
+call   10 returned 1
+        1:   57-block  5
+        1:   58:    } catch (DuplicateDataError) {
+        1:   58-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   58-block  1
+call    2 returned 1
+call    3 returned 1
+        -:   59:        assert(true);
+        1:   60:    }
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   61:
+        -:   62:    try {
+       3*:   63:        carsToWashController.addCarToWashRepository("EN124BB");
+        1:   63-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   63-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1 (throw)
+    %%%%%:   63-block  2
+call    7 never executed
+call    8 never executed
+        1:   63-block  3
+call    9 returned 1
+        1:   63-block  4
+        1:   63-block  5
+call   10 returned 1
+        1:   63-block  6
+        1:   64:    } catch (CarNotFoundError) {
+        1:   64-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   64-block  1
+call    2 returned 1
+call    3 returned 1
+        -:   65:        assert(true);
+        1:   66:    }
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   67:
+        1:   68:    std::vector<Car> cars = carsToWashController.GetAllCars();
+        1:   68-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   69:
+       1*:   70:    assert(cars[0].getRegistrationNumber() == car1.getRegistrationNumber());
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   70-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   70-block  3
+call   10 never executed
+        1:   70-block  4
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   70-block  5
+call   13 never executed
+    $$$$$:   70-block  6
+       1*:   71:    assert(cars[1].getRegistrationNumber() == car2.getRegistrationNumber());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   71-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   71-block  2
+call   10 never executed
+        1:   71-block  3
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   71-block  4
+call   13 never executed
+    $$$$$:   71-block  5
+       1*:   72:    assert(cars[2].getRegistrationNumber() == car3.getRegistrationNumber());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   72-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   72-block  2
+call   10 never executed
+        1:   72-block  3
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   72-block  4
+call   13 never executed
+    $$$$$:   72-block  5
+        1:   73:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:   73-block  0
+call    6 never executed
+    $$$$$:   73-block  1
+call    7 never executed
+    $$$$$:   73-block  2
+call    8 never executed
+    $$$$$:   73-block  3
+call    9 never executed
+    $$$$$:   73-block  4
+call   10 never executed
+    $$$$$:   73-block  5
+call   11 never executed
+        -:   74:
+function _ZN25CarsToWashControllerTests19TestEmptyRepositoryEv called 1 returned 100% blocks executed 45%
+        1:   75:void CarsToWashControllerTests::TestEmptyRepository() {
+        -:   76:    // Arrange
+        1:   77:    CarRepository carRepository;
+        1:   77-block  0
+call    0 returned 1
+        2:   78:    Car car1("RO123AA", "Dacia", "AAAA", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   78-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   78-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   78-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   78-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   78-block  4
+    $$$$$:   78-block  5
+    $$$$$:   78-block  6
+    $$$$$:   78-block  7
+    $$$$$:   78-block  8
+    $$$$$:   78-block  9
+    $$$$$:   78-block 10
+    $$$$$:   78-block 11
+        2:   79:    Car car2("EN123BB", "Ferrari", "AS12", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   79-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   79-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   79-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   79-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   79-block  4
+    $$$$$:   79-block  5
+    $$$$$:   79-block  6
+    $$$$$:   79-block  7
+    $$$$$:   79-block  8
+    $$$$$:   79-block  9
+    $$$$$:   79-block 10
+    $$$$$:   79-block 11
+        2:   80:    Car car3("DE123AA", "BMW", "BB55", "Luxury");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   80-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   80-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   80-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   80-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   80-block  4
+    $$$$$:   80-block  5
+    $$$$$:   80-block  6
+    $$$$$:   80-block  7
+    $$$$$:   80-block  8
+    $$$$$:   80-block  9
+    $$$$$:   80-block 10
+    $$$$$:   80-block 11
+        -:   81:
+        1:   82:    carRepository.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83:    carRepository.addNewCar(car2);
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   84:    carRepository.addNewCar(car3);
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   85:
+        1:   86:    CarsToWashController carsToWashController(carRepository);
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   87:    carsToWashController.addCarToWashRepository("RO123AA");
+        1:   87-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   87-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   87-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   87-block  3
+call    9 never executed
+    $$$$$:   87-block  4
+    $$$$$:   87-block  5
+call   10 never executed
+    $$$$$:   87-block  6
+        1:   88:    carsToWashController.addCarToWashRepository("EN123BB");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   88-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   88-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   88-block  2
+call    9 never executed
+    $$$$$:   88-block  3
+    $$$$$:   88-block  4
+call   10 never executed
+    $$$$$:   88-block  5
+        1:   89:    carsToWashController.addCarToWashRepository("DE123AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   89-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   89-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   89-block  2
+call    9 never executed
+    $$$$$:   89-block  3
+    $$$$$:   89-block  4
+call   10 never executed
+    $$$$$:   89-block  5
+        -:   90:
+        -:   91:    // Act
+        1:   92:    carsToWashController.emptyRepository();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   93:
+        -:   94:    // Assert
+        1:   95:    std::vector<Car> cars = carsToWashController.GetAllCars();
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   96:    assert(cars.empty());
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   96-block  1
+call    3 never executed
+        1:   97:}
+        1:   97-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:   97-block  1
+call    6 never executed
+    $$$$$:   97-block  2
+call    7 never executed
+    $$$$$:   97-block  3
+call    8 never executed
+    $$$$$:   97-block  4
+call    9 never executed
+    $$$$$:   97-block  5
+call   10 never executed
+        -:   98:
+function _ZN25CarsToWashControllerTests17TestAddRandomCarsEv called 1 returned 100% blocks executed 47%
+        1:   99:void CarsToWashControllerTests::TestAddRandomCars() {
+        -:  100:    // Arrange
+        1:  101:    CarRepository carRepository;
+        1:  101-block  0
+call    0 returned 1
+        2:  102:    Car car1("RO123AA", "Dacia", "AAAA", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  102-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  102-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  102-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  102-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  102-block  4
+    $$$$$:  102-block  5
+    $$$$$:  102-block  6
+    $$$$$:  102-block  7
+    $$$$$:  102-block  8
+    $$$$$:  102-block  9
+    $$$$$:  102-block 10
+    $$$$$:  102-block 11
+        2:  103:    Car car2("EN123BB", "Ferrari", "AS12", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  103-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  103-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  103-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  103-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  103-block  4
+    $$$$$:  103-block  5
+    $$$$$:  103-block  6
+    $$$$$:  103-block  7
+    $$$$$:  103-block  8
+    $$$$$:  103-block  9
+    $$$$$:  103-block 10
+    $$$$$:  103-block 11
+        2:  104:    Car car3("DE123AA", "BMW", "BB55", "Luxury");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  104-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  104-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  104-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  104-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  104-block  4
+    $$$$$:  104-block  5
+    $$$$$:  104-block  6
+    $$$$$:  104-block  7
+    $$$$$:  104-block  8
+    $$$$$:  104-block  9
+    $$$$$:  104-block 10
+    $$$$$:  104-block 11
+        -:  105:
+        1:  106:    carRepository.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  107:    carRepository.addNewCar(car2);
+        1:  107-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  108:    carRepository.addNewCar(car3);
+        1:  108-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  109:
+        1:  110:    CarsToWashController carsToWashController(carRepository);
+        1:  110-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  111:    carsToWashController.addCarToWashRepository("RO123AA");
+        1:  111-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  111-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  111-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  111-block  3
+call    9 never executed
+    $$$$$:  111-block  4
+    $$$$$:  111-block  5
+call   10 never executed
+    $$$$$:  111-block  6
+        -:  112:
+        -:  113:    // Act
+        1:  114:    carsToWashController.addRandomCars(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  115:
+        -:  116:    // Assert
+        -:  117:    try {
+        1:  118:        carsToWashController.addRandomCars(4);
+        1:  118-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:  119:        assert(false);
+    %%%%%:  119-block  0
+call    0 never executed
+        1:  120:    } catch (AddRandomCarsError) {
+        1:  120-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  120-block  1
+call    2 returned 1
+call    3 returned 1
+        -:  121:        assert(true);
+        1:  122:    }
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  123:
+        -:  124:    try {
+        1:  125:        carsToWashController.addRandomCars(1);
+        1:  125-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    =====:  126:        assert(false);
+    $$$$$:  126-block  0
+call    0 never executed
+        1:  127:    } catch (AddRandomCarsError) {
+        1:  127-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  127-block  1
+call    2 returned 1
+call    3 returned 1
+        -:  128:        assert(true);
+        1:  129:    }
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  130:
+        1:  131:    std::vector<Car> cars = carsToWashController.GetAllCars();
+        1:  131-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  132:    assert(cars.size() == 2);
+        1:  132-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    $$$$$:  132-block  1
+call    3 never executed
+        1:  133:}
+        1:  133-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  133-block  1
+call    6 never executed
+    $$$$$:  133-block  2
+call    7 never executed
+    $$$$$:  133-block  3
+call    8 never executed
+    $$$$$:  133-block  4
+call    9 never executed
+    $$$$$:  133-block  5
+call   10 never executed
+        -:  134:
+function _ZN25CarsToWashControllerTests20TestExportCarsToWashEv called 1 returned 100% blocks executed 48%
+        1:  135:void CarsToWashControllerTests::TestExportCarsToWash() {
+        -:  136:    // Arrange
+        1:  137:    CarRepository carRepository;
+        1:  137-block  0
+call    0 returned 1
+        2:  138:    Car car1("RO123AA", "Dacia", "AAAA", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  138-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  138-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  138-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  138-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  138-block  4
+    $$$$$:  138-block  5
+    $$$$$:  138-block  6
+    $$$$$:  138-block  7
+    $$$$$:  138-block  8
+    $$$$$:  138-block  9
+    $$$$$:  138-block 10
+    $$$$$:  138-block 11
+        2:  139:    Car car2("EN123BB", "Ferrari", "AS12", "Sports");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  139-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  139-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  139-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  139-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  139-block  4
+    $$$$$:  139-block  5
+    $$$$$:  139-block  6
+    $$$$$:  139-block  7
+    $$$$$:  139-block  8
+    $$$$$:  139-block  9
+    $$$$$:  139-block 10
+    $$$$$:  139-block 11
+        2:  140:    Car car3("DE123AA", "BMW", "BB55", "Luxury");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  140-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  140-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  140-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  140-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:  140-block  4
+    $$$$$:  140-block  5
+    $$$$$:  140-block  6
+    $$$$$:  140-block  7
+    $$$$$:  140-block  8
+    $$$$$:  140-block  9
+    $$$$$:  140-block 10
+    $$$$$:  140-block 11
+        -:  141:
+        1:  142:    carRepository.addNewCar(car1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  143:    carRepository.addNewCar(car2);
+        1:  143-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  144:    carRepository.addNewCar(car3);
+        1:  144-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  145:
+        1:  146:    CarsToWashController carsToWashController(carRepository);
+        1:  146-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  147:    carsToWashController.addCarToWashRepository("RO123AA");
+        1:  147-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  147-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  147-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  147-block  3
+call    9 never executed
+    $$$$$:  147-block  4
+    $$$$$:  147-block  5
+call   10 never executed
+    $$$$$:  147-block  6
+        1:  148:    carsToWashController.addCarToWashRepository("EN123BB");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  148-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  148-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  148-block  2
+call    9 never executed
+    $$$$$:  148-block  3
+    $$$$$:  148-block  4
+call   10 never executed
+    $$$$$:  148-block  5
+        1:  149:    carsToWashController.addCarToWashRepository("DE123AA");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  149-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  149-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  149-block  2
+call    9 never executed
+    $$$$$:  149-block  3
+    $$$$$:  149-block  4
+call   10 never executed
+    $$$$$:  149-block  5
+        1:  150:    carRepository.deleteCarByRegistrationNumber("EN123BB");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  150-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  150-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  150-block  2
+call    9 never executed
+    $$$$$:  150-block  3
+    $$$$$:  150-block  4
+call   10 never executed
+    $$$$$:  150-block  5
+        -:  151:
+        1:  152:    std::string exportNameHTML = "htmlTest";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  152-block  0
+        1:  153:    std::string exportNameCSV = "csvTest";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  153-block  0
+        -:  154:
+        -:  155:    // Act
+        1:  156:    carsToWashController.exportCarsToWash("HTML", exportNameHTML);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  156-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  156-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  156-block  2
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    $$$$$:  156-block  3
+call   13 never executed
+    $$$$$:  156-block  4
+    $$$$$:  156-block  5
+call   14 never executed
+    $$$$$:  156-block  6
+    $$$$$:  156-block  7
+call   15 never executed
+    $$$$$:  156-block  8
+        1:  157:    carsToWashController.exportCarsToWash("CSV", exportNameCSV);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  157-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  157-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  157-block  2
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    $$$$$:  157-block  3
+call   13 never executed
+    $$$$$:  157-block  4
+    $$$$$:  157-block  5
+call   14 never executed
+    $$$$$:  157-block  6
+    $$$$$:  157-block  7
+call   15 never executed
+    $$$$$:  157-block  8
+        -:  158:
+        -:  159:    // Assert
+        -:  160:    try {
+       4*:  161:        carsToWashController.exportCarsToWash("PDF", exportNameHTML);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  161-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  161-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1 (throw)
+    %%%%%:  161-block  2
+call   10 never executed
+call   11 never executed
+call   12 never executed
+        1:  161-block  3
+call   13 returned 1
+        1:  161-block  4
+        1:  161-block  5
+call   14 returned 1
+        1:  161-block  6
+        1:  161-block  7
+call   15 returned 1
+        1:  161-block  8
+    #####:  162:        assert(false);
+call    0 never executed
+        1:  163:    } catch (InvalidExportFormatError) {
+        1:  163-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  163-block  1
+call    2 returned 1
+call    3 returned 1
+        -:  164:        assert(true);
+        1:  165:    }
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  166:
+        1:  167:    std::ifstream htmlFile("htmlTest.html");
+        1:  167-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  168:    std::string content;
+        1:  168-block  0
+call    0 returned 1
+        1:  169:    getline(htmlFile, content);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  170:    assert(content == "<!DOCTYPE html><html><head><title>" + exportNameHTML + "</title></head><body><table><tr><th>Registration number</th><th>Type</th><th>Model</th><th>Producer</th></tr>");
+        1:  170-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  170-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  170-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    $$$$$:  170-block  3
+call    9 never executed
+        1:  170-block  4
+call   10 returned 1
+call   11 returned 1
+    $$$$$:  170-block  5
+call   12 never executed
+    $$$$$:  170-block  6
+        3:  171:    for (auto car: carsToWashController.GetAllCars()) {
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  171-block  0
+call    3 returned 1
+call    4 returned 1
+        2:  171-block  1
+call    5 returned 2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 2
+        3:  171-block  2
+call   10 returned 3
+branch 11 taken 2
+branch 12 taken 1 (fallthrough)
+        2:  172:        htmlFile >> content;
+        2:  172-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  173:        assert(content == "<tr><td>" + car.getRegistrationNumber() + "</td><td>" + car.getType() + "</td><td>" + car.getModel() + "</td><td>" + car.getProducer() + "</td></tr>");
+        2:  173-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  173-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  173-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:  173-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:  173-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:  173-block  5
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:  173-block  6
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0 (throw)
+        2:  173-block  7
+call   21 returned 2
+branch 22 taken 2 (fallthrough)
+branch 23 taken 0 (throw)
+        2:  173-block  8
+call   24 returned 2
+branch 25 taken 2 (fallthrough)
+branch 26 taken 0 (throw)
+        2:  173-block  9
+call   27 returned 2
+branch 28 taken 2 (fallthrough)
+branch 29 taken 0 (throw)
+        2:  173-block 10
+call   30 returned 2
+branch 31 taken 2 (fallthrough)
+branch 32 taken 0 (throw)
+        2:  173-block 11
+call   33 returned 2
+branch 34 taken 2 (fallthrough)
+branch 35 taken 0 (throw)
+        2:  173-block 12
+call   36 returned 2
+branch 37 taken 0 (fallthrough)
+branch 38 taken 2
+    $$$$$:  173-block 13
+call   39 never executed
+        2:  173-block 14
+call   40 returned 2
+call   41 returned 2
+call   42 returned 2
+call   43 returned 2
+call   44 returned 2
+call   45 returned 2
+call   46 returned 2
+call   47 returned 2
+call   48 returned 2
+call   49 returned 2
+call   50 returned 2
+call   51 returned 2
+    $$$$$:  173-block 15
+call   52 never executed
+    $$$$$:  173-block 16
+    $$$$$:  173-block 17
+call   53 never executed
+    $$$$$:  173-block 18
+    $$$$$:  173-block 19
+call   54 never executed
+    $$$$$:  173-block 20
+    $$$$$:  173-block 21
+call   55 never executed
+    $$$$$:  173-block 22
+    $$$$$:  173-block 23
+call   56 never executed
+    $$$$$:  173-block 24
+    $$$$$:  173-block 25
+call   57 never executed
+    $$$$$:  173-block 26
+    $$$$$:  173-block 27
+call   58 never executed
+    $$$$$:  173-block 28
+    $$$$$:  173-block 29
+call   59 never executed
+    $$$$$:  173-block 30
+    $$$$$:  173-block 31
+call   60 never executed
+    $$$$$:  173-block 32
+    $$$$$:  173-block 33
+call   61 never executed
+    $$$$$:  173-block 34
+    $$$$$:  173-block 35
+call   62 never executed
+    $$$$$:  173-block 36
+        3:  174:    }
+call    0 returned 2
+        1:  174-block  0
+call    1 returned 1
+    $$$$$:  174-block  1
+call    2 never executed
+    $$$$$:  174-block  2
+call    3 never executed
+        1:  175:    htmlFile >> content;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  176:    assert(content == "</table></body></html>");
+        1:  176-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    $$$$$:  176-block  1
+call    3 never executed
+        -:  177:
+        1:  178:    std::ifstream csvFile("csvTest.csv");
+        1:  178-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  179:    for (auto car: carsToWashController.GetAllCars()) {
+        1:  179-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  179-block  1
+call    3 returned 1
+call    4 returned 1
+        2:  179-block  2
+call    5 returned 2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 2
+        3:  179-block  3
+call   10 returned 3
+branch 11 taken 2
+branch 12 taken 1 (fallthrough)
+        2:  180:        csvFile >> content;
+        2:  180-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  181:        assert(content == car.getRegistrationNumber() + "," + car.getType() + "," + car.getModel() + "," + car.getProducer());
+        2:  181-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  181-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  181-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:  181-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:  181-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:  181-block  5
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:  181-block  6
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0 (throw)
+        2:  181-block  7
+call   21 returned 2
+branch 22 taken 2 (fallthrough)
+branch 23 taken 0 (throw)
+        2:  181-block  8
+call   24 returned 2
+branch 25 taken 2 (fallthrough)
+branch 26 taken 0 (throw)
+        2:  181-block  9
+call   27 returned 2
+branch 28 taken 2 (fallthrough)
+branch 29 taken 0 (throw)
+        2:  181-block 10
+call   30 returned 2
+branch 31 taken 0 (fallthrough)
+branch 32 taken 2
+    $$$$$:  181-block 11
+call   33 never executed
+        2:  181-block 12
+call   34 returned 2
+call   35 returned 2
+call   36 returned 2
+call   37 returned 2
+call   38 returned 2
+call   39 returned 2
+call   40 returned 2
+call   41 returned 2
+call   42 returned 2
+call   43 returned 2
+    $$$$$:  181-block 13
+call   44 never executed
+    $$$$$:  181-block 14
+    $$$$$:  181-block 15
+call   45 never executed
+    $$$$$:  181-block 16
+    $$$$$:  181-block 17
+call   46 never executed
+    $$$$$:  181-block 18
+    $$$$$:  181-block 19
+call   47 never executed
+    $$$$$:  181-block 20
+    $$$$$:  181-block 21
+call   48 never executed
+    $$$$$:  181-block 22
+    $$$$$:  181-block 23
+call   49 never executed
+    $$$$$:  181-block 24
+    $$$$$:  181-block 25
+call   50 never executed
+    $$$$$:  181-block 26
+    $$$$$:  181-block 27
+call   51 never executed
+    $$$$$:  181-block 28
+    $$$$$:  181-block 29
+call   52 never executed
+    $$$$$:  181-block 30
+        3:  182:    }
+call    0 returned 2
+        1:  182-block  0
+call    1 returned 1
+    $$$$$:  182-block  1
+call    2 never executed
+    $$$$$:  182-block  2
+call    3 never executed
+        1:  183:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+    $$$$$:  183-block  0
+call   10 never executed
+    $$$$$:  183-block  1
+call   11 never executed
+    $$$$$:  183-block  2
+call   12 never executed
+    $$$$$:  183-block  3
+call   13 never executed
+    $$$$$:  183-block  4
+call   14 never executed
+    $$$$$:  183-block  5
+call   15 never executed
+    $$$$$:  183-block  6
+call   16 never executed
+    $$$$$:  183-block  7
+call   17 never executed
+    $$$$$:  183-block  8
+call   18 never executed
+    $$$$$:  183-block  9
+call   19 never executed

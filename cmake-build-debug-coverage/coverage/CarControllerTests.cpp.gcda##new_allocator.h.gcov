@@ -96,8 +96,16 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
 ------------------
         -:   80:
         -:   81:      _GLIBCXX20_CONSTEXPR
+    #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+------------------
+_ZN9__gnu_cxx13new_allocatorI3CarEC2ERKS2_:
 function _ZN9__gnu_cxx13new_allocatorI3CarEC2ERKS2_ called 0 returned 0% blocks executed 0%
     #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+------------------
+_ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_:
+function _ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_ called 0 returned 0% blocks executed 0%
+    #####:   82:      new_allocator(const new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+------------------
         -:   83:
         -:   84:      template<typename _Tp1>
         -:   85:	_GLIBCXX20_CONSTEXPR
@@ -108,6 +116,10 @@ function _ZN9__gnu_cxx13new_allocatorI3CarEC2ERKS2_ called 0 returned 0% blocks 
 ------------------
 _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev:
 function _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev called 0 returned 0% blocks executed 0%
+    #####:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+------------------
+_ZN9__gnu_cxx13new_allocatorISt10unique_ptrI4UndoSt14default_deleteIS2_EEED2Ev:
+function _ZN9__gnu_cxx13new_allocatorISt10unique_ptrI4UndoSt14default_deleteIS2_EEED2Ev called 0 returned 0% blocks executed 0%
     #####:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev:
@@ -338,6 +350,31 @@ call    0 never executed
 ------------------
 _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m:
 function _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m called 0 returned 0% blocks executed 0%
+    #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
+    %%%%%:  132-block  0
+        -:  133:      {
+        -:  134:#if __cpp_aligned_new
+        -:  135:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+        -:  136:	  {
+        -:  137:	    ::operator delete(__p,
+        -:  138:# if __cpp_sized_deallocation
+        -:  139:			      __t * sizeof(_Tp),
+        -:  140:# endif
+        -:  141:			      std::align_val_t(alignof(_Tp)));
+        -:  142:	    return;
+        -:  143:	  }
+        -:  144:#endif
+    #####:  145:	::operator delete(__p
+    %%%%%:  145-block  0
+call    0 never executed
+        -:  146:#if __cpp_sized_deallocation
+        -:  147:			  , __t * sizeof(_Tp)
+        -:  148:#endif
+        -:  149:			 );
+        -:  150:      }
+------------------
+_ZN9__gnu_cxx13new_allocatorISt10unique_ptrI4UndoSt14default_deleteIS2_EEE10deallocateEPS5_m:
+function _ZN9__gnu_cxx13new_allocatorISt10unique_ptrI4UndoSt14default_deleteIS2_EEE10deallocateEPS5_m called 0 returned 0% blocks executed 0%
     #####:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
     %%%%%:  132-block  0
         -:  133:      {

@@ -11,12 +11,13 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-UI::UI(CarController  carController, CarsToWashController  carsToWashController) : carController(std::move(carController)),
-                                                                                               carsToWashController(std::move(carsToWashController)) {}
+UI::UI(CarController&  carController, CarsToWashController&  carsToWashController) : carController(carController),
+                                                                                               carsToWashController(carsToWashController) {}
 
 
 
 void UI::runApp() {
+    carController.loadData();
     bool running = true;
     cout << "This is a car management application." << std::endl;
     cout << "In order to use it you have to choose one of the following options:\n";
@@ -34,7 +35,8 @@ void UI::runApp() {
                 "  10. Sort cars by producer and model.\n"
                 "  11. Create and display type report.\n"
                 "  12. Access the menu for managing the cars that will be washed.\n"
-                "  13. Exit the application.\n";
+                "  13. Undo the previous action.\n"
+                "  14. Exit the application.\n";
         try {
             cin >> option;
         } catch (...) {
@@ -69,6 +71,8 @@ void UI::runApp() {
                 try {
                     this->carController.addNewCar(registrationNumber, type, model, producer);
                     cout << "The car was added successfully" << endl;
+                    // Save the data
+                    carController.saveData();
                 } catch (InvalidDataError& error) {
                     cout << error.getErrorMessage();
                 } catch (DuplicateDataError& error) {
@@ -86,6 +90,8 @@ void UI::runApp() {
                 try {
                     this->carController.deleteCarByRegistrationNumber(registrationNumber);
                     cout << "The car was deleted successfully!" << endl;
+                    // Save the data
+                    carController.saveData();
                 } catch (CarNotFoundError& error) {
                     cout << error.getErrorMessage() << endl;
                 }
@@ -116,6 +122,8 @@ void UI::runApp() {
                     this->carController.updateCarByRegistrationNumber(registrationNumber, newRegistrationNumber, type,
                             model, producer);
                     cout << "The car was updated successfully." << endl;
+                    // Save the data
+                    carController.saveData();
                 } catch (InvalidDataError& error) {
                     cout << error.getErrorMessage();
                 } catch (DuplicateDataError& error) {
@@ -244,6 +252,16 @@ void UI::runApp() {
                 carsToWashMenu();
                 break;
             case 13:
+                try {
+                    carController.undo();
+                    cout << "The previous action was undone successfully." << endl;
+                    // Save the data
+                    carController.saveData();
+                } catch (UndoError& e) {
+                    cout << e.getErrorMessage() << endl;
+                }
+                break;
+            case 14:
                 running = false;
                 cout << "Thank you for using this application." << endl;
                 break;

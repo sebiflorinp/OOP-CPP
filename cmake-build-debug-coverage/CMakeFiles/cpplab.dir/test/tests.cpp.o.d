@@ -11,5 +11,6 @@ CMakeFiles/cpplab.dir/test/tests.cpp.o: \
  /home/sebifp/devStuff/repos/OOP-CPP/test/SortingFunctionsTests.h \
  /home/sebifp/devStuff/repos/OOP-CPP/test/DynamicArrayTests.h \
  /home/sebifp/devStuff/repos/OOP-CPP/test/GenericExceptionTests.h \
- /home/sebifp/devStuff/repos/OOP-CPP/test/CarstToWashControllerTests.h \
- /home/sebifp/devStuff/repos/OOP-CPP/test/TypeDTOTests.h
+ /home/sebifp/devStuff/repos/OOP-CPP/test/CarsToWashControllerTests.h \
+ /home/sebifp/devStuff/repos/OOP-CPP/test/TypeDTOTests.h \
+ /home/sebifp/devStuff/repos/OOP-CPP/test/UndoTests.h

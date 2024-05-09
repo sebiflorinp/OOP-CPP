@@ -11,12 +11,12 @@
         -:    7:
         -:    8:class GenericException: std::exception {
         -:    9:public:
-function _ZN16GenericExceptionC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 23 returned 100% blocks executed 100%
-       23:   10:    explicit GenericException(std::string  errorMessage) : message(std::move(errorMessage)) {}
-       23:   10-block  0
-call    0 returned 23
-call    1 returned 23
-call    2 returned 23
+function _ZN16GenericExceptionC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 24 returned 100% blocks executed 100%
+       24:   10:    explicit GenericException(std::string  errorMessage) : message(std::move(errorMessage)) {}
+       24:   10-block  0
+call    0 returned 24
+call    1 returned 24
+call    2 returned 24
         -:   11:
         -:   12:    std::string getErrorMessage();
         -:   13:private:
@@ -43,4 +43,12 @@ call    2 returned 23
         -:   34:    using GenericException::GenericException;
         -:   35:};
         -:   36:
-        -:   37:#endif //CPPLAB_EXCEPTIONS_H
+        -:   37:class UndoError : public GenericException {
+        -:   38:    using GenericException::GenericException;
+        -:   39:};
+        -:   40:
+        -:   41:class RandomError : public GenericException {
+        -:   42:    using GenericException::GenericException;
+        -:   43:};
+        -:   44:
+        -:   45:#endif //CPPLAB_EXCEPTIONS_H

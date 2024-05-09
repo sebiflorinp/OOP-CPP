@@ -8,8 +8,9 @@
 #include "SortingFunctionsTests.h"
 #include "DynamicArrayTests.h"
 #include "GenericExceptionTests.h"
-#include "CarstToWashControllerTests.h"
+#include "CarsToWashControllerTests.h"
 #include "TypeDTOTests.h"
+#include "UndoTests.h"
 
 void testAll();
 
@@ -46,6 +47,9 @@ void runAllTests() {
     carControllerTests.testFilter();
     carControllerTests.testSort();
     carControllerTests.testCreateTypeReport();
+    carControllerTests.testCreateTypeReport();
+    carControllerTests.testLoadData();
+    carControllerTests.testSaveData();
 
     // Filters tests
     FiltersTests filtersTests = FiltersTests();
@@ -80,6 +84,13 @@ void runAllTests() {
     // TypeDTO tests
     TypeDTOTests typeDTOTests = TypeDTOTests();
     typeDTOTests.testTypeDTO();
+
+    // Undo tests
+    UndoTests undoTests = UndoTests();
+    undoTests.testUndo();
+    undoTests.testUndoAdd();
+    undoTests.testUndoDelete();
+    undoTests.testUndoUpdate();
 }
 
 

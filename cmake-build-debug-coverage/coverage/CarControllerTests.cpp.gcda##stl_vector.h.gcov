@@ -286,10 +286,21 @@ call    1 never executed
         -:  273:      typedef _Alloc allocator_type;
         -:  274:
         -:  275:      _Tp_alloc_type&
+    #####:  276:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+    #####:  277:      { return this->_M_impl; }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI4UndoSt14default_deleteIS1_EESaIS4_EE19_M_get_Tp_allocatorEv:
+function _ZNSt12_Vector_baseISt10unique_ptrI4UndoSt14default_deleteIS1_EESaIS4_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
+    #####:  276:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+    #####:  277:      { return this->_M_impl; }
+    %%%%%:  277-block  0
+------------------
+_ZNSt12_Vector_baseI3CarSaIS0_EE19_M_get_Tp_allocatorEv:
 function _ZNSt12_Vector_baseI3CarSaIS0_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
     #####:  276:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
     #####:  277:      { return this->_M_impl; }
     %%%%%:  277-block  0
+------------------
         -:  278:
         -:  279:      const _Tp_alloc_type&
 function _ZNKSt12_Vector_baseI3CarSaIS0_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
@@ -359,6 +370,24 @@ call    3 never executed
         -:  330:      { }
         -:  331:#endif
         -:  332:
+    #####:  333:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+        -:  334:      {
+    #####:  335:	_M_deallocate(_M_impl._M_start,
+    #####:  336:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+    #####:  337:      }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI4UndoSt14default_deleteIS1_EESaIS4_EED2Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI4UndoSt14default_deleteIS1_EESaIS4_EED2Ev called 0 returned 0% blocks executed 0%
+    #####:  333:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+        -:  334:      {
+    #####:  335:	_M_deallocate(_M_impl._M_start,
+    #####:  336:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+    %%%%%:  336-block  0
+call    0 never executed
+    #####:  337:      }
+call    0 never executed
+------------------
+_ZNSt12_Vector_baseI3CarSaIS0_EED2Ev:
 function _ZNSt12_Vector_baseI3CarSaIS0_EED2Ev called 0 returned 0% blocks executed 0%
     #####:  333:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  334:      {
@@ -368,6 +397,7 @@ function _ZNSt12_Vector_baseI3CarSaIS0_EED2Ev called 0 returned 0% blocks execut
 call    0 never executed
     #####:  337:      }
 call    0 never executed
+------------------
         -:  338:
         -:  339:    public:
         -:  340:      _Vector_impl _M_impl;
@@ -388,6 +418,28 @@ call    2 never executed
         -:  347:      }
         -:  348:
         -:  349:      void
+    #####:  350:      _M_deallocate(pointer __p, size_t __n)
+        -:  351:      {
+        -:  352:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+    #####:  353:	if (__p)
+    #####:  354:	  _Tr::deallocate(_M_impl, __p, __n);
+    #####:  355:      }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI4UndoSt14default_deleteIS1_EESaIS4_EE13_M_deallocateEPS4_m:
+function _ZNSt12_Vector_baseISt10unique_ptrI4UndoSt14default_deleteIS1_EESaIS4_EE13_M_deallocateEPS4_m called 0 returned 0% blocks executed 0%
+    #####:  350:      _M_deallocate(pointer __p, size_t __n)
+        -:  351:      {
+        -:  352:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+    #####:  353:	if (__p)
+    %%%%%:  353-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  354:	  _Tr::deallocate(_M_impl, __p, __n);
+    %%%%%:  354-block  0
+call    0 never executed
+    #####:  355:      }
+------------------
+_ZNSt12_Vector_baseI3CarSaIS0_EE13_M_deallocateEPS0_m:
 function _ZNSt12_Vector_baseI3CarSaIS0_EE13_M_deallocateEPS0_m called 0 returned 0% blocks executed 0%
     #####:  350:      _M_deallocate(pointer __p, size_t __n)
         -:  351:      {
@@ -400,6 +452,7 @@ branch  1 never executed
     %%%%%:  354-block  0
 call    0 never executed
     #####:  355:      }
+------------------
         -:  356:
         -:  357:    protected:
         -:  358:      void
@@ -751,6 +804,27 @@ call    0 never executed
         -:  675:       *  not touched in any way.  Managing the pointer is the user's
         -:  676:       *  responsibility.
         -:  677:       */
+    #####:  678:      ~vector() _GLIBCXX_NOEXCEPT
+        -:  679:      {
+    #####:  680:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+    #####:  681:		      _M_get_Tp_allocator());
+        -:  682:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+    #####:  683:      }
+------------------
+_ZNSt6vectorISt10unique_ptrI4UndoSt14default_deleteIS1_EESaIS4_EED2Ev:
+function _ZNSt6vectorISt10unique_ptrI4UndoSt14default_deleteIS1_EESaIS4_EED2Ev called 0 returned 0% blocks executed 0%
+    #####:  678:      ~vector() _GLIBCXX_NOEXCEPT
+        -:  679:      {
+    #####:  680:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 never executed
+    #####:  681:		      _M_get_Tp_allocator());
+    %%%%%:  681-block  0
+call    0 never executed
+        -:  682:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+    #####:  683:      }
+call    0 never executed
+------------------
+_ZNSt6vectorI3CarSaIS0_EED2Ev:
 function _ZNSt6vectorI3CarSaIS0_EED2Ev called 0 returned 0% blocks executed 0%
     #####:  678:      ~vector() _GLIBCXX_NOEXCEPT
         -:  679:      {
@@ -762,6 +836,7 @@ call    0 never executed
         -:  682:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
     #####:  683:      }
 call    0 never executed
+------------------
         -:  684:
         -:  685:      /**
         -:  686:       *  @brief  %Vector assignment operator.

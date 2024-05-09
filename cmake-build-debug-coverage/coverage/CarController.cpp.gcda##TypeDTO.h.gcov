@@ -18,15 +18,15 @@
         -:   14:     * Default constructor
         -:   15:     * Preconditions: -
         -:   16:     */
-function _ZN7TypeDTOC2Ev called 3 returned 100% blocks executed 71%
-        3:   17:    TypeDTO(): type("Undefined"), count(0) {};
-        3:   17-block  0
-call    0 returned 3
-call    1 returned 3
-branch  2 taken 3 (fallthrough)
+function _ZN7TypeDTOC2Ev called 6 returned 100% blocks executed 71%
+        6:   17:    TypeDTO(): type("Undefined"), count(0) {};
+        6:   17-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
 branch  3 taken 0 (throw)
-        3:   17-block  1
-call    4 returned 3
+        6:   17-block  1
+call    4 returned 6
     $$$$$:   17-block  2
 call    5 never executed
         -:   18:
@@ -35,11 +35,11 @@ call    5 never executed
         -:   21:     * Preconditions: type: a string
         -:   22:     *                count: an integer
         -:   23:     */
-function _ZN7TypeDTOC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKi called 4 returned 100% blocks executed 100%
-        4:   24:    TypeDTO(std::string type, const int& count) : type(std::move(type)), count(count) {};
-        4:   24-block  0
-call    0 returned 4
-call    1 returned 4
+function _ZN7TypeDTOC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKi called 7 returned 100% blocks executed 100%
+        7:   24:    TypeDTO(std::string type, const int& count) : type(std::move(type)), count(count) {};
+        7:   24-block  0
+call    0 returned 7
+call    1 returned 7
         -:   25:
         -:   26:    /*
         -:   27:     * Type getter.

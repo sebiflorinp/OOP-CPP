@@ -1,0 +1,137 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/undo/Undo.h
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/controller/CarController.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/controller/CarController.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef CPPLAB_UNDO_H
+        -:    2:#define CPPLAB_UNDO_H
+        -:    3:
+        -:    4:
+        -:    5:#include <string>
+        -:    6:#include <utility>
+        -:    7:#include "../repository/CarRepository.h"
+        -:    8:
+        -:    9:class Undo {
+        -:   10:public:
+        -:   11:    /*
+        -:   12:     * Reverts the previous action
+        -:   13:     * Preconditions: -
+        -:   14:     * Post-conditions: -
+        -:   15:     */
+        -:   16:    virtual void doUndo() = 0;
+        -:   17:
+        -:   18:    /*
+        -:   19:     * Destructor for Undo
+        -:   20:     * Preconditions: -
+        -:   21:     * Post-conditions: -
+        -:   22:     */
+      38*:   23:    virtual ~Undo() = default;
+------------------
+_ZN4UndoD0Ev:
+function _ZN4UndoD0Ev called 0 returned 0% blocks executed 0%
+    #####:   23:    virtual ~Undo() = default;
+    %%%%%:   23-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN4UndoD2Ev:
+function _ZN4UndoD2Ev called 38 returned 100% blocks executed 100%
+       38:   23:    virtual ~Undo() = default;
+------------------
+        -:   24:};
+        -:   25:
+        -:   26:class UndoAdd: public Undo {
+        -:   27:private:
+        -:   28:    Car car;
+        -:   29:    AbstractCarRepo& carRepositoryReference;
+        -:   30:public:
+        -:   31:    /*
+        -:   32:     * Constructor for UndoAdd
+        -:   33:     * Preconditions: car: An instance of the Car class
+        -:   34:     *               carRepositoryReference: reference to an instance of the CarRepository class
+        -:   35:     */
+function _ZN7UndoAddC2ERK3CarR15AbstractCarRepo called 34 returned 100% blocks executed 80%
+       34:   36:    UndoAdd(const Car& car, AbstractCarRepo& carRepositoryReference): car(car), carRepositoryReference(carRepositoryReference) {};
+       34:   36-block  0
+call    0 returned 34
+call    1 returned 34
+branch  2 taken 34 (fallthrough)
+branch  3 taken 0 (throw)
+       34:   36-block  1
+    $$$$$:   36-block  2
+call    4 never executed
+        -:   37:
+        -:   38:    /*
+        -:   39:     * Reverts the addition of the previously added car.
+        -:   40:     * Preconditions: -
+        -:   41:     * Post-conditions: -
+        -:   42:     */
+        -:   43:    void doUndo() override;
+        -:   44:};
+        -:   45:
+        -:   46:class UndoDelete: public Undo {
+        -:   47:private:
+        -:   48:    Car car;
+        -:   49:    AbstractCarRepo& carRepositoryReference;
+        -:   50:public:
+        -:   51:    /*
+        -:   52:     * Constructor for UndoDelete
+        -:   53:     * Preconditions: car: An instance of the Car class
+        -:   54:     *                carRepositoryReference: reference to an instance of the CarRepository class
+        -:   55:     */
+function _ZN10UndoDeleteC2ERK3CarR15AbstractCarRepo called 2 returned 100% blocks executed 80%
+        2:   56:    UndoDelete(const Car& car, AbstractCarRepo& carRepositoryReference): car(car), carRepositoryReference(carRepositoryReference) {};
+        2:   56-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   56-block  1
+    $$$$$:   56-block  2
+call    4 never executed
+        -:   57:
+        -:   58:    /*
+        -:   59:     * Reverts the deletion of the previously deleted car.
+        -:   60:     * Preconditions: -
+        -:   61:     * Post-conditions: -
+        -:   62:     */
+        -:   63:    void doUndo() override;
+        -:   64:};
+        -:   65:
+        -:   66:class UndoUpdate: public Undo {
+        -:   67:private:
+        -:   68:    Car oldCar;
+        -:   69:    Car newCar;
+        -:   70:    AbstractCarRepo& carRepositoryReference;
+        -:   71:public:
+        -:   72:    /*
+        -:   73:     * Constructor for UndoUpdate
+        -:   74:     * Preconditions: oldCar: An instance of the Car class
+        -:   75:     *                newCar: An instance of the Car class
+        -:   76:     *                carRepositoryReference: reference to an instance of the CarRepository class
+        -:   77:     */
+function _ZN10UndoUpdateC2ERK3CarS2_R15AbstractCarRepo called 2 returned 100% blocks executed 62%
+        2:   78:    UndoUpdate(const Car& oldCar, const Car& newCar, AbstractCarRepo& carRepositoryReference): oldCar(oldCar), newCar(newCar), carRepositoryReference(carRepositoryReference) {};
+        2:   78-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   78-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   78-block  2
+    $$$$$:   78-block  3
+call    7 never executed
+    $$$$$:   78-block  4
+call    8 never executed
+        -:   79:
+        -:   80:    /*
+        -:   81:     * Reverts the update of the previously updated car.
+        -:   82:     * Preconditions: -
+        -:   83:     * Post-conditions: -
+        -:   84:     */
+        -:   85:    void doUndo() override;
+        -:   86:};
+        -:   87:
+        -:   88:#endif //CPPLAB_UNDO_H

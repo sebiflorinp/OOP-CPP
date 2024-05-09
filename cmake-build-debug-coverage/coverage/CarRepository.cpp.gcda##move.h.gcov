@@ -80,10 +80,10 @@ function _ZSt11__addressofI3CarEPT_RS1_ called 0 returned 0% blocks executed 0%
         -:   74:  template<typename _Tp>
         -:   75:    _GLIBCXX_NODISCARD
         -:   76:    constexpr _Tp&&
-function _ZSt7forwardIRK3CarEOT_RNSt16remove_referenceIS3_E4typeE called 0 returned 0% blocks executed 0%
-    #####:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-    #####:   78:    { return static_cast<_Tp&&>(__t); }
-    %%%%%:   78-block  0
+function _ZSt7forwardIRK3CarEOT_RNSt16remove_referenceIS3_E4typeE called 407 returned 100% blocks executed 100%
+      407:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+      407:   78:    { return static_cast<_Tp&&>(__t); }
+      407:   78-block  0
         -:   79:
         -:   80:  /**
         -:   81:   *  @brief  Forward an rvalue.
@@ -109,32 +109,32 @@ function _ZSt7forwardIRK3CarEOT_RNSt16remove_referenceIS3_E4typeE called 0 retur
         -:  101:  template<typename _Tp>
         -:  102:    _GLIBCXX_NODISCARD
         -:  103:    constexpr typename std::remove_reference<_Tp>::type&&
-     261*:  104:    move(_Tp&& __t) noexcept
-     261*:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+     320*:  104:    move(_Tp&& __t) noexcept
+     320*:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
 ------------------
 _ZSt4moveIR3CarEONSt16remove_referenceIT_E4typeEOS3_:
-function _ZSt4moveIR3CarEONSt16remove_referenceIT_E4typeEOS3_ called 27 returned 100% blocks executed 100%
-       27:  104:    move(_Tp&& __t) noexcept
-       27:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-       27:  105-block  0
+function _ZSt4moveIR3CarEONSt16remove_referenceIT_E4typeEOS3_ called 28 returned 100% blocks executed 100%
+       28:  104:    move(_Tp&& __t) noexcept
+       28:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+       28:  105-block  0
 ------------------
 _ZSt4moveIRZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EONSt16remove_referenceIT_E4typeEOSF_:
-function _ZSt4moveIRZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EONSt16remove_referenceIT_E4typeEOSF_ called 16 returned 100% blocks executed 100%
-       16:  104:    move(_Tp&& __t) noexcept
-       16:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-       16:  105-block  0
+function _ZSt4moveIRZN13CarRepository29deleteCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EONSt16remove_referenceIT_E4typeEOSF_ called 24 returned 100% blocks executed 100%
+       24:  104:    move(_Tp&& __t) noexcept
+       24:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+       24:  105-block  0
 ------------------
 _ZSt4moveIRZN13CarRepository9addNewCarERK3CarEUlS3_E_EONSt16remove_referenceIT_E4typeEOS7_:
-function _ZSt4moveIRZN13CarRepository9addNewCarERK3CarEUlS3_E_EONSt16remove_referenceIT_E4typeEOS7_ called 140 returned 100% blocks executed 100%
-      140:  104:    move(_Tp&& __t) noexcept
-      140:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-      140:  105-block  0
+function _ZSt4moveIRZN13CarRepository9addNewCarERK3CarEUlS3_E_EONSt16remove_referenceIT_E4typeEOS7_ called 170 returned 100% blocks executed 100%
+      170:  104:    move(_Tp&& __t) noexcept
+      170:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+      170:  105-block  0
 ------------------
 _ZSt4moveIRZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EONSt16remove_referenceIT_E4typeEOSF_:
-function _ZSt4moveIRZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EONSt16remove_referenceIT_E4typeEOSF_ called 78 returned 100% blocks executed 100%
-       78:  104:    move(_Tp&& __t) noexcept
-       78:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-       78:  105-block  0
+function _ZSt4moveIRZN13CarRepository26getCarByRegistrationNumberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRK3CarE_EONSt16remove_referenceIT_E4typeEOSF_ called 98 returned 100% blocks executed 100%
+       98:  104:    move(_Tp&& __t) noexcept
+       98:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+       98:  105-block  0
 ------------------
 _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_:
 function _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_ called 0 returned 0% blocks executed 0%

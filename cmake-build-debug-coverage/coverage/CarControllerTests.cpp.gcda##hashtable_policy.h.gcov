@@ -755,34 +755,34 @@ function _ZNSt8__detail20_Prime_rehash_policy8_M_resetEm called 0 returned 0% bl
         -:  720:	   typename _Hash, typename _RangeHash, typename _Unused,
         -:  721:	   typename _RehashPolicy, typename _Traits>
         -:  722:    auto
-function _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOESaISA_ENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEELb1EEixEOS6_ called 6 returned 100% blocks executed 43%
-        6:  723:    _Map_base<_Key, _Pair, _Alloc, _Select1st, _Equal,
+function _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS6_7TypeDTOESaISA_ENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEELb1EEixEOS6_ called 12 returned 100% blocks executed 43%
+       12:  723:    _Map_base<_Key, _Pair, _Alloc, _Select1st, _Equal,
         -:  724:	      _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits, true>::
         -:  725:    operator[](key_type&& __k)
         -:  726:    -> mapped_type&
         -:  727:    {
-        6:  728:      __hashtable* __h = static_cast<__hashtable*>(this);
-        6:  729:      __hash_code __code = __h->_M_hash_code(__k);
-        6:  729-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
+       12:  728:      __hashtable* __h = static_cast<__hashtable*>(this);
+       12:  729:      __hash_code __code = __h->_M_hash_code(__k);
+       12:  729-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
 branch  2 taken 0 (throw)
-        6:  730:      std::size_t __bkt = __h->_M_bucket_index(__code);
-        6:  730-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
+       12:  730:      std::size_t __bkt = __h->_M_bucket_index(__code);
+       12:  730-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
 branch  2 taken 0 (throw)
-        6:  731:      if (auto __node = __h->_M_find_node(__bkt, __k, __code))
-        6:  731-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
+       12:  731:      if (auto __node = __h->_M_find_node(__bkt, __k, __code))
+       12:  731-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
 branch  2 taken 0 (throw)
-        6:  731-block  1
-branch  3 taken 6 (fallthrough)
+       12:  731-block  1
+branch  3 taken 12 (fallthrough)
 branch  4 taken 0
-        6:  732:	return __node->_M_v().second;
-        6:  732-block  0
-call    0 returned 6
+       12:  732:	return __node->_M_v().second;
+       12:  732-block  0
+call    0 returned 12
         -:  733:
     #####:  734:      typename __hashtable::_Scoped_node __node {
 call    0 never executed

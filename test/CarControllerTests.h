@@ -18,6 +18,10 @@ class CarControllerTests {
         void testSort();
 
         void testCreateTypeReport();
+
+        void testLoadData();
+
+        void testSaveData();
 };
 
 #endif //CPPLAB_CARCONTROLLERTESTS_H

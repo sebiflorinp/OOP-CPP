@@ -1,11 +1,13 @@
 #ifndef CPPLAB_CARREPOSITORY_H
 #define CPPLAB_CARREPOSITORY_H
 
-#include <vector>
+
 #include "../domain/Car.h"
 #include "../misc/DynamicArray.h"
+#include "AbstractCarRepo.h"
+#include <vector>
 
-class CarRepository {
+class CarRepository : public AbstractCarRepo {
     private:
         std::vector<Car> cars;
 
@@ -16,14 +18,14 @@ class CarRepository {
          * Post-conditions: an instance of the Car class
          * Raises: No car with the received registrationNumber exists.
          */
-        Car getCarByRegistrationNumber(const std::string& registrationNumber);
+        Car getCarByRegistrationNumber(const std::string& registrationNumber) override;
 
         /*
          * Returns a vector with all Car instances.
          * Preconditions: -
          * Post-conditions: a vector with instances of the Car class
          */
-        const std::vector<Car>& getAllCars() const;
+        const std::vector<Car>& getAllCars() const override;
 
         /*
          * Adds the received Car instance in the repository.
@@ -31,7 +33,7 @@ class CarRepository {
          * Post-conditions: -
          * Raises: There is already another car with the same registrationNumber
          */
-        void addNewCar(const Car& newCar);
+        void addNewCar(const Car& newCar) override;
 
         /*
          * Deletes the instance of the Car class with the received registrationNumber
@@ -39,7 +41,7 @@ class CarRepository {
          * Post-conditions: -
          * Raises: No car with the received registrationNumber exists.
          */
-        void deleteCarByRegistrationNumber(const std::string& registrationNumber);
+        void deleteCarByRegistrationNumber(const std::string& registrationNumber) override;
 
         /*
          * Updates the instance of the Car class with the received registrationNumber to match updatedCar.
@@ -48,9 +50,14 @@ class CarRepository {
          * Post-conditions: -
          * Raises: No car with the received registrationNumber exists.
          */
-        void updateCarByRegistrationNumber(const std::string& registrationNumber, Car updatedCar);
+        void updateCarByRegistrationNumber(const std::string& registrationNumber, Car updatedCar) override;
 
-    void emptyRepository();
+        /*
+         * Empties the repository.
+         * Preconditions: -
+         * Post-conditions: -
+         */
+        void emptyRepository() override;
 };
 
 #endif //CPPLAB_CARREPOSITORY_H

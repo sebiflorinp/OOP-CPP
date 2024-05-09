@@ -423,10 +423,10 @@ branch  1 taken 1 (fallthrough)
       454:  405:	  _M_x[__k] = (_M_x[__k + __m] ^ (__y >> 1)
       227:  406:		       ^ ((__y & 0x01) ? __a : 0));
       227:  406-block  0
-branch  0 taken 106 (fallthrough)
-branch  1 taken 121
-      106:  406-block  1
-      121:  406-block  2
+branch  0 taken 105 (fallthrough)
+branch  1 taken 122
+      105:  406-block  1
+      122:  406-block  2
       227:  406-block  3
         -:  407:        }
         -:  408:
@@ -441,10 +441,10 @@ branch  1 taken 1 (fallthrough)
       792:  413:	  _M_x[__k] = (_M_x[__k + (__m - __n)] ^ (__y >> 1)
       396:  414:		       ^ ((__y & 0x01) ? __a : 0));
       396:  414-block  0
-branch  0 taken 189 (fallthrough)
-branch  1 taken 207
-      189:  414-block  1
-      207:  414-block  2
+branch  0 taken 210 (fallthrough)
+branch  1 taken 186
+      210:  414-block  1
+      186:  414-block  2
       396:  414-block  3
         -:  415:	}
         -:  416:
@@ -453,10 +453,10 @@ branch  1 taken 207
         2:  419:      _M_x[__n - 1] = (_M_x[__m - 1] ^ (__y >> 1)
        1*:  420:		       ^ ((__y & 0x01) ? __a : 0));
         1:  420-block  0
-branch  0 taken 1 (fallthrough)
-branch  1 taken 0
-        1:  420-block  1
-    %%%%%:  420-block  2
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  420-block  1
+        1:  420-block  2
         1:  421:      _M_p = 0;
         1:  422:    }
         -:  423:

@@ -7,8 +7,8 @@
 
 class UI {
     private:
-        CarController carController;
-        CarsToWashController carsToWashController;
+        CarController& carController;
+        CarsToWashController& carsToWashController;
 
     public:
         /*
@@ -21,7 +21,7 @@ class UI {
          * Preconditions: carController: an instance of the CarController class.
          * Postconditions: -
          */
-        UI(CarController  carController, CarsToWashController  carsToWashController);
+        UI(CarController&  carController, CarsToWashController&  carsToWashController);
 
         /*
          * The function that starts the application

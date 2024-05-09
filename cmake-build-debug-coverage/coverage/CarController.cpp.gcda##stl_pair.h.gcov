@@ -315,10 +315,10 @@
         -:  311:#endif
         -:  312:
         -:  313:#if __cplusplus >= 201103L
-function _ZNSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEC2ERKS7_ called 3 returned 100% blocks executed 100%
-        3:  314:      constexpr pair(const pair&) = default;	///< Copy constructor
-        3:  314-block  0
-call    0 returned 3
+function _ZNSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEC2ERKS7_ called 6 returned 100% blocks executed 100%
+        6:  314:      constexpr pair(const pair&) = default;	///< Copy constructor
+        6:  314-block  0
+call    0 returned 6
         -:  315:      constexpr pair(pair&&) = default;		///< Move constructor
         -:  316:
         -:  317:      // DR 811.

@@ -1,0 +1,52 @@
+        -:    0:Source:/home/sebifp/devStuff/repos/OOP-CPP/undo/Undo.cpp
+        -:    0:Graph:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/undo/Undo.cpp.gcno
+        -:    0:Data:/home/sebifp/devStuff/repos/OOP-CPP/cmake-build-debug-coverage/CMakeFiles/cpplab.dir/undo/Undo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Undo.h"
+        -:    2:
+function _ZN7UndoAdd6doUndoEv called 3 returned 100% blocks executed 71%
+        3:    3:void UndoAdd::doUndo() {
+        -:    4:    // Undo the addition by deleting the added car
+        3:    5:    carRepositoryReference.deleteCarByRegistrationNumber(car.getRegistrationNumber());
+        3:    5-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:    5-block  1
+call    4 returned 3
+    $$$$$:    5-block  2
+call    5 never executed
+        3:    6:}
+        -:    7:
+function _ZN10UndoDelete6doUndoEv called 1 returned 100% blocks executed 100%
+        1:    8:void UndoDelete::doUndo() {
+        -:    9:    // Undo the deletion by adding back the deleted car
+        1:   10:    carRepositoryReference.addNewCar(car);
+        1:   10-block  0
+call    0 returned 1
+        -:   11:
+        1:   12:}
+        -:   13:
+function _ZN10UndoUpdate6doUndoEv called 1 returned 100% blocks executed 58%
+        1:   14:void UndoUpdate::doUndo() {
+        -:   15:    // Undo the update by updating the car to its previous state
+        1:   16:    carRepositoryReference.updateCarByRegistrationNumber(newCar.getRegistrationNumber(), oldCar);
+        1:   16-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   16-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   16-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   16-block  3
+call    9 never executed
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+call   10 never executed
+        1:   17:}

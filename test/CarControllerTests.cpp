@@ -1,8 +1,10 @@
 #include <cassert>
+#include <fstream>
 #include "CarControllerTests.h"
 #include "../controller/CarController.h"
 #include "../misc/Filters.h"
 #include "../misc/SortingFunctions.h"
+#include "../misc/Exceptions.h"
 
 void CarControllerTests::testGetAllCars() {
     // Arrange
@@ -198,3 +200,68 @@ void CarControllerTests::testCreateTypeReport() {
     assert(actual["CCC"].getType() == "CCC");
     assert(actual["CCC"].getCount() == 2);
 }
+
+void CarControllerTests::testLoadData() {
+    // Arrange
+    CarRepository carRepository = CarRepository();
+    CarController carController = CarController(carRepository);
+    carController.addNewCar("RO123AB", "AAA", "AAA", "AAA");
+
+    std::ofstream out("test.txt");
+    out << "RO123AB AAA AAA AAA\n";
+    out << "RO111BB BBB BBB BBB\n";
+    out << "EN123BB CCC CCC CCC\n";
+    out.close();
+
+    // Act
+    carController.loadData("test.txt");
+
+    // Assert
+    assert(carController.getAllCars().size() == 3);
+    try {
+        carController.findCarByRegistrationNumber("RO123AB");
+        assert(true);
+    } catch (CarNotFoundError) {
+        assert(false);
+    }
+
+    try {
+        carController.findCarByRegistrationNumber("RO111BB");
+        assert(true);
+    } catch (CarNotFoundError) {
+        assert(false);
+    }
+
+    try {
+        carController.findCarByRegistrationNumber("EN123BB");
+        assert(true);
+    } catch (CarNotFoundError) {
+        assert(false);
+    }
+}
+
+void CarControllerTests::testSaveData() {
+    // Arrange
+    CarRepository carRepository = CarRepository();
+    CarController carController = CarController(carRepository);
+
+    carController.addNewCar("RO123AB", "AAA", "AAA", "AAA");
+    carController.addNewCar("RO111BB", "BBB", "BBB", "BBB");
+    carController.addNewCar("EN123BB", "CCC", "CCC", "CCC");
+
+    // Act
+    carController.saveData("test.txt");
+
+    // Assert
+    std::ifstream in("test.txt");
+    std::string registrationNumber, type, model, producer;
+    for (auto car: carController.getAllCars()) {
+        in >> registrationNumber >> type >> model >> producer;
+        assert(car.getRegistrationNumber() == registrationNumber);
+        assert(car.getType() == type);
+        assert(car.getModel() == model);
+        assert(car.getProducer() == producer);
+    }
+}
+
+

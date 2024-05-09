@@ -105,8 +105,8 @@
         -:  101:  template<typename _Tp>
         -:  102:    _GLIBCXX_NODISCARD
         -:  103:    constexpr typename std::remove_reference<_Tp>::type&&
-       8*:  104:    move(_Tp&& __t) noexcept
-       8*:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+      16*:  104:    move(_Tp&& __t) noexcept
+      16*:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
 ------------------
 _ZSt4moveIRN9__gnu_cxx5__ops15_Iter_comp_iterIZ26sortCarsByProducerAndModelSt6vectorI3CarSaIS4_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRKS4_SG_E_EEEONSt16remove_referenceIT_E4typeEOSL_:
 function _ZSt4moveIRN9__gnu_cxx5__ops15_Iter_comp_iterIZ26sortCarsByProducerAndModelSt6vectorI3CarSaIS4_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRKS4_SG_E_EEEONSt16remove_referenceIT_E4typeEOSL_ called 0 returned 0% blocks executed 0%
@@ -151,10 +151,10 @@ function _ZSt4moveIRZ28sortCarsByRegistrationNumberSt6vectorI3CarSaIS1_EERKNSt7_
         4:  105-block  0
 ------------------
 _ZSt4moveIRNSt12_Vector_baseI3CarSaIS1_EE12_Vector_implEEONSt16remove_referenceIT_E4typeEOS7_:
-function _ZSt4moveIRNSt12_Vector_baseI3CarSaIS1_EE12_Vector_implEEONSt16remove_referenceIT_E4typeEOS7_ called 0 returned 0% blocks executed 0%
-    #####:  104:    move(_Tp&& __t) noexcept
-    #####:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-    %%%%%:  105-block  0
+function _ZSt4moveIRNSt12_Vector_baseI3CarSaIS1_EE12_Vector_implEEONSt16remove_referenceIT_E4typeEOS7_ called 8 returned 100% blocks executed 100%
+        8:  104:    move(_Tp&& __t) noexcept
+        8:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+        8:  105-block  0
 ------------------
         -:  106:
         -:  107:

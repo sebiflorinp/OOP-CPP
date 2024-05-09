@@ -150,29 +150,29 @@
         -:  146:       *  @return @c addressof(__r)
         -:  147:      */
         -:  148:      static _GLIBCXX20_CONSTEXPR pointer
-        8:  149:      pointer_to(__make_not_void<element_type>& __r) noexcept
-        8:  150:      { return std::addressof(__r); }
+       16:  149:      pointer_to(__make_not_void<element_type>& __r) noexcept
+       16:  150:      { return std::addressof(__r); }
 ------------------
 _ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEE10pointer_toERSC_:
-function _ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEE10pointer_toERSC_ called 3 returned 100% blocks executed 100%
-        3:  149:      pointer_to(__make_not_void<element_type>& __r) noexcept
-        3:  150:      { return std::addressof(__r); }
-        3:  150-block  0
-call    0 returned 3
+function _ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEE10pointer_toERSC_ called 6 returned 100% blocks executed 100%
+        6:  149:      pointer_to(__make_not_void<element_type>& __r) noexcept
+        6:  150:      { return std::addressof(__r); }
+        6:  150-block  0
+call    0 returned 6
 ------------------
 _ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEE10pointer_toERSB_:
-function _ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEE10pointer_toERSB_ called 3 returned 100% blocks executed 100%
-        3:  149:      pointer_to(__make_not_void<element_type>& __r) noexcept
-        3:  150:      { return std::addressof(__r); }
-        3:  150-block  0
-call    0 returned 3
+function _ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiELb1EEEE10pointer_toERSB_ called 6 returned 100% blocks executed 100%
+        6:  149:      pointer_to(__make_not_void<element_type>& __r) noexcept
+        6:  150:      { return std::addressof(__r); }
+        6:  150-block  0
+call    0 returned 6
 ------------------
 _ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_:
-function _ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_ called 2 returned 100% blocks executed 100%
-        2:  149:      pointer_to(__make_not_void<element_type>& __r) noexcept
-        2:  150:      { return std::addressof(__r); }
-        2:  150-block  0
-call    0 returned 2
+function _ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_ called 4 returned 100% blocks executed 100%
+        4:  149:      pointer_to(__make_not_void<element_type>& __r) noexcept
+        4:  150:      { return std::addressof(__r); }
+        4:  150-block  0
+call    0 returned 4
 ------------------
         -:  151:    };
         -:  152:
@@ -182,10 +182,10 @@ call    0 returned 2
         -:  156:
         -:  157:  template<typename _Tp>
         -:  158:    constexpr _Tp*
-        8:  159:    __to_address(_Tp* __ptr) noexcept
+       16:  159:    __to_address(_Tp* __ptr) noexcept
         -:  160:    {
         -:  161:      static_assert(!std::is_function<_Tp>::value, "not a function pointer");
-        8:  162:      return __ptr;
+       16:  162:      return __ptr;
         -:  163:    }
         -:  164:
         -:  165:#if __cplusplus <= 201703L

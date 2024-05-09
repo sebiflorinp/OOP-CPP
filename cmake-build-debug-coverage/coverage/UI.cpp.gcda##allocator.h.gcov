@@ -173,11 +173,8 @@ call    0 never executed
 ------------------
         -:  157:
         -:  158:      _GLIBCXX20_CONSTEXPR
-function _ZNSaI3CarEC2ERKS0_ called 0 returned 0% blocks executed 0%
-    #####:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-    #####:  160:      : __allocator_base<_Tp>(__a) { }
-    %%%%%:  160-block  0
-call    0 never executed
+        -:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+        -:  160:      : __allocator_base<_Tp>(__a) { }
         -:  161:
         -:  162:#if __cplusplus >= 201103L
         -:  163:      // Avoid implicit deprecation.
@@ -202,14 +199,14 @@ function _ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev called 0 returned 0% blocks 
     %%%%%:  174-block  0
 call    0 never executed
 ------------------
-_ZNSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev:
-function _ZNSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev called 0 returned 0% blocks executed 0%
+_ZNSaI3CarED2Ev:
+function _ZNSaI3CarED2Ev called 0 returned 0% blocks executed 0%
     #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }
     %%%%%:  174-block  0
 call    0 never executed
 ------------------
-_ZNSaI3CarED2Ev:
-function _ZNSaI3CarED2Ev called 0 returned 0% blocks executed 0%
+_ZNSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev:
+function _ZNSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev called 0 returned 0% blocks executed 0%
     #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }
     %%%%%:  174-block  0
 call    0 never executed

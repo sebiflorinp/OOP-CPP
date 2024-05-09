@@ -65,6 +65,12 @@ function _ZSt11__addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_ called 0 retu
     #####:   50:    { return __builtin_addressof(__r); }
     %%%%%:   50-block  0
 ------------------
+_ZSt11__addressofISt10unique_ptrI4UndoSt14default_deleteIS1_EEEPT_RS5_:
+function _ZSt11__addressofISt10unique_ptrI4UndoSt14default_deleteIS1_EEEPT_RS5_ called 0 returned 0% blocks executed 0%
+    #####:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+    #####:   50:    { return __builtin_addressof(__r); }
+    %%%%%:   50-block  0
+------------------
 _ZSt11__addressofI3CarEPT_RS1_:
 function _ZSt11__addressofI3CarEPT_RS1_ called 0 returned 0% blocks executed 0%
     #####:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
@@ -169,6 +175,12 @@ function _ZSt7forwardINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEOT_RN
         -:  103:    constexpr typename std::remove_reference<_Tp>::type&&
     #####:  104:    move(_Tp&& __t) noexcept
     #####:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+------------------
+_ZSt4moveIRP4UndoEONSt16remove_referenceIT_E4typeEOS4_:
+function _ZSt4moveIRP4UndoEONSt16remove_referenceIT_E4typeEOS4_ called 0 returned 0% blocks executed 0%
+    #####:  104:    move(_Tp&& __t) noexcept
+    #####:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+    %%%%%:  105-block  0
 ------------------
 _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_:
 function _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_ called 0 returned 0% blocks executed 0%

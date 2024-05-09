@@ -192,6 +192,12 @@ function _ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev called 0 returned 0% blocks 
     %%%%%:  174-block  0
 call    0 never executed
 ------------------
+_ZNSaISt10unique_ptrI4UndoSt14default_deleteIS0_EEED2Ev:
+function _ZNSaISt10unique_ptrI4UndoSt14default_deleteIS0_EEED2Ev called 0 returned 0% blocks executed 0%
+    #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+    %%%%%:  174-block  0
+call    0 never executed
+------------------
 _ZNSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev:
 function _ZNSaINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOELb1EEEED2Ev called 0 returned 0% blocks executed 0%
     #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }

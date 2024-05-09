@@ -984,12 +984,12 @@
         -:  980:      { return _M_h[__k]; }
         -:  981:
         -:  982:      mapped_type&
-function _ZNSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOSt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEEixEOS5_ called 6 returned 100% blocks executed 100%
-        6:  983:      operator[](key_type&& __k)
-        6:  984:      { return _M_h[std::move(__k)]; }
-        6:  984-block  0
-call    0 returned 6
-call    1 returned 6
+function _ZNSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7TypeDTOSt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEEixEOS5_ called 12 returned 100% blocks executed 100%
+       12:  983:      operator[](key_type&& __k)
+       12:  984:      { return _M_h[std::move(__k)]; }
+       12:  984-block  0
+call    0 returned 12
+call    1 returned 12
         -:  985:      ///@}
         -:  986:
         -:  987:      ///@{
