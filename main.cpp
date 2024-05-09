@@ -18,6 +18,7 @@ int main() {
     runAllTests();
 
     // run app
+
     ui.runApp();
 
     return 0;

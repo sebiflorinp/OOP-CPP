@@ -3,12 +3,14 @@
 #include "../misc/Exceptions.h"
 #include "../misc/Utils.h"
 
+
+
 Car ProbabilityRepo::getCarByRegistrationNumber(const std::string &registrationNumber) {
     // Throw the dice
     unsigned int diceResult = getRandomIndex(100);
 
-    // If the result is less than 50, throw an error
-    if (diceResult < 50) {
+    // If the result is less than the probability, throw an error
+    if (diceResult < probability * 100) {
         throw RandomError("You are unlucky. Try again.");
     }
 
@@ -26,10 +28,12 @@ const std::vector<Car> &ProbabilityRepo::getAllCars() const {
     // Throw the dice
     unsigned int diceResult = getRandomIndex(100);
 
-    // If the result is less than 50, throw an error
-    if (diceResult < 50) {
+    // If the result is less than the probability, throw an error
+    if (diceResult < probability * 100) {
         throw RandomError("You are unlucky. Try again.");
     }
+
+
 
     return cars;
 }
@@ -38,8 +42,8 @@ void ProbabilityRepo::addNewCar(const Car &newCar) {
     // Throw the dice
     unsigned int diceResult = getRandomIndex(100);
 
-    // If the result is less than 50, throw an error
-    if (diceResult < 50) {
+    // If the result is less than the probability, throw an error
+    if (diceResult < probability * 100) {
         throw RandomError("You are unlucky. Try again.");
     }
 
@@ -58,8 +62,8 @@ void ProbabilityRepo::deleteCarByRegistrationNumber(const std::string &registrat
     // Throw the dice
     unsigned int diceResult = getRandomIndex(100);
 
-    // If the result is less than 50, throw an error
-    if (diceResult < 50) {
+    // If the result is less than the probability, throw an error
+    if (diceResult < probability * 100) {
         throw RandomError("You are unlucky. Try again.");
     }
 
@@ -78,11 +82,10 @@ void ProbabilityRepo::updateCarByRegistrationNumber(const std::string &registrat
     // Throw the dice
     unsigned int diceResult = getRandomIndex(100);
 
-    // If the result is less than 50, throw an error
-    if (diceResult < 50) {
+    // If the result is less than the probability, throw an error
+    if (diceResult < probability * 100) {
         throw RandomError("You are unlucky. Try again.");
     }
-
 
     // ensure that the update operation will not lead to multiple cars with the same registration number
     if (registrationNumber != updatedCar.getRegistrationNumber()) {
@@ -110,8 +113,8 @@ void ProbabilityRepo::emptyRepository() {
     // Throw the dice
     unsigned int diceResult = getRandomIndex(100);
 
-    // If the result is less than 50, throw an error
-    if (diceResult < 50) {
+    // If the result is less than the probability, throw an error
+    if (diceResult < probability * 100) {
         throw RandomError("You are unlucky. Try again.");
     }
 

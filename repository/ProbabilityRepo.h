@@ -5,7 +5,14 @@
 #include "AbstractCarRepo.h"
 
 class ProbabilityRepo: public AbstractCarRepo{
+private:
+    float probability;
 public:
+    /*
+     * Constructor for the ProbabilityRepo class.
+     * Preconditions: probability: a float number between 0 and 1
+     */
+    ProbabilityRepo(float probability): probability(probability) {};
     /*
      * Returns an instance of the Car class with the received registrationNumber or throws a RandomError.
      * Preconditions: registrationNumber: a non-empty string made of 7 characters
